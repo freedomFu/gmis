@@ -5,13 +5,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             // 初始化表格参数配置
             Table.api.init({
                 extend: {
-                    index_url: 'student/index',
-                    add_url: 'student/add',
-                    edit_url: 'student/edit',
-                    del_url: 'student/del',
-                    import_url: 'student/import',
-                    multi_url: 'student/multi',
-                    table: 'student',
+                    index_url: 'tapply/index',
+                    add_url: 'tapply/add',
+                    edit_url: 'tapply/edit',
+                    del_url: 'tapply/del',
+                    multi_url: 'tapply/multi',
+                    table: 'tapply',
                 }
             });
 
@@ -26,15 +25,18 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {checkbox: true},
                         {field: 'id', title: __('Id')},
-                        {field: 'stuidcard', title: __('Stuidcard')},
-                        {field: 'stupwd', title: __('Stupwd')},
-                        {field: 'stuname', title: __('Stuname')},
-                        {field: 'stuclass', title: __('Stuclass')},
-                        {field: 'stuphone', title: __('Stuphone')},
+                        {field: 'title', title: __('Title')},
+                        {field: 'nature', title: __('Nature')},
+                        {field: 'source', title: __('Source')},
+                        {field: 'isnew', title: __('Isnew'),formatter:Table.api.formatter.toggle},
+                        {field: 'isprac', title: __('Isprac'),formatter:Table.api.formatter.toggle},
+                        {field: 'note', title: __('Note')},
+                        {field: 'stuid', title: __('Stuid')},
+                        {field: 'teaid', title: __('Teaid')},
                         {field: 'weigh', title: __('Weigh')},
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'updatetime', title: __('Updatetime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
-                        {field: 'status', title: __('Status'), searchList: {"应届生":__('应届生'),"其他":__('其他')}, formatter: Table.api.formatter.status},
+                        {field: 'status', title: __('Status'), searchList: {"已通过":__('已通过'),"未通过":__('未通过')}, formatter: Table.api.formatter.toggle,yes:'已通过',no:'未通过'},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]

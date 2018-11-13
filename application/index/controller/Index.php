@@ -1,31 +1,16 @@
 <?php
-
+/**
+ * @Author:      fyd
+ * @DateTime:    2018/11/13 20:59
+ * @Description: 描述信息
+ */
 namespace app\index\controller;
+use think\Controller;
+use think\Db;
 
-use app\common\controller\Frontend;
-use app\common\library\Token;
-
-class Index extends Frontend
+class Index extends Controller
 {
-
-    protected $noNeedLogin = '*';
-    protected $noNeedRight = '*';
-    protected $layout = '';
-
-    public function _initialize()
-    {
-        parent::_initialize();
+    public function index(){
+        echo "这是首页呀！";
     }
-
-    public function index()
-    {
-        return $this->view->fetch();
-    }
-
-    public function news()
-    {
-        $newslist = [];
-        return jsonp(['newslist' => $newslist, 'new' => count($newslist), 'url' => 'https://www.fastadmin.net?ref=news']);
-    }
-
 }

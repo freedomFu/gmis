@@ -5,23 +5,23 @@ namespace app\admin\controller;
 use app\common\controller\Backend;
 
 /**
- * 学生管理
+ * 毕设过程管理
  *
  * @icon fa fa-circle-o
  */
-class Student extends Backend
+class Process extends Backend
 {
     
     /**
-     * Student模型对象
-     * @var \app\admin\model\Student
+     * Process模型对象
+     * @var \app\admin\model\Process
      */
     protected $model = null;
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\Student;
+        $this->model = new \app\admin\model\Process;
         $this->view->assign("statusList", $this->model->getStatusList());
     }
     
@@ -30,9 +30,6 @@ class Student extends Backend
      * 因此在当前控制器中可不用编写增删改查的代码,除非需要自己控制这部分逻辑
      * 需要将application/admin/library/traits/Backend.php中对应的方法复制到当前控制器,然后进行修改
      */
-
-    public function import(){
-        return parent::import();
-    }
+    
 
 }
