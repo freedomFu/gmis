@@ -4,7 +4,7 @@ use app\index\model\Userlogin;
 use think\Controller;
 use think\Db;
 
-class Login extends Controller
+class User extends Controller
 {
 
     /**
