@@ -11,6 +11,6 @@ use think\Db;
 class Index extends Controller
 {
     public function index(){
-        echo "这是首页呀！";
+        return $this->fetch('user/login');
     }
 }
