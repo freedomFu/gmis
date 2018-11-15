@@ -5,11 +5,12 @@
  * @Description: 描述信息
  */
 namespace app\index\controller;
+use app\index\controller\Base;
 use app\index\model\Tapply;
 use think\Controller;
 use think\Db;
 
-class Teapply extends Controller
+class Teapply extends Base
 {
     /**
      * @Author:      fyd
@@ -37,12 +38,13 @@ class Teapply extends Controller
 
         $teapply = new Tapply();
         $res = $teapply->add($data);
+        $url = 'index';
         if($res == 1){
-            $this->success("添加成功",'index');
+            $this->success("添加成功",$url);
         }elseif($res ==2){
-            $this->error("已经有这个题目了",'index');
+            $this->error("已经有这个题目了",$url);
         }else{
-            $this->error("添加失败",'index');
+            $this->error("添加失败",$url);
         }
     }
 
@@ -66,12 +68,13 @@ class Teapply extends Controller
 
         $teapply = new Tapply();
         $res = $teapply->edit($id,$data);
+        $url = 'index';
         if($res == 1){
-            $this->success('修改成功','index');
+            $this->success('修改成功',$url);
         }elseif($res == 2){
-            $this->error('重复的题目','index');
+            $this->error('重复的题目',$url);
         }else{
-            $this->error('修改失败','index');
+            $this->error('修改失败',$url);
         }
     }
 
@@ -85,10 +88,11 @@ class Teapply extends Controller
 //        $id = input('id');
         $id = 16;
         $res = $teapply->del($id);
+        $url = 'index';
         if($res){
-            $this->success('删除成功','index');
+            $this->success('删除成功',$url);
         }else{
-            $this->error('删除失败','index');
+            $this->error('删除失败',$url);
         }
     }
 }

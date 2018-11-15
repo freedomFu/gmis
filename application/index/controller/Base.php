@@ -16,6 +16,8 @@ class Base extends Controller
      * @Description: 初始化函数，用于判断用户是否登录
      */
     public function _initialize(){
-
+        if(session('uid')==0){
+            $this->error("请先登录系统！","Login/index");
+        }
     }
 }
