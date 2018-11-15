@@ -101,4 +101,45 @@ class Userlogin extends Model
         }
         return $table;
     }
+
+    public function findpass($auth,$id,$useremail){
+        $table = $this->findTable($auth);
+        $tablename = $table[0];
+        $pwdname = $table[1];
+        $where['id'] = $id;
+        switch (true){
+            case (empty($useremail)):
+                return 2; //为空的情况
+            case !isEmail($useremail):
+                return 3;
+            default:
+                break;
+        }
+
+        //获取随机密码
+        $emailPwd = rand('100000','999999');
+        $password = enctypePw($emailPwd);
+        $email = new \app\common\library\Email;
+        $res = $email
+            ->subject('毕设选题系统找回密码')
+            ->to($useremail)
+            ->message('新密码是：'.$emailPwd)
+            ->send();
+
+        if($res){
+            //修改数据库中的密码
+            $update = [$pwdname=>$password];
+            $dbres = Db::name($tablename)
+                ->where($where)
+                ->update($update);
+            if($dbres){
+                return 1; //成功
+            }else{
+                return 4;
+            }
+        }else{
+            return 0; //失败
+        }
+
+    }
 }

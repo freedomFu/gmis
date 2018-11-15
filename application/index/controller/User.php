@@ -16,8 +16,10 @@ class User extends Controller
         $data = [
             'auth'      => 1,
             'username'  => '201509010110',
-            'password'  => '123456'
+            'password'  => '431677'
         ];
+
+        $data['password'] = enctypePw($data['password']);
 
         $login = new Userlogin();
         $res = $login->login($data);
@@ -44,7 +46,9 @@ class User extends Controller
      * @Description: 用户退出
      */
     public function logout(){
-        session(null);
+        session('auth',0);
+        session('username','0');
+        session('uid',0);
         $this->success('退出成功','Index/index');
     }
 
@@ -81,7 +85,6 @@ class User extends Controller
             default:
                 $this->error('未知错误',$url);
         }
-
     }
 
 
@@ -93,5 +96,24 @@ class User extends Controller
     public function findpass(){
         $id = session('uid'); //ID
         $auth = session('auth'); //Auth
+        $emailPwd = '223344';
+        $useremail = '1219532602@qq.com';
+
+        $self = new Userlogin();
+        $res = $self->findpass($auth,$id,$useremail);
+        $url = "Index/index";
+        switch ($res){
+            case 1:
+                $this->success("发送成功",$url);
+            case 2:
+                $this->error("不可为空",$url);
+            case 3:
+                $this->error("邮箱不符合规范",$url);
+            case 0:
+            case 4:
+                $this->error("发送失败",$url);
+            default:
+                $this->error("未知错误",$url);
+        }
     }
 }
