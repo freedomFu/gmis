@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="22bcd330-2bf3-4591-b345-000f3989cf2a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/controller/Login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/log/201811/14.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201811/14.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/User.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +53,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/index/controller/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="718">
+              <caret line="61" column="46" lean-forward="true" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
               <folding>
                 <element signature="e#38#68#0#PHP" expanded="true" />
               </folding>
@@ -213,7 +211,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1211" />
+    <option name="width" value="1207" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -294,16 +292,15 @@
       <workItem from="1541936432708" duration="4690000" />
       <workItem from="1541995238295" duration="5472000" />
       <workItem from="1542075584060" duration="14288000" />
-      <workItem from="1542162116903" duration="9235000" />
+      <workItem from="1542162116903" duration="9954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39121000" />
+    <option name="totallyTimeSpent" value="39840000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1210" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1211" height="1047" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -311,7 +308,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19130434" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19113813" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
@@ -728,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="718">
+          <caret line="61" column="46" lean-forward="true" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
           <folding>
             <element signature="e#38#68#0#PHP" expanded="true" />
           </folding>

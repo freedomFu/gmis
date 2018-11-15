@@ -37,4 +37,31 @@ class User extends Controller
             $this->error('用户不存在');
         }
     }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/14 22:26
+     * @Description: 用户退出
+     */
+    public function logout(){
+
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/14 22:27
+     * @Description: 修改密码
+     */
+    public function expass(){
+
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/14 22:27
+     * @Description: 找回密码，通过使用phpemail发送六位数字密码
+     */
+    public function findpass(){
+
+    }
 }
