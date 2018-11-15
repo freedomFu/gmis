@@ -25,7 +25,7 @@ class Login extends Controller
         $data = [
             'auth'      => 1,
             'username'  => '201509010110',
-            'password'  => '223344'
+            'password'  => '848855'
         ];
 
         $login = new Userlogin();
@@ -49,13 +49,30 @@ class Login extends Controller
 
     /**
      * @Author:      fyd
-     * @DateTime:    2018/11/14 22:26
-     * @Description: 用户退出
+     * @DateTime:    2018/11/14 22:27
+     * @Description: 找回密码，通过使用phpemail发送六位数字密码
      */
-    public function logout(){
-        session('auth',0);
-        session('username','0');
-        session('uid',0);
-        $this->success('退出成功','Index/index');
+    public function findpass(){
+        $id = session('uid'); //ID
+        $auth = session('auth'); //Auth
+        $emailPwd = '223344';
+        $useremail = '1219532602@qq.com';
+
+        $self = new Userlogin();
+        $res = $self->findpass($auth,$id,$useremail);
+        $url = "Index/index";
+        switch ($res){
+            case 1:
+                $this->success("发送成功",$url);
+            case 2:
+                $this->error("不可为空",$url);
+            case 3:
+                $this->error("邮箱不符合规范",$url);
+            case 0:
+            case 4:
+                $this->error("发送失败",$url);
+            default:
+                $this->error("未知错误",$url);
+        }
     }
 }

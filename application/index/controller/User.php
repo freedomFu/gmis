@@ -7,6 +7,19 @@ use think\Db;
 
 class User extends Base
 {
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/14 22:26
+     * @Description: 用户退出
+     */
+    public function logout(){
+        session('auth',0);
+        session('username','0');
+        session('uid',0);
+        $this->success('退出成功','Index/index');
+    }
+
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/14 22:27
@@ -17,13 +30,14 @@ class User extends Base
         $id = session('uid'); //ID
         $auth = session('auth'); //Auth
         $data = [
-            'oldPwd'    => '123456',
-            'newPwd'    => '223344',
-            'conPwd'    => '223344'
+            'oldPwd'    => '848855',
+            'newPwd'    => '123456',
+            'conPwd'    => '123456'
         ];
         $user = new Userlogin();
         $res = $user->expass(1,1,$data);
         $url = 'Index/index';
+        //判断情况
         switch ($res){
             case 2:
                 $this->error('原密码错误',$url);
@@ -45,33 +59,4 @@ class User extends Base
         }
     }
 
-
-    /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/14 22:27
-     * @Description: 找回密码，通过使用phpemail发送六位数字密码
-     */
-    public function findpass(){
-        $id = session('uid'); //ID
-        $auth = session('auth'); //Auth
-        $emailPwd = '223344';
-        $useremail = '1219532602@qq.com';
-
-        $self = new Userlogin();
-        $res = $self->findpass($auth,$id,$useremail);
-        $url = "Index/index";
-        switch ($res){
-            case 1:
-                $this->success("发送成功",$url);
-            case 2:
-                $this->error("不可为空",$url);
-            case 3:
-                $this->error("邮箱不符合规范",$url);
-            case 0:
-            case 4:
-                $this->error("发送失败",$url);
-            default:
-                $this->error("未知错误",$url);
-        }
-    }
 }
