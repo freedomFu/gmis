@@ -17,9 +17,9 @@ class User extends Base
         $id = session('uid'); //ID
         $auth = session('auth'); //Auth
         $data = [
-            'oldPwd'    => '234567',
-            'newPwd'    => '123456',
-            'conPwd'    => '123456'
+            'oldPwd'    => '123456',
+            'newPwd'    => '223344',
+            'conPwd'    => '223344'
         ];
         $user = new Userlogin();
         $res = $user->expass(1,1,$data);
@@ -30,6 +30,9 @@ class User extends Base
                 break;
             case 3:
                 $this->error('两次密码不同',$url);
+                break;
+            case 4:
+                $this->error('密码不符合规范',$url);
                 break;
             case 1:
                 $this->success('修改成功',$url);

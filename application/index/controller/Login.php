@@ -25,10 +25,8 @@ class Login extends Controller
         $data = [
             'auth'      => 1,
             'username'  => '201509010110',
-            'password'  => '431677'
+            'password'  => '223344'
         ];
-
-        $data['password'] = enctypePw($data['password']);
 
         $login = new Userlogin();
         $res = $login->login($data);

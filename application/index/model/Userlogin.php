@@ -34,7 +34,7 @@ class Userlogin extends Model
             -> where($where)
             -> find();
 //        dump($user);
-
+        $data['password'] = enctypePw($data['password']);
         if($user){
             if($user[$pwd] == $data['password']){
                 session('username',$data['username']);
@@ -66,6 +66,8 @@ class Userlogin extends Model
             ->find();
 
         switch (true){
+            case (!isPw($oldPwd) || !isPw($newPwd) || !isPw($conPwd)):
+                return 4; //密码不符合规范
             case enctypePw($oldPwd)!=$tableData[$pwdname]:
                 return 2; //原密码错误！
             case $newPwd!=$conPwd:
@@ -102,7 +104,12 @@ class Userlogin extends Model
         return $table;
     }
 
-    public function findpass($auth,$id,$useremail){
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/15 21:21
+     * @Description: 找回密码
+     */
+    public function findpass($auth, $id, $useremail){
         $table = $this->findTable($auth);
         $tablename = $table[0];
         $pwdname = $table[1];
