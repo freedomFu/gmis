@@ -61,7 +61,8 @@ class Tapply extends Model{
      * @Description: 审核标题
      */
     protected static function checkTitle($title){
-        $uniCheck = Tapply::where('title',$title)
+        $where['title'] = $title;
+        $uniCheck = Tapply::where($where)
             ->find();
         if($uniCheck){
             return true; //已经有存在的标题
@@ -77,8 +78,9 @@ class Tapply extends Model{
      */
     public function edit($id, $data){
         $tapply = new Tapply();
+        $where['id'] = $id;
         $oldData = $tapply
-            ->where('id',$id)
+            ->where($where)
             ->find();
         $oldTitle = $oldData['title']; //原来数据库中的标题
 //        dump($oldTitle);
@@ -101,6 +103,11 @@ class Tapply extends Model{
         }
     }
 
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/15 10:18
+     * @Description: 删除数据
+     */
     public function del($id){
         $ta = Tapply::get($id);
         $res = $ta->delete();

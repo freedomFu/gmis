@@ -67,11 +67,11 @@ class Teapply extends Controller
         $teapply = new Tapply();
         $res = $teapply->edit($id,$data);
         if($res == 1){
-            $this->success("修改成功",'index');
+            $this->success('修改成功','index');
         }elseif($res == 2){
-            $this->error("重复的题目",'index');
+            $this->error('重复的题目','index');
         }else{
-            $this->error("修改失败",'index');
+            $this->error('修改失败','index');
         }
     }
 
@@ -86,9 +86,9 @@ class Teapply extends Controller
         $id = 16;
         $res = $teapply->del($id);
         if($res){
-            $this->success("删除成功",'index');
+            $this->success('删除成功','index');
         }else{
-            $this->error("删除失败",'index');
+            $this->error('删除失败','index');
         }
     }
 }

@@ -29,10 +29,11 @@ class Userlogin extends Model
      * @Description: 登录审核
      */
     private function check($data, $name,$idcard,$pwd){
+        $where[$idcard] = $data['username'];
         $user = Db::name($name)
-            -> where($idcard,$data['username'])
+            -> where($where)
             -> find();
-        dump($user);
+//        dump($user);
 
         if($user){
             if($user[$pwd] == $data['password']){
@@ -45,5 +46,59 @@ class Userlogin extends Model
         }else{
             return 1; //用户不存在
         }
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/15 10:33
+     * @Description: 修改密码
+     */
+    public function expass($auth, $id,$data){
+        $table = $this->findTable($auth);
+        $tablename = $table[0];
+        $pwdname = $table[1];
+        $where['id'] = $id;
+        $oldPwd = $data['oldPwd'];
+        $newPwd = $data['newPwd'];
+        $conPwd = $data['conPwd'];
+        $tableData = Db::name($tablename)
+            ->where($where)
+            ->find();
+
+        switch (true){
+            case enctypePw($oldPwd)!=$tableData[$pwdname]:
+                return 2; //原密码错误！
+            case $newPwd!=$conPwd:
+                return 3; //两次密码不同
+            default:
+                break;
+        }
+
+        dump($tableData);
+        $pass = enctypePw($newPwd);
+        $update = [$pwdname=>$pass];
+        $res = Db::name($tablename)
+            ->where($where)
+            ->update($update);
+
+        if($res){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/15 10:36
+     * @Description: 根据用户auth获取表
+     */
+    private function findTable($auth){
+        if($auth==1){
+            $table = ['student','stupwd'];
+        }elseif($auth==2){
+            $table = ['teacher','teapwd'];
+        }
+        return $table;
     }
 }
