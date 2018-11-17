@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="22bcd330-2bf3-4591-b345-000f3989cf2a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/controller/Stuselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Stuselect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/model/Sselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/Sselect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/sselect/showTitle.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/sselect/showTitle.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/log/201811/17.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201811/17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/a582f844d666532032fcd68448157dd3.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/a582f844d666532032fcd68448157dd3.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,17 +47,17 @@
       <file leaf-file-name="Userlogin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/model/Userlogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="40" column="28" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="28" />
+            <state relative-caret-position="-576">
+              <caret line="62" column="34" lean-forward="true" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sselect.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Sselect.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/index/model/Sselect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+            <state relative-caret-position="540">
+              <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
               <folding>
                 <element signature="e#119#146#0#PHP" expanded="true" />
               </folding>
@@ -78,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stuselect.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Stuselect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Stuselect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+            <state relative-caret-position="444">
+              <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
               <folding>
                 <element signature="e#123#153#0#PHP" expanded="true" />
               </folding>
@@ -120,8 +119,8 @@
       <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state relative-caret-position="440">
+              <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
                 <element signature="e#123#153#0#PHP" expanded="true" />
@@ -168,11 +167,11 @@
         <option value="$PROJECT_DIR$/application/index/controller/Base.php" />
         <option value="$PROJECT_DIR$/application/index/view/sselect/index.html" />
         <option value="$PROJECT_DIR$/public/assets/js/backend/tapply.js" />
-        <option value="$PROJECT_DIR$/application/index/controller/Login.php" />
         <option value="$PROJECT_DIR$/application/index/controller/Teapply.php" />
         <option value="$PROJECT_DIR$/application/index/view/sselect/showTitle.html" />
-        <option value="$PROJECT_DIR$/application/index/model/Sselect.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Login.php" />
         <option value="$PROJECT_DIR$/application/index/controller/Stuselect.php" />
+        <option value="$PROJECT_DIR$/application/index/model/Sselect.php" />
       </list>
     </option>
   </component>
@@ -234,7 +233,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1270" />
+    <option name="width" value="1304" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -323,18 +322,18 @@
       <workItem from="1542162116903" duration="9954000" />
       <workItem from="1542242945532" duration="21861000" />
       <workItem from="1542375003358" duration="648000" />
-      <workItem from="1542414469075" duration="14895000" />
+      <workItem from="1542414469075" duration="18126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77244000" />
+    <option name="totallyTimeSpent" value="80475000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1270" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19173554" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25382933" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -678,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/backend/tapply.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="39" column="129" selection-start-line="39" selection-start-column="129" selection-end-line="39" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/model/Tapply.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -692,34 +684,6 @@
           <folding>
             <element signature="e#119#135#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <element signature="e#123#153#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Teapply.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="e#123#153#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/sselect/showTitle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -733,29 +697,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/model/Sselect.php">
+    <entry file="file://$PROJECT_DIR$/application/index/model/Userlogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+        <state relative-caret-position="-576">
+          <caret line="62" column="34" lean-forward="true" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Teapply.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1020">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
-            <element signature="e#119#146#0#PHP" expanded="true" />
+            <element signature="e#123#153#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/model/Userlogin.php">
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="440">
+          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <element signature="e#123#153#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/sselect/showTitle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/backend/tapply.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="39" column="129" selection-start-line="39" selection-start-column="129" selection-end-line="39" selection-end-column="129" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/Stuselect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+        <state relative-caret-position="444">
+          <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
           <folding>
             <element signature="e#123#153#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/Sselect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
+          <folding>
+            <element signature="e#119#146#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

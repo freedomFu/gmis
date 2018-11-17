@@ -71,15 +71,27 @@ class Stuselect extends Base
      */
     public function saveData(){
         $sselect = new Sselect();
-        $dataid = [2,4,8,10];
-        $res = $sselect->saveData($dataid);
+        $dataid = [4,12];
         $url = "Stuselect/showApplyTitle";
+        $check = $sselect->checkStuTitleNum($dataid);
+        switch ($check){
+            case 2:
+                $this->error("数据过多",$url);
+                break;
+            case 3:
+                $this->error("你只能申请三个哦！",$url);
+                break;
+            case 1:
+            default:
+                break;
+        }
+
+
+        $res = $sselect->saveData($dataid);
+
         switch ($res){
             case 1:
                 $this->success("保存成功",$url);
-                break;
-            case 2:
-                $this->error("数据过多",$url);
                 break;
             case 0:
                 $this->error("保存失败",$url);

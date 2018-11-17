@@ -24,7 +24,7 @@ class Login extends Controller
     public function login(){
         $data = [
             'auth'      => 1,
-            'username'  => '201509010110',
+            'username'  => '201509010107',
             'password'  => '123456'
         ];
 

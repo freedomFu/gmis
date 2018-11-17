@@ -118,10 +118,11 @@ class Sselect extends Model
      */
     public function saveData($dataid){
         $count = count($dataid);
-        if($count>3){
-            return 2;
+
+        for($j=0;$j<$count;$j++){
+            $data[$j]=[];
         }
-        $data = [[],[],[]];
+
         $stuid = session('uid');
         for($i=0;$i<$count;$i++){
             $titleid = $dataid[$i];
@@ -138,6 +139,32 @@ class Sselect extends Model
         }else{
             return 0;
         }
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/17 17:10
+     * @Description: 判断是否还可以申请
+     */
+    public function checkStuTitleNum($dataid){
+        $count = count($dataid);
+        if($count>3){
+            return 2;
+        }
+        $stuid = session('uid');
+        $where['stuid'] = $stuid;
+        $num = Db::name('sselect')
+            ->where($where)
+            ->count();
+
+        $num+=$count;
+        dump($num);
+
+        if($num>3){
+            return 3;
+        }
+
+        return 1;
     }
 
 }
