@@ -12,12 +12,21 @@ use think\Db;
 
 class Stuselect extends Base
 {
+
+    private function isStudent(){
+        if(session('auth')!=1){
+            $this->error("您没有权限操作！","Login/index");
+        }
+    }
+
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/17 10:30
      * @Description: 已选题目
      */
     public function index(){
+        $this->isStudent();
+
         $sselect = new Sselect();
         $teaid = 5;
         $list = $sselect->sselect($teaid);
@@ -32,6 +41,8 @@ class Stuselect extends Base
      * @Description: 查询题目
      */
     public function showApplyTitle(){
+        $this->isStudent();
+
         $sselect = new Sselect();
         $senior="2018-2019";
         $list = $sselect->showApplyTitle(1,"",$senior);
