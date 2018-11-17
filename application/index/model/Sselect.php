@@ -74,11 +74,70 @@ class Sselect extends Model
      * @Description: 根据专业id获取专业名称
      */
     public function getProfessName($professid){
-        $where['id']=$professid;
+        $where['id'] = $professid;
+        $where['status'] = "正常";
         $res = Db::name('profess')
             ->where($where)
             ->find();
         return $res['proname'];
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/17 15:35
+     * @Description: 获取当前题目总数
+     */
+    public function getCount($titleid){
+        $where['titleid'] = $titleid;
+        $where['issubmit'] = 1; //已经提交
+        $where['status'] = "正常";
+        $total = Db::name('sselect')
+            ->where($where)
+            ->count();
+        return $total;
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/17 16:01
+     * @Description: 根据titleid获取teaid
+     */
+    private function getTeaid($titleid){
+        $where['status'] = "已通过";
+        $where['id'] = $titleid;
+        $teaid = Db::name('tapply')
+            ->where($where)
+            ->value('teaid');
+        return $teaid;
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/17 15:53
+     * @Description: 保存数据，但是没有提交，获取的是titleid，已经通过的
+     */
+    public function saveData($dataid){
+        $count = count($dataid);
+        if($count>3){
+            return 2;
+        }
+        $data = [[],[],[]];
+        $stuid = session('uid');
+        for($i=0;$i<$count;$i++){
+            $titleid = $dataid[$i];
+            $data[$i] = [
+                'stuid'     =>  $stuid,
+                'titleid'   =>  $titleid,
+                'teaid'     =>  $this->getTeaid($titleid),
+                'issubmit'  =>  0
+            ];
+        }
+        $res = Sselect::saveall($data);
+        if($res){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 
 }
