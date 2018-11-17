@@ -14,10 +14,22 @@ class Teapply extends Base
 {
     /**
      * @Author:      fyd
+     * @DateTime:    2018/11/17 15:03
+     * @Description: 判断是不是教师权限
+     */
+    private function isTeacher(){
+        if(session('auth')!=2){
+            $this->error("您没有权限操作！","Login/index");
+        }
+    }
+
+    /**
+     * @Author:      fyd
      * @DateTime:    2018/11/13 22:17
      * @Description: 显示添加申请的表单
      */
     public function index(){
+        $this->isTeacher();
         return 123;
     }
 
@@ -27,6 +39,7 @@ class Teapply extends Base
      * @Description: 添加数据测试
      */
     public function add(){
+        $this->isTeacher();
         $data = [
             'title'     =>  '基于NBA的金秋杯的管理系统',
             'nature'    =>  '未知',
@@ -54,6 +67,7 @@ class Teapply extends Base
      * @Description: 修改申请信息
      */
     public function edit(){
+        $this->isTeacher();
 //        $id = input('id');
         $id = 4;
 
@@ -84,6 +98,7 @@ class Teapply extends Base
      * @Description: 删除数据
      */
     public function del(){
+        $this->isTeacher();
         $teapply = new Tapply();
 //        $id = input('id');
         $id = 16;

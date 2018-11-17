@@ -12,7 +12,11 @@ use think\Db;
 
 class Stuselect extends Base
 {
-
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/17 15:03
+     * @Description: 判断是不是学生权限
+     */
     private function isStudent(){
         if(session('auth')!=1){
             $this->error("您没有权限操作！","Login/index");
@@ -45,7 +49,7 @@ class Stuselect extends Base
 
         $sselect = new Sselect();
         $senior="2018-2019";
-        $list = $sselect->showApplyTitle(1,"",$senior);
+        $list = $sselect->showApplyTitle(1,"系统",$senior);
         $listcount = count($list);
         for($i=0;$i<$listcount;$i++){
             $proid = $list[$i]['proid'];
