@@ -116,14 +116,14 @@ class Sselect extends Model
      * @DateTime:    2018/11/17 15:53
      * @Description: 保存数据，但是没有提交，获取的是titleid，已经通过的
      */
-    public function saveData($dataid){
+    public function saveData($stuid,$dataid){
+
         $count = count($dataid);
 
         for($j=0;$j<$count;$j++){
             $data[$j]=[];
         }
 
-        $stuid = session('uid');
         for($i=0;$i<$count;$i++){
             $titleid = $dataid[$i];
             $data[$i] = [
@@ -146,25 +146,79 @@ class Sselect extends Model
      * @DateTime:    2018/11/17 17:10
      * @Description: 判断是否还可以申请
      */
-    public function checkStuTitleNum($dataid){
+    public function checkStuTitleNum($stuid,$dataid){
+        //若已经有提交的就不能再添加了
+        $wherecheck['stuid'] = $stuid;
+        $wherecheck['issubmit']=1;
+        $checkIsAllow = Sselect::where($wherecheck)
+            ->find();
+        if($checkIsAllow){
+            return 4;
+        }
+
         $count = count($dataid);
+//        dump($count);
         if($count>3){
             return 2;
         }
-        $stuid = session('uid');
+//        dump($stuid);
         $where['stuid'] = $stuid;
-        $num = Db::name('sselect')
-            ->where($where)
+        $num = Sselect::where($where)
             ->count();
+//        dump($num);
 
         $num+=$count;
-        dump($num);
+//        dump($num);
 
         if($num>3){
             return 3;
         }
-
         return 1;
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/17 20:03
+     * @Description: 提交数据
+     */
+    public function submitData($stuid){
+
+        $wherecheck['stuid'] = $stuid;
+        $wherecheck['issubmit']=1;
+        $checkIsAllow = Sselect::where($wherecheck)
+            ->find();
+        if($checkIsAllow){
+            return 4;
+        }
+
+        $where['stuid'] = $stuid;
+        $stuselect = Sselect::where($where)
+            ->select();
+        $count = count($stuselect);
+
+        if($count>3){
+            return 2; //超过三个，提示出错
+        }
+
+        for($i=0;$i<$count;$i++){
+            $ssid = $stuselect[$i]['id'];
+            $titleid = $stuselect[$i]['stuid'];
+            $titlenum = $this->getCount($titleid);
+            if($titlenum>9){
+                return 3;
+            }
+            $list[$i] = [
+                'id'        =>  $ssid,
+                'issubmit'  =>  1
+            ];
+        }
+        $res = Sselect::saveAll($list);
+
+        if($res){
+            return 1; //更新成功
+        }else{
+            return 0; //更新失败
+        }
     }
 
 }

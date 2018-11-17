@@ -17,7 +17,7 @@ class User extends Base
         session('auth',0);
         session('username','0');
         session('uid',0);
-        $this->success('退出成功','Index/index');
+        $this->success('退出成功','Login/index');
     }
 
     /**

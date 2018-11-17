@@ -24,7 +24,7 @@ class Login extends Controller
     public function login(){
         $data = [
             'auth'      => 1,
-            'username'  => '201509010107',
+            'username'  => '201509010108',
             'password'  => '123456'
         ];
 
@@ -36,10 +36,10 @@ class Login extends Controller
         }else{
             echo "这是教师用户！";
         }
-        $url = 'Index/index';
+        $url = 'Login/index';
         if(($res-3)%10 == 0){
             session('auth',$data['auth']);
-            $this->success('登陆成功',$url);
+            $this->success('登陆成功','Index/index');
         }elseif(($res-2)%10 == 0){
             $this->error('密码错误',$url);
         }elseif (($res-1)%10 == 0){

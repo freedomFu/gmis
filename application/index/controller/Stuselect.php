@@ -71,34 +71,58 @@ class Stuselect extends Base
      */
     public function saveData(){
         $sselect = new Sselect();
-        $dataid = [4,12];
+        $dataid = [2,4,8];
         $url = "Stuselect/showApplyTitle";
-        $check = $sselect->checkStuTitleNum($dataid);
+        $stuid = session('uid');
+        $check = $sselect->checkStuTitleNum($stuid,$dataid);
         switch ($check){
+            case 4:
+                $this->error("你已经提交了，不能再添加了",$url);
             case 2:
                 $this->error("数据过多",$url);
-                break;
             case 3:
                 $this->error("你只能申请三个哦！",$url);
-                break;
             case 1:
             default:
                 break;
         }
 
 
-        $res = $sselect->saveData($dataid);
+        $res = $sselect->saveData($stuid,$dataid);
 
         switch ($res){
             case 1:
                 $this->success("保存成功",$url);
-                break;
             case 0:
                 $this->error("保存失败",$url);
-                break;
             default:
                 $this->error("未知错误",$url);
-                break;
+        }
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/17 18:57
+     * @Description: 提交数据
+     */
+    public function submitData(){
+        $sselect = new Sselect();
+        $stuid = session('uid');
+        $res = $sselect->submitData($stuid);
+        $url = "Stuselect/showApplyTitle";
+        switch ($res){
+            case 4:
+                $this->error("你已经提交了，不能再添加了",$url);
+            case 3:
+                $this->error("存在题目数目已经申请数目已经超过10个");
+            case 2:
+                $this->success("您的数据有误",$url);
+            case 1:
+                $this->success("保存成功",$url);
+            case 0:
+                $this->error("保存失败",$url);
+            default:
+                $this->error("未知错误",$url);
         }
     }
 }
