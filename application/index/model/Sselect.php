@@ -6,7 +6,7 @@
  */
 
 namespace app\index\model;
-
+use app\index\model\Tapply;
 use think\Model;
 use think\Db;
 
@@ -37,10 +37,48 @@ class Sselect extends Model
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
 
-    public function sselect(){
+    public function sselect($teaid){
         $list = Sselect::order('id desc')
+            ->where('teaid',$teaid)
             ->paginate(10);
         return $list;
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/17 10:15
+     * @Description: 获取筛选信息
+     */
+    public function showApplyTitle($professid, $titlekey,$senior){
+        $where['belongsenior']=$senior;
+        $where['status'] = "已通过";
+        //都没有传入
+        if(!($professid==0)){
+            $where['proid'] = $professid;
+        }
+
+        if(!empty($titlekey)){
+            $where['title'] = ['like','%'.$titlekey.'%'];
+        }
+
+        $list = Tapply::where($where)
+            ->order('id desc')
+            ->select();
+
+        return $list;
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/17 10:45
+     * @Description: 根据专业id获取专业名称
+     */
+    public function getProfessName($professid){
+        $where['id']=$professid;
+        $res = Db::name('profess')
+            ->where($where)
+            ->find();
+        return $res['proname'];
     }
 
 }

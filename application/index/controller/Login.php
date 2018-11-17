@@ -25,7 +25,7 @@ class Login extends Controller
         $data = [
             'auth'      => 1,
             'username'  => '201509010110',
-            'password'  => '848855'
+            'password'  => '123456'
         ];
 
         $login = new Userlogin();

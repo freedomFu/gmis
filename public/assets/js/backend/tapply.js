@@ -28,15 +28,16 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'title', title: __('Title')},
                         {field: 'nature', title: __('Nature')},
                         {field: 'source', title: __('Source')},
-                        {field: 'isnew', title: __('Isnew'),formatter:Table.api.formatter.toggle},
-                        {field: 'isprac', title: __('Isprac'),formatter:Table.api.formatter.toggle},
+                        {field: 'isnew', title: __('Isnew')},
+                        {field: 'isprac', title: __('Isprac')},
+                        {field: 'proid', title: __('Proid')},
                         {field: 'note', title: __('Note')},
                         {field: 'stuid', title: __('Stuid')},
                         {field: 'teaid', title: __('Teaid')},
                         {field: 'weigh', title: __('Weigh')},
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'updatetime', title: __('Updatetime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
-                        {field: 'status', title: __('Status'), searchList: {"已通过":__('已通过'),"未通过":__('未通过')}, formatter: Table.api.formatter.toggle,yes:'已通过',no:'未通过'},
+                        {field: 'status', title: __('Status'), searchList: {"已通过":__('已通过'),"未通过":__('未通过')}, formatter: Table.api.formatter.status},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]

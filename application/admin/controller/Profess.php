@@ -5,23 +5,23 @@ namespace app\admin\controller;
 use app\common\controller\Backend;
 
 /**
- * 毕设题目申请管理
+ * 专业管理
  *
  * @icon fa fa-circle-o
  */
-class Tapply extends Backend
+class Profess extends Backend
 {
     
     /**
-     * Tapply模型对象
-     * @var \app\admin\model\Tapply
+     * Profess模型对象
+     * @var \app\admin\model\Profess
      */
     protected $model = null;
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\Tapply;
+        $this->model = new \app\admin\model\Profess;
         $this->view->assign("statusList", $this->model->getStatusList());
     }
     

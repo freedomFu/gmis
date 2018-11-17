@@ -7,6 +7,7 @@ return [
     'Source'  =>  '课题来源',
     'Isnew'  =>  '是否新题',
     'Isprac'  =>  '是否结合实际',
+    'Proid'  =>  '专业id',
     'Note'  =>  '备注',
     'Stuid'  =>  '学生ID',
     'Teaid'  =>  '教师ID',
