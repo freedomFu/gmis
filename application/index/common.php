@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * @Author:      fyd
  * @DateTime:    2018/11/13 16:03
@@ -38,4 +37,20 @@ function isPw($password){
         $flag = true;
     }
     return $flag;
+}
+
+function getSenior(){
+    $thisyear = date("Y");
+    $lastyear = date("Y")-1;
+    $nextyear = date("Y")+1;
+
+    $thismonth = date("m");
+
+    if($thismonth<9){
+        $senior = $lastyear.'-'.$thisyear;
+    }else{
+        $senior = $thisyear.'-'.$nextyear;
+    }
+
+    return $senior;
 }

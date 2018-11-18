@@ -17,4 +17,8 @@ class Index extends Base
         return $this->fetch('user/login');
     }
 
+    public function test(){
+        getSenior();
+    }
+
 }
