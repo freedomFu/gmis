@@ -118,5 +118,14 @@ class Tapply extends Model{
         }
     }
 
+    public function getTitleNum($teaid){
+        $where['id'] = $teaid;
+        $tableName = 'teacher';
+        $titleNum = Db::name($tableName)
+            ->where($where)
+            ->value('teatitlenum');
+        return $titleNum;
+    }
+
 
 }

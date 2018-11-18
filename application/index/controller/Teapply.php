@@ -110,4 +110,12 @@ class Teapply extends Base
             $this->error('删除失败',$url);
         }
     }
+
+    public function test(){
+        $this->isTeacher();
+        $teapply = new Tapply();
+        $stuid = session('uid');
+        $titlenum = $teapply->getTitleNum($stuid);
+        echo $titlenum;
+    }
 }

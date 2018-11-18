@@ -87,7 +87,6 @@ class Stuselect extends Base
                 break;
         }
 
-
         $res = $sselect->saveData($stuid,$dataid);
 
         switch ($res){
