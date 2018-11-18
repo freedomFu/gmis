@@ -40,18 +40,27 @@ class Teapply extends Base
      */
     public function add(){
         $this->isTeacher();
+        $teapply = new Tapply();
+        $stuid = session('uid');
+        $titlenum = $teapply->getTitleNum($stuid);  //允许的个数
+        $appliedNum = $teapply->getAppliedNum($stuid);  //已经提交申请的数目
+        $url = 'index';
+        if($titlenum<=$appliedNum){
+            $this->error("您已经没有剩余名额了",$url);
+        }
+
+        $teaid = session('uid');
         $data = [
             'title'     =>  '基于NBA的金秋杯的管理系统',
             'nature'    =>  '未知',
             'source'    =>  '未知',
             'isnew'     =>  '0',
             'isprac'    =>  '1',
+            'teaid'     =>  $teaid,
             'note'      =>  '无'
         ];
 
-        $teapply = new Tapply();
         $res = $teapply->add($data);
-        $url = 'index';
         if($res == 1){
             $this->success("添加成功",$url);
         }elseif($res ==2){
@@ -87,6 +96,8 @@ class Teapply extends Base
             $this->success('修改成功',$url);
         }elseif($res == 2){
             $this->error('重复的题目',$url);
+        }elseif($res==3){
+            $this->error('已经通过申请，不能修改了',$url);
         }else{
             $this->error('修改失败',$url);
         }
@@ -112,10 +123,7 @@ class Teapply extends Base
     }
 
     public function test(){
-        $this->isTeacher();
         $teapply = new Tapply();
-        $stuid = session('uid');
-        $titlenum = $teapply->getTitleNum($stuid);
-        echo $titlenum;
+        echo $teapply->checkIsAllow(14);
     }
 }

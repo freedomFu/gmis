@@ -79,6 +79,12 @@ class Tapply extends Model{
     public function edit($id, $data){
         $tapply = new Tapply();
         $where['id'] = $id;
+
+        $isAllow = $this->checkIsAllow($id);
+        if($isAllow){
+            return 3; // 已经通过申请，不能再添加了
+        }
+
         $oldData = $tapply
             ->where($where)
             ->find();
@@ -105,6 +111,22 @@ class Tapply extends Model{
 
     /**
      * @Author:      fyd
+     * @DateTime:    2018/11/18 20:26
+     * @Description: 判断这个id对应的数据是不是已经通过，如果已经通过了，就不可以再编辑了
+     */
+    public function checkIsAllow($titleid){
+        $where['id'] = $titleid;
+        $isAllow = Tapply::where($where)
+            ->value('status');
+        if($isAllow == "已通过"){
+            return 1;
+        }elseif($isAllow == "未通过"){
+            return 0;
+        }
+    }
+
+    /**
+     * @Author:      fyd
      * @DateTime:    2018/11/15 10:18
      * @Description: 删除数据
      */
@@ -118,6 +140,11 @@ class Tapply extends Model{
         }
     }
 
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/18 15:33
+     * @Description: 获取题目数量
+     */
     public function getTitleNum($teaid){
         $where['id'] = $teaid;
         $tableName = 'teacher';
@@ -127,5 +154,16 @@ class Tapply extends Model{
         return $titleNum;
     }
 
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/18 15:42
+     * @Description: 获取已经申请的
+     */
+    public function getAppliedNum($teaid){
+        $where['teaid'] = $teaid;
+        $total = Tapply::where($where)
+            ->count();
+        return $total;
+    }
 
 }
