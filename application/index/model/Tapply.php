@@ -36,6 +36,30 @@ class Tapply extends Model{
 
     /**
      * @Author:      fyd
+     * @DateTime:    2018/11/20 11:10
+     * @Description: 展示当前教师的申请内容
+     */
+    public function show($teaid,$xq){
+        $where['teaid'] = $teaid;
+        $where['belongsenior'] = $xq;
+        $maintable = 'tapply';
+        $field = 'ta.id,title,nature,source,isnew,isprac,proname,note,ta.status,stuidcard,stuname,stuclass,stuphone';
+        $mt = 'ta';
+        $join = [
+            ['gmis_student gs','gs.id=ta.stuid','LEFT'],
+            ['gmis_profess gp','gp.id=ta.proid','LEFT'],
+        ];
+        $list = Db::name($maintable)
+            ->alias($mt)
+            ->join($join)
+            ->field($field)
+            ->where($where)
+            ->select();
+        return $list;
+    }
+
+    /**
+     * @Author:      fyd
      * @DateTime:    2018/11/14 10:53
      * @Description: 新增数据
      */

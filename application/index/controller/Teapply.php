@@ -26,11 +26,15 @@ class Teapply extends Base
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/13 22:17
-     * @Description: 显示添加申请的表单
+     * @Description: 显示该教师已经申请过的内容
      */
     public function index(){
         $this->isTeacher();
-        return 123;
+        $id = session('uid');
+        $xq = getSenior();
+        $teapply = new Tapply();
+        $list = $teapply->show($id,$xq);
+        dump($list);
     }
 
     /**

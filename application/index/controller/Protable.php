@@ -34,7 +34,6 @@ class Protable extends Base{
 
         $this->assign('prochart',$prochart);
         return $this->fetch('tapply/index');
-
     }
 
 }
