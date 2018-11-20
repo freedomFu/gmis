@@ -48,7 +48,7 @@ class Stuselect extends Base
         $this->isStudent();
 
         $sselect = new Sselect();
-        $senior="2018-2019";
+        $senior=getSenior();
         $list = $sselect->showApplyTitle(1,"",$senior);
         $listcount = count($list);
         for($i=0;$i<$listcount;$i++){
