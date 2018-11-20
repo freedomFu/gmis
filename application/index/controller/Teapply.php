@@ -30,11 +30,16 @@ class Teapply extends Base
      */
     public function index(){
         $this->isTeacher();
-        $id = session('uid');
-        $xq = getSenior();
         $teapply = new Tapply();
+        $id = session('uid');
+        $titlenum = $teapply->getTitleNum($id);  //允许的个数
+        $appliedNum = $teapply->getAppliedNum($id);  //已经提交申请的数目
+        $leftNum = $titlenum-$appliedNum;
+        $xq = getSenior();
         $list = $teapply->show($id,$xq);
-        dump($list);
+        $this->assign('leftnum',$leftNum);
+        $this->assign('tapplylist',$list);
+        return $this->fetch('tapply/index');
     }
 
     /**
@@ -55,7 +60,7 @@ class Teapply extends Base
 
         $teaid = session('uid');
         $data = [
-            'title'         =>  '基于NBA的金秋杯的管理系统',
+            'title'         =>  '基于CBA的金秋杯的管理系统',
             'nature'        =>  '未知',
             'source'        =>  '未知',
             'isnew'         =>  '0',

@@ -5,8 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-    {volist name='prochart' id='pro'}
-        {$pro.id} -- {$pro.proname} -- {$pro.protimer} <br>
+    剩余的量为：{$leftnum} <br>
+    {volist name='tapplylist' id='pro'}
+        {$pro.id}--{$pro.title}-{$pro.nature}-{$pro.source}-{$pro.isnew}
+    --{$pro.isprac}-{$pro.proname}-{$pro.note}-{$pro.status}
+    --{$pro.stuidcard}--{$pro.stuname}--{$pro.stuclass}
+    --{$pro.stuphone}
+    <br>
     {/volist}
 
 </body>
