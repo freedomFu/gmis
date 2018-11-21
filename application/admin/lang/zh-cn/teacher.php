@@ -11,6 +11,7 @@ return [
     'Starttimer'  =>  '开题时间',
     'Middletimer'  =>  '中期检查时间',
     'Replytimer'  =>  '答辩时间',
+    'Replyplace'  =>  '答辩地点',
     'Note'  =>  '备注',
     'Weigh'  =>  '权重',
     'Createtime'  =>  '创建时间',

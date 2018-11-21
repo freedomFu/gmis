@@ -47,4 +47,8 @@ class Student extends Model
 
 
 
+    public function profess()
+    {
+        return $this->belongsTo('Profess', 'stuproid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 }

@@ -13,7 +13,7 @@ class Login extends Controller
 {
 
     public function index(){
-        return '登录界面';
+        return $this->fetch('user/login');
     }
 
     /**
@@ -27,16 +27,19 @@ class Login extends Controller
             'username'  => '334455',
             'password'  => '123456'
         ];
+        $data = input('data');
 
         $login = new Userlogin();
         $res = $login->login($data);
 
-        if($data['auth']==1){
+        /*if($data['auth']==1){
             echo "这是学生用户！";
         }else{
             echo "这是教师用户！";
-        }
-        $url = 'Login/index';
+        }*/
+        $json = ['success'=>0,'succmsg'=>'cc'];
+        echo json_encode($json,JSON_UNESCAPED_UNICODE);
+        /*$url = 'Login/index';
         if(($res-3)%10 == 0){
             session('auth',$data['auth']);
             $this->success('登陆成功','Index/index');
@@ -44,7 +47,7 @@ class Login extends Controller
             $this->error('密码错误',$url);
         }elseif (($res-1)%10 == 0){
             $this->error('用户不存在',$url);
-        }
+        }*/
     }
 
     /**

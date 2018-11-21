@@ -5,26 +5,24 @@ namespace app\admin\controller;
 use app\common\controller\Backend;
 
 /**
- * 普通教师
+ * 常量设置
  *
  * @icon fa fa-circle-o
  */
-class Teacher extends Backend
+class Userset extends Backend
 {
     
     /**
-     * Teacher模型对象
-     * @var \app\admin\model\Teacher
+     * Userset模型对象
+     * @var \app\admin\model\Userset
      */
     protected $model = null;
-    protected $searchFields = 'id,teaidcard,teaname,teahonor';
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\Teacher;
-        $this->view->assign("teahonorList", $this->model->getTeahonorList());
-        $this->view->assign("statusList", $this->model->getStatusList());
+        $this->model = new \app\admin\model\Userset;
+
     }
     
     /**

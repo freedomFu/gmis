@@ -11,6 +11,7 @@ use think\Db;
 class Userlogin extends Model
 {
     public function login($data){
+        $res = '';
         $auth = $data['auth'];
         if($auth == 1){
             $res = $this->check($data,'student','stuidcard','stupwd');

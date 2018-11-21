@@ -12,6 +12,8 @@
 // [ 应用入口文件 ]
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
+//定义站点的根路径
+define('SITE_URL','http://127.0.0.1/gmis');
 
 // 判断是否安装FastAdmin
 if (!is_file(APP_PATH . 'admin/command/Install/install.lock'))
