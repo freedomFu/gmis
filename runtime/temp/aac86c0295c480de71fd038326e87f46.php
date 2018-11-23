@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\userset\add.html";i:1542807308;s:61:"C:\wamp64\www\gmis\application\admin\view\layout\default.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"C:\wamp64\www\gmis\public/../application/admin\view\auth\group\edit.html";i:1540985180;s:61:"C:\wamp64\www\gmis\application\admin\view\layout\default.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,22 +50,37 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+                                <form id="edit-form" class="form-horizontal form-ajax" role="form" method="POST" action="">
+    <input type="hidden" name="row[rules]" value="" />
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Parent'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <?php echo build_select('row[pid]', $groupdata, $row['pid'], ['class'=>'form-control selectpicker', 'data-rule'=>'required', 'data-id'=>$row['id'], 'data-pid'=>$row['pid']]); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Name'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input type="text" class="form-control" id="name" name="row[name]" value="<?php echo $row['name']; ?>" data-rule="required" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Permission'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <span class="text-muted"><input type="checkbox" name="" id="checkall" /> <label for="checkall"><small><?php echo __('Check all'); ?></small></label></span>
+            <span class="text-muted"><input type="checkbox" name="" id="expandall" /> <label for="expandall"><small><?php echo __('Expand all'); ?></small></label></span>
 
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Setname'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-setname" data-rule="required" class="form-control" name="row[setname]" type="text" value="">
+            <div id="treeview"></div>
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Setvalue'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-setvalue" data-rule="required" class="form-control" name="row[setvalue]" type="text" value="">
+            <?php echo build_radios('row[status]', ['normal'=>__('Normal'), 'hidden'=>__('Hidden')], $row['status']); ?>
         </div>
     </div>
-    <div class="form-group layer-footer">
-        <label class="control-label col-xs-12 col-sm-2"></label>
+    <div class="form-group hidden layer-footer">
+        <label class="control-label col-xs-12 col-sm-2 col-xs-2"></label>
         <div class="col-xs-12 col-sm-8">
             <button type="submit" class="btn btn-success btn-embossed disabled"><?php echo __('OK'); ?></button>
             <button type="reset" class="btn btn-default btn-embossed"><?php echo __('Reset'); ?></button>

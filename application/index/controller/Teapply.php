@@ -60,12 +60,13 @@ class Teapply extends Base
 
         $teaid = session('uid');
         $data = [
-            'title'         =>  '基于CBA的金秋杯的管理系统',
+            'title'         =>  '测试管理系统',
             'nature'        =>  '未知',
             'source'        =>  '未知',
             'isnew'         =>  '0',
             'isprac'        =>  '1',
             'teaid'         =>  $teaid,
+            'proid'         =>  5,
             'note'          =>  '无',
             'belongsenior'  =>  getSenior()
         ];

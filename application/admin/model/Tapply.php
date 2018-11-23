@@ -47,4 +47,20 @@ class Tapply extends Model
 
 
 
+    public function profess()
+    {
+        return $this->belongsTo('Profess', 'proid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
+
+
+    public function student()
+    {
+        return $this->belongsTo('Student', 'stuid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
+
+
+    public function teacher()
+    {
+        return $this->belongsTo('Teacher', 'teaid', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 }

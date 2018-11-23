@@ -39,6 +39,11 @@ function isPw($password){
     return $flag;
 }
 
+/**
+ * @Author:      fyd
+ * @DateTime:    2018/11/22 14:42
+ * @Description: 获取当前学期
+ */
 function getSenior(){
     $thisyear = date("Y");
     $lastyear = date("Y")-1;
@@ -53,4 +58,14 @@ function getSenior(){
     }
 
     return $senior;
+}
+
+/**
+ * @Author:      fyd
+ * @DateTime:    2018/11/22 14:42
+ * @Description: 返回json数据
+ */
+function falsePro($errno, $errmsg){
+    $json = ['errno'=>$errno,'errmsg'=>$errmsg];
+    echo json_encode($json,JSON_UNESCAPED_UNICODE);
 }

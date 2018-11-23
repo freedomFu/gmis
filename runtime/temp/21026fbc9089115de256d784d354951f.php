@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:71:"C:\wamp64\www\gmis\public/../application/admin\view\auth\rule\edit.html";i:1540985180;s:61:"C:\wamp64\www\gmis\application\admin\view\layout\default.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\auth\rule\tpl.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\tapply\edit.html";i:1542809551;s:61:"C:\wamp64\www\gmis\application\admin\view\layout\default.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,115 +50,95 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <form id="edit-form" class="form-horizontal form-ajax" role="form" method="POST" action="">
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Ismenu'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <?php echo build_radios('row[ismenu]', ['1'=>__('Yes'), '0'=>__('No')], $row['ismenu']); ?>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Parent'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <?php echo build_select('row[pid]', $ruledata, $row['pid'], ['class'=>'form-control', 'required'=>'']); ?>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="name" class="control-label col-xs-12 col-sm-2"><?php echo __('Name'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input type="text" class="form-control" id="name" name="row[name]" data-placeholder-node="<?php echo __('Node tips'); ?>" data-placeholder-menu="<?php echo __('Menu tips'); ?>" value="<?php echo $row['name']; ?>" data-rule="required" />
-        </div>
-    </div>
+                                <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Title'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input type="text" class="form-control" id="title" name="row[title]" value="<?php echo $row['title']; ?>" data-rule="required" />
+            <input id="c-title" data-rule="required" class="form-control" name="row[title]" type="text" value="<?php echo $row['title']; ?>">
         </div>
     </div>
     <div class="form-group">
-        <label for="icon" class="control-label col-xs-12 col-sm-2"><?php echo __('Icon'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Nature'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <div class="input-group input-groupp-md">
-                <input type="text" class="form-control" id="icon" name="row[icon]" value="<?php echo $row['icon']; ?>" />
-                <a href="javascript:;" class="btn-search-icon input-group-addon"><?php echo __('Search icon'); ?></a>
-            </div>
+            <input id="c-nature" data-rule="required" class="form-control" name="row[nature]" type="text" value="<?php echo $row['nature']; ?>">
         </div>
     </div>
     <div class="form-group">
-        <label for="weigh" class="control-label col-xs-12 col-sm-2"><?php echo __('Weigh'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Source'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input type="text" class="form-control" id="weigh" name="row[weigh]" value="<?php echo $row['weigh']; ?>" data-rule="required" />
+            <input id="c-source" data-rule="required" class="form-control" name="row[source]" type="text" value="<?php echo $row['source']; ?>">
         </div>
     </div>
     <div class="form-group">
-        <label for="remark" class="control-label col-xs-12 col-sm-2"><?php echo __('Condition'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Isnew'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <textarea class="form-control" id="condition" name="row[condition]"><?php echo $row['condition']; ?></textarea>
+            <input id="c-isnew" data-rule="required" class="form-control" name="row[isnew]" type="text" value="<?php echo $row['isnew']; ?>">
         </div>
     </div>
     <div class="form-group">
-        <label for="remark" class="control-label col-xs-12 col-sm-2"><?php echo __('Remark'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Isprac'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <textarea class="form-control" id="remark" name="row[remark]"><?php echo $row['remark']; ?></textarea>
+            <input id="c-isprac" data-rule="required" class="form-control" name="row[isprac]" type="text" value="<?php echo $row['isprac']; ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Proid'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-proid" data-rule="required" class="form-control" name="row[proid]" type="number" value="<?php echo $row['proid']; ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Note'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-note" data-rule="required" class="form-control" name="row[note]" type="text" value="<?php echo $row['note']; ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Stuid'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-stuid" class="form-control" name="row[stuid]" type="number" value="<?php echo $row['stuid']; ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Belongsenior'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-belongsenior" data-rule="required" class="form-control" name="row[belongsenior]" type="text" value="<?php echo $row['belongsenior']; ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Teaid'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-teaid" class="form-control" name="row[teaid]" type="number" value="<?php echo $row['teaid']; ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Weigh'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-weigh" data-rule="required" class="form-control" name="row[weigh]" type="number" value="<?php echo $row['weigh']; ?>">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <?php echo build_radios('row[status]', ['normal'=>__('Normal'), 'hidden'=>__('Hidden')], $row['status']); ?>
+            
+            <div class="radio">
+            <?php if(is_array($statusList) || $statusList instanceof \think\Collection || $statusList instanceof \think\Paginator): if( count($statusList)==0 ) : echo "" ;else: foreach($statusList as $key=>$vo): ?>
+            <label for="row[status]-<?php echo $key; ?>"><input id="row[status]-<?php echo $key; ?>" name="row[status]" type="radio" value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['status'])?$row['status']:explode(',',$row['status']))): ?>checked<?php endif; ?> /> <?php echo $vo; ?></label> 
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+
         </div>
     </div>
-    <div class="form-group hidden layer-footer">
-        <div class="col-xs-2"></div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
         <div class="col-xs-12 col-sm-8">
             <button type="submit" class="btn btn-success btn-embossed disabled"><?php echo __('OK'); ?></button>
             <button type="reset" class="btn btn-default btn-embossed"><?php echo __('Reset'); ?></button>
         </div>
     </div>
 </form>
-<style>
-    #chooseicon {
-        margin:10px;
-    }
-    #chooseicon ul {
-        margin:5px 0 0 0;
-    }
-    #chooseicon ul li{
-        width:41px;height:42px;
-        line-height:42px;
-        border:1px solid #efefef;
-        padding:1px;
-        margin:1px;
-        text-align: center;
-        font-size:18px;
-    }
-    #chooseicon ul li:hover{
-        border:1px solid #2c3e50;
-        cursor:pointer;
-    }
-</style>
-<script id="chooseicontpl" type="text/html">
-    <div id="chooseicon">
-        <div>
-            <form onsubmit="return false;">
-                <div class="input-group input-groupp-md">
-                    <div class="input-group-addon"><?php echo __('Search icon'); ?></div>
-                    <input class="js-icon-search form-control" type="text" placeholder="">
-                </div>
-            </form>
-        </div>
-        <div>
-            <ul class="list-inline">
-                <% for(var i=0; i<iconlist.length; i++){ %>
-                    <li data-font="<%=iconlist[i]%>" data-toggle="tooltip" title="<%=iconlist[i]%>">
-                    <i class="fa fa-<%=iconlist[i]%>"></i>
-                </li>
-                <% } %>
-            </ul>
-        </div>
 
-    </div>
-</script>
                             </div>
                         </div>
                     </div>

@@ -30,32 +30,33 @@ class User extends Base
         $id = session('uid'); //ID
         $auth = session('auth'); //Auth
         $data = [
-            'oldPwd'    => '848855',
+            'oldPwd'    => '621191',
             'newPwd'    => '123456',
             'conPwd'    => '123456'
         ];
         $user = new Userlogin();
-        $res = $user->expass(1,1,$data);
-        $url = 'Index/index';
+        $res = $user->expass($auth,$id,$data);
+
         //判断情况
         switch ($res){
             case 2:
-                $this->error('原密码错误',$url);
+                falsePro(2,'原密码错误');
                 break;
             case 3:
-                $this->error('两次密码不同',$url);
+                falsePro(3,'两次密码输入不匹配');
                 break;
             case 4:
-                $this->error('密码不符合规范',$url);
+                falsePro(4,'密码输入不规范');
                 break;
             case 1:
-                $this->success('修改成功',$url);
+                falsePro(0,'修改成功');
                 break;
             case 0:
-                $this->error('修改失败',$url);
+                falsePro(1,'修改失败');
                 break;
             default:
-                $this->error('未知错误',$url);
+                falsePro(5,'未知错误');
+                break;
         }
     }
 

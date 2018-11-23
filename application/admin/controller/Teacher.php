@@ -25,6 +25,7 @@ class Teacher extends Backend
         $this->model = new \app\admin\model\Teacher;
         $this->view->assign("teahonorList", $this->model->getTeahonorList());
         $this->view->assign("statusList", $this->model->getStatusList());
+
     }
     
     /**

@@ -62,6 +62,28 @@ class Process extends Model
         return $list;
     }
 
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/22 21:42
+     * @Description: 填写成绩
+     */
+    public function editScore($processid,$score){
+        $process = Process::get($processid);
+        $oldScore = $process['replyscore'];
+
+        if($oldScore>0){
+            return 2; //已经打过成绩不可以再打
+        }
+
+        $process->replyscore = $score;
+        $res = $process->save();
+        if($res){
+            return 1; //更新成功
+        }else{
+            return 0; //更新失败
+        }
+    }
+
 
 
 

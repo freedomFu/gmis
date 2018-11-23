@@ -24,17 +24,17 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'id', title: __('Id')},
+                        {field: 'id', title: __('Id'),operate:false},
                         {field: 'stuidcard', title: __('Stuidcard')},
-                        {field: 'stupwd', title: __('Stupwd'),visible:false},
+                        {field: 'stupwd', title: __('Stupwd'),visible:false,operate:false},
                         {field: 'stuname', title: __('Stuname')},
                         {field: 'stuclass', title: __('Stuclass')},
                         {field: 'stuphone', title: __('Stuphone')},
                         {field: 'profess.proname', title: __('Profess.proname')},
-                        {field: 'stuproid', title: __('Stuproid'),visible:false},
-                        {field: 'weigh', title: __('Weigh'),visible:false},
-                        {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime,visible:false},
-                        {field: 'updatetime', title: __('Updatetime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime,visible:false},
+                        {field: 'stuproid', title: __('Stuproid'),visible:false,operate:false},
+                        {field: 'weigh', title: __('Weigh'),visible:false,operate:false},
+                        {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime,visible:false,operate:false},
+                        {field: 'updatetime', title: __('Updatetime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime,visible:false,operate:false},
                         {field: 'status', title: __('Status'), searchList: {"应届生":__('应届生'),"其他":__('其他')}, formatter: Table.api.formatter.status},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]

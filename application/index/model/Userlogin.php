@@ -98,9 +98,9 @@ class Userlogin extends Model
      */
     private function findTable($auth){
         if($auth==1){
-            $table = ['student','stupwd'];
+            $table = ['student','stupwd','stuidcard'];
         }elseif($auth==2){
-            $table = ['teacher','teapwd'];
+            $table = ['teacher','teapwd','teaidcard'];
         }
         return $table;
     }
@@ -114,9 +114,10 @@ class Userlogin extends Model
         $table = $this->findTable($auth);
         $tablename = $table[0];
         $pwdname = $table[1];
-        $where['id'] = $id;
+        $idcard = $table[2];
+        $where[$idcard] = $id;
         switch (true){
-            case (empty($useremail)):
+            case (empty($useremail) || empty($id) || empty($useremail)):
                 return 2; //为空的情况
             case !isEmail($useremail):
                 return 3;

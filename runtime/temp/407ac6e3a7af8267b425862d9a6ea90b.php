@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"C:\wamp64\www\gmis\public/../application/admin\view\prochart\edit.html";i:1542807984;s:61:"C:\wamp64\www\gmis\application\admin\view\layout\default.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"C:\wamp64\www\gmis\public/../application/admin\view\auth\group\index.html";i:1540985180;s:61:"C:\wamp64\www\gmis\application\admin\view\layout\default.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,46 +50,27 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+                                <div class="panel panel-default panel-intro">
+    <?php echo build_heading(); ?>
 
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Proname'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-proname" data-rule="required" class="form-control" name="row[proname]" type="text" value="<?php echo $row['proname']; ?>">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Protimer'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-protimer" data-rule="required" class="form-control" name="row[protimer]" type="text" value="<?php echo $row['protimer']; ?>">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Weigh'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-weigh" data-rule="required" class="form-control" name="row[weigh]" type="number" value="<?php echo $row['weigh']; ?>">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            
-            <div class="radio">
-            <?php if(is_array($statusList) || $statusList instanceof \think\Collection || $statusList instanceof \think\Paginator): if( count($statusList)==0 ) : echo "" ;else: foreach($statusList as $key=>$vo): ?>
-            <label for="row[status]-<?php echo $key; ?>"><input id="row[status]-<?php echo $key; ?>" name="row[status]" type="radio" value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['status'])?$row['status']:explode(',',$row['status']))): ?>checked<?php endif; ?> /> <?php echo $vo; ?></label> 
-            <?php endforeach; endif; else: echo "" ;endif; ?>
+    <div class="panel-body">
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="one">
+                <div class="widget-body no-padding">
+                    <div id="toolbar" class="toolbar">
+                        <?php echo build_toolbar('refresh,add,delete'); ?>
+                    </div>
+                    <table id="table" class="table table-striped table-bordered table-hover" 
+                           data-operate-edit="<?php echo $auth->check('auth/group/edit'); ?>" 
+                           data-operate-del="<?php echo $auth->check('auth/group/del'); ?>" 
+                           width="100%">
+                    </table>
+                </div>
             </div>
 
         </div>
     </div>
-    <div class="form-group layer-footer">
-        <label class="control-label col-xs-12 col-sm-2"></label>
-        <div class="col-xs-12 col-sm-8">
-            <button type="submit" class="btn btn-success btn-embossed disabled"><?php echo __('OK'); ?></button>
-            <button type="reset" class="btn btn-default btn-embossed"><?php echo __('Reset'); ?></button>
-        </div>
-    </div>
-</form>
+</div>
 
                             </div>
                         </div>

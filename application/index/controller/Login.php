@@ -8,6 +8,7 @@ namespace app\index\controller;
 use app\index\model\Userlogin;
 use think\Controller;
 use think\Db;
+use think\Session;
 
 class Login extends Controller
 {
@@ -27,18 +28,37 @@ class Login extends Controller
             'username'  => '334455',
             'password'  => '123456'
         ];
-        $data = input('data');
-
+//        $data = input('data');
+        $auth = $data['auth'];
+        if($auth!=1 && $auth!=2){
+            falsePro(2,'登录方式非法');
+            exit;
+        }
         $login = new Userlogin();
         $res = $login->login($data);
+
+        if(($res-3)%10 == 0){
+            session('auth',$auth);
+            dump(Session::get());
+            falsePro(0,$auth.'登录成功');
+            exit;
+        }elseif(($res-2)%10 == 0){
+            falsePro(1,'密码错误');
+            exit;
+        }elseif (($res-1)%10 == 0){
+            falsePro(1,'用户不存在');
+            exit;
+        }
+
+
 
         /*if($data['auth']==1){
             echo "这是学生用户！";
         }else{
             echo "这是教师用户！";
         }*/
-        $json = ['success'=>0,'succmsg'=>'cc'];
-        echo json_encode($json,JSON_UNESCAPED_UNICODE);
+        /*$json = ['success'=>0,'succmsg'=>'cc'];
+        echo json_encode($json,JSON_UNESCAPED_UNICODE);*/
         /*$url = 'Login/index';
         if(($res-3)%10 == 0){
             session('auth',$data['auth']);
@@ -56,14 +76,36 @@ class Login extends Controller
      * @Description: 找回密码，通过使用phpemail发送六位数字密码
      */
     public function findpass(){
-        $id = session('uid'); //ID
-        $auth = session('auth'); //Auth
-        $emailPwd = '223344';
-        $useremail = '1219532602@qq.com';
+        //$data['useremail']
+        $idcard = '201509010106';
+        $auth = 1;
+        $useremail = 'fuyanduo_1026@sina.com';
 
         $self = new Userlogin();
-        $res = $self->findpass($auth,$id,$useremail);
-        $url = "Index/index";
+        $res = $self->findpass($auth,$idcard,$useremail);
+
+        switch ($res){
+            case 1:
+                falsePro(0,'发送成功');
+                break;
+            case 2:
+                falsePro(1,'各项不可为空');
+                break;
+            case 3:
+                falsePro(2,'邮箱不符合规范');
+                break;
+            case 0:
+                falsePro(3,'找回失败哦');
+                break;
+            case 4:
+                falsePro(3,'找回失败');
+                break;
+            default:
+                falsePro(4,'未知错误');
+                break;
+        }
+
+        /*$url = "Index/index";
         switch ($res){
             case 1:
                 $this->success("发送成功",$url);
@@ -73,9 +115,9 @@ class Login extends Controller
                 $this->error("邮箱不符合规范",$url);
             case 0:
             case 4:
-                $this->error("发送失败",$url);
+                $this->error("找回失败",$url);
             default:
                 $this->error("未知错误",$url);
-        }
+        }*/
     }
 }

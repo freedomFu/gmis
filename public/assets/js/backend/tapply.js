@@ -15,7 +15,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             });
 
             var table = $("#table");
-
+            //,formatter:Table.api.formatter.toggle
             // 初始化表格
             table.bootstrapTable({
                 url: $.fn.bootstrapTable.defaults.extend.index_url,
@@ -24,20 +24,40 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'id', title: __('Id')},
+                        {field: 'id', title: __('Id'),operate:false},
                         {field: 'title', title: __('Title')},
                         {field: 'nature', title: __('Nature')},
                         {field: 'source', title: __('Source')},
-                        {field: 'isnew', title: __('Isnew')},
-                        {field: 'isprac', title: __('Isprac')},
-                        {field: 'proid', title: __('Proid')},
-                        {field: 'note', title: __('Note')},
-                        {field: 'stuid', title: __('Stuid')},
-                        {field: 'teaid', title: __('Teaid')},
-                        {field: 'weigh', title: __('Weigh')},
-                        {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
-                        {field: 'updatetime', title: __('Updatetime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
-                        {field: 'status', title: __('Status'), searchList: {"已通过":__('已通过'),"未通过":__('未通过')},yes: '已通过', no: '未通过', formatter: Table.api.formatter.toggle},
+                        {field: 'isnew', title: __('Isnew'),formatter:function(value){
+                                if(value == 1){
+                                    return '是';
+                                }else{
+                                    return '否';
+                                }
+                            }},
+                        {field: 'isprac', title: __('Isprac'),formatter:function(value){
+                                if(value == 1){
+                                    return '是';
+                                }else{
+                                    return '否';
+                                }
+                            }},
+                        {field: 'profess.proname', title: __('Profess.proname')},
+                        {field: 'student.stuidcard', title: __('Student.stuidcard'),visible:false},
+                        {field: 'student.stuname', title: __('Student.stuname')},
+                        {field: 'student.stuclass', title: __('Student.stuclass'),visible:false},
+                        {field: 'student.stuphone', title: __('Student.stuphone'),visible:false},
+                        {field: 'teacher.teaname', title: __('Teacher.teaname')},
+                        {field: 'proid', title: __('Proid'),visible:false,operate:false},
+                        {field: 'note', title: __('Note'),operate:false},
+                        {field: 'stuid', title: __('Stuid'),visible:false,operate:false},
+                        {field: 'belongsenior', title: __('Belongsenior')},
+                        {field: 'teaid', title: __('Teaid'),visible:false,operate:false},
+                        {field: 'weigh', title: __('Weigh'),visible:false,operate:false},
+                        {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime,visible:false,operate:false},
+                        {field: 'updatetime', title: __('Updatetime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime,visible:false,operate:false},
+                        {field: 'status', title: __('Status'), searchList: {"已通过":__('已通过'),"未通过":__('未通过')}, yes: '已通过', no: '未通过',formatter: Table.api.formatter.toggle},
+
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]

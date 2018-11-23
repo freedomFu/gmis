@@ -36,4 +36,27 @@ class Reprocess extends Base
         $list = $pro->showProcess($id,$xq);
         dump($list);
     }
+
+    /**
+     * 保存数据  编辑成绩
+     */
+    public function editScore(){
+        $process = new Process();
+        $res = $process->editScore(1,80);
+
+        switch ($res){
+            case 0:
+                falsePro(1,"添加成绩失败");
+                break;
+            case 1:
+                falsePro(0,"添加成绩成功");
+                break;
+            case 2:
+                falsePro(2,"不可更新成绩");
+                break;
+            default:
+                falsePro(3,"未知错误");
+                break;
+        }
+    }
 }
