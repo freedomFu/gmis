@@ -37,9 +37,11 @@ class Teapply extends Base
         $leftNum = $titlenum-$appliedNum;
         $xq = getSenior();
         $list = $teapply->show($id,$xq);
-        $this->assign('leftnum',$leftNum);
+        falsePro(0,'',$list,$titlenum,$leftNum);
+
+        /*$this->assign('leftnum',$leftNum);
         $this->assign('tapplylist',$list);
-        return $this->fetch('tapply/index');
+        return $this->fetch('tapply/index');*/
     }
 
     /**
@@ -53,9 +55,10 @@ class Teapply extends Base
         $stuid = session('uid');
         $titlenum = $teapply->getTitleNum($stuid);  //允许的个数
         $appliedNum = $teapply->getAppliedNum($stuid);  //已经提交申请的数目
-        $url = 'index';
         if($titlenum<=$appliedNum){
-            $this->error("您已经没有剩余名额了",$url);
+            falsePro(3,"您已经没有剩余名额了！");
+            exit;
+//            $this->error("您已经没有剩余名额了",$url);
         }
 
         $teaid = session('uid');
@@ -66,18 +69,17 @@ class Teapply extends Base
             'isnew'         =>  '0',
             'isprac'        =>  '1',
             'teaid'         =>  $teaid,
-            'proid'         =>  5,
-            'note'          =>  '无',
+            'proid'         =>  4,
             'belongsenior'  =>  getSenior()
         ];
 
         $res = $teapply->add($data);
         if($res == 1){
-            $this->success("添加成功",$url);
+            falsePro(0,"添加成功");
         }elseif($res ==2){
-            $this->error("已经有这个题目了",$url);
+            falsePro(2,"题目重复");
         }else{
-            $this->error("添加失败",$url);
+            falsePro(1,"添加失败");
         }
     }
 
@@ -94,23 +96,22 @@ class Teapply extends Base
         $data = [
             'title'     =>  '基于物联网系统的防护系统',
             'nature'    =>  '未知',
-            'source'    =>  '不知道',
+            'source'    =>  '未知',
             'isnew'     =>  '0',
             'isprac'    =>  '1',
-            'note'      =>  '无'
+            'proid'     =>  '3'
         ];
 
         $teapply = new Tapply();
         $res = $teapply->edit($id,$data);
-        $url = 'index';
         if($res == 1){
-            $this->success('修改成功',$url);
+            falsePro(0,"修改成功");
         }elseif($res == 2){
-            $this->error('重复的题目',$url);
+            falsePro(2,"题目出现重复");
         }elseif($res==3){
-            $this->error('已经通过申请，不能修改了',$url);
+            falsePro(3,"已经通过申请，不可以再修改");
         }else{
-            $this->error('修改失败',$url);
+            falsePro(1,"修改失败");
         }
     }
 
@@ -123,18 +124,16 @@ class Teapply extends Base
         $this->isTeacher();
         $teapply = new Tapply();
 //        $id = input('id');
-        $id = 16;
+        $id = 14;
         $res = $teapply->del($id);
-        $url = 'index';
-        if($res){
-            $this->success('删除成功',$url);
+        if($res==1){
+            falsePro(0,"删除成功");
+        }elseif($res==2){
+            falsePro(2,"已经通过申请，不可删除");
+        }elseif($res==3){
+            falsePro(3,"用户id不存在");
         }else{
-            $this->error('删除失败',$url);
+            falsePro(1,"删除失败");
         }
-    }
-
-    public function test(){
-        $teapply = new Tapply();
-        echo $teapply->checkIsAllow(14);
     }
 }

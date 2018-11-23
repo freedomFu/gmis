@@ -65,7 +65,7 @@ function getSenior(){
  * @DateTime:    2018/11/22 14:42
  * @Description: 返回json数据
  */
-function falsePro($errno, $errmsg){
-    $json = ['errno'=>$errno,'errmsg'=>$errmsg];
+function falsePro($errno, $errmsg,$data=null,$count=null,$left=null){
+    $json = ['errno'=>$errno,'errmsg'=>$errmsg,'data'=>$data,'count'=>$count,'left'=>$left];
     echo json_encode($json,JSON_UNESCAPED_UNICODE);
 }

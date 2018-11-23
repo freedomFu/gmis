@@ -155,12 +155,21 @@ class Tapply extends Model{
      * @Description: 删除数据
      */
     public function del($id){
+        $isAllow = $this->checkIsAllow($id);
+        if($isAllow){
+            return 2; // 已经通过申请，不能再删除了
+        }
+
         $ta = Tapply::get($id);
-        $res = $ta->delete();
-        if($res){
-            return 1; //删除成功
+        if($ta){
+            $res = $ta->delete();
+            if($res){
+                return 1; //删除成功
+            }else{
+                return 0; //删除失败
+            }
         }else{
-            return 0; //删除失败
+            return 3;
         }
     }
 

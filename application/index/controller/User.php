@@ -4,6 +4,7 @@ use app\index\controller\Base;
 use app\index\model\Userlogin;
 use think\Controller;
 use think\Db;
+use think\Session;
 
 class User extends Base
 {
@@ -17,7 +18,8 @@ class User extends Base
         session('auth',0);
         session('username','0');
         session('uid',0);
-        $this->success('退出成功','Login/index');
+        Session::delete('isLogin');
+        $this->success('退出成功','index/index');
     }
 
     /**

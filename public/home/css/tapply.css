@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(245, 245, 245);
+    padding-top: 20px;
+}
+.title{
+    margin: 2px;
+    border-bottom:  1px solid gray;
+    background-color: rgb(244, 244, 244)
+}
+li{
+    list-style: none;
+    text-indent:15px
+}
+button{
+    outline: none;
+}
+
+
+#map{
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(254, 254, 254);
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 10px;
+}
+#map h3{
+    font-size: 25px;
+    padding-left: 50px;
+    text-align: center;
+}
+
+#map_box{
+    width: 100%;
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content:space-around;
+}
+#map_box>div{
+    width: 150px;
+    margin: 20px 0px;
+}
+#map_box>div::after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left: 8px solid #AFABAB;
+    position: relative;
+    top: -7px;
+    left: 25px;
+}
+#map_box>div:nth-last-child(1)::after{
+    border: 0px solid transparent;
+}
+#map_box>div:nth-child(1){
+    margin-left: 20px;
+}
+
+
+#apply{
+    width: 80%;
+    margin: 40px auto;
+    margin-top: 0px;
+    background-color: rgb(254, 254, 254);
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+.table{
+    margin-top: 20px;
+}
+#apply td{
+    width: 8%;
+}
+
+/* 年份 */
+#apply_remind>span:nth-child(1){
+    font-size: 1.4em;
+}
+
+/* 几个可申请题目 */
+#apply_remind>span:nth-child(2)>span{
+    font-size: 1.4em;
+}
+
+.apply_save{
+    width: 49%;
+    display: inline-block;
+    text-align: center
+}
+.apply_save button{
+    width: 175px;
+    height: 50px;
+    margin: auto auto;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.tips{
+    float: right
+}
+
+#apply_save_data{
+    display: block;
+    margin: auto auto;
+}
+
+
+
+
+
+#pre{
+    width: 80%;
+    margin: 40px auto;
+    background-color: rgb(254, 254, 254);
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#operation{
+    width: 90%;
+    display: flex;
+}
+#operation ul{
+    margin: 0 auto;
+    margin-top:-10px;
+    text-align: center;
+}
+#operation ul li{
+    cursor: pointer;
+}
+
+
+.revisable{
+    border-bottom: 1px dashed rgb(52,122,182) !important ;
+    border-top: 1px dashed rgb(52,122,182) !important ;
+
+}

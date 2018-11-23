@@ -40,7 +40,7 @@
         </p>
     <?php endif; ?>
     <p class="clearfix">
-        <a href="/gmis/public/" class="btn btn-grey"><?php echo __('Go back'); ?></a>
+        <a href="http://127.0.0.1/gmis/public/home" class="btn btn-grey"><?php echo __('Go back'); ?></a>
         <?php if($url): ?>
             <a href="<?php echo $url; ?>" class="btn btn-primary"><?php echo __('Jump now'); ?></a>
         <?php endif; ?>

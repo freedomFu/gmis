@@ -34,7 +34,11 @@ class Reprocess extends Base
         $id = session('uid');
         $xq = getSenior();
         $list = $pro->showProcess($id,$xq);
-        dump($list);
+        if($list){
+            falsePro(0,'获取成功',$list);
+        }else{
+            falsePro(1,'获取失败');
+        }
     }
 
     /**

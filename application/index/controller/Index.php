@@ -12,13 +12,14 @@ use think\Session;
 
 class Index extends Base
 {
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/23 15:18
+     * @Description: 首页
+     */
     public function index(){
         dump(Session::get());
-        return $this->fetch('user/login');
-    }
-
-    public function test(){
-        getSenior();
+        return $this->fetch('index');
     }
 
 }

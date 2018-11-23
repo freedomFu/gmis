@@ -36,6 +36,18 @@ class Prochart extends Model
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
 
+    private function getStatus($status){
+        if($status=="未开始"){
+            $res = 0;
+        }elseif ($status=="正在进行"){
+            $res = 1;
+        }elseif ($status=="已截止"){
+            $res = 2;
+        }
+
+        return $res;
+    }
+
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/18 21:07
@@ -43,6 +55,12 @@ class Prochart extends Model
      */
     public function prochart(){
         $list = Prochart::order('id asc')->select();
+        $total = count($list);
+        for($i=0;$i<$total;$i++){
+            $status = $this->getStatus($list[$i]['status']);
+            $list[$i]['statusnum'] = $status;
+        }
+
         return $list;
     }
 }

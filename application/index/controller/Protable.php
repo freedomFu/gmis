@@ -31,7 +31,7 @@ class Protable extends Base{
         $this->isTeacher();
         $pc = new Prochart();
         $prochart = $pc->prochart();
-
+//        dump($prochart);
         $this->assign('prochart',$prochart);
         return $this->fetch('tapply/index');
     }

@@ -7,14 +7,28 @@
 namespace app\index\controller;
 use app\index\model\Userlogin;
 use think\Controller;
-use think\Db;
 use think\Session;
 
 class Login extends Controller
 {
 
     public function index(){
+        dump(Session::get());
         return $this->fetch('user/login');
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/23 14:33
+     * @Description: 判断用户是否登录
+     */
+    private function isLogin(){
+        $isLogin = \session('isLogin');
+        if(!empty($isLogin)){
+            dump(Session::get());
+            $this->error("您已经登录！","index/index");
+            exit;
+        }
     }
 
     /**
@@ -23,6 +37,8 @@ class Login extends Controller
      * @Description: 判断用户登录情况
      */
     public function login(){
+        $this->isLogin();
+
         $data = [
             'auth'      => 2,
             'username'  => '334455',
@@ -39,6 +55,7 @@ class Login extends Controller
 
         if(($res-3)%10 == 0){
             session('auth',$auth);
+            session('isLogin',1);
             dump(Session::get());
             falsePro(0,$auth.'登录成功');
             exit;
@@ -49,25 +66,6 @@ class Login extends Controller
             falsePro(1,'用户不存在');
             exit;
         }
-
-
-
-        /*if($data['auth']==1){
-            echo "这是学生用户！";
-        }else{
-            echo "这是教师用户！";
-        }*/
-        /*$json = ['success'=>0,'succmsg'=>'cc'];
-        echo json_encode($json,JSON_UNESCAPED_UNICODE);*/
-        /*$url = 'Login/index';
-        if(($res-3)%10 == 0){
-            session('auth',$data['auth']);
-            $this->success('登陆成功','Index/index');
-        }elseif(($res-2)%10 == 0){
-            $this->error('密码错误',$url);
-        }elseif (($res-1)%10 == 0){
-            $this->error('用户不存在',$url);
-        }*/
     }
 
     /**
@@ -104,20 +102,5 @@ class Login extends Controller
                 falsePro(4,'未知错误');
                 break;
         }
-
-        /*$url = "Index/index";
-        switch ($res){
-            case 1:
-                $this->success("发送成功",$url);
-            case 2:
-                $this->error("不可为空",$url);
-            case 3:
-                $this->error("邮箱不符合规范",$url);
-            case 0:
-            case 4:
-                $this->error("找回失败",$url);
-            default:
-                $this->error("未知错误",$url);
-        }*/
     }
 }
