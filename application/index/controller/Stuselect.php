@@ -23,6 +23,11 @@ class Stuselect extends Base
         }
     }
 
+    public function show(){
+        $this->isStudent();
+        return $this->fetch('sselect/index');
+    }
+
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/17 10:30
@@ -32,11 +37,9 @@ class Stuselect extends Base
         $this->isStudent();
 
         $sselect = new Sselect();
-        $teaid = 5;
-        $list = $sselect->sselect($teaid);
-//        dump($list);
-        $this->assign('list',$list);
-        return $this->fetch('sselect/index');
+        $stuid = session('uid');
+        $list = $sselect->sselect($stuid);
+        falsePro('0','',$list);
     }
 
     /**
@@ -46,10 +49,9 @@ class Stuselect extends Base
      */
     public function showApplyTitle(){
         $this->isStudent();
-
         $sselect = new Sselect();
         $senior=getSenior();
-        $list = $sselect->showApplyTitle(1,"",$senior);
+        $list = $sselect->showApplyTitle(null,"",$senior);
         $listcount = count($list);
         for($i=0;$i<$listcount;$i++){
             $titleid = $list[$i]['id'];
@@ -58,10 +60,13 @@ class Stuselect extends Base
             $list[$i]['total'] = $sselect->getCount($titleid);
         }
 
-        dump(session('uid'));
+        $auth = session('auth');
+        if($auth==1){
+            falsePro(0,$auth,$list);
+        }else{
+            falsePro(1,$auth,$list);
+        }
 
-        $this->assign('list',$list);
-        return $this->fetch('sselect/showTitle');
     }
 
     /**

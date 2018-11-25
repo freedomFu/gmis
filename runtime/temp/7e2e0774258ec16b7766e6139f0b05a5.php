@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543089811;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>学生毕设选题系统</title>
-    <link rel="stylesheet" href="__HOME_CSS__/sselect.css">
+    <link rel="stylesheet" href="http://127.0.0.1/gmis/public/home/css/sselect.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -119,6 +120,6 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
-    <script src="__HOME_JS__/sselect/sselect.js"></script>
+    <script src="http://127.0.0.1/gmis/public/home/js/sselect/sselect.js"></script>
 </body>
 </html>

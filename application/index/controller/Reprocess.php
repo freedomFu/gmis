@@ -46,7 +46,9 @@ class Reprocess extends Base
      */
     public function editScore(){
         $process = new Process();
-        $res = $process->editScore(1,80);
+        $id = $_POST['id'];
+        $score = $_POST['replyscore'];
+        $res = $process->editScore($id,$score);
 
         switch ($res){
             case 0:

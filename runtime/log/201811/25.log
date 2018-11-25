@@ -1,0 +1,4090 @@
+---------------------------------------------------------------
+[ 2018-11-25T18:33:25+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/
+[运行时间：0.532373s] [吞吐率：1.88req/s] [内存消耗：4,274.49kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000203s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.034661s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017358s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T18:33:27+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/login/index.html
+[运行时间：0.462067s] [吞吐率：2.16req/s] [内存消耗：4,156.21kb] [文件加载：60]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000464s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024691s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015688s ]
+[ info ] [ RUN ] app\index\controller\Login->index[ C:\wamp64\www\gmis\application\index\controller\Login.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T18:33:36+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Login/login
+[运行时间：0.448186s] [吞吐率：2.23req/s] [内存消耗：5,906.48kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000529s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.025379s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '38',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/login/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'auth' => '2',
+  'username' => '234567',
+  'password' => '123456',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.019274s ]
+[ info ] [ RUN ] app\index\controller\Login->login[ C:\wamp64\www\gmis\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013538s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003522s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` WHERE  `teaidcard` = '234567' LIMIT 1 [ RunTime:0.002315s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:33:38+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Index/index
+[运行时间：0.584082s] [吞吐率：1.71req/s] [内存消耗：6,180.48kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000639s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021132s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/login/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013902s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\gmis\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\index\index.html [ array (
+  0 => 'prochart',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013350s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_prochart` [ RunTime:0.004457s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_prochart` ORDER BY `id` ASC [ RunTime:0.002535s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:33:46+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.440211s] [吞吐率：2.27req/s] [内存消耗：6,281.41kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000188s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.016862s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.012051s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013635s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003774s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001925s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:33:48+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.526532s] [吞吐率：1.90req/s] [内存消耗：6,049.58kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000230s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024020s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.021867s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013947s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.004194s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.002056s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003865s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002002s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.003100s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:33:48+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.446161s] [吞吐率：2.24req/s] [内存消耗：5,919.49kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000413s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018915s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.019869s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004740s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003682s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.002499s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:34:07+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/edit
+[运行时间：0.509777s] [吞吐率：1.96req/s] [内存消耗：6,028.40kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000241s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023659s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '285',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '19',
+  'title' => '测试管理系统',
+  'nature' => '未知',
+  'source' => '未知',
+  'isnew' => 'false',
+  'isprac' => 'true',
+  'proid' => '3',
+  'proname' => '网络工程',
+  'note' => '无',
+  'status' => '未通过',
+  'stuidcard' => '',
+  'stuname' => '',
+  'stuclass' => '',
+  'stuphone' => '',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.023402s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->edit[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004486s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003476s ]
+[ sql ] [ SQL ] SELECT `status` FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001942s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001986s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002893s ]
+[ sql ] [ SQL ] UPDATE `gmis_tapply`  SET `isnew`='0',`updatetime`=1543142047  WHERE  `id` = 19 [ RunTime:0.012461s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:34:21+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/edit
+[运行时间：0.395679s] [吞吐率：2.53req/s] [内存消耗：6,038.01kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000203s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.016381s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '294',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '19',
+  'title' => '测试管理系统哦',
+  'nature' => '未知',
+  'source' => '未知',
+  'isnew' => 'false',
+  'isprac' => 'true',
+  'proid' => '3',
+  'proname' => '网络工程',
+  'note' => '无',
+  'status' => '未通过',
+  'stuidcard' => '',
+  'stuname' => '',
+  'stuclass' => '',
+  'stuphone' => '',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.012362s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->edit[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004791s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003464s ]
+[ sql ] [ SQL ] SELECT `status` FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001855s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002692s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `title` = '测试管理系统哦' LIMIT 1 [ RunTime:0.002098s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002019s ]
+[ sql ] [ SQL ] UPDATE `gmis_tapply`  SET `title`='测试管理系统哦',`isnew`='0',`updatetime`=1543142061  WHERE  `id` = 19 [ RunTime:0.012266s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:34:25+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.446143s] [吞吐率：2.24req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000215s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018722s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.018523s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013475s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003362s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001873s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:34:26+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.460976s] [吞吐率：2.17req/s] [内存消耗：6,049.95kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000217s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022640s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016128s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005365s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003692s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001805s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003646s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002072s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002863s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:34:27+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.412116s] [吞吐率：2.43req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000220s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019544s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.010969s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013174s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003992s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.002679s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:37:48+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.495775s] [吞吐率：2.02req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000233s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023407s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022816s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005754s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003811s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.002014s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:37:50+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.411649s] [吞吐率：2.43req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000186s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022074s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015025s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011995s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003385s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001860s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:37:51+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.433018s] [吞吐率：2.31req/s] [内存消耗：6,049.95kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000212s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018144s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013729s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013264s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003819s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001848s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004239s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.001955s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002875s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:37:51+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.441981s] [吞吐率：2.26req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000224s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019171s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.018475s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005155s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.004111s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.003445s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:38:00+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/edit
+[运行时间：0.478816s] [吞吐率：2.09req/s] [内存消耗：6,029.66kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000251s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024764s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '294',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '19',
+  'title' => '测试管理系统哦',
+  'nature' => '未知',
+  'source' => '未知',
+  'isnew' => 'false',
+  'isprac' => 'true',
+  'proid' => '1',
+  'proname' => '网络工程',
+  'note' => '无',
+  'status' => '未通过',
+  'stuidcard' => '',
+  'stuname' => '',
+  'stuclass' => '',
+  'stuphone' => '',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.018242s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->edit[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004186s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003146s ]
+[ sql ] [ SQL ] SELECT `status` FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001499s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001811s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001759s ]
+[ sql ] [ SQL ] UPDATE `gmis_tapply`  SET `isnew`='0',`proid`=1,`updatetime`=1543142280  WHERE  `id` = 19 [ RunTime:0.004698s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:38:04+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.621374s] [吞吐率：1.61req/s] [内存消耗：6,019.09kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000199s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020165s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013029s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021554s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.005835s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.002489s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:38:05+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.438065s] [吞吐率：2.28req/s] [内存消耗：6,049.48kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000334s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019363s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016086s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004765s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003277s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.002207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003650s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002546s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002644s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:38:05+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.483441s] [吞吐率：2.07req/s] [内存消耗：5,919.49kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000187s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.017016s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013049s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014128s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.004784s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.003247s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:38:23+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/edit
+[运行时间：0.427476s] [吞吐率：2.34req/s] [内存消耗：6,028.57kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000217s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019669s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '330',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '19',
+  'title' => '测试管理系统哦',
+  'nature' => '未知',
+  'source' => '未知',
+  'isnew' => 'false',
+  'isprac' => 'true',
+  'proid' => '1',
+  'proname' => '计算机科学与技术',
+  'note' => '无',
+  'status' => '未通过',
+  'stuidcard' => '',
+  'stuname' => '',
+  'stuclass' => '',
+  'stuphone' => '',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011655s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->edit[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013499s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004021s ]
+[ sql ] [ SQL ] SELECT `status` FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002112s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002508s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002136s ]
+[ sql ] [ SQL ] UPDATE `gmis_tapply`  SET `isnew`='0',`updatetime`=1543142303  WHERE  `id` = 19 [ RunTime:0.012282s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:41:03+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.399499s] [吞吐率：2.50req/s] [内存消耗：6,019.12kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000194s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020392s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015153s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012600s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003154s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001629s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:41:04+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.494167s] [吞吐率：2.02req/s] [内存消耗：6,049.48kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000227s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.035603s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017859s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005014s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003771s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001887s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003441s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.001908s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002759s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:41:05+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.483224s] [吞吐率：2.07req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000249s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021487s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017892s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004726s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003911s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.002541s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:41:09+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/edit
+[运行时间：0.488551s] [吞吐率：2.05req/s] [内存消耗：6,028.49kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000235s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020460s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '330',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '19',
+  'title' => '测试管理系统哦',
+  'nature' => '未知',
+  'source' => '未知',
+  'isnew' => 'false',
+  'isprac' => 'true',
+  'proid' => '1',
+  'proname' => '计算机科学与技术',
+  'note' => '无',
+  'status' => '未通过',
+  'stuidcard' => '',
+  'stuname' => '',
+  'stuclass' => '',
+  'stuphone' => '',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.019002s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->edit[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012282s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004934s ]
+[ sql ] [ SQL ] SELECT `status` FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001795s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002166s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002258s ]
+[ sql ] [ SQL ] UPDATE `gmis_tapply`  SET `isnew`='0',`updatetime`=1543142469  WHERE  `id` = 19 [ RunTime:0.004709s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:41:12+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.464266s] [吞吐率：2.15req/s] [内存消耗：6,019.12kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000214s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020350s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014256s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005127s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003574s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001899s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:41:14+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.431588s] [吞吐率：2.32req/s] [内存消耗：6,049.48kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000234s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021547s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011757s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013097s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.004052s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001856s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004513s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.001920s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.003008s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:41:15+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.616698s] [吞吐率：1.62req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000247s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024447s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.035875s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007299s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.004488s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.003252s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:42:42+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/edit
+[运行时间：0.445926s] [吞吐率：2.24req/s] [内存消耗：6,032.44kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000227s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023056s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '370',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '19',
+  'title' => '基于CUBA的金秋杯的管理系统',
+  'nature' => '未知',
+  'source' => '未知',
+  'isnew' => 'false',
+  'isprac' => 'true',
+  'proid' => '1',
+  'proname' => '计算机科学与技术',
+  'note' => '无',
+  'status' => '未通过',
+  'stuidcard' => '',
+  'stuname' => '',
+  'stuclass' => '',
+  'stuphone' => '',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.018818s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->edit[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005186s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004193s ]
+[ sql ] [ SQL ] SELECT `status` FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001907s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002061s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `title` = '基于CUBA的金秋杯的管理系统' LIMIT 1 [ RunTime:0.002277s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:42:45+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.417182s] [吞吐率：2.40req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000206s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018517s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.019789s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004762s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.004524s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001947s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:42:47+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.675247s] [吞吐率：1.48req/s] [内存消耗：6,049.95kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000230s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.029068s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.028923s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004983s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.005368s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.002479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004379s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002097s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.003471s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:42:48+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.512057s] [吞吐率：1.95req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000448s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024401s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016837s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004754s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.004328s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.003110s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:43:26+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/add
+[运行时间：0.557735s] [吞吐率：1.79req/s] [内存消耗：6,052.84kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000232s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.028802s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '128',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+  'nature' => '',
+  'source' => '',
+  'isnew' => '',
+  'isprac' => '',
+  'proid' => '',
+  'isallow' => 'false',
+  'note' => '',
+  'status' => '状态',
+  'stuidcard' => '',
+  'stuname' => '',
+  'stuclass' => '',
+  'stuphone' => '',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022465s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->add[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005367s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.004596s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.002150s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004117s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002068s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `title` = '测试管理系统' LIMIT 1 [ RunTime:0.002066s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_tapply` (`title` , `nature` , `source` , `isnew` , `isprac` , `teaid` , `proid` , `belongsenior` , `createtime` , `updatetime`) VALUES ('测试管理系统' , '未知' , '未知' , '0' , '1' , 3 , 4 , '2018-2019' , 1543142605 , 1543142605) [ RunTime:0.008735s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:44:10+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.439542s] [吞吐率：2.28req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000242s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023457s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011642s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013195s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003301s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001816s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:44:12+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.474908s] [吞吐率：2.11req/s] [内存消耗：6,051.05kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000219s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023676s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.018353s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004910s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003702s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003772s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.001966s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002678s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:44:12+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.381813s] [吞吐率：2.62req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000214s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.017179s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013025s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004412s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003645s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.002761s ]
+---------------------------------------------------------------
+[ 2018-11-25T18:44:44+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/edit
+[运行时间：0.405986s] [吞吐率：2.46req/s] [内存消耗：6,028.57kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000180s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019773s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '330',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '19',
+  'title' => '测试管理系统哦',
+  'nature' => '未知',
+  'source' => '未知',
+  'isnew' => 'false',
+  'isprac' => 'true',
+  'proid' => '1',
+  'proname' => '计算机科学与技术',
+  'note' => '无',
+  'status' => '未通过',
+  'stuidcard' => '',
+  'stuname' => '',
+  'stuclass' => '',
+  'stuphone' => '',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014473s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->edit[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005078s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003811s ]
+[ sql ] [ SQL ] SELECT `status` FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001901s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002324s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.002224s ]
+[ sql ] [ SQL ] UPDATE `gmis_tapply`  SET `isnew`='0',`updatetime`=1543142684  WHERE  `id` = 19 [ RunTime:0.012565s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:00:56+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.587975s] [吞吐率：1.70req/s] [内存消耗：6,019.09kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000562s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.054241s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.021542s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013676s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.004826s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.002603s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:00:57+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.601365s] [吞吐率：1.66req/s] [内存消耗：6,050.49kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000221s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.026675s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.023960s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005498s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.004074s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.002878s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004017s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002632s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.003748s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:00:58+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.412015s] [吞吐率：2.43req/s] [内存消耗：5,919.49kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000387s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018264s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011611s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013099s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.004385s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.002509s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:01:06+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/editScore
+[运行时间：0.398337s] [吞吐率：2.51req/s] [内存消耗：5,923.29kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000184s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020035s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'editScore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '396',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'title' => '基于动力系统的防护系统',
+  'stuidcard' => '201509010108',
+  'stuname' => '李君杰',
+  'stuclass' => '计科1504',
+  'starttimer' => '2019.1.1',
+  'middletimer' => '尚未填写',
+  'replytimer' => '尚未填写',
+  'replyplace' => '尚未填写',
+  'note' => '无',
+  'replyscore' => '100',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014522s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->editScore[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004721s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003147s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_process` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001983s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:01:11+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/editScore
+[运行时间：0.398593s] [吞吐率：2.51req/s] [内存消耗：5,923.29kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000190s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018769s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'editScore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '396',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'title' => '基于动力系统的防护系统',
+  'stuidcard' => '201509010108',
+  'stuname' => '李君杰',
+  'stuclass' => '计科1504',
+  'starttimer' => '2019.1.1',
+  'middletimer' => '尚未填写',
+  'replytimer' => '尚未填写',
+  'replyplace' => '尚未填写',
+  'note' => '无',
+  'replyscore' => '100',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011999s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->editScore[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003949s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003034s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_process` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.002099s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:01:43+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.423982s] [吞吐率：2.36req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000218s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018096s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.018821s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004859s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003892s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001827s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:01:44+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.490882s] [吞吐率：2.04req/s] [内存消耗：6,051.05kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000245s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024857s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022783s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013266s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003674s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.002282s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004049s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002308s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002468s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:01:45+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.370800s] [吞吐率：2.70req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000388s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018503s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.012890s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012246s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003723s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.002788s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:01:51+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/editScore
+[运行时间：0.391467s] [吞吐率：2.55req/s] [内存消耗：5,923.29kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000307s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022914s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'editScore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '395',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'title' => '基于动力系统的防护系统',
+  'stuidcard' => '201509010108',
+  'stuname' => '李君杰',
+  'stuclass' => '计科1504',
+  'starttimer' => '2019.1.1',
+  'middletimer' => '尚未填写',
+  'replytimer' => '尚未填写',
+  'replyplace' => '尚未填写',
+  'note' => '无',
+  'replyscore' => '11',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014716s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->editScore[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011918s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003062s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_process` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001724s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:01:54+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.408820s] [吞吐率：2.45req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000180s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.015237s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017463s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013366s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.002961s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001576s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:01:56+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.437443s] [吞吐率：2.29req/s] [内存消耗：6,051.05kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000206s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019441s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015007s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005808s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.004799s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.002131s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003770s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002384s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002671s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:01:56+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.425623s] [吞吐率：2.35req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000213s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019761s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014391s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004799s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.004229s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.002604s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:06:00+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.474028s] [吞吐率：2.11req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000330s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022400s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017167s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004924s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.004361s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.002097s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:06:02+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.442858s] [吞吐率：2.26req/s] [内存消耗：6,051.05kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000212s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022696s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017875s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004811s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003818s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001766s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004243s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002153s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002632s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:06:02+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.366354s] [吞吐率：2.73req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000204s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018509s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013717s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013069s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003582s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.002570s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:06:07+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/editScore
+[运行时间：0.366874s] [吞吐率：2.73req/s] [内存消耗：5,923.44kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000209s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018489s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'editScore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '394',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'title' => '基于动力系统的防护系统',
+  'stuidcard' => '201509010108',
+  'stuname' => '李君杰',
+  'stuclass' => '计科1504',
+  'starttimer' => '2019.1.1',
+  'middletimer' => '尚未填写',
+  'replytimer' => '尚未填写',
+  'replyplace' => '尚未填写',
+  'note' => '无',
+  'replyscore' => '0',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011219s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->editScore[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004520s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003783s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_process` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001966s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:06:11+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.367760s] [吞吐率：2.72req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000193s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.016255s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011925s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003869s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.002976s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001592s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:06:13+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.481792s] [吞吐率：2.08req/s] [内存消耗：6,051.05kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000240s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023066s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015535s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012827s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003623s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001791s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004108s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002314s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002751s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:06:13+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.431231s] [吞吐率：2.32req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000424s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.017775s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013271s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012403s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003912s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.003519s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:08:53+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Teapply/show
+[运行时间：0.400493s] [吞吐率：2.50req/s] [内存消耗：6,019.18kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000197s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020081s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015843s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->show[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html [ array (
+  0 => 'profess',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012171s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003627s ]
+[ sql ] [ SQL ] SELECT `id`,`proname` FROM `gmis_profess` WHERE  `status` = '正常' [ RunTime:0.001879s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:08:54+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Teapply/index
+[运行时间：0.439670s] [吞吐率：2.27req/s] [内存消耗：6,051.05kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000195s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023585s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Teapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.018457s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Teapply->index[ C:\wamp64\www\gmis\application\index\controller\Teapply.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004915s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003826s ]
+[ sql ] [ SQL ] SELECT `teatitlenum` FROM `gmis_teacher` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001817s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003655s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` WHERE  `teaid` = 3 LIMIT 1 [ RunTime:0.002259s ]
+[ sql ] [ SQL ] SELECT `ta`.`id`,`title`,`nature`,`source`,`isnew`,`isprac`,`ta`.`proid`,`proname`,`note`,`ta`.`status`,`stuidcard`,`stuname`,`stuclass`,`stuphone` FROM `gmis_tapply` `ta` LEFT JOIN `gmis_student` `gs` ON `gs`.`id`=`ta`.`stuid` LEFT JOIN `gmis_profess` `gp` ON `gp`.`id`=`ta`.`proid` WHERE  `teaid` = 3  AND `belongsenior` = '2018-2019' [ RunTime:0.002898s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:08:55+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Reprocess/show
+[运行时间：0.387978s] [吞吐率：2.58req/s] [内存消耗：5,919.51kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000225s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020067s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Reprocess',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Teapply/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016400s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Reprocess->show[ C:\wamp64\www\gmis\application\index\controller\Reprocess.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004904s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_process` [ RunTime:0.003526s ]
+[ sql ] [ SQL ] SELECT `p`.`id`,`gta`.`title`,`gs`.`stuidcard`,`gs`.`stuname`,`gs`.`stuclass`,`gt`.`starttimer`,`gt`.`middletimer`,`gt`.`replytimer`,`gt`.`replyplace`,`gt`.`note`,`p`.`replyscore` FROM `gmis_process` `p` INNER JOIN `gmis_student` `gs` ON `gs`.`id`=`p`.`stuid` INNER JOIN `gmis_teacher` `gt` ON `gt`.`id`=`p`.`teaid` INNER JOIN `gmis_tapply` `gta` ON `gta`.`id`=`p`.`titleid` WHERE  `p`.`teaid` = 3  AND `p`.`belongsenior` = '2018-2019' [ RunTime:0.003035s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:15:38+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.773506s] [吞吐率：1.29req/s] [内存消耗：6,262.61kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000320s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.025071s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.021246s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006606s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004121s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL  AND `proid` = 1 ORDER BY `id` DESC [ RunTime:0.004899s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003630s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002191s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_sselect` [ RunTime:0.005263s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 14  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.003600s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001973s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 12  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002616s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002115s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 10  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002503s ]
+[ error ] [0]模板文件不存在:C:\wamp64\www\gmis\public/../application/index\view\sselect\showTitle.html[C:\wamp64\www\gmis\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2018-11-25T20:16:18+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.643926s] [吞吐率：1.55req/s] [内存消耗：6,264.51kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000229s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.025288s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017603s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005042s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004572s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL  AND `proid` = 1 ORDER BY `id` DESC [ RunTime:0.002740s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.004126s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001924s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_sselect` [ RunTime:0.003838s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 14  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002058s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002665s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 12  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002050s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002223s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 10  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002392s ]
+[ error ] [0]模板文件不存在:C:\wamp64\www\gmis\public/../application/index\view\sselect\showTitle.html[C:\wamp64\www\gmis\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2018-11-25T20:16:39+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.593191s] [吞吐率：1.69req/s] [内存消耗：6,166.80kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000259s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.029888s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.020591s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004819s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003269s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL  AND `proid` = 1 ORDER BY `id` DESC [ RunTime:0.003045s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003676s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001727s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_sselect` [ RunTime:0.003881s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 14  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002412s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002251s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 12  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002311s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001748s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 10  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002574s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:20:44+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.564434s] [吞吐率：1.77req/s] [内存消耗：6,108.95kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000471s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.032703s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022692s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005306s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004537s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL  AND `proid` = 3 ORDER BY `id` DESC [ RunTime:0.002939s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:20:52+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.674157s] [吞吐率：1.48req/s] [内存消耗：6,167.20kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000229s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.030483s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.029233s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013297s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004752s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL ORDER BY `id` DESC [ RunTime:0.003084s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.004254s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002231s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_sselect` [ RunTime:0.005412s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 14  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002910s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002432s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 12  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002286s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002289s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 10  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002132s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:25:29+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.508233s] [吞吐率：1.97req/s] [内存消耗：6,150.06kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000239s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021090s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013985s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013539s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.005290s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL ORDER BY `id` DESC [ RunTime:0.002534s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003728s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002647s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_sselect` [ RunTime:0.004614s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 14  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002044s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001943s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 12  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.001635s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001758s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 10  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002269s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:26:00+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.516666s] [吞吐率：1.94req/s] [内存消耗：6,151.20kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000263s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019768s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016094s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012790s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003258s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL ORDER BY `id` DESC [ RunTime:0.002680s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003712s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001954s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_sselect` [ RunTime:0.004676s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 14  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002784s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002325s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 12  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002127s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002327s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 10  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002823s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:27:15+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/User/logout
+[运行时间：0.290933s] [吞吐率：3.44req/s] [内存消耗：4,040.22kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000211s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019272s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'User',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011709s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\User->logout[ C:\wamp64\www\gmis\application\index\controller\User.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T20:27:17+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/index/index.html
+[运行时间：0.306250s] [吞吐率：3.27req/s] [内存消耗：4,028.95kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000222s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020986s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/User/logout',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011324s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T20:27:19+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/login/index.html
+[运行时间：0.283307s] [吞吐率：3.53req/s] [内存消耗：3,908.99kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000223s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020629s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.010873s ]
+[ info ] [ RUN ] app\index\controller\Login->index[ C:\wamp64\www\gmis\application\index\controller\Login.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T20:27:33+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Login/login
+[运行时间：0.368224s] [吞吐率：2.72req/s] [内存消耗：5,900.73kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000253s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019163s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/login/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'auth' => '1',
+  'username' => '201509010106',
+  'password' => '123456',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014215s ]
+[ info ] [ RUN ] app\index\controller\Login->login[ C:\wamp64\www\gmis\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004585s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_student` [ RunTime:0.003922s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_student` WHERE  `stuidcard` = '201509010106' LIMIT 1 [ RunTime:0.002413s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:27:35+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Index/index
+[运行时间：0.451913s] [吞吐率：2.21req/s] [内存消耗：5,931.94kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000224s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021654s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/login/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014631s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\gmis\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\index\index.html [ array (
+  0 => 'prochart',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005128s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_prochart` [ RunTime:0.004380s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_prochart` ORDER BY `id` ASC [ RunTime:0.001970s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:27:42+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.466431s] [吞吐率：2.14req/s] [内存消耗：6,150.95kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000219s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.017006s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.012891s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013419s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.003550s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL ORDER BY `id` DESC [ RunTime:0.002751s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.004503s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002143s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_sselect` [ RunTime:0.004411s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 14  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002140s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002118s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 12  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002657s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002188s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 10  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.001882s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:27:48+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/show
+[运行时间：0.458795s] [吞吐率：2.18req/s] [内存消耗：4,187.83kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000289s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.026356s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017294s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->show[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T20:27:48+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/data.js
+[运行时间：0.569422s] [吞吐率：1.76req/s] [内存消耗：4,012.98kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000392s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.045564s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'data.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/index/Stuselect/show',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.028248s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T20:31:23+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.514172s] [吞吐率：1.94req/s] [内存消耗：6,151.80kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000240s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020856s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015322s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004993s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004428s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL ORDER BY `id` DESC [ RunTime:0.002495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.003519s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002113s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_sselect` [ RunTime:0.004190s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 14  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002339s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002608s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 12  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002163s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.002382s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 10  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002076s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:31:36+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Stuselect/showApplyTitle
+[运行时间：0.491570s] [吞吐率：2.03req/s] [内存消耗：6,152.25kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000199s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021936s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stuselect',
+    2 => 'showApplyTitle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016807s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Stuselect->showApplyTitle[ C:\wamp64\www\gmis\application\index\controller\Stuselect.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013614s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.004461s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`nature`,`source`,`isnew`,`isprac`,`proid`,`status` FROM `gmis_tapply` WHERE  `belongsenior` = '2018-2019'  AND `status` = '已通过'  AND `stuid` IS NULL ORDER BY `id` DESC [ RunTime:0.002378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.002953s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001997s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_sselect` [ RunTime:0.003790s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 14  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002346s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001953s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 12  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.002176s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_profess` WHERE  `id` = 1  AND `status` = '正常' LIMIT 1 [ RunTime:0.001952s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_sselect` WHERE  `titleid` = 10  AND `issubmit` = '1'  AND `status` = '正常' LIMIT 1 [ RunTime:0.001957s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:32:12+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/User/logout
+[运行时间：0.367696s] [吞吐率：2.72req/s] [内存消耗：4,040.22kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000212s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.025241s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'User',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017796s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\User->logout[ C:\wamp64\www\gmis\application\index\controller\User.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T20:32:15+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/index/index.html
+[运行时间：0.295040s] [吞吐率：3.39req/s] [内存消耗：4,028.95kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000230s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018192s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/User/logout',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.011479s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T20:32:18+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/login/index.html
+[运行时间：0.289213s] [吞吐率：3.46req/s] [内存消耗：3,908.99kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000218s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020367s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.010923s ]
+[ info ] [ RUN ] app\index\controller\Login->index[ C:\wamp64\www\gmis\application\index\controller\Login.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T20:32:19+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/login/index.html
+[运行时间：0.344491s] [吞吐率：2.90req/s] [内存消耗：3,908.99kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000211s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.026127s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017183s ]
+[ info ] [ RUN ] app\index\controller\Login->index[ C:\wamp64\www\gmis\application\index\controller\Login.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-25T20:32:28+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/index/Login/login
+[运行时间：0.410614s] [吞吐率：2.44req/s] [内存消耗：5,906.48kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000360s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024880s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '38',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/login/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+  'auth' => '2',
+  'username' => '234567',
+  'password' => '123456',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015964s ]
+[ info ] [ RUN ] app\index\controller\Login->login[ C:\wamp64\www\gmis\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004953s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.003949s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` WHERE  `teaidcard` = '234567' LIMIT 1 [ RunTime:0.002783s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:33:12+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index/Index/index
+[运行时间：0.387582s] [吞吐率：2.58req/s] [内存消耗：5,931.94kb] [文件加载：67]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000197s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.016673s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/index/login/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=j07ekl5h5icpsi9npgbj83b662',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015394s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\gmis\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/index\view\index\index.html [ array (
+  0 => 'prochart',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005086s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_prochart` [ RunTime:0.003464s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_prochart` ORDER BY `id` ASC [ RunTime:0.002222s ]

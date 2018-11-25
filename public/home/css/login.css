@@ -81,9 +81,8 @@ html {
   .form__label__content {
     position: absolute;
   }
-  .form__input:focus ~ .form__label .form__label-content,
-  .form--filled .form__label-content {
-  }
+
+  
   .btn {
     width: 49%;
     display: inline-block;

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    text-indent:15px
+}
+
+
+
+#apply{
+    width: 80%;
+    margin: 40px auto;
+    background-color: rgb(254, 254, 254);
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+.table{
+    margin-top: 20px;
+}
+#profess{
+    width: 100px;
+    display: inline-block;
+}
+#tile_key{
+    width: 100px;
+    display: inline-block;
+}
+#apply_save_data{
+    display: block;
+    margin: 0 auto;
+}

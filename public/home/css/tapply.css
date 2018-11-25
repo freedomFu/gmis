@@ -19,7 +19,6 @@ button{
     outline: none;
 }
 
-
 #map{
     width: 80%;
     margin: 0 auto;
@@ -62,7 +61,6 @@ button{
     margin-left: 20px;
 }
 
-
 #apply{
     width: 80%;
     margin: 40px auto;
@@ -78,7 +76,22 @@ button{
 #apply td{
     width: 8%;
 }
-
+#apply_teacher td input{
+    height: 100%;
+    width: 100%;
+    /* border: 0; */
+    background-color: initial;
+}
+#apply_teacher td textarea{
+    height: 100%;
+    width: 100%;
+    /* border: 0; */
+    background-color: initial;
+    overflow-y:visible ;
+}
+#apply_teacher td select{
+    background-color: initial;
+}
 /* 年份 */
 #apply_remind>span:nth-child(1){
     font-size: 1.4em;
@@ -87,6 +100,10 @@ button{
 /* 几个可申请题目 */
 #apply_remind>span:nth-child(2)>span{
     font-size: 1.4em;
+}
+
+#addItem input,#addItem textarea{
+    /* border: 1px solid blue !important */
 }
 
 .apply_save{
@@ -112,10 +129,6 @@ button{
     margin: auto auto;
 }
 
-
-
-
-
 #pre{
     width: 80%;
     margin: 40px auto;
@@ -137,7 +150,6 @@ button{
 #operation ul li{
     cursor: pointer;
 }
-
 
 .revisable{
     border-bottom: 1px dashed rgb(52,122,182) !important ;

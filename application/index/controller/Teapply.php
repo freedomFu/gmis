@@ -25,6 +25,19 @@ class Teapply extends Base
 
     /**
      * @Author:      fyd
+     * @DateTime:    2018/11/25 0:24
+     * @Description: 显示界面
+     */
+    public function show(){
+        $this->isTeacher();
+        $teapply = new Tapply();
+        $profess = $teapply->showProfess();
+        $this->assign('profess',$profess);
+        return $this->fetch('tapply/teacher');
+    }
+
+    /**
+     * @Author:      fyd
      * @DateTime:    2018/11/13 22:17
      * @Description: 显示该教师已经申请过的内容
      */
@@ -38,10 +51,6 @@ class Teapply extends Base
         $xq = getSenior();
         $list = $teapply->show($id,$xq);
         falsePro(0,'',$list,$titlenum,$leftNum);
-
-        /*$this->assign('leftnum',$leftNum);
-        $this->assign('tapplylist',$list);
-        return $this->fetch('tapply/index');*/
     }
 
     /**
@@ -83,6 +92,14 @@ class Teapply extends Base
         }
     }
 
+    private function isTrue($bool){
+        if($bool=="true"){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/14 10:50
@@ -90,16 +107,16 @@ class Teapply extends Base
      */
     public function edit(){
         $this->isTeacher();
-//        $id = input('id');
-        $id = 4;
-
+        $id = $_POST['id'];
+        $isnew = $this->isTrue($_POST['isnew']);
+        $isprac = $this->isTrue($_POST['isprac']);
         $data = [
-            'title'     =>  '基于物联网系统的防护系统',
-            'nature'    =>  '未知',
-            'source'    =>  '未知',
-            'isnew'     =>  '0',
-            'isprac'    =>  '1',
-            'proid'     =>  '3'
+            'title'     =>  $_POST['title'],
+            'nature'    =>  $_POST['nature'],
+            'source'    =>  $_POST['source'],
+            'isnew'     =>  $isnew,
+            'isprac'    =>  $isprac,
+            'proid'     =>  $_POST['proid']
         ];
 
         $teapply = new Tapply();
@@ -123,8 +140,7 @@ class Teapply extends Base
     public function del(){
         $this->isTeacher();
         $teapply = new Tapply();
-//        $id = input('id');
-        $id = 14;
+        $id = $_POST['id'];
         $res = $teapply->del($id);
         if($res==1){
             falsePro(0,"删除成功");
@@ -134,6 +150,46 @@ class Teapply extends Base
             falsePro(3,"用户id不存在");
         }else{
             falsePro(1,"删除失败");
+        }
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/24 7:32
+     * @Description: 教师选择学生
+     */
+    public function showSelectStu(){
+        $this->isTeacher();
+        $ta = new Tapply();
+        $teaid = session('uid');
+        $xq = getSenior();
+        $list = $ta->showSelectStu($teaid,$xq);
+        falsePro('0','',$list);
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/24 15:41
+     * @Description: 选择学生,需要对应的id
+     */
+    public function chooseTitle(){
+        $this->isTeacher();
+        $ta = new Tapply();
+        $res = $ta->chooseTitle(2);
+
+        switch ($res){
+            case 2:
+                falsePro(2,"这一项已经通过申请！");
+                break;
+            case 1:
+                falsePro(0,"确认成功");
+                break;
+            case 0:
+                falsePro(1,"确认失败");
+                break;
+            default:
+                falsePro(3,"未知错误");
+                break;
         }
     }
 }

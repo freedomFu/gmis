@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(245, 245, 245);
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;/*水平居中*/
+    align-items: center;/*垂直居中*/
+}
+.title{
+    margin: 2px;
+    border-bottom:  1px solid gray;
+    background-color: rgb(244, 244, 244)
+}
+li{
+    list-style: none;
+    text-indent:15px
+}
+button{
+    outline: none;
+}
+
+
+#map{
+    width: 80%;
+    margin: auto auto;
+    background-color: rgb(254, 254, 254);
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 10px;
+    min-width: 600px;
+}
+#map h3{
+    font-size: 25px;
+    padding-left: 50px;    
+    text-align: center;
+}
+
+#map_box{
+    width: 100%;
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content:space-around;
+}
+#map_box>div{
+    width: 150px;
+    margin: 20px 0px;
+    position: relative;
+}
+#map_box>div::after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left: 8px solid #AFABAB;
+    position: relative;
+    top: -7px;
+    left: 25px;
+}
+#map_box>div:nth-last-child(1)::after{
+    border: 0px solid transparent;
+}
+#map_box>div:nth-child(1){
+    margin-left: 20px;
+}
+
+#now_box{
+    position: absolute;
+    border: 2px solid rgb(52,122,182);
+    width: 120%;
+    height: 89px;
+    border-radius: 15px;
+    left: -30%;
+    top: -23px;
+}
+
+.before{
+    position: absolute;
+    border: 2px solid gray;
+    background-color: rgba(170,170,170,0.4);
+    width: 120%;
+    height: 89px;
+    border-radius: 15px;
+    left: -30%;
+    top: -23px;
+}

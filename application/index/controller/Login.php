@@ -13,7 +13,6 @@ class Login extends Controller
 {
 
     public function index(){
-        dump(Session::get());
         return $this->fetch('user/login');
     }
 
@@ -25,7 +24,7 @@ class Login extends Controller
     private function isLogin(){
         $isLogin = \session('isLogin');
         if(!empty($isLogin)){
-            dump(Session::get());
+//            dump(Session::get());
             $this->error("您已经登录！","index/index");
             exit;
         }
@@ -37,14 +36,12 @@ class Login extends Controller
      * @Description: 判断用户登录情况
      */
     public function login(){
-        $this->isLogin();
-
         $data = [
-            'auth'      => 2,
-            'username'  => '334455',
-            'password'  => '123456'
+            'auth'      => $_POST['auth'],
+            'username'  => $_POST['username'],
+            'password'  => $_POST['password']
         ];
-//        $data = input('data');
+
         $auth = $data['auth'];
         if($auth!=1 && $auth!=2){
             falsePro(2,'登录方式非法');
@@ -56,8 +53,7 @@ class Login extends Controller
         if(($res-3)%10 == 0){
             session('auth',$auth);
             session('isLogin',1);
-            dump(Session::get());
-            falsePro(0,$auth.'登录成功');
+            falsePro(0,'登录成功');
             exit;
         }elseif(($res-2)%10 == 0){
             falsePro(1,'密码错误');

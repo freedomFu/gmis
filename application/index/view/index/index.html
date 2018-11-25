@@ -1,1 +1,35 @@
-首页
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="__HOME_CSS__/prochart.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>毕设流程图</title>
+</head>
+<body>
+    <div id="map">
+        <h3 class="title">毕设流程图</h3>
+        <div id="map_box">
+            {volist name='prochart' id='pro'}
+            {if condition="$pro.statusnum eq 2"}
+            <div class="now">
+                <div class="before"></div>
+            {/if}
+            {if condition="$pro.statusnum eq 1"}
+            <div class="now">
+                <div id="now_box"></div>
+            {/if}
+            {if condition="$pro.statusnum eq 0"}
+            <div class="now">
+                <div id="after"></div>
+            {/if}
+                <span>{$pro.proname}</span><br>
+                <span>({$pro.protimer})</span>
+            </div>
+            {/volist}
+        </div>
+    </div>
+</body>
+</html>

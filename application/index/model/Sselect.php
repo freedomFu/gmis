@@ -37,10 +37,12 @@ class Sselect extends Model
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
 
-    public function sselect($teaid){
+    public function sselect($stuid){
+        $where['status'] = '正常';
+        $where['stuid'] = $stuid;
         $list = Sselect::order('id desc')
-            ->where('teaid',$teaid)
-            ->paginate(10);
+            ->where($where)
+            ->select();
         return $list;
     }
 
@@ -52,6 +54,8 @@ class Sselect extends Model
     public function showApplyTitle($professid, $titlekey,$senior){
         $where['belongsenior']=$senior;
         $where['status'] = "已通过";
+        $where['stuid'] = null;
+        $field = "id,title,nature,source,isnew,isprac,proid,status";
         //都没有传入
         if(!($professid==0)){
             $where['proid'] = $professid;
@@ -62,6 +66,7 @@ class Sselect extends Model
         }
 
         $list = Tapply::where($where)
+            ->field($field)
             ->order('id desc')
             ->select();
 
@@ -150,6 +155,7 @@ class Sselect extends Model
         //若已经有提交的就不能再添加了
         $wherecheck['stuid'] = $stuid;
         $wherecheck['issubmit']=1;
+        $wherecheck['status'] = '正常';
         $checkIsAllow = Sselect::where($wherecheck)
             ->find();
         if($checkIsAllow){
@@ -163,6 +169,7 @@ class Sselect extends Model
         }
 //        dump($stuid);
         $where['stuid'] = $stuid;
+        $where['status'] = '正常';
         $num = Sselect::where($where)
             ->count();
 //        dump($num);
@@ -185,6 +192,7 @@ class Sselect extends Model
 
         $wherecheck['stuid'] = $stuid;
         $wherecheck['issubmit']=1;
+        $wherecheck['status'] = '正常';
         $checkIsAllow = Sselect::where($wherecheck)
             ->find();
         if($checkIsAllow){
