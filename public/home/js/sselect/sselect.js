@@ -103,11 +103,12 @@ var app=new Vue({
             if(this.store[index].pick==true){  //打勾
                 console.log("够")
                 if(this.picked.length<3){//已选不满三个
-
+                    console.log(app.store[index].id);
+                    var id = app.store[index].id;
                     $.ajax({
                         type: 'POST',
-                        url: "http://localhost/gmis/public/xxxxxx",
-                        data: app.store[index].id,
+                        url: base_index+"/Stuselect/saveOne",
+                        data: {id:id},
                         success : function(res){
                             if (res.errno == 0) {  //保存成功
                                 app.newItem=app.store[index];
@@ -115,17 +116,11 @@ var app=new Vue({
                                 app.picked_id.push(app.newItem.id)
                                 app.newItem={};
                             }
-                            if (res.errno == 1) {
+                            if ((res.errno == 1) || (res.errno == 2) || (res.errno == 3) ) {
                               if(res.errmsg){
                                 alert(res.errmsg);
                               }
                             }
-                            if (res.errno == 2) {
-                              if(res.errmsg){
-                                alert(res.errmsg);
-                              }
-                            }
-
                         },
                         error:function(){
                             alert("数据请求失败，请检查网络连接")
@@ -137,7 +132,7 @@ var app=new Vue({
                     this.store[index].pick=false;
                 }
             }else{                       //取消勾子
-                console.log("取消勾")
+                console.log("取消勾");
                 for(let i=0;i<this.picked.length;i++){
                     if(this.store[index]==this.picked[i]){
                         this.picked.splice(i,1);

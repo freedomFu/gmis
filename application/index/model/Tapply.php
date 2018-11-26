@@ -252,7 +252,7 @@ class Tapply extends Model{
         $where['ss.isallow'] = 0;
         $where['ss.status'] = '正常';
 
-        $field = 'ss.id,gt.title,ss.issubmit,gs.stuidcard,gs.stupwd,stuname,stuclass';
+        $field = 'ss.id,gt.title,ss.issubmit,gs.stuidcard,stuname,stuclass,gs.stuphone';
         $join = [
             ['gmis_tapply gt','gt.id=ss.titleid','LEFT'],
             ['gmis_student gs','gs.id=ss.stuid','LEFT'],

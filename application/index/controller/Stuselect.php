@@ -69,7 +69,58 @@ class Stuselect extends Base
         }else{
             falsePro(1,$auth,$list);
         }
+    }
 
+    /**
+     * @Description: 打勾
+     * @DateTime:    2018/11/26 15:51
+     * @Author:      fyd
+     */
+    public function saveOne(){
+        $sselect = new Sselect();
+        $stuid = session('uid');
+        $dataid = $_POST['id'];
+        $xq = getSenior();
+        $res = $sselect->saveOne($stuid,$dataid,$xq);
+
+        switch ($res){
+            case 1:
+                falsePro(0,"成功");
+                break;
+            case 0:
+                falsePro(1,"失败");
+                break;
+            case 2:
+                falsePro(2,"不能多余三个呀");
+                break;
+            case 3:
+                falsePro(3,"已经通过，不可申请");
+                break;
+            case 4:
+                falsePro(3,"数据重复");
+                break;
+        }
+    }
+
+    /**
+     * @Description: 取消勾
+     * @DateTime:    2018/11/26 16:39
+     * @Author:      fyd
+     */
+    public function delOne(){
+        $sselect = new Sselect();
+        $stuid = session('uid');
+//        $dataid = $_POST['id'];
+        $dataid = 15;
+        $xq = getSenior();
+
+        $res = $sselect->delOne($stuid,$dataid,$xq);
+
+        if($res==1){
+            falsePro(0,"取消成功");
+        }else{
+            falsePro(1,"取消失败");
+        }
     }
 
     /**
@@ -110,7 +161,7 @@ class Stuselect extends Base
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/17 18:57
-     * @Description: 提交数据
+     * @Description: 提交数据,这里提交的时候需要修改weigh
      */
     public function submitData(){
         $sselect = new Sselect();

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"C:\wamp64\www\gmis\public/../application/index\view\common\base.html";i:1543193354;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"C:\wamp64\www\gmis\public/../application/index\view\common\base.html";i:1543217056;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,8 +26,8 @@
                 <li onclick="liclick(this)"><a href="http://127.0.0.1/gmis/public/index/Teapply/show.html" target="fra">老师选学生</a></li>
                 <?php endif; ?>
                 <!--<li onclick="liclick(this)"><a href="../调剂平台/调剂平台.html" target="fra">调剂平台</a></li>-->
-                <li onclick="liclick(this)"><a href="http://127.0.0.1/gmis/public/index/User/showExpass" target="fra">修改密码</a></li>
-                <li onclick="liclick(this)"><a href="http://127.0.0.1/gmis/public/index/User/logout" target="fra">退出</a></li>
+                <li onclick="liclick(this)"><a href="http://127.0.0.1/gmis/public/index/User/showExpass" target="_parent">修改密码</a></li>
+                <li onclick="liclick(this)"><a href="http://127.0.0.1/gmis/public/index/User/logout" target="_parent" target="fra">退出</a></li>
             </ul>
         </div>
     </div>

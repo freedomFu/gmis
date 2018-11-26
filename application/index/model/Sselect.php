@@ -53,6 +53,11 @@ class Sselect extends Model
         return $list;
     }
 
+    /**
+     * @Description: 显示选择列表
+     * @DateTime:    2018/11/26 11:38
+     * @Author:      fyd
+     */
     public function sselect($stuid){
         $where['status'] = '正常';
         $where['stuid'] = $stuid;
@@ -132,19 +137,112 @@ class Sselect extends Model
         return $teaid;
     }
 
+    private function checkSave($stuid){
+
+        $where['stuid'] = $stuid;
+        $where['status'] = '正常';
+        $total = Sselect::where($where)
+            ->count();
+        if($total>=3){
+            return 1;
+        }
+        $where2['stuid']=$stuid;
+        $where2['isallow']=1;
+        $where2['status']='正常';
+        $isallow = Sselect::where($where2)
+            ->find();
+        if($isallow){
+            return 2;
+        }
+
+        return 3;
+    }
+
+    /**
+     * @Description: 修改pick值,根据数据库中的值修改,pick置为true，如果取消就要删除
+     * @DateTime:    2018/11/26 11:45
+     * @Author:      fyd
+     */
+    public function saveOne($stuid, $dataid,$xq){
+        $titleid = $dataid; //题目id
+        $teaid = $this->getTeaid($titleid);
+        $check = $this->checkSave($stuid);
+        if($check==1){
+            return 2;
+        }elseif($check==2){
+            return 3;
+        }
+
+        $whereAll['titleid']=$titleid;
+        $whereAll['teaid']=$teaid;
+        $whereAll['stuid']=$stuid;
+        $whereAll['status']="正常";
+        $whereAll['belongSenior']=$xq;
+        $whereAll['isallow']=0;
+
+        $isAllowed = Sselect::where($whereAll)
+            ->find();
+        if($isAllowed){
+            return 4; //已经提交过了
+        }
+
+
+        $data = [
+            'stuid'         =>      $stuid,
+            'titleid'       =>      $titleid,
+            'teaid'         =>      $teaid,
+            'pick'          =>      'true',
+            'isallow'       =>      0,
+            'issubmit'      =>      0,
+            'belongSenior'  =>      $xq
+        ];
+
+        $res = Sselect::save($data);
+        if($res){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+    /**
+     * @Description: 取消勾
+     * @DateTime:    2018/11/26 16:37
+     * @Author:      fyd
+     */
+    public function delOne($stuid, $dataid, $xq){
+        $titleid = $dataid;
+        $teaid = $this->getTeaid($titleid);
+        $where['stuid']=$stuid;
+        $where['titleid']=$titleid;
+        $where['teaid']=$teaid;
+        $where['belongSenior']=$xq;
+        $where['status']="正常";
+        $where['isallow']=0;
+        $id = Sselect::where($where)
+            ->value("id");
+
+        $ss = Sselect::get($id);
+        $res = $ss -> delete();
+        if($res){
+            return 1;
+        }else{
+            return 0;
+        }
+
+    }
+
+
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/17 15:53
      * @Description: 保存数据，但是没有提交，获取的是titleid，已经通过的
      */
     public function saveData($stuid,$dataid){
-
         $count = count($dataid);
-
         for($j=0;$j<$count;$j++){
             $data[$j]=[];
         }
-
         for($i=0;$i<$count;$i++){
             $titleid = $dataid[$i];
             $data[$i] = [
@@ -179,19 +277,15 @@ class Sselect extends Model
         }
 
         $count = count($dataid);
-//        dump($count);
         if($count>3){
             return 2;
         }
-//        dump($stuid);
         $where['stuid'] = $stuid;
         $where['status'] = '正常';
         $num = Sselect::where($where)
             ->count();
-//        dump($num);
 
         $num+=$count;
-//        dump($num);
 
         if($num>3){
             return 3;
