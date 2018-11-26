@@ -64,16 +64,19 @@ class Login extends Controller
         }
     }
 
+    public function showFind(){
+        return $this->fetch("user/forgetpass");
+    }
+
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/14 22:27
      * @Description: 找回密码，通过使用phpemail发送六位数字密码
      */
     public function findpass(){
-        //$data['useremail']
-        $idcard = '201509010106';
-        $auth = 1;
-        $useremail = 'fuyanduo_1026@sina.com';
+        $idcard = $_POST['id'];
+        $auth = $_POST['auth'];
+        $useremail = $_POST['useremail'];
 
         $self = new Userlogin();
         $res = $self->findpass($auth,$idcard,$useremail);

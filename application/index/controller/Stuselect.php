@@ -25,6 +25,9 @@ class Stuselect extends Base
 
     public function show(){
         $this->isStudent();
+        $sselect = new Sselect();
+        $profess = $sselect->showProfess();
+        $this->assign('profess',$profess);
         return $this->fetch('sselect/index');
     }
 
@@ -51,7 +54,7 @@ class Stuselect extends Base
         $this->isStudent();
         $sselect = new Sselect();
         $senior=getSenior();
-        $list = $sselect->showApplyTitle(null,"",$senior);
+        $list = $sselect->showApplyTitle(0,"",$senior);
         $listcount = count($list);
         for($i=0;$i<$listcount;$i++){
             $titleid = $list[$i]['id'];

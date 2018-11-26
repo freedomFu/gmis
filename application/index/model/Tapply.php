@@ -43,6 +43,11 @@ class Tapply extends Model{
         }
     }
 
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/26 7:42
+     * @Description: 显示专业
+     */
     public function showProfess(){
         $table = "profess";
         $field = "id,proname";

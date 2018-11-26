@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl";i:1540985180;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl";i:1543194737;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +40,6 @@
         </p>
     <?php endif; ?>
     <p class="clearfix">
-        <a href="http://127.0.0.1/gmis/public/home" class="btn btn-grey"><?php echo __('Go back'); ?></a>
         <?php if($url): ?>
             <a href="<?php echo $url; ?>" class="btn btn-primary"><?php echo __('Jump now'); ?></a>
         <?php endif; ?>

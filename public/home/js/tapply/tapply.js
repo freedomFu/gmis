@@ -59,7 +59,8 @@ var app=new Vue({
         },
         count:obj_apply.count,     //可申请总数
         left:obj_apply.left,//剩余可申请数量
-        old_item:{}
+        old_item:"111",
+        adding:false
 
     },
     created: function () {
@@ -69,11 +70,16 @@ var app=new Vue({
     },
     methods:{
         add:function(){
-            if(this.store.length>=this.count){
-                alert("您可申请题目为"+this.count+"个。")
-                return;
+            if(this.store.length>=count){
+                
+            }else{
+                this.adding=true;//出现新框
+                readyNumber()
             }
-            this.newItem.id=this.store.length+1;
+
+
+        },
+        add_sure:function(){
             $.ajax({
                 type: 'POST',
                 url: base_index+"/Teapply/add",
@@ -86,7 +92,7 @@ var app=new Vue({
                 },
                 dataType: "json",
               });
-            
+            this.newItem.id=this.store.length+1;
             this.store.push(this.newItem);
             this.newItem={
                 id:this.store.length+1,
@@ -96,7 +102,6 @@ var app=new Vue({
                 isnew:"",
                 isprac:"",//是否结合实践
                 proname:"",//专业名称
-                isallow:true,
                 note:"",//备注
                 status:"",
                 stuidcard:"",//学生号
@@ -105,8 +110,13 @@ var app=new Vue({
                 stuphone:"",//电话
             }
             readyNumber()
+            this.adding=false;
 
         },
+
+
+
+
         del:function(index){
             if(confirm("确认删除？")){
                 var s = this.store;
@@ -130,7 +140,7 @@ var app=new Vue({
             }
         },
         edit:function(index){
-            this.old_item=this.store[index];
+            this.old_item=JSON.parse(JSON.stringify(this.store[index]))
             console.log(this.old_item)
             var aim_textarea="#mytable tr:eq("+(index+1)+") textarea";
             var aim_input="#mytable tr:eq("+(index+1)+") input";
@@ -163,6 +173,36 @@ var app=new Vue({
                 },
                 dataType: "json",
               });
+        },
+
+        cancle:function(index){
+            Vue.set(this.store, index, this.old_item);
+            var aim_input="#mytable tr:eq("+(index+1)+") input";
+            var aim_textarea="#mytable tr:eq("+(index+1)+") textarea";
+            var aim_select="#mytable tr:eq("+(index+1)+") select";
+            Vue.set(this.editing, index, false)
+            $(aim_input).attr("disabled","disabled");
+            $(aim_textarea).attr("disabled","disabled");
+            $(aim_select).attr("disabled","disabled");
+        },
+        add_cancle(){
+            this.newItem={
+                id:this.store.length+1,
+                title:"",
+                nature:"",
+                source:"",
+                isnew:true,
+                isprac:"",//是否结合实践
+                proname:"",//专业名称
+                isallow:true,
+                note:"",//备注
+                status:"",
+                stuidcard:"",//学生号
+                stuname:"",//姓名
+                stuclass:"",//班级
+                stuphone:"",//电话
+            }
+            this.adding=false;
         },
         submitApply:function(){
             $.ajax({
@@ -202,9 +242,15 @@ var stu=new Vue({
         count:obj_stu.count,
         editing:[false,false]
     },
+    created:function(){
+        /*for(let i=0;i<this.store.length;i++){
+            if(this.store[i].replyscore!="0"){
+                $(".stu_edit").eq(i).attr("disabled","disabled")
+            }
+        }*/
+    },
     methods:{
         edit:function(index){
-
             if(this.store[index].replyscore=="0"){
                 var aim_input="#apply_graph2 tr:eq("+(index+1)+") input";
                 Vue.set(this.editing, index, true)
@@ -212,6 +258,7 @@ var stu=new Vue({
                 $("#apply_graph2 tr").eq(index+1).addClass("success");
             }
         },
+
         sure:function(index){
             var aim_input="#apply_graph2 tr:eq("+(index+1)+") textarea";
             var aim_textarea="#apply_graph2 tr:eq("+(index+1)+") input";

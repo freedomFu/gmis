@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html";i:1543141663;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html";i:1543192439;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +73,7 @@
                     </td>
                 </tr>
 
-                <tr id="addItem">
+                <tr id="addItem" v-if="adding">
                     <td>{{this.store.length+1}}</td>
                     <td class="revisable"> <textarea  class="form-control" type="text" v-model="newItem.title" ></textarea></td>
                     <td class="revisable"> <input class="form-control" type="text" v-model="newItem.nature" > </td>
@@ -92,11 +92,10 @@
                     </td>
                     <td> </td>
                     <td>
-                        <select class="form-control" name="proname" id="add_proname" v-model="newItem.proid" disabled="disabled">
-                            <option value="1">计算机科学与技术</option>
-                            <option value="2">软件工程</option>
-                            <option value="3">网络工程</option>
-                            <option value="4">信息安全</option>
+                        <select class="form-control" name="proname" id="add_proname" v-model="newItem.proid" >
+                            <?php if(is_array($profess) || $profess instanceof \think\Collection || $profess instanceof \think\Paginator): $i = 0; $__LIST__ = $profess;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $pro['id']; ?>"><?php echo $pro['proname']; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </td>
                     <td> </td>
@@ -104,11 +103,16 @@
                     <td> </td>
                     <td> </td>
                     <td> </td>
-                    <td><button class="btn " v-on:click="add()"> 添加 </button> </td>
+                    <td>
+                        <button  class="btn btn-success" v-on:click="add_sure">确定</button>
+                        <button  class="btn btn-warning" v-on:click="add_cancle">取消</button>
+                    </td>
                 </tr>
                 </tbody>
             </table>
         </div>
+        <button class="btn " v-on:click="add()"> 添加 </button>
+
         <div id="apply_save_student" class="apply_save">
             <h4>教师选择学生截止时间：<span>2019.1.10</span></h4>
             <!--<button  class="btn btn-primary btn-lg" >保存选题学生</button>-->
@@ -159,12 +163,13 @@
                     <td><input class="form-control" type="text" v-model="item.replyscore" disabled="disabled"></td>
                     <td class="revisable" >
                         <button v-show="editing[index]" class="btn btn-success" v-on:click="sure(index)">确定</button>
-                        <button v-show="!editing[index]" class="btn btn-primary" v-on:click="edit(index)">编辑</button>
+                        <button v-if="!(item.replyscore!='0')" v-show="!editing[index]" class="btn btn-primary stu_edit"  v-on:click="edit(index)">编辑</button>
                     </td>
                 </tr>
                 </tbody>
             </table>
-            <button id="apply_save_data" class="btn btn-primary btn-lg" >保存数据</button>
+            <!--<button id="apply_save_data" class="btn btn-primary btn-lg" >保存数据</button>-->
+
             <!-- end #apply_stu -->
         </div>
     </div>

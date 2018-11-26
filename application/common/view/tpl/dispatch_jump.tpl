@@ -39,7 +39,6 @@
         </p>
     {/if}
     <p class="clearfix">
-        <a href="__PUBLIC__" class="btn btn-grey">{:__('Go back')}</a>
         {if $url}
             <a href="{$url}" class="btn btn-primary">{:__('Jump now')}</a>
         {/if}

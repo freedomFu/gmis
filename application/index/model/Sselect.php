@@ -37,6 +37,22 @@ class Sselect extends Model
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
 
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/26 7:42
+     * @Description: 显示专业
+     */
+    public function showProfess(){
+        $table = "profess";
+        $field = "id,proname";
+        $where['status'] = "正常";
+        $list = Db::name($table)
+            ->field($field)
+            ->where($where)
+            ->select();
+        return $list;
+    }
+
     public function sselect($stuid){
         $where['status'] = '正常';
         $where['stuid'] = $stuid;

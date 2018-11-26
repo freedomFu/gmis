@@ -13,7 +13,7 @@ $(function() {
             console.log(res);
             if (res.errno == 0) {  //登陆成功
                 alert("登录成功");
-                window.location.href=base_index+"/Index/index"
+                window.location.href=base_index+"/Index/nav"
             }
             if (res.errno == 1) {  //账号或者密码错误
                 alert("账号或者密码错误");
@@ -42,7 +42,7 @@ $(function() {
           // docCookies.setItem("user", "一个靓仔", new Date(2222, 2, 2), "../");
             if (res.errno == 0) {  //登陆成功
                 alert("登录成功");
-                window.location.href=base_index+"/Index/index"
+                window.location.href=base_index+"/Index/nav"
             }
             if (res.errno == 1) {  //账号或者密码错误
                 alert("账号或者密码错误");

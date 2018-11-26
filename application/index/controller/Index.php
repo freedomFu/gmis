@@ -26,4 +26,8 @@ class Index extends Base
         return $this->fetch('index');
     }
 
+    public function nav(){
+        return $this->fetch('common/base');
+    }
+
 }

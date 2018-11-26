@@ -77,7 +77,7 @@ class Userlogin extends Model
                 break;
         }
 
-        dump($tableData);
+//        dump($tableData);
         $pass = enctypePw($newPwd);
         $update = [$pwdname=>$pass];
         $res = Db::name($tablename)

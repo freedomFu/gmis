@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\wamp64\www\gmis\public/../application/index\view\user\login.html";i:1543069224;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\wamp64\www\gmis\public/../application/index\view\user\login.html";i:1543201160;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +34,9 @@
       </div>
     </div>
   </section>
+  <div id="operate">
+    <p><a href="http://127.0.0.1/gmis/public/index/Login/showFind.html">忘记密码</a></p>
+  </div>
 </section>
 
 <script src="http://127.0.0.1/gmis/public/home/js/base.js"></script>

@@ -8,8 +8,6 @@ li{
     text-indent:15px
 }
 
-
-
 #apply{
     width: 80%;
     margin: 40px auto;
@@ -32,4 +30,11 @@ li{
 #apply_save_data{
     display: block;
     margin: 0 auto;
+}
+select{
+    background-color: initial !important;
+    border: 0px !important;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
 }

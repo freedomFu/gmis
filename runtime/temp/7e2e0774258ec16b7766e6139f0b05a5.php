@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543089811;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543197508;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,25 +10,16 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
- 
     <div id="apply">
-
         <h4 id="apply_remind" >
             <span>2019</span>
             <span>届 毕设题目查询</span>
             <select name="profess" id="profess"  class="form-control">
-                <option value="1">专业1</option>
-                <option value="2">专业2</option>
-                <option value="3">专业3</option>
-                <option value="4">专业4</option>
-                <option value="5">专业5</option>
-                <option value="6">专业6</option>
-                <option value="7">专业7</option>
-                <option value="8">专业8</option>
-                <option value="9">专业9</option>
-                <option value="10">专业10</option>
+                <?php if(is_array($profess) || $profess instanceof \think\Collection || $profess instanceof \think\Paginator): $i = 0; $__LIST__ = $profess;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
+                <option value="<?php echo $pro['id']; ?>"><?php echo $pro['proname']; ?></option>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
             </select>
-            <input class="form-control" type="text" name="tile_key" id="tile_key" placeholder="关键字">
+            <input class="form-control" type="text"   v-model="searchContent" name="tile_key" id="tile_key" placeholder="关键字">
             <button class="btn">查询</button>
         </h4>
         <div id="apply_graph">
@@ -45,32 +36,27 @@
                     <th>已选人数（上限10）</th>
                 </thead>
                 <tbody>
-                    <tr v-for="(book, index) in store">
+                    <tr v-for="(item, index) in filterData">
                         <td><input type="checkbox" v-model="store[index].pick" v-on:click="change(index)"></td>
                         <td>{{index+1}}</td>
-                        <td>{{book.title}}</td>               
-                        <td>{{book.nature}}</td>                        
-                        <td>{{book.source}}</td>
-                        <td></td> 
-                        <td></td>                 
-                        <td>{{book.a7}}</td>
-                        <td>{{book.a8}}</td>
+                        <td>{{item.title}}</td>
+                        <td>{{item.nature}}</td>
+                        <td>{{item.source}}</td>
+                        <td>{{c_isNew(index)}}</td>
+                        <td>{{c_isPrac(index)}}</td>
+                        <td>{{item.status}}</td>
+                        <td>{{item.total}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
-      
-
         <hr>
         
         <div id="apply_stu">
             <div id="apply_remind2" >
                 <h4> 已选题目查询</h4>
                 <span> 每个学生最多选3个毕设题目，请在序号中使用1、2、3填写毕设题目顺序，如果教师没有选择该生则自动调剂。</span>
-
             </div>
-
             <div id="apply_graph2">
                 <table class="table table-striped table-bordered table-hover table-condensed">
                     <thead>
@@ -85,8 +71,8 @@
                         <th>指导教师联系电话</th>
                         <th>该题选择人数</th>
                     </thead>
-                    <tbody v-if="picked.length>1">
-                        <tr v-for="(book, index) in picked" v-if="index!=0">
+                    <tbody v-if="picked!=[]">
+                        <tr v-if="picked!=[]" v-for="(book, index) in picked" >
                             <td>
                                 <a href="#" v-on:click="upon(index)">
                                     <span class="glyphicon glyphicon-arrow-up"></span>
@@ -94,14 +80,12 @@
                                 <a href="#" v-on:click="down(index)">
                                     <span class="glyphicon glyphicon-arrow-down"></span>
                                 </a>
-                            
-                            
                             </td>
                             <td>{{book.title}}</td>               
                             <td>{{book.nature}}</td>                        
                             <td>{{book.source}}</td>
-                            <td>{{book.isNew}}</td>                  
-                            <td>{{book.isAllow}}</td>
+                            <td>{{c_isNew(index)}}</td>
+                            <td>{{c_isPrac(index)}}</td>
                             <td>{{book.a7}}</td>
                             <td>{{book.a8}}</td>
                             <td>{{book.a9}}</td>                  
@@ -110,13 +94,13 @@
                     </tbody>
                 </table>
 
-            <button id="apply_save_data" class="btn btn-primary btn-lg" >保存数据</button>
+            <button id="apply_save_data" class="btn btn-primary btn-lg" v-on:click="submit()" >提交数据</button>
         <!-- end #apply_stu -->
     </div>
         </div>
     </div>
     <!-- end #apply -->
-    <script src="data.js"></script>
+    <script src="http://127.0.0.1/gmis/public/home/js/base.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>

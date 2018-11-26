@@ -61,24 +61,25 @@ class Teapply extends Base
     public function add(){
         $this->isTeacher();
         $teapply = new Tapply();
-        $stuid = session('uid');
-        $titlenum = $teapply->getTitleNum($stuid);  //允许的个数
-        $appliedNum = $teapply->getAppliedNum($stuid);  //已经提交申请的数目
+        $teaid = session('uid');
+        $titlenum = $teapply->getTitleNum($teaid);  //允许的个数
+        $appliedNum = $teapply->getAppliedNum($teaid);  //已经提交申请的数目
         if($titlenum<=$appliedNum){
             falsePro(3,"您已经没有剩余名额了！");
             exit;
 //            $this->error("您已经没有剩余名额了",$url);
         }
+        $isnew = $this->isTrue($_POST['isnew']);
+        $isprac = $this->isTrue($_POST['isprac']);
 
-        $teaid = session('uid');
         $data = [
-            'title'         =>  '测试管理系统',
-            'nature'        =>  '未知',
-            'source'        =>  '未知',
-            'isnew'         =>  '0',
-            'isprac'        =>  '1',
+            'title'         =>  $_POST['title'],
+            'nature'        =>  $_POST['nature'],
+            'source'        =>  $_POST['source'],
+            'isnew'         =>  $isnew,
+            'isprac'        =>  $isprac,
             'teaid'         =>  $teaid,
-            'proid'         =>  4,
+            'proid'         =>  $_POST['proid'],
             'belongsenior'  =>  getSenior()
         ];
 
@@ -147,7 +148,7 @@ class Teapply extends Base
         }elseif($res==2){
             falsePro(2,"已经通过申请，不可删除");
         }elseif($res==3){
-            falsePro(3,"用户id不存在");
+            falsePro(3,"id不存在");
         }else{
             falsePro(1,"删除失败");
         }

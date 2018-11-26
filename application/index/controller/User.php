@@ -11,15 +11,33 @@ class User extends Base
 
     /**
      * @Author:      fyd
-     * @DateTime:    2018/11/14 22:26
-     * @Description: 用户退出
+     * @DateTime:    2018/11/26 9:05
+     * @Description: 清空session
      */
-    public function logout(){
+    private function delSession(){
         session('auth',0);
         session('username','0');
         session('uid',0);
         Session::delete('isLogin');
-        $this->success('退出成功','index/index');
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/14 22:26
+     * @Description: 用户退出
+     */
+    public function logout(){
+        $this->delSession();
+        $this->success('退出成功','Login/index');
+    }
+
+    /**
+     * @Author:      fyd
+     * @DateTime:    2018/11/26 8:14
+     * @Description: 显示修改密码页面
+     */
+    public function showExpass(){
+        return $this->fetch('user/expass');
     }
 
     /**
@@ -32,9 +50,9 @@ class User extends Base
         $id = session('uid'); //ID
         $auth = session('auth'); //Auth
         $data = [
-            'oldPwd'    => '621191',
-            'newPwd'    => '123456',
-            'conPwd'    => '123456'
+            'oldPwd'    => $_POST['oldPwd'],
+            'newPwd'    => $_POST['newPwd'],
+            'conPwd'    => $_POST['conPwd']
         ];
         $user = new Userlogin();
         $res = $user->expass($auth,$id,$data);
@@ -51,7 +69,8 @@ class User extends Base
                 falsePro(4,'密码输入不规范');
                 break;
             case 1:
-                falsePro(0,'修改成功');
+                $this->delSession();
+                falsePro(0,'修改成功,请重新登录');
                 break;
             case 0:
                 falsePro(1,'修改失败');
