@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html";i:1543192439;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html";i:1543241900;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -175,6 +175,52 @@
     </div>
 </div>
 <!-- end #apply -->
+
+
+
+<div id="manage">
+    <div id="apply_remind3" >
+        <span>2019</span>
+        <span> 届 教师管理学生</span>
+    </div>
+
+    <div id="manage_graph">
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+            <th>序号</th>
+            <th>题目</th>
+            <th>是否提交</th>
+            <th>学生姓名</th>
+            <th>学生学号</th>
+            <th>学生姓名</th>
+            <th>学生班级</th>
+            <th>学生电话</th>
+            <th>操作</th>
+            </thead>
+            <tbody>
+            <tr v-for="(item,index) in store" >
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{c_isSbumit(index)}}</td>
+                <td>{{item.stuname}}</td>
+                <td>{{item.stuidcard}}</td>
+                <td>{{item.stuname}}</td>
+                <td>{{item.stuclass}}</td>
+                <td>{{item.stuphone}}</td>
+                <td class="revisable" >
+                    <button  class="btn btn-success" v-on:click="allow(index)">允许</button>
+                    <button  class="btn btn-warning " v-on:click="reject(index)">拒绝</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+
 <script src="http://127.0.0.1/gmis/public/home/js/base.js"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>

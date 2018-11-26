@@ -123,6 +123,16 @@ class Sselect extends Model
         return $total;
     }
 
+    public function getPick($titleid,$stuid){
+        $where['titleid'] = $titleid;
+        $where['stuid'] = $stuid;
+        $where['status'] = "正常";
+        $where['isallow'] = 0;
+        $res = Sselect::where($where)
+            ->value('pick');
+        return $res;
+    }
+
     /**
      * @Author:      fyd
      * @DateTime:    2018/11/17 16:01

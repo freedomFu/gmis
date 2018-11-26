@@ -52,6 +52,7 @@ class Stuselect extends Base
      */
     public function showApplyTitle(){
         $this->isStudent();
+        $stuid = session('uid');
         $sselect = new Sselect();
         $senior=getSenior();
         $list = $sselect->showApplyTitle(0,"",$senior);
@@ -61,6 +62,7 @@ class Stuselect extends Base
             $proid = $list[$i]['proid'];
             $list[$i]['proname'] = $sselect->getProfessName($proid);
             $list[$i]['total'] = $sselect->getCount($titleid);
+            $list[$i]['pick'] = $sselect->getPick($titleid,$stuid);
         }
 
         $auth = session('auth');

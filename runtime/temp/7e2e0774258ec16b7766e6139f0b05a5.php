@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543197508;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543238153;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +42,8 @@
                         <td>{{item.title}}</td>
                         <td>{{item.nature}}</td>
                         <td>{{item.source}}</td>
-                        <td>{{c_isNew(index)}}</td>
-                        <td>{{c_isPrac(index)}}</td>
+                        <td>{{item.isNew | shift}}</td>
+                        <td>{{item.isPrac | shift}}</td>
                         <td>{{item.status}}</td>
                         <td>{{item.total}}</td>
                     </tr>
@@ -72,7 +72,7 @@
                         <th>该题选择人数</th>
                     </thead>
                     <tbody v-if="picked!=[]">
-                        <tr v-if="picked!=[]" v-for="(book, index) in picked" >
+                        <tr v-if="picked!=[]" v-for="(item, index) in picked" >
                             <td>
                                 <a href="#" v-on:click="upon(index)">
                                     <span class="glyphicon glyphicon-arrow-up"></span>
@@ -81,15 +81,15 @@
                                     <span class="glyphicon glyphicon-arrow-down"></span>
                                 </a>
                             </td>
-                            <td>{{book.title}}</td>               
-                            <td>{{book.nature}}</td>                        
-                            <td>{{book.source}}</td>
-                            <td>{{c_isNew(index)}}</td>
-                            <td>{{c_isPrac(index)}}</td>
-                            <td>{{book.a7}}</td>
-                            <td>{{book.a8}}</td>
-                            <td>{{book.a9}}</td>                  
-                            <td>{{book.a11}}</td>
+                            <td>{{item.title}}</td>
+                            <td>{{item.nature}}</td>
+                            <td>{{item.source}}</td>
+                            <td>{{item.isnew | shift}}</td>
+                            <td>{{item.isprac | shift}}</td>
+                            <td>{{item.a7}}</td>
+                            <td>{{item.a8}}</td>
+                            <td>{{item.a9}}</td>
+                            <td>{{item.a11}}</td>
                         </tr>    
                     </tbody>
                 </table>

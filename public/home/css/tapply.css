@@ -19,6 +19,7 @@ button{
     outline: none;
 }
 
+
 #map{
     width: 80%;
     margin: 0 auto;
@@ -27,7 +28,7 @@ button{
     border-radius: 5px;
     box-shadow: 10px;
 }
-#map h3{
+h3{
     font-size: 25px;
     padding-left: 50px;
     text-align: center;
@@ -60,6 +61,7 @@ button{
 #map_box>div:nth-child(1){
     margin-left: 20px;
 }
+
 
 #apply{
     width: 80%;
@@ -106,6 +108,9 @@ button{
     /* border: 1px solid blue !important */
 }
 
+
+
+
 .apply_save{
     width: 49%;
     display: inline-block;
@@ -127,6 +132,16 @@ button{
 #apply_save_data{
     display: block;
     margin: auto auto;
+}
+
+#manage{
+    width: 80%;
+    margin: 40px auto;
+    margin-top: 0px;
+    background-color: rgb(254, 254, 254);
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 #pre{
@@ -151,8 +166,21 @@ button{
     cursor: pointer;
 }
 
+
 .revisable{
     border-bottom: 1px dashed rgb(52,122,182) !important ;
     border-top: 1px dashed rgb(52,122,182) !important ;
 
 }
+
+
+body>div{
+    width: 80%;
+    margin: 40px auto;
+    margin-top: 0px;
+    background-color: rgb(254, 254, 254);
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+

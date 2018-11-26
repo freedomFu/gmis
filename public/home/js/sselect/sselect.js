@@ -76,32 +76,21 @@ var app=new Vue({
                 items1 = this.store
             }
             return items1
-        },
-        c_isNew(){
-            return function(index){
-                if(this.store[index].isNew==false){
-                    return "否"
-                }else{
-                    return "是"
-                }
-            }
-        },
-        c_isPrac(){
-            return function(index){
-                if(this.store[index].isPrac==false){
-                    return "否"
-                }else{
-                    return "是"
-                }
-            }
         }
     },
-
+    filters:{
+        shift:function(value){   //在视图中把布尔值换为是和否
+            if(value==false){
+                return "否"
+            }else{
+                return "是"
+            }
+        },
+    },
     methods:{
         change(index){
             console.log(this.picked)
             if(this.store[index].pick==true){  //打勾
-                console.log("够")
                 if(this.picked.length<3){//已选不满三个
                     console.log(app.store[index].id);
                     var id = app.store[index].id;
@@ -149,39 +138,52 @@ var app=new Vue({
             }
         },
         down(index){
-            if(index<2){
+            if(index<this.picked.length-1){
                 var temp=this.picked[index+1];
                 Vue.set(this.picked,index+1, this.picked[index])
                 Vue.set(this.picked,index, temp)
             }
-        }   
-    },submit(){
-        $.ajax({
-            type: 'POST',
-            url: "http://localhost/gmis/public/xxxxxx",
-            data: app.picked_id,
-            success : function(res){
-                if (res.errno == 0) {  //保存成功
-
-                }
-                if (res.errno == 1) {
-                    if(res.errmsg){
-                        alert(res.errmsg);
+        },
+        submit(){
+            $.ajax({
+                type: 'POST',
+                url: "http://localhost/gmis/public/xxxxxx",
+                data: app.picked_id,
+                success : function(res){
+                    if (res.errno == 0) {  //保存成功
+                        // app.newItem=app.store[index];
+                        // app.picked.push(app.newItem);
+                        // app.newItem={};
                     }
-                }
-                if (res.errno == 2) {
-                    if(res.errmsg){
-                        alert(res.errmsg);
+                    if (res.errno == 1) {
+                        if(res.errmsg){
+                            alert(res.errmsg);
+                        }
                     }
-                }
+                    if (res.errno == 2) {
+                        if(res.errmsg){
+                            alert(res.errmsg);
+                        }
+                    }
+                },
+                error:function(){
+                    alert("数据请求失败，请检查网络连接")
+                },
+                dataType: "json",
+            });
+        }
 
-            },
-            error:function(){
-                alert("数据请求失败，请检查网络连接")
-            },
-            dataType: "json",
-        });
+    },//end methods
 
-    }
+    created: function () {
+        for(var i=0;i<this.store.length;i++){
+            if(this.store[i].pick=="true"){
+                this.picked.push(this.store[i]);
+            }
+        }
+    },
+
+
+
 })
 

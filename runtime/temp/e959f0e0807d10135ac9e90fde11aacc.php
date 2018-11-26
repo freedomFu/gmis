@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"C:\wamp64\www\gmis\public/../application/index\view\common\base.html";i:1543217056;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"C:\wamp64\www\gmis\public/../application/index\view\common\base.html";i:1543240528;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,7 +23,6 @@
                 <li onclick="liclick(this)" ><a href="http://127.0.0.1/gmis/public/index/Stuselect/show" target="fra">学生选题</a></li>
                 <?php endif; if(\think\Request::instance()->session('auth') == 2): ?>
                 <li onclick="liclick(this)"><a href="http://127.0.0.1/gmis/public/index/Teapply/show.html" target="fra">申请题目</a></li>
-                <li onclick="liclick(this)"><a href="http://127.0.0.1/gmis/public/index/Teapply/show.html" target="fra">老师选学生</a></li>
                 <?php endif; ?>
                 <!--<li onclick="liclick(this)"><a href="../调剂平台/调剂平台.html" target="fra">调剂平台</a></li>-->
                 <li onclick="liclick(this)"><a href="http://127.0.0.1/gmis/public/index/User/showExpass" target="_parent">修改密码</a></li>

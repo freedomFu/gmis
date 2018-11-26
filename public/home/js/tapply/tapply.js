@@ -285,3 +285,94 @@ var stu=new Vue({
         },
     }
 })
+
+
+var obj_manage;
+$.ajax({
+    type: 'POST',
+    url: base_index+"/Teapply/showSelectStu",
+    async:false,
+    data: {},
+    success : function(res){
+        obj_manage=res.data;
+        console.log(res.errmes)
+    },
+    error:function(){
+        alert("数据请求失败，请检查网络连接")
+    },
+    dataType: "json",
+});
+
+
+
+
+var manage = new Vue({
+    el:"#manage",
+    data:{
+        store:obj_manage,
+    },
+    // async:false,
+    methods:{
+        allow(index){
+            $.ajax({
+                type: 'POST',
+                url: base_index+"",
+                data: manage.store[index],
+                success : function(res){
+                    if (res.errno == 0) {  //保存成功
+                        alert("成功");
+                    }
+                    if (res.errno == 1) {
+                        if(res.errmsg){
+                            alert(res.errmsg);
+                        }
+                    }
+                    if (res.errno == 2) {
+                        if(res.errmsg){
+                            alert(res.errmsg);
+                        }
+                    }
+                },
+                error:function(){
+                    alert("数据请求失败，请检查网络连接")
+                },
+                dataType: "json",
+            });
+        },
+        reject(index){
+            $.ajax({
+                type: 'POST',
+                url: "http://localhost/gmis/public/xxxxxx",
+                data: manage.store[index],
+                success : function(res){
+                    if (res.errno == 0) {  //保存成功
+
+                    }
+                    if (res.errno == 1) {
+                        if(res.errmsg){
+                            alert(res.errmsg);
+                        }
+                    }
+                    if (res.errno == 2) {
+                        if(res.errmsg){
+                            alert(res.errmsg);
+                        }
+                    }
+
+                },
+                error:function(){
+                    alert("数据请求失败，请检查网络连接")
+                },
+                dataType: "json",
+            });
+        },
+        c_isSbumit(index){
+            if(this.store[index].issubmit==false){
+                return "否"
+            }else{
+                return "是"
+            }
+        },
+
+    }
+})
