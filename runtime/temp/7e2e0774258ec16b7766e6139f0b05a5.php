@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543238153;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543285538;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +61,7 @@
                 <table class="table table-striped table-bordered table-hover table-condensed">
                     <thead>
                         <th>序号调整</th>
-                        <th>题目</th>s
+                        <th>题目</th>
                         <th>课题性质</th>
                         <th>课题来源</th>
                         <th>是否新题</th>

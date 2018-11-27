@@ -23,8 +23,7 @@ function tableInput(){
         $(this).removeClass('hover');    
         })
 }
-tableInput()
-
+tableInput();
 
 var obj_all;
 $.ajax({
@@ -182,8 +181,5 @@ var app=new Vue({
             }
         }
     },
-
-
-
 })
 

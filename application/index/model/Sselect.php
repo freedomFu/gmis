@@ -1,10 +1,4 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/15 21:48
- * @Description: 描述信息
- */
-
 namespace app\index\model;
 use app\index\model\Tapply;
 use think\Model;
@@ -22,15 +16,12 @@ class Sselect extends Model
      * 学生选择论文题目
      * @author fyd
      */
-
     //获取器修改时间格式
     public function getcreatetimeAttr($value, $data)
     {
         $value = $value ? $value : (isset($data['refreshtime']) ? $data['createtime'] : '');
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
-
-
     public function getRefreshtimeTextAttr($value, $data)
     {
         $value = $value ? $value : (isset($data['refreshtime']) ? $data['refreshtime'] : '');
@@ -38,9 +29,9 @@ class Sselect extends Model
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/26 7:42
      * @Description: 显示专业
+     * @DateTime:    2018/11/27 10:46
+     * @Author:      fyd
      */
     public function showProfess(){
         $table = "profess";
@@ -68,9 +59,9 @@ class Sselect extends Model
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 10:15
      * @Description: 获取筛选信息
+     * @DateTime:    2018/11/27 10:46
+     * @Author:      fyd
      */
     public function showApplyTitle($professid, $titlekey,$senior){
         $where['belongsenior']=$senior;
@@ -81,11 +72,9 @@ class Sselect extends Model
         if(!($professid==0)){
             $where['proid'] = $professid;
         }
-
         if(!empty($titlekey)){
             $where['title'] = ['like','%'.$titlekey.'%'];
         }
-
         $list = Tapply::where($where)
             ->field($field)
             ->order('id desc')
@@ -95,9 +84,9 @@ class Sselect extends Model
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 10:45
      * @Description: 根据专业id获取专业名称
+     * @DateTime:    2018/11/27 10:46
+     * @Author:      fyd
      */
     public function getProfessName($professid){
         $where['id'] = $professid;
@@ -109,9 +98,9 @@ class Sselect extends Model
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 15:35
      * @Description: 获取当前题目总数
+     * @DateTime:    2018/11/27 10:47
+     * @Author:      fyd
      */
     public function getCount($titleid){
         $where['titleid'] = $titleid;
@@ -123,7 +112,12 @@ class Sselect extends Model
         return $total;
     }
 
-    public function getPick($titleid,$stuid){
+    /**
+     * @Description: 获取pick值
+     * @DateTime:    2018/11/27 10:47
+     * @Author:      fyd
+     */
+    public function getPick($titleid, $stuid){
         $where['titleid'] = $titleid;
         $where['stuid'] = $stuid;
         $where['status'] = "正常";
@@ -134,9 +128,9 @@ class Sselect extends Model
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 16:01
      * @Description: 根据titleid获取teaid
+     * @DateTime:    2018/11/27 10:47
+     * @Author:      fyd
      */
     private function getTeaid($titleid){
         $where['status'] = "已通过";
@@ -147,6 +141,11 @@ class Sselect extends Model
         return $teaid;
     }
 
+    /**
+     * @Description: 检验这个数据能否保存
+     * @DateTime:    2018/11/27 10:48
+     * @Author:      fyd
+     */
     private function checkSave($stuid){
 
         $where['stuid'] = $stuid;
@@ -169,7 +168,7 @@ class Sselect extends Model
     }
 
     /**
-     * @Description: 修改pick值,根据数据库中的值修改,pick置为true，如果取消就要删除
+     * @Description: 保存数据
      * @DateTime:    2018/11/26 11:45
      * @Author:      fyd
      */
@@ -244,9 +243,9 @@ class Sselect extends Model
 
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 15:53
      * @Description: 保存数据，但是没有提交，获取的是titleid，已经通过的
+     * @DateTime:    2018/11/27 10:49
+     * @Author:      fyd
      */
     public function saveData($stuid,$dataid){
         $count = count($dataid);
@@ -271,9 +270,9 @@ class Sselect extends Model
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 17:10
      * @Description: 判断是否还可以申请
+     * @DateTime:    2018/11/27 10:51
+     * @Author:      fyd
      */
     public function checkStuTitleNum($stuid,$dataid){
         //若已经有提交的就不能再添加了
@@ -304,9 +303,9 @@ class Sselect extends Model
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 20:03
      * @Description: 提交数据
+     * @DateTime:    2018/11/27 10:51
+     * @Author:      fyd
      */
     public function submitData($stuid){
 

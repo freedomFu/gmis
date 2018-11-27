@@ -1,11 +1,5 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/20 15:05
- * @Description: 描述信息
- */
 namespace app\index\model;
-
 use think\Model;
 use think\Db;
 
@@ -29,7 +23,6 @@ class Process extends Model
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
 
-
     public function getRefreshtimeTextAttr($value, $data)
     {
         $value = $value ? $value : (isset($data['refreshtime']) ? $data['refreshtime'] : '');
@@ -37,11 +30,10 @@ class Process extends Model
     }
 
     /**
+     * @Description: 展示流程   序号  题目  学生学号  学生姓名  学生班级  开题时间  中期检查时间  答辩时间  答辩地点  答辩成绩
+     * @DateTime:    2018/11/27 10:42
      * @Author:      fyd
-     * @DateTime:    2018/11/20 15:26
-     * @Description: 展示流程
      */
-    ////序号  题目  学生学号  学生姓名  学生班级  开题时间  中期检查时间  答辩时间  答辩地点  答辩成绩
     public function showProcess($teaid, $xq){
         $where['p.teaid'] = $teaid;
         $where['p.belongsenior'] = $xq;
@@ -63,9 +55,9 @@ class Process extends Model
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/22 21:42
      * @Description: 填写成绩
+     * @DateTime:    2018/11/27 10:42
+     * @Author:      fyd
      */
     public function editScore($processid,$score){
         $process = Process::get($processid);

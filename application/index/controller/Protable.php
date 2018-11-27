@@ -1,9 +1,4 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/18 21:12
- * @Description: 描述信息
- */
 namespace app\index\controller;
 use app\index\model\Prochart;
 use think\Controller;
@@ -12,9 +7,9 @@ use think\Db;
 class Protable extends Base{
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 15:03
      * @Description: 判断是不是教师权限
+     * @DateTime:    2018/11/27 10:33
+     * @Author:      fyd
      */
     private function isTeacher(){
         if(session('auth')!=2){
@@ -23,9 +18,9 @@ class Protable extends Base{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/18 21:14
      * @Description: 显示出流程图
+     * @DateTime:    2018/11/27 10:33
+     * @Author:      fyd
      */
     public function index(){
         $this->isTeacher();

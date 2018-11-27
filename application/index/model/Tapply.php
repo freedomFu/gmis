@@ -1,11 +1,5 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/13 22:01
- * @Description: 描述信息
- */
 namespace app\index\model;
-
 use app\index\model\Process;
 use think\Model;
 use think\Db;
@@ -27,14 +21,17 @@ class Tapply extends Model{
         $value = $value ? $value: (isset($data['refreshtime']) ? $data['createtime'] : '');
         return is_numeric($value) ? date("Y-m-d H:i:s",$value) : $value;
     }
-
-
     public function getRefreshtimeTextAttr($value, $data)
     {
         $value = $value ? $value : (isset($data['refreshtime']) ? $data['refreshtime'] : '');
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
 
+    /**
+     * @Description: 根据值返回true和false
+     * @DateTime:    2018/11/27 10:52
+     * @Author:      fyd
+     */
     private function isTrue($val){
         if($val==1){
             return true;
@@ -44,9 +41,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/26 7:42
      * @Description: 显示专业
+     * @DateTime:    2018/11/27 10:52
+     * @Author:      fyd
      */
     public function showProfess(){
         $table = "profess";
@@ -60,9 +57,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/20 11:10
      * @Description: 展示当前教师的申请内容
+     * @DateTime:    2018/11/27 10:52
+     * @Author:      fyd
      */
     public function show($teaid,$xq){
         $where['teaid'] = $teaid;
@@ -92,9 +89,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/14 10:53
      * @Description: 新增数据
+     * @DateTime:    2018/11/27 10:53
+     * @Author:      fyd
      */
     public function add($data){
         $tapply = new Tapply($data);
@@ -113,9 +110,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/14 11:01
      * @Description: 审核标题
+     * @DateTime:    2018/11/27 10:53
+     * @Author:      fyd
      */
     protected static function checkTitle($title){
         $where['title'] = $title;
@@ -129,9 +126,9 @@ class Tapply extends Model{
     }
 
     /**
+     * @Description: $data是指新提交的数据   编辑
+     * @DateTime:    2018/11/27 10:53
      * @Author:      fyd
-     * @DateTime:    2018/11/14 10:53
-     * @Description: $data是指新提交的数据
      */
     public function edit($id, $data){
         $tapply = new Tapply();
@@ -164,9 +161,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/18 20:26
      * @Description: 判断这个id对应的数据是不是已经通过，如果已经通过了，就不可以再编辑了
+     * @DateTime:    2018/11/27 10:53
+     * @Author:      fyd
      */
     public function checkIsAllow($titleid){
         $where['id'] = $titleid;
@@ -180,9 +177,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/15 10:18
      * @Description: 删除数据
+     * @DateTime:    2018/11/27 10:54
+     * @Author:      fyd
      */
     public function del($id){
         $isAllow = $this->checkIsAllow($id);
@@ -204,9 +201,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/18 15:33
      * @Description: 获取题目数量
+     * @DateTime:    2018/11/27 10:54
+     * @Author:      fyd
      */
     public function getTitleNum($teaid){
         $where['id'] = $teaid;
@@ -218,9 +215,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/18 15:42
      * @Description: 获取已经申请的
+     * @DateTime:    2018/11/27 10:54
+     * @Author:      fyd
      */
     public function getAppliedNum($teaid){
         $where['teaid'] = $teaid;
@@ -230,9 +227,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/24 7:42
      * @Description: 教师生成选择表单
+     * @DateTime:    2018/11/27 10:54
+     * @Author:      fyd
      */
     public function showSelectStu($teaid,$xq){
         /**
@@ -267,9 +264,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/24 14:17
      * @Description: 根据id获取学生id
+     * @DateTime:    2018/11/27 10:54
+     * @Author:      fyd
      */
     private function ccselect($id,$value){
         $table = 'sselect';
@@ -282,9 +279,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/24 15:13
      * @Description: 把对应学生的其他选择隐藏
+     * @DateTime:    2018/11/27 10:54
+     * @Author:      fyd
      */
     private function cutdownStu($stuid, $id){
         $table = 'sselect';
@@ -310,9 +307,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/24 13:50
      * @Description: 修改tapply表中的数据
+     * @DateTime:    2018/11/27 10:55
+     * @Author:      fyd
      */
     private function dbTaUpdate($id){
         $stuid = $this->ccselect($id,'stuid');
@@ -329,9 +326,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/24 13:49
      * @Description: 添加到process表中
+     * @DateTime:    2018/11/27 10:55
+     * @Author:      fyd
      */
     private function dbProUpdate($id){
         $titleid = $this->ccselect($id,'titleid');
@@ -349,9 +346,9 @@ class Tapply extends Model{
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/24 13:48
      * @Description: 确认选择这个学生
+     * @DateTime:    2018/11/27 10:55
+     * @Author:      fyd
      */
     public function chooseTitle($id){
         $table = 'sselect';

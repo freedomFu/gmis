@@ -12,14 +12,19 @@ use think\Session;
 class Login extends Controller
 {
 
+    /**
+     * @Description: 显示登录页面
+     * @DateTime:    2018/11/27 10:31
+     * @Author:      fyd
+     */
     public function index(){
         return $this->fetch('user/login');
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/23 14:33
      * @Description: 判断用户是否登录
+     * @DateTime:    2018/11/27 10:31
+     * @Author:      fyd
      */
     private function isLogin(){
         $isLogin = \session('isLogin');
@@ -31,9 +36,9 @@ class Login extends Controller
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/13 20:55
      * @Description: 判断用户登录情况
+     * @DateTime:    2018/11/27 10:31
+     * @Author:      fyd
      */
     public function login(){
         $data = [
@@ -64,14 +69,19 @@ class Login extends Controller
         }
     }
 
+    /**
+     * @Description: 显示忘记密码页面
+     * @DateTime:    2018/11/27 10:32
+     * @Author:      fyd
+     */
     public function showFind(){
         return $this->fetch("user/forgetpass");
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/14 22:27
      * @Description: 找回密码，通过使用phpemail发送六位数字密码
+     * @DateTime:    2018/11/27 10:33
+     * @Author:      fyd
      */
     public function findpass(){
         $idcard = $_POST['id'];
@@ -102,4 +112,5 @@ class Login extends Controller
                 break;
         }
     }
+
 }

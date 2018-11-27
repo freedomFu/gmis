@@ -1,9 +1,4 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/13 14:41
- * @Description: 基础文件
- */
 namespace app\index\controller;
 use think\Controller;
 use think\Db;
@@ -11,9 +6,9 @@ use think\Db;
 class Base extends Controller
 {
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/13 14:43
      * @Description: 初始化函数，用于判断用户是否登录
+     * @DateTime:    2018/11/27 10:30
+     * @Author:      fyd
      */
     public function _initialize(){
         if(session('uid')==0){

@@ -1,9 +1,4 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/13 22:15
- * @Description: 描述信息
- */
 namespace app\index\controller;
 use app\index\controller\Base;
 use app\index\model\Tapply;
@@ -13,9 +8,9 @@ use think\Db;
 class Teapply extends Base
 {
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 15:03
      * @Description: 判断是不是教师权限
+     * @DateTime:    2018/11/27 10:36
+     * @Author:      fyd
      */
     private function isTeacher(){
         if(session('auth')!=2){
@@ -24,9 +19,9 @@ class Teapply extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/25 0:24
      * @Description: 显示界面
+     * @DateTime:    2018/11/27 10:37
+     * @Author:      fyd
      */
     public function show(){
         $this->isTeacher();
@@ -37,9 +32,9 @@ class Teapply extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/13 22:17
      * @Description: 显示该教师已经申请过的内容
+     * @DateTime:    2018/11/27 10:37
+     * @Author:      fyd
      */
     public function index(){
         $this->isTeacher();
@@ -54,9 +49,9 @@ class Teapply extends Base
     }
 
     /**
+     * @Description: 添加数据
+     * @DateTime:    2018/11/27 10:37
      * @Author:      fyd
-     * @DateTime:    2018/11/13 22:19
-     * @Description: 添加数据测试
      */
     public function add(){
         $this->isTeacher();
@@ -67,11 +62,9 @@ class Teapply extends Base
         if($titlenum<=$appliedNum){
             falsePro(3,"您已经没有剩余名额了！");
             exit;
-//            $this->error("您已经没有剩余名额了",$url);
         }
         $isnew = $this->isTrue($_POST['isnew']);
         $isprac = $this->isTrue($_POST['isprac']);
-
         $data = [
             'title'         =>  $_POST['title'],
             'nature'        =>  $_POST['nature'],
@@ -93,6 +86,11 @@ class Teapply extends Base
         }
     }
 
+    /**
+     * @Description: 根据boolean返回值
+     * @DateTime:    2018/11/27 10:38
+     * @Author:      fyd
+     */
     private function isTrue($bool){
         if($bool=="true"){
             return 1;
@@ -102,9 +100,9 @@ class Teapply extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/14 10:50
      * @Description: 修改申请信息
+     * @DateTime:    2018/11/27 10:38
+     * @Author:      fyd
      */
     public function edit(){
         $this->isTeacher();
@@ -134,9 +132,9 @@ class Teapply extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/14 15:09
      * @Description: 删除数据
+     * @DateTime:    2018/11/27 10:39
+     * @Author:      fyd
      */
     public function del(){
         $this->isTeacher();
@@ -155,9 +153,9 @@ class Teapply extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/24 7:32
      * @Description: 教师选择学生
+     * @DateTime:    2018/11/27 10:39
+     * @Author:      fyd
      */
     public function showSelectStu(){
         $this->isTeacher();
@@ -169,9 +167,9 @@ class Teapply extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/24 15:41
      * @Description: 选择学生,需要对应的id
+     * @DateTime:    2018/11/27 10:39
+     * @Author:      fyd
      */
     public function chooseTitle(){
         $this->isTeacher();

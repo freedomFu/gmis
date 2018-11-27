@@ -1,11 +1,5 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/18 21:03
- * @Description: 描述信息
- */
 namespace app\index\model;
-
 use think\Model;
 use think\Db;
 
@@ -29,13 +23,17 @@ class Prochart extends Model
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
 
-
     public function getRefreshtimeTextAttr($value, $data)
     {
         $value = $value ? $value : (isset($data['refreshtime']) ? $data['refreshtime'] : '');
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
 
+    /**
+     * @Description: 根据状态返回值
+     * @DateTime:    2018/11/27 10:45
+     * @Author:      fyd
+     */
     private function getStatus($status){
         if($status=="未开始"){
             $res = 0;
@@ -49,9 +47,9 @@ class Prochart extends Model
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/18 21:07
      * @Description: 获取流程表
+     * @DateTime:    2018/11/27 10:45
+     * @Author:      fyd
      */
     public function prochart(){
         $list = Prochart::order('id asc')->select();
@@ -60,7 +58,6 @@ class Prochart extends Model
             $status = $this->getStatus($list[$i]['status']);
             $list[$i]['statusnum'] = $status;
         }
-
         return $list;
     }
 }

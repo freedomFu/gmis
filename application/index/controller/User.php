@@ -10,9 +10,9 @@ class User extends Base
 {
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/26 9:05
      * @Description: 清空session
+     * @DateTime:    2018/11/27 10:40
+     * @Author:      fyd
      */
     private function delSession(){
         session('auth',0);
@@ -22,9 +22,9 @@ class User extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/14 22:26
      * @Description: 用户退出
+     * @DateTime:    2018/11/27 10:41
+     * @Author:      fyd
      */
     public function logout(){
         $this->delSession();
@@ -32,18 +32,18 @@ class User extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/26 8:14
      * @Description: 显示修改密码页面
+     * @DateTime:    2018/11/27 10:41
+     * @Author:      fyd
      */
     public function showExpass(){
         return $this->fetch('user/expass');
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/14 22:27
      * @Description: 修改密码
+     * @DateTime:    2018/11/27 10:41
+     * @Author:      fyd
      */
     public function expass(){
         // 获取当前用户的身份和ID

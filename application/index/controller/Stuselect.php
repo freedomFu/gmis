@@ -1,9 +1,4 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/15 21:55
- * @Description: 描述信息
- */
 namespace app\index\controller;
 use app\index\controller\Base;
 use app\index\model\Sselect;
@@ -13,9 +8,9 @@ use think\Db;
 class Stuselect extends Base
 {
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 15:03
      * @Description: 判断是不是学生权限
+     * @DateTime:    2018/11/27 10:35
+     * @Author:      fyd
      */
     private function isStudent(){
         if(session('auth')!=1){
@@ -23,6 +18,11 @@ class Stuselect extends Base
         }
     }
 
+    /**
+     * @Description: 显示学生选择页面
+     * @DateTime:    2018/11/27 10:35
+     * @Author:      fyd
+     */
     public function show(){
         $this->isStudent();
         $sselect = new Sselect();
@@ -32,13 +32,12 @@ class Stuselect extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 10:30
      * @Description: 已选题目
+     * @DateTime:    2018/11/27 10:35
+     * @Author:      fyd
      */
     public function index(){
         $this->isStudent();
-
         $sselect = new Sselect();
         $stuid = session('uid');
         $list = $sselect->sselect($stuid);
@@ -46,9 +45,9 @@ class Stuselect extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 10:31
      * @Description: 查询题目
+     * @DateTime:    2018/11/27 10:27
+     * @Author:      fyd
      */
     public function showApplyTitle(){
         $this->isStudent();
@@ -126,9 +125,9 @@ class Stuselect extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 15:49
      * @Description: 获取三个titleid并保存起来
+     * @DateTime:    2018/11/27 10:27
+     * @Author:      fyd
      */
     public function saveData(){
         $sselect = new Sselect();
@@ -161,9 +160,9 @@ class Stuselect extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 18:57
      * @Description: 提交数据,这里提交的时候需要修改weigh
+     * @DateTime:    2018/11/27 10:28
+     * @Author:      fyd
      */
     public function submitData(){
         $sselect = new Sselect();

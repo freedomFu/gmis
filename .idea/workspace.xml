@@ -6,18 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="22bcd330-2bf3-4591-b345-000f3989cf2a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Base.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Base.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Protable.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Protable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Reprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Reprocess.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/controller/Stuselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Stuselect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Teapply.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Teapply.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/model/Process.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/Process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/model/Prochart.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/Prochart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/model/Sselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/Sselect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/common/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/common/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/model/Tapply.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/Tapply.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/sselect/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/sselect/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/tapply/teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/tapply/teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/css/tapply.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/css/tapply.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/home/js/sselect/sselect.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/js/sselect/sselect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/js/tapply/tapply.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/js/tapply/tapply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/log/201811/26.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201811/26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/67d83a4a674093a0f059486ddf9766c7.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/67d83a4a674093a0f059486ddf9766c7.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/7e2e0774258ec16b7766e6139f0b05a5.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/7e2e0774258ec16b7766e6139f0b05a5.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/e959f0e0807d10135ac9e90fde11aacc.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/e959f0e0807d10135ac9e90fde11aacc.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,52 +32,139 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="sselect.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/public/home/js/sselect/sselect.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="709">
+                    <caret line="182" column="6" selection-start-line="182" selection-start-column="6" selection-end-line="182" selection-end-column="6" />
+                    <folding>
+                      <element signature="e#29#361#0" />
+                      <element signature="n#!!block;n#tableInput#0" />
+                      <element signature="e#1126#1408#0" />
+                      <element signature="e#1847#2401#0" />
+                      <element signature="e#1903#2386#0" />
+                      <element signature="e#2407#2475#0" />
+                      <element signature="e#2531#2715#0" />
+                      <element signature="e#2752#4514#0" />
+                      <element signature="e#4535#4766#0" />
+                      <element signature="e#4787#5017#0" />
+                      <element signature="e#6032#6202#0" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="teacher.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/tapply/teacher.html">
+      <file leaf-file-name="Prochart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/model/Prochart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="216" selection-start-line="216" selection-end-line="216" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Teapply.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/controller/Teapply.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="165" column="26" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="26" />
+            <state relative-caret-position="500">
+              <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
               <folding>
-                <element signature="e#123#153#0#PHP" expanded="true" />
+                <element signature="e#329#556#0#PHP" />
+                <element signature="e#563#796#0#PHP" />
+                <element signature="e#801#904#0#PHP" />
+                <element signature="e#802#1039#0#PHP" />
+                <element signature="e#1152#1253#0#PHP" />
+                <element signature="e#1257#1548#0#PHP" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tapply.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Sselect.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/model/Sselect.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="707">
+              <caret line="348" column="5" lean-forward="true" selection-start-line="348" selection-start-column="5" selection-end-line="348" selection-end-column="5" />
+              <folding>
+                <element signature="e#374#420#0#PHP" />
+                <element signature="e#442#669#0#PHP" />
+                <element signature="e#676#909#0#PHP" />
+                <element signature="e#826#926#0#PHP" />
+                <element signature="e#1019#1282#0#PHP" />
+                <element signature="e#1288#1390#0#PHP" />
+                <element signature="e#1395#1616#0#PHP" />
+                <element signature="e#1534#1636#0#PHP" />
+                <element signature="e#1639#2225#0#PHP" />
+                <element signature="e#2233#2341#0#PHP" />
+                <element signature="e#2338#2572#0#PHP" />
+                <element signature="e#2586#2690#0#PHP" />
+                <element signature="e#2783#3045#0#PHP" />
+                <element signature="e#2963#3066#0#PHP" />
+                <element signature="e#3051#3322#0#PHP" />
+                <element signature="e#3347#3459#0#PHP" />
+                <element signature="e#3445#3671#0#PHP" />
+                <element signature="e#3696#3802#0#PHP" />
+                <element signature="e#3677#4137#0#PHP" />
+                <element signature="e#4273#4373#0#PHP" />
+                <element signature="e#4282#5362#0#PHP" />
+                <element signature="e#5368#5467#0#PHP" />
+                <element signature="e#5472#6009#0#PHP" />
+                <element signature="e#6112#6237#0#PHP" />
+                <element signature="e#6146#6719#0#PHP" />
+                <element signature="e#6821#6926#0#PHP" />
+                <element signature="e#6835#7470#0#PHP" />
+                <element signature="e#7572#7672#0#PHP" />
+                <element signature="e#7677#8681#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tapply.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/index/model/Tapply.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="252" column="32" selection-start-line="252" selection-start-column="32" selection-end-line="252" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tapply.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/home/css/tapply.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="135" selection-start-line="135" selection-end-line="135" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tapply.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/home/js/tapply/tapply.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="320" column="26" selection-start-line="320" selection-start-column="26" selection-end-line="320" selection-end-column="26" />
+            <state relative-caret-position="727">
+              <caret line="383" column="5" lean-forward="true" selection-start-line="383" selection-start-column="5" selection-end-line="383" selection-end-column="5" />
+              <folding>
+                <element signature="e#373#419#0#PHP" />
+                <element signature="e#441#660#0#PHP" />
+                <element signature="e#667#900#0#PHP" />
+                <element signature="e#818#929#0#PHP" />
+                <element signature="e#906#1039#0#PHP" />
+                <element signature="e#1073#1173#0#PHP" />
+                <element signature="e#1149#1412#0#PHP" />
+                <element signature="e#1447#1554#0#PHP" />
+                <element signature="e#1530#2426#0#PHP" />
+                <element signature="e#2461#2561#0#PHP" />
+                <element signature="e#2566#2925#0#PHP" />
+                <element signature="e#2931#3031#0#PHP" />
+                <element signature="e#3037#3296#0#PHP" />
+                <element signature="e#3301#3415#0#PHP" />
+                <element signature="e#3406#4163#0#PHP" />
+                <element signature="e#4183#4314#0#PHP" />
+                <element signature="e#4285#4556#0#PHP" />
+                <element signature="e#4596#4696#0#PHP" />
+                <element signature="e#4701#5100#0#PHP" />
+                <element signature="e#5106#5208#0#PHP" />
+                <element signature="e#5455#5558#0#PHP" />
+                <element signature="e#5560#5723#0#PHP" />
+                <element signature="e#5732#5836#0#PHP" />
+                <element signature="e#5806#6746#0#PHP" />
+                <element signature="e#5857#6089#0#PHP" />
+                <element signature="e#6787#6893#0#PHP" />
+                <element signature="e#6894#7141#0#PHP" />
+                <element signature="e#7151#7259#0#PHP" />
+                <element signature="e#7256#7916#0#PHP" />
+                <element signature="e#7930#8039#0#PHP" />
+                <element signature="e#8035#8443#0#PHP" />
+                <element signature="e#8458#8566#0#PHP" />
+                <element signature="e#8567#9007#0#PHP" />
+                <element signature="e#9017#9121#0#PHP" />
+                <element signature="e#9123#9929#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,6 +188,7 @@
       <find>picked</find>
       <find>obj_apply.data</find>
       <find>obj_manage</find>
+      <find>checkStuTitleNum</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/home/js/base.js" />
         <option value="$PROJECT_DIR$/application/admin/view/teacher/edit.html" />
         <option value="$PROJECT_DIR$/application/admin/view/teacher/add.html" />
         <option value="$PROJECT_DIR$/application/admin/controller/Student.php" />
@@ -120,43 +210,44 @@
         <option value="$PROJECT_DIR$/application/admin/controller/Tapply.php" />
         <option value="$PROJECT_DIR$/public/assets/js/backend/profess.js" />
         <option value="$PROJECT_DIR$/public/assets/js/backend/process.js" />
-        <option value="$PROJECT_DIR$/application/index/model/Process.php" />
         <option value="$PROJECT_DIR$/application/admin/controller/Teacher.php" />
         <option value="$PROJECT_DIR$/public/assets/js/backend/teacher.js" />
         <option value="$PROJECT_DIR$/application/admin/view/teacher/index.html" />
         <option value="$PROJECT_DIR$/application/index/view/tapply/index.html" />
-        <option value="$PROJECT_DIR$/application/index/model/Prochart.php" />
-        <option value="$PROJECT_DIR$/application/index/controller/Protable.php" />
         <option value="$PROJECT_DIR$/application/index/common.php" />
         <option value="$PROJECT_DIR$/public/home/css/prochart.css" />
-        <option value="$PROJECT_DIR$/application/index/controller/Reprocess.php" />
-        <option value="$PROJECT_DIR$/application/index/controller/Teapply.php" />
         <option value="$PROJECT_DIR$/public/home/css/sselect.css" />
         <option value="$PROJECT_DIR$/public/home/css/base.css" />
         <option value="$PROJECT_DIR$/application/index/view/index/index.html" />
-        <option value="$PROJECT_DIR$/application/index/controller/Index.php" />
         <option value="$PROJECT_DIR$/public/home/js/user/expass.css" />
         <option value="$PROJECT_DIR$/public/home/css/expass.css" />
         <option value="$PROJECT_DIR$/application/common/view/tpl/dispatch_jump.tpl" />
         <option value="$PROJECT_DIR$/public/home/js/login/login.js" />
         <option value="$PROJECT_DIR$/application/index/view/user/expass.html" />
         <option value="$PROJECT_DIR$/application/index/model/Userlogin.php" />
-        <option value="$PROJECT_DIR$/application/index/controller/User.php" />
         <option value="$PROJECT_DIR$/public/home/css/forpass.css" />
         <option value="$PROJECT_DIR$/application/index/view/user/login.html" />
         <option value="$PROJECT_DIR$/application/index/view/user/forgetpass.html" />
-        <option value="$PROJECT_DIR$/application/index/controller/Login.php" />
         <option value="$PROJECT_DIR$/public/home/js/user/expass.js" />
         <option value="$PROJECT_DIR$/public/home/js/user/forpass.js" />
-        <option value="$PROJECT_DIR$/application/index/view/sselect/index.html" />
-        <option value="$PROJECT_DIR$/application/index/model/Sselect.php" />
-        <option value="$PROJECT_DIR$/application/index/controller/Stuselect.php" />
-        <option value="$PROJECT_DIR$/public/home/js/sselect/sselect.js" />
         <option value="$PROJECT_DIR$/application/index/view/common/base.html" />
         <option value="$PROJECT_DIR$/public/home/js/tapply/tapply.js" />
-        <option value="$PROJECT_DIR$/application/index/model/Tapply.php" />
         <option value="$PROJECT_DIR$/application/index/view/tapply/teacher.html" />
         <option value="$PROJECT_DIR$/public/home/css/tapply.css" />
+        <option value="$PROJECT_DIR$/application/index/view/sselect/index.html" />
+        <option value="$PROJECT_DIR$/public/home/js/sselect/sselect.js" />
+        <option value="$PROJECT_DIR$/application/index/controller/Base.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Index.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Login.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/User.php" />
+        <option value="$PROJECT_DIR$/application/index/model/Process.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Teapply.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Stuselect.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Reprocess.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Protable.php" />
+        <option value="$PROJECT_DIR$/application/index/model/Prochart.php" />
+        <option value="$PROJECT_DIR$/application/index/model/Sselect.php" />
+        <option value="$PROJECT_DIR$/application/index/model/Tapply.php" />
       </list>
     </option>
   </component>
@@ -216,10 +307,9 @@
       <path value="$PROJECT_DIR$/vendor/mtdowling/cron-expression" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="560" />
-    <option name="y" value="58" />
-    <option name="width" value="1042" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -277,6 +367,14 @@
               <item name="index" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmis" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="sselect" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
@@ -394,16 +492,18 @@
       <workItem from="1542938957188" duration="17898000" />
       <workItem from="1543015439057" duration="60903000" />
       <workItem from="1543189182395" duration="28367000" />
+      <workItem from="1543285033152" duration="2314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255660000" />
+    <option name="totallyTimeSpent" value="257974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19989339" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16257995" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -426,20 +526,20 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.48667377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -453,7 +553,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -506,26 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="50" />
-          <folding>
-            <element signature="e#123#144#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/model/Prochart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
-          <folding>
-            <element signature="e#119#135#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/home/css/animate.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -547,16 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Protable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="29" />
-          <folding>
-            <element signature="e#123#152#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -564,37 +634,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/tapply/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1758">
-          <caret line="218" column="43" lean-forward="true" selection-start-line="218" selection-start-column="43" selection-end-line="218" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/model/Process.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="74" column="35" lean-forward="true" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-          <folding>
-            <element signature="e#119#135#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/tapply/index.html" />
     <entry file="file://$PROJECT_DIR$/public/home/css/prochart.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Reprocess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding>
-            <element signature="e#123#153#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,13 +663,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/home/js/user/expass.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="818">
-          <caret line="133" column="1" selection-start-line="133" selection-start-column="1" selection-end-line="133" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/home/js/user/expass.css" />
     <entry file="file://$PROJECT_DIR$/public/home/css/expass.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="818">
@@ -661,16 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding>
-            <element signature="e#123#153#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/home/js/login/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -699,28 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="80" column="32" lean-forward="true" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <element signature="e#123#153#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/home/js/user/expass.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -766,33 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/home/js/sselect/sselect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="155" column="42" selection-start-line="155" selection-start-column="42" selection-end-line="155" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/sselect/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Stuselect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2458">
-          <caret line="162" column="7" selection-start-line="162" selection-start-column="7" selection-end-line="162" selection-end-column="7" />
-          <folding>
-            <element signature="e#123#153#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/common/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -800,56 +783,296 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/model/Sselect.php">
+    <entry file="file://$PROJECT_DIR$/public/home/css/tapply.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+        <state relative-caret-position="447">
+          <caret line="140" column="41" lean-forward="true" selection-start-line="140" selection-start-column="41" selection-end-line="140" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/tapply/teacher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="807">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/sselect/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/home/js/sselect/sselect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="182" column="6" selection-start-line="182" selection-start-column="6" selection-end-line="182" selection-end-column="6" />
           <folding>
-            <element signature="e#119#146#0#PHP" expanded="true" />
-            <element signature="e#442#669#0#PHP" />
-            <element signature="e#676#909#0#PHP" />
-            <element signature="e#1019#1282#0#PHP" />
-            <element signature="e#1288#1390#0#PHP" />
-            <element signature="e#3866#4000#0#PHP" />
+            <element signature="e#29#361#0" />
+            <element signature="n#!!block;n#tableInput#0" />
+            <element signature="e#1126#1408#0" />
+            <element signature="e#1847#2401#0" />
+            <element signature="e#1903#2386#0" />
+            <element signature="e#2407#2475#0" />
+            <element signature="e#2531#2715#0" />
+            <element signature="e#2752#4514#0" />
+            <element signature="e#4535#4766#0" />
+            <element signature="e#4787#5017#0" />
+            <element signature="e#6032#6202#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/home/js/tapply/tapply.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="320" column="26" selection-start-line="320" selection-start-column="26" selection-end-line="320" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/Process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding>
+            <element signature="e#346#392#0#PHP" />
+            <element signature="e#414#641#0#PHP" />
+            <element signature="e#648#881#0#PHP" />
+            <element signature="e#886#1045#0#PHP" />
+            <element signature="e#1056#1748#0#PHP" />
+            <element signature="e#1390#1551#0#PHP" />
+            <element signature="e#1748#1848#0#PHP" />
+            <element signature="e#1853#2239#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="e#187#292#0#PHP" />
+            <element signature="e#292#450#0#PHP" />
+            <element signature="e#461#561#0#PHP" />
+            <element signature="e#566#672#0#PHP" />
+            <element signature="e#678#782#0#PHP" />
+            <element signature="e#783#862#0#PHP" />
+            <element signature="e#872#972#0#PHP" />
+            <element signature="e#977#1926#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/Teapply.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="165" column="26" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="26" />
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
           <folding>
             <element signature="e#123#153#0#PHP" expanded="true" />
+            <element signature="e#252#357#0#PHP" />
+            <element signature="e#357#486#0#PHP" />
+            <element signature="e#497#597#0#PHP" />
+            <element signature="e#602#826#0#PHP" />
+            <element signature="e#832#941#0#PHP" />
+            <element signature="e#937#1339#0#PHP" />
+            <element signature="e#1354#1454#0#PHP" />
+            <element signature="e#1459#2561#0#PHP" />
+            <element signature="e#2519#2627#0#PHP" />
+            <element signature="e#2567#2700#0#PHP" />
+            <element signature="e#2771#2873#0#PHP" />
+            <element signature="e#2876#3661#0#PHP" />
+            <element signature="e#3669#3769#0#PHP" />
+            <element signature="e#3710#4096#0#PHP" />
+            <element signature="e#4166#4268#0#PHP" />
+            <element signature="e#4271#4505#0#PHP" />
+            <element signature="e#4513#4621#0#PHP" />
+            <element signature="e#4618#5103#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Reprocess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#123#153#0#PHP" expanded="true" />
+            <element signature="e#255#360#0#PHP" />
+            <element signature="e#365#494#0#PHP" />
+            <element signature="e#500#608#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Protable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#123#152#0#PHP" expanded="true" />
+            <element signature="e#224#329#0#PHP" />
+            <element signature="e#334#463#0#PHP" />
+            <element signature="e#469#571#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <element signature="e#123#153#0#PHP" expanded="true" />
+            <element signature="e#234#336#0#PHP" />
+            <element signature="e#420#524#0#PHP" />
+            <element signature="e#752#856#0#PHP" />
+            <element signature="e#1593#1697#0#PHP" />
+            <element signature="e#1789#1910#0#PHP" />
+            <element signature="e#1915#2661#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/Prochart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <folding>
+            <element signature="e#329#556#0#PHP" />
+            <element signature="e#563#796#0#PHP" />
+            <element signature="e#801#904#0#PHP" />
+            <element signature="e#802#1039#0#PHP" />
+            <element signature="e#1152#1253#0#PHP" />
+            <element signature="e#1257#1548#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Stuselect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="186" column="1" lean-forward="true" selection-start-line="186" selection-start-column="1" selection-end-line="186" selection-end-column="1" />
+          <folding>
+            <element signature="e#170#275#0#PHP" />
+            <element signature="e#280#409#0#PHP" />
+            <element signature="e#415#519#0#PHP" />
+            <element signature="e#524#748#0#PHP" />
+            <element signature="e#754#854#0#PHP" />
+            <element signature="e#859#1059#0#PHP" />
+            <element signature="e#1065#1165#0#PHP" />
+            <element signature="e#1170#1908#0#PHP" />
+            <element signature="e#1914#2012#0#PHP" />
+            <element signature="e#2017#2662#0#PHP" />
+            <element signature="e#2668#2767#0#PHP" />
+            <element signature="e#2772#3118#0#PHP" />
+            <element signature="e#3124#3236#0#PHP" />
+            <element signature="e#3241#4052#0#PHP" />
+            <element signature="e#4058#4175#0#PHP" />
+            <element signature="e#4180#4807#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#186#284#0#PHP" />
+            <element signature="e#502#601#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/Sselect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="348" column="5" lean-forward="true" selection-start-line="348" selection-start-column="5" selection-end-line="348" selection-end-column="5" />
+          <folding>
+            <element signature="e#374#420#0#PHP" />
+            <element signature="e#442#669#0#PHP" />
+            <element signature="e#676#909#0#PHP" />
+            <element signature="e#826#926#0#PHP" />
+            <element signature="e#1019#1282#0#PHP" />
+            <element signature="e#1288#1390#0#PHP" />
+            <element signature="e#1395#1616#0#PHP" />
+            <element signature="e#1534#1636#0#PHP" />
+            <element signature="e#1639#2225#0#PHP" />
+            <element signature="e#2233#2341#0#PHP" />
+            <element signature="e#2338#2572#0#PHP" />
+            <element signature="e#2586#2690#0#PHP" />
+            <element signature="e#2783#3045#0#PHP" />
+            <element signature="e#2963#3066#0#PHP" />
+            <element signature="e#3051#3322#0#PHP" />
+            <element signature="e#3347#3459#0#PHP" />
+            <element signature="e#3445#3671#0#PHP" />
+            <element signature="e#3696#3802#0#PHP" />
+            <element signature="e#3677#4137#0#PHP" />
+            <element signature="e#4273#4373#0#PHP" />
+            <element signature="e#4282#5362#0#PHP" />
+            <element signature="e#5368#5467#0#PHP" />
+            <element signature="e#5472#6009#0#PHP" />
+            <element signature="e#6112#6237#0#PHP" />
+            <element signature="e#6146#6719#0#PHP" />
+            <element signature="e#6821#6926#0#PHP" />
+            <element signature="e#6835#7470#0#PHP" />
+            <element signature="e#7572#7672#0#PHP" />
+            <element signature="e#7677#8681#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/model/Tapply.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="252" column="32" selection-start-line="252" selection-start-column="32" selection-end-line="252" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/tapply/teacher.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/home/js/tapply/tapply.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="320" column="26" selection-start-line="320" selection-start-column="26" selection-end-line="320" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/home/css/tapply.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        <state relative-caret-position="727">
+          <caret line="383" column="5" lean-forward="true" selection-start-line="383" selection-start-column="5" selection-end-line="383" selection-end-column="5" />
+          <folding>
+            <element signature="e#373#419#0#PHP" />
+            <element signature="e#441#660#0#PHP" />
+            <element signature="e#667#900#0#PHP" />
+            <element signature="e#818#929#0#PHP" />
+            <element signature="e#906#1039#0#PHP" />
+            <element signature="e#1073#1173#0#PHP" />
+            <element signature="e#1149#1412#0#PHP" />
+            <element signature="e#1447#1554#0#PHP" />
+            <element signature="e#1530#2426#0#PHP" />
+            <element signature="e#2461#2561#0#PHP" />
+            <element signature="e#2566#2925#0#PHP" />
+            <element signature="e#2931#3031#0#PHP" />
+            <element signature="e#3037#3296#0#PHP" />
+            <element signature="e#3301#3415#0#PHP" />
+            <element signature="e#3406#4163#0#PHP" />
+            <element signature="e#4183#4314#0#PHP" />
+            <element signature="e#4285#4556#0#PHP" />
+            <element signature="e#4596#4696#0#PHP" />
+            <element signature="e#4701#5100#0#PHP" />
+            <element signature="e#5106#5208#0#PHP" />
+            <element signature="e#5455#5558#0#PHP" />
+            <element signature="e#5560#5723#0#PHP" />
+            <element signature="e#5732#5836#0#PHP" />
+            <element signature="e#5806#6746#0#PHP" />
+            <element signature="e#5857#6089#0#PHP" />
+            <element signature="e#6787#6893#0#PHP" />
+            <element signature="e#6894#7141#0#PHP" />
+            <element signature="e#7151#7259#0#PHP" />
+            <element signature="e#7256#7916#0#PHP" />
+            <element signature="e#7930#8039#0#PHP" />
+            <element signature="e#8035#8443#0#PHP" />
+            <element signature="e#8458#8566#0#PHP" />
+            <element signature="e#8567#9007#0#PHP" />
+            <element signature="e#9017#9121#0#PHP" />
+            <element signature="e#9123#9929#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

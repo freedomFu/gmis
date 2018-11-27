@@ -1,9 +1,4 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/20 15:15
- * @Description: 描述信息
- */
 namespace app\index\controller;
 use app\index\controller\Base;
 use app\index\model\Process;
@@ -13,9 +8,9 @@ use think\Db;
 class Reprocess extends Base
 {
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/17 15:03
      * @Description: 判断是不是教师权限
+     * @DateTime:    2018/11/27 10:34
+     * @Author:      fyd
      */
     private function isTeacher(){
         if(session('auth')!=2){
@@ -24,9 +19,9 @@ class Reprocess extends Base
     }
 
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/20 15:24
      * @Description: 获取教师对应学生毕设流程
+     * @DateTime:    2018/11/27 10:34
+     * @Author:      fyd
      */
     public function show(){
         $this->isTeacher();
@@ -42,7 +37,9 @@ class Reprocess extends Base
     }
 
     /**
-     * 保存数据  编辑成绩
+     * @Description: 保存数据  编辑成绩
+     * @DateTime:    2018/11/27 10:34
+     * @Author:      fyd
      */
     public function editScore(){
         $process = new Process();

@@ -1,9 +1,4 @@
 <?php
-/**
- * @Author:      fyd
- * @DateTime:    2018/11/13 20:59
- * @Description: 描述信息
- */
 namespace app\index\controller;
 use app\index\controller\Base;
 use app\index\model\Prochart;
@@ -14,9 +9,9 @@ use think\Session;
 class Index extends Base
 {
     /**
-     * @Author:      fyd
-     * @DateTime:    2018/11/23 15:18
      * @Description: 首页
+     * @DateTime:    2018/11/27 10:30
+     * @Author:      fyd
      */
     public function index(){
         $pc = new Prochart();
@@ -26,6 +21,11 @@ class Index extends Base
         return $this->fetch('index');
     }
 
+    /**
+     * @Description: 导航栏
+     * @DateTime:    2018/11/27 10:30
+     * @Author:      fyd
+     */
     public function nav(){
         return $this->fetch('common/base');
     }
