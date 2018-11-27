@@ -42,6 +42,7 @@ class Stuselect extends Base
         $this->assign('profess',$profess);
         $this->assign('submit',$submitData);
         $this->assign('allow',$allowData);
+
         return $this->fetch('sselect/index');
     }
 
@@ -125,12 +126,11 @@ class Stuselect extends Base
     public function delOne(){
         $sselect = new Sselect();
         $stuid = session('uid');
-//        $dataid = $_POST['id'];
-        $dataid = 15;
+        $dataid = $_POST['id'];
+//        $dataid = 12;
         $xq = getSenior();
 
         $res = $sselect->delOne($stuid,$dataid,$xq);
-
         if($res==1){
             falsePro(0,"取消成功");
         }else{
@@ -181,21 +181,22 @@ class Stuselect extends Base
     public function submitData(){
         $sselect = new Sselect();
         $stuid = session('uid');
-        $res = $sselect->submitData($stuid);
-        $url = "Stuselect/showApplyTitle";
+        $xq = getSenior();
+        $res = $sselect->submitData($stuid,$xq);
         switch ($res){
-            case 4:
-                $this->error("你已经提交了，不能再添加了",$url);
             case 3:
-                $this->error("存在题目数目已经申请数目已经超过10个");
-            case 2:
-                $this->success("您的数据有误",$url);
+                falsePro(2,"数量超出，不能申请");
+                break;
             case 1:
-                $this->success("保存成功",$url);
+                falsePro(0,"提交成功");
+                break;
             case 0:
-                $this->error("保存失败",$url);
+                falsePro(1,"提交失败");
+                break;
+            case 2:
             default:
-                $this->error("未知错误",$url);
+                falsePro(3,"操作错误");
+                break;
         }
     }
 }

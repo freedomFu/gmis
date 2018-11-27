@@ -306,26 +306,17 @@ class Sselect extends Model
      * @DateTime:    2018/11/27 10:51
      * @Author:      fyd
      */
-    public function submitData($stuid){
+    public function submitData($stuid,$xq){
+        $where['status']="正常";
+        $where['stuid']=$stuid;
+        $where['isallow']=0;
+        $where['belongSenior']=$xq;
 
-        $wherecheck['stuid'] = $stuid;
-        $wherecheck['issubmit']=1;
-        $wherecheck['status'] = '正常';
-        $checkIsAllow = Sselect::where($wherecheck)
-            ->find();
-        if($checkIsAllow){
-            return 4;
-        }
-
-        $where['stuid'] = $stuid;
         $stuselect = Sselect::where($where)
+            ->where('issubmit',0)
             ->select();
         $count = count($stuselect);
-
-        if($count>3){
-            return 2; //超过三个，提示出错
-        }
-
+        $list=[];
         for($i=0;$i<$count;$i++){
             $ssid = $stuselect[$i]['id'];
             $titleid = $stuselect[$i]['stuid'];
@@ -335,9 +326,11 @@ class Sselect extends Model
             }
             $list[$i] = [
                 'id'        =>  $ssid,
-                'issubmit'  =>  1
+                'issubmit'  =>  1,
+                'weigh'     =>  $i
             ];
         }
+
         $res = Sselect::saveAll($list);
 
         if($res){

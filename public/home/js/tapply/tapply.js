@@ -67,10 +67,11 @@ var app=new Vue({
         for(var i=0;i<this.store.length;i++){
             this.editing.push(false)
         }
+        console.log(obj_apply.count)
     },
     methods:{
         add:function(){
-            if(this.store.length>=count){
+            if(this.store.length>=this.count){
                 
             }else{
                 this.adding=true;//出现新框
@@ -113,10 +114,6 @@ var app=new Vue({
             this.adding=false;
 
         },
-
-
-
-
         del:function(index){
             if(confirm("确认删除？")){
                 var s = this.store;
@@ -295,16 +292,13 @@ $.ajax({
     data: {},
     success : function(res){
         obj_manage=res.data;
-        console.log(res.errmes)
+        // console.log(res.errmes)
     },
     error:function(){
         alert("数据请求失败，请检查网络连接")
     },
     dataType: "json",
 });
-
-
-
 
 var manage = new Vue({
     el:"#manage",
@@ -314,20 +308,17 @@ var manage = new Vue({
     // async:false,
     methods:{
         allow(index){
+            var id = manage.store[index].id;
+            console.log(id);
             $.ajax({
                 type: 'POST',
-                url: base_index+"",
-                data: manage.store[index],
+                url: base_index+"/Teapply/chooseTitle",
+                data: {id:id},
                 success : function(res){
+                    // alert(id);
                     if (res.errno == 0) {  //保存成功
                         alert("成功");
-                    }
-                    if (res.errno == 1) {
-                        if(res.errmsg){
-                            alert(res.errmsg);
-                        }
-                    }
-                    if (res.errno == 2) {
+                    }else{
                         if(res.errmsg){
                             alert(res.errmsg);
                         }

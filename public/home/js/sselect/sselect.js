@@ -121,11 +121,38 @@ var app=new Vue({
                 }
             }else{                       //取消勾子
                 console.log("取消勾");
-                for(let i=0;i<this.picked.length;i++){
+                /*for(let i=0;i<this.picked.length;i++){
                     if(this.store[index]==this.picked[i]){
                         this.picked.splice(i,1);
                     }
-                }
+                }*/
+                var id = app.store[index].id;
+                console.log(id);
+                $.ajax({
+                    type: 'POST',
+                    url: base_index+"/Stuselect/delOne",
+                    data: {id:id},
+                    success : function(res){
+                        console.log(index);
+                        if (res.errno == 0) {  //删除成功
+                            // alert("成功");
+                            for(let i=0;i<app.picked.length;i++){
+                                if(app.store[index]==app.picked[i]){
+                                    app.picked.splice(i,1);
+                                }
+                            }
+                        }
+                        if (res.errno == 1) {
+                            if(res.errmsg){
+                                alert(res.errmsg);
+                            }
+                        }
+                    },
+                    error:function(){
+                        alert("数据请求失败，请检查网络连接")
+                    },
+                    dataType: "json",
+                });
             }
             tableInput()//给序号添加可改效果
         },
@@ -146,20 +173,16 @@ var app=new Vue({
         submit(){
             $.ajax({
                 type: 'POST',
-                url: "http://localhost/gmis/public/xxxxxx",
+                url: base_index+"/Stuselect/submitData",
                 data: app.picked_id,
                 success : function(res){
                     if (res.errno == 0) {  //保存成功
+                        alert("成功");
                         // app.newItem=app.store[index];
                         // app.picked.push(app.newItem);
                         // app.newItem={};
                     }
-                    if (res.errno == 1) {
-                        if(res.errmsg){
-                            alert(res.errmsg);
-                        }
-                    }
-                    if (res.errno == 2) {
+                    if ((res.errno == 1) || (res.errno == 2) || (res.errno == 3)) {
                         if(res.errmsg){
                             alert(res.errmsg);
                         }

@@ -173,8 +173,10 @@ class Teapply extends Base
      */
     public function chooseTitle(){
         $this->isTeacher();
+
         $ta = new Tapply();
-        $res = $ta->chooseTitle(2);
+        $id = $_POST['id'];
+        $res = $ta->chooseTitle($id);
 
         switch ($res){
             case 2:

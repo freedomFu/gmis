@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html";i:1543241900;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html";i:1543307073;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -209,7 +209,7 @@
                 <td>{{item.stuphone}}</td>
                 <td class="revisable" >
                     <button  class="btn btn-success" v-on:click="allow(index)">允许</button>
-                    <button  class="btn btn-warning " v-on:click="reject(index)">拒绝</button>
+                    <!--<button  class="btn btn-warning " v-on:click="reject(index)">拒绝</button>-->
                 </td>
             </tr>
             </tbody>
