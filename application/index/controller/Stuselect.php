@@ -26,8 +26,22 @@ class Stuselect extends Base
     public function show(){
         $this->isStudent();
         $sselect = new Sselect();
+        $xq = getSenior();
+        $stuid = session('uid');
+        $submitData = $sselect->showSubmit($stuid,$xq);
+        $subCount = count($submitData);
+        for ($i=0;$i<$subCount;$i++){
+            $titleid = $submitData[$i]['titleid'];
+            $submitData[$i]['total'] = $sselect->getCount($titleid);
+            $submitData[$i]['isnew'] = $sselect->getStr($submitData[$i]['isnew']);
+            $submitData[$i]['isprac'] = $sselect->getStr($submitData[$i]['isprac']);
+            $submitData[$i]['isallow'] = $sselect->getStr($submitData[$i]['isallow']);
+        }
+        $allowData = $sselect->getAllow($stuid,$xq);
         $profess = $sselect->showProfess();
         $this->assign('profess',$profess);
+        $this->assign('submit',$submitData);
+        $this->assign('allow',$allowData);
         return $this->fetch('sselect/index');
     }
 

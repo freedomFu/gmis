@@ -241,7 +241,6 @@ class Sselect extends Model
 
     }
 
-
     /**
      * @Description: 保存数据，但是没有提交，获取的是titleid，已经通过的
      * @DateTime:    2018/11/27 10:49
@@ -346,6 +345,67 @@ class Sselect extends Model
         }else{
             return 0; //更新失败
         }
+    }
+
+    /**
+     * @Description: 显示已经提交的数据
+     * @DateTime:    2018/11/27 11:03
+     * @Author:      fyd
+     */
+    public function showSubmit($stuid,$xq){
+        $where['ss.stuid']=$stuid;
+        $where['ss.issubmit']=1;
+        $where['ss.belongSenior']=$xq;
+        $field="ss.titleid,gt.title,gt.nature,gt.source,gt.isnew,gt.isprac,ss.isallow,gt.status,gte.teaname,gte.teaphone";
+        $alias="ss";
+        $join = [
+            ['gmis_tapply gt','gt.id=ss.titleid','LEFT'],
+            ['gmis_teacher gte','gte.id=ss.teaid','LEFT'],
+        ];
+        $list = Sselect::alias($alias)
+            ->field($field)
+            ->join($join)
+            ->where($where)
+            ->select();
+        return $list;
+    }
+
+    /**
+     * @Description: 根据1和0返回是与否
+     * @DateTime:    2018/11/27 12:59
+     * @Author:      fyd
+     */
+    public function getStr($val){
+        if($val==1){
+            return "是";
+        }else{
+            return "否";
+        }
+    }
+
+    /**
+     * @Description: 获取已经通过的
+     * @DateTime:    2018/11/27 13:10
+     * @Author:      fyd
+     */
+    public function getAllow($stuid, $xq){
+        $table = "process";
+        $alias = "gp";
+        $join = [
+            ['gmis_tapply gta','gta.id=gp.titleid','LEFT'],
+            ['gmis_student gs','gs.id=gp.stuid','LEFT'],
+            ['gmis_teacher gte','gte.id=gp.teaid','LEFT']
+        ];
+        $field = "gta.title,gs.stuidcard,gs.stuname,gs.stuclass,gte.teaname,gte.starttimer,gte.middletimer,gte.replytimer,gte.replyplace,gp.replyscore";
+        $where['gp.stuid']=$stuid;
+        $where['gp.belongSenior']=$xq;
+        $list = Db::name($table)
+            ->alias($alias)
+            ->field($field)
+            ->join($join)
+            ->where($where)
+            ->select();
+        return $list;
     }
 
 }

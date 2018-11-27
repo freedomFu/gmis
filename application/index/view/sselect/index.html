@@ -95,7 +95,80 @@
 
             <button id="apply_save_data" class="btn btn-primary btn-lg" v-on:click="submit()" >提交数据</button>
         <!-- end #apply_stu -->
-    </div>
+            </div>
+
+            <div id="apply_remind3" >
+                <h4>已提交数据</h4>
+            </div>
+            <div id="apply_graph3">
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <thead>
+                    <th>题目</th>
+                    <th>课题性质</th>
+                    <th>课题来源</th>
+                    <th>是否新题</th>
+                    <th>是否结合实际</th>
+                    <th>是否通过审核</th>
+                    <th>教研室审批意见</th>
+                    <th>指导教师</th>
+                    <th>指导教师联系电话</th>
+                    <th>该题选择人数</th>
+                    </thead>
+                    <tbody>
+                    {volist name="submit" id="sd"}
+                    <tr>
+                        <td>{$sd.title}</td>
+                        <td>{$sd.nature}</td>
+                        <td>{$sd.source}</td>
+                        <td>{$sd.isnew}</td>
+                        <td>{$sd.isprac}</td>
+                        <td>{$sd.isallow}</td>
+                        <td>{$sd.status}</td>
+                        <td>{$sd.teaname}</td>
+                        <td>{$sd.teaphone}</td>
+                        <td>{$sd.total}</td>
+                    </tr>
+                    {/volist}
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="apply_remind4" >
+                <h4>已通过申请</h4>
+            </div>
+            <div id="apply_graph4">
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <thead>
+                    <th>题目</th>
+                    <th>学生学号</th>
+                    <th>学生姓名</th>
+                    <th>学生班级</th>
+                    <th>开题时间</th>
+                    <th>中期检查时间</th>
+                    <th>答辩时间</th>
+                    <th>答辩地点</th>
+                    <th>教师姓名</th>
+                    <th>答辩成绩</th>
+                    </thead>
+                    <tbody>
+                    {volist name="allow" id="al"}
+                    <tr>
+                        <td>{$al.title}</td>
+                        <td>{$al.stuidcard}</td>
+                        <td>{$al.stuname}</td>
+                        <td>{$al.stuclass}</td>
+                        <td>{$al.starttimer}</td>
+                        <td>{$al.middletimer}</td>
+                        <td>{$al.replytimer}</td>
+                        <td>{$al.replyplace}</td>
+                        <td>{$al.teaname}</td>
+                        <td>{$al.replyscore}</td>
+                    </tr>
+                    {/volist}
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
     <!-- end #apply -->

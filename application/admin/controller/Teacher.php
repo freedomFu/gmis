@@ -17,7 +17,6 @@ class Teacher extends Backend
      * @var \app\admin\model\Teacher
      */
     protected $model = null;
-    protected $searchFields = 'id,teaidcard,teaname,teahonor';
 
     public function _initialize()
     {
@@ -25,7 +24,6 @@ class Teacher extends Backend
         $this->model = new \app\admin\model\Teacher;
         $this->view->assign("teahonorList", $this->model->getTeahonorList());
         $this->view->assign("statusList", $this->model->getStatusList());
-
     }
     
     /**

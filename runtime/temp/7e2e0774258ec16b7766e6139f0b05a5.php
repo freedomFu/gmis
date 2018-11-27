@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543285538;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543295672;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,7 +96,80 @@
 
             <button id="apply_save_data" class="btn btn-primary btn-lg" v-on:click="submit()" >提交数据</button>
         <!-- end #apply_stu -->
-    </div>
+            </div>
+
+            <div id="apply_remind3" >
+                <h4>已提交数据</h4>
+            </div>
+            <div id="apply_graph3">
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <thead>
+                    <th>题目</th>
+                    <th>课题性质</th>
+                    <th>课题来源</th>
+                    <th>是否新题</th>
+                    <th>是否结合实际</th>
+                    <th>是否通过审核</th>
+                    <th>教研室审批意见</th>
+                    <th>指导教师</th>
+                    <th>指导教师联系电话</th>
+                    <th>该题选择人数</th>
+                    </thead>
+                    <tbody>
+                    <?php if(is_array($submit) || $submit instanceof \think\Collection || $submit instanceof \think\Paginator): $i = 0; $__LIST__ = $submit;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sd): $mod = ($i % 2 );++$i;?>
+                    <tr>
+                        <td><?php echo $sd['title']; ?></td>
+                        <td><?php echo $sd['nature']; ?></td>
+                        <td><?php echo $sd['source']; ?></td>
+                        <td><?php echo $sd['isnew']; ?></td>
+                        <td><?php echo $sd['isprac']; ?></td>
+                        <td><?php echo $sd['isallow']; ?></td>
+                        <td><?php echo $sd['status']; ?></td>
+                        <td><?php echo $sd['teaname']; ?></td>
+                        <td><?php echo $sd['teaphone']; ?></td>
+                        <td><?php echo $sd['total']; ?></td>
+                    </tr>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="apply_remind4" >
+                <h4>已通过申请</h4>
+            </div>
+            <div id="apply_graph4">
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <thead>
+                    <th>题目</th>
+                    <th>学生学号</th>
+                    <th>学生姓名</th>
+                    <th>学生班级</th>
+                    <th>开题时间</th>
+                    <th>中期检查时间</th>
+                    <th>答辩时间</th>
+                    <th>答辩地点</th>
+                    <th>教师姓名</th>
+                    <th>答辩成绩</th>
+                    </thead>
+                    <tbody>
+                    <?php if(is_array($allow) || $allow instanceof \think\Collection || $allow instanceof \think\Paginator): $i = 0; $__LIST__ = $allow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$al): $mod = ($i % 2 );++$i;?>
+                    <tr>
+                        <td><?php echo $al['title']; ?></td>
+                        <td><?php echo $al['stuidcard']; ?></td>
+                        <td><?php echo $al['stuname']; ?></td>
+                        <td><?php echo $al['stuclass']; ?></td>
+                        <td><?php echo $al['starttimer']; ?></td>
+                        <td><?php echo $al['middletimer']; ?></td>
+                        <td><?php echo $al['replytimer']; ?></td>
+                        <td><?php echo $al['replyplace']; ?></td>
+                        <td><?php echo $al['teaname']; ?></td>
+                        <td><?php echo $al['replyscore']; ?></td>
+                    </tr>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
     <!-- end #apply -->

@@ -1,5 +1,5 @@
 define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefined, Backend, Table, Form) {
-    Form.api.bindevent("form[role=form]");
+
     var Controller = {
         index: function () {
             // 初始化表格参数配置
@@ -24,19 +24,20 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'id', title: __('Id'),operate:false},
+                        {field: 'id', title: 'ID'},
                         {field: 'teaidcard', title: __('Teaidcard')},
                         {field: 'teaname', title: __('Teaname')},
                         {field: 'teapwd', title: __('Teapwd'),visible:false,operate:false},
                         {field: 'teaduty', title: __('Teaduty')},
-                        {field: 'teahonor', title: __('Teahonor'), searchList: {"助教":__('助教'),"讲师":__('讲师'),"副教授":__('副教授'),"教授":__('教授')},formatter: Table.api.formatter.status},
+                        {field: 'teahonor', title: __('Teahonor'), searchList: {"助教":__('助教'),"讲师":__('讲师'),"副教授":__('副教授'),"教授":__('教授')}, formatter: Table.api.formatter.normal},
                         {field: 'teatitlenum', title: __('Teatitlenum')},
+                        {field: 'teaphone', title: __('Teaphone')},
                         {field: 'starttimer', title: __('Starttimer')},
                         {field: 'middletimer', title: __('Middletimer')},
                         {field: 'replytimer', title: __('Replytimer')},
                         {field: 'replyplace', title: __('Replyplace')},
-                        {field: 'note', title: __('Note'),visible:false},
-                        {field: 'weigh', title: __('Weigh'),visible:false},
+                        {field: 'note', title: __('Note'),visible:false,operate:false},
+                        {field: 'weigh', title: __('Weigh'),visible:false,operate:false},
                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime,visible:false,operate:false},
                         {field: 'updatetime', title: __('Updatetime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime,visible:false,operate:false},
                         {field: 'status', title: __('Status'), searchList: {"任教中":__('任教中'),"未任教":__('未任教')}, formatter: Table.api.formatter.status},
@@ -45,6 +46,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 ]
             });
 
+            // 为表格绑定事件
+            Table.api.bindevent(table);
         },
         add: function () {
             Controller.api.bindevent();
