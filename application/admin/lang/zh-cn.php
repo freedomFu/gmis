@@ -68,7 +68,7 @@ return [
     'Login'                                                 => '登录',
     'Logout'                                                => '注销',
     'Profile'                                               => '个人资料',
-    'Index'                                                 => '首页',
+    'Info'                                                 => '首页',
     'Hot'                                                   => '热门',
     'Recommend'                                             => '推荐',
     'Dashboard'                                             => '控制台',

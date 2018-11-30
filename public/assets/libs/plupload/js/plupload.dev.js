@@ -412,7 +412,7 @@ var plupload = {
 	 * @static
 	 * @param {mixed} needle Element to find
 	 * @param {Array} array
-	 * @return {Int} Index of the element, or -1 if not found
+	 * @return {Int} Info of the element, or -1 if not found
 	 */
 	inArray : u.Basic.inArray,
 

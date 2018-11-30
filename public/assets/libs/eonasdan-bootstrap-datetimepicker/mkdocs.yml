@@ -14,7 +14,7 @@ pages:
 - Extras: 'Extras.md'
 - FAQs: 'FAQ.md'
 - Issues:
-    - Issues: 'Issues/Index.md'
+    - Issues: 'Issues/Info.md'
     - 1014: 'Issues/1014.md'
     - 1041: 'Issues/1041.md'
     - 1045: 'Issues/1045.md'

@@ -3189,8 +3189,8 @@ var TableResultAction = function (startPoint, where, action, domTable) {
     /**
      * Define virtual table position info object.
      *
-     * @param {int} rowIndex Index position in line of virtual table.
-     * @param {int} cellIndex Index position in column of virtual table.
+     * @param {int} rowIndex Info position in line of virtual table.
+     * @param {int} cellIndex Info position in column of virtual table.
      * @param {object} baseRow Row affected by this position.
      * @param {object} baseCell Cell affected by this position.
      * @param {bool} isSpan Inform if it is an span cell/row.
@@ -3227,8 +3227,8 @@ var TableResultAction = function (startPoint, where, action, domTable) {
     /**
      * Recover free index of row to append Cell.
      *
-     * @param {int} rowIndex Index of row to find free space.
-     * @param {int} cellIndex Index of cell to find free space in table.
+     * @param {int} rowIndex Info of row to find free space.
+     * @param {int} cellIndex Info of cell to find free space in table.
      */
     function recoverCellIndex(rowIndex, cellIndex) {
         if (!_virtualTable[rowIndex]) {

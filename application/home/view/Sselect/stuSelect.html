@@ -1,0 +1,37 @@
+{include file="Public/header" /}
+<div class="layui-body">
+    <div class="layui-container">
+        <!-- 内容主体区域 -->
+        <h2 id="userCon" style="text-align: center;padding: 15px 0">选择题目</h2>
+        <div class="demo">
+            题目关键字：
+            <div class="layui-inline">
+                <input class="layui-input" type="text" name="titlekey" id="titlekey" autocomplete="off">
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;专业
+            <div class="layui-inline">
+                <select id="profess" class="layui-select" name="professid" lay-filter="zhuanye" id="proname" lay-search="">
+                    <option value="0"></option>
+                    {volist name="profess" id="pro"}
+                    <option value="{$pro.id}">{$pro.proname}</option>
+                    {/volist}
+                </select>
+            </div>
+            <a class="layui-btn" id="searchBtn" lay-event="search">搜索</a>
+        </div>
+        <table id="stuSelect" lay-filter="stuSelect"></table>
+        <script type="text/html" id="isNewTpl">
+            {{(d.isnew==='1'?'是':'否')}}
+        </script>
+        <script type="text/html" id="isPracTpl">
+            {{(d.isprac==='1'?'是':'否')}}
+        </script>
+        <script type="text/html" id="operation-bar">
+            <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail">查看</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="save">选题</a>
+        </script>
+    </div>
+</div>
+{include file="Public/footer" /}
+
+<script src="__FHOME_JS__/sselect.js"></script>

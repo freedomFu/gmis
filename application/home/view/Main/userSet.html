@@ -1,0 +1,48 @@
+{include file="Public/header" /}
+<div style="width:930px;margin:50px auto;">
+    <h2 id="setTeacherInfo">设置教师信息</h2>
+    <form class="layui-form " id="set_info_form" action="#" style="padding: 15px 20px 0 0;" method="post">
+        <!--开题日期-->
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">开题日期</label>
+            <div class="layui-input-block">
+                <input type="text" name="starttimer" value="{$teainfo.starttimer}" id="starttimer" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <!--中期时间-->
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">中期时间</label>
+            <div class="layui-input-block">
+                <input type="text" name="middletimer" value="{$teainfo.middletimer}" id="middletimer" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <!--答辩时间-->
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">答辩时间</label>
+            <div class="layui-input-block">
+                <input type="text" name="replytimer" value="{$teainfo.replytimer}" id="replytimer" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <!--答辩地点-->
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">答辩地点</label>
+            <div class="layui-input-block">
+                <input type="text" name="replyplace" value="{$teainfo.replyplace}" lay-verify="title" autocomplete="off" placeholder="请输入答辩地点" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">手机号</label>
+            <div class="layui-input-block">
+                <input type="tel" name="teaphone" value="{$teainfo.teaphone}"  lay-verify="required|phone" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" style="margin-top: 15px;">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="change_info">立即提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+{include file="Public/footer" /}
+<script src="__FHOME_JS__/userSet.js"></script>

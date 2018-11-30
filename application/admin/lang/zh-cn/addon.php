@@ -39,7 +39,7 @@ return [
     'Click to contact developer'     => '点击与插件开发者取得联系',
     'My addons'                      => '我购买的插件',
     'My posts'                       => '我发布的插件',
-    'Index'                          => '前台',
+    'Info'                          => '前台',
     'All'                            => '全部',
     'Uncategoried'                   => '未归类',
     'Recommend'                      => '推荐',

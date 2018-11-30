@@ -1,0 +1,16 @@
+{include file="Public/header" /}
+<div class="layui-body">
+    <div class="layui-container">
+        <!-- 内容主体区域 -->
+        <h2 id="userCon" style="text-align: center;padding: 15px 0">管理学生</h2>
+
+        <table id="showStudent" lay-filter="showStudent"></table>
+        <script type="text/html" id="operation-bar">
+            <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+            <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit">修改</a>
+        </script>
+    </div>
+</div>
+{include file="Public/footer" /}
+
+<script src="__FHOME_JS__/showEditScore.js"></script>

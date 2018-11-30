@@ -1,0 +1,40 @@
+{include file="Public/header" /}
+<div class="layui-body">
+    <div class="layui-container">
+        <div class="layui-row layui-col-space10 prochartDemo">
+            <div class="layui-anim layui-anim-fadein">
+                <div class="layui-col-md4" style="opacity: 0;">左边</div>
+                    <div class="layui-col-md4">
+                        <ul class="layui-timeline">
+                            {volist name="prochart" id="pro"}
+                            <li class="layui-timeline-item">
+                                {if condition="$pro.statusnum eq 2"}
+                                <i class="layui-icon layui-timeline-axis">&#xe605;</i>  <!-- 已截止 -->
+                                {/if}
+                                {if condition="$pro.statusnum eq 1"}
+                                <i class="layui-icon layui-timeline-axis">&#xe6af;</i>  <!-- 正在进行 -->
+                                {/if}
+                                {if condition="$pro.statusnum eq 0"}
+                                <i class="layui-icon layui-timeline-axis">&#xe609;</i>  <!-- 未开始 -->
+                                {/if}
+                                <div class="layui-timeline-content layui-text">
+                                    <h2 class="layui-timeline-title">{$pro.proname}</h2>
+                                    <h4>
+                                        {$pro.protimer}
+                                    </h4>
+                                    <br/>
+                                </div>
+                            </li>
+                            {/volist}
+                        </ul>
+                    </div>
+                <div class="layui-col-md4"></div>
+
+            </div>
+        </div>
+            <!--<div class="layui-col-md3"></div>-->
+    </div>
+</div>
+{include file="Public/footer" /}
+</body>
+</html>

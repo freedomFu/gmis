@@ -69,3 +69,12 @@ function falsePro($errno, $errmsg,$data=null,$count=null,$left=null){
     $json = ['errno'=>$errno,'errmsg'=>$errmsg,'data'=>$data,'count'=>$count,'left'=>$left];
     echo json_encode($json,JSON_UNESCAPED_UNICODE);
 }
+
+/**
+ * @Description: 输出json
+ * @DateTime:    2018/11/28 15:49
+ * @Author:      fyd
+ */
+function echoJson($errno=0,$errmsg="",$count=0,$data=null,$total=0,$left=0){
+    echo json(['errno'=>$errno,'count'=>$count,'errmsg'=>$errmsg,'data'=>$data,'total'=>$total,'left'=>$left])->getcontent();
+}

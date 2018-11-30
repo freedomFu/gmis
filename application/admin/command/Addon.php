@@ -95,7 +95,7 @@ class Addon extends Command
                 $this->writeToFile("addon", $data, $addonDir . ucfirst($name) . '.php');
                 $this->writeToFile("config", $data, $addonDir . 'config.php');
                 $this->writeToFile("info", $data, $addonDir . 'info.ini');
-                $this->writeToFile("controller", $data, $addonDir . 'controller' . DS . 'Index.php');
+                $this->writeToFile("controller", $data, $addonDir . 'controller' . DS . 'Infophp');
                 if ($createTableSql) {
                     $createTableSql = str_replace("`" . $prefix, '`__PREFIX__', $createTableSql);
                     file_put_contents($addonDir . 'install.sql', $createTableSql);

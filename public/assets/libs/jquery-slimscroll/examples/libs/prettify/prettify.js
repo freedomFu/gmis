@@ -1065,17 +1065,17 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
   
     var source = job.sourceCode;
     var sourceLength = source.length;
-    // Index into source after the last code-unit recombined.
+    // Info into source after the last code-unit recombined.
     var sourceIndex = 0;
   
     var spans = job.spans;
     var nSpans = spans.length;
-    // Index into spans after the last span which ends at or before sourceIndex.
+    // Info into spans after the last span which ends at or before sourceIndex.
     var spanIndex = 0;
   
     var decorations = job.decorations;
     var nDecorations = decorations.length;
-    // Index into decorations after the last decoration which ends at or before
+    // Info into decorations after the last decoration which ends at or before
     // sourceIndex.
     var decorationIndex = 0;
   

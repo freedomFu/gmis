@@ -1,0 +1,22 @@
+.layui-body,.layui-layout-admin .layui-footer{
+    left: 0px;
+}
+
+h2#adminCon{
+    margin: 0;
+    padding: 0;
+    margin: 50px 0;
+}
+
+#setTeacherInfo{
+    margin-top: 100px;
+    margin-bottom: 80px;
+    vertical-align: middle;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.set_info{
+    margin: 30px 0;
+}

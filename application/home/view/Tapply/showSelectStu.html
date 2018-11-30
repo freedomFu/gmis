@@ -1,0 +1,19 @@
+{include file="Public/header" /}
+<div class="layui-body">
+    <div class="layui-container">
+        <!-- 内容主体区域 -->
+        <h2 id="userCon" style="text-align: center;padding: 15px 0">管理学生申请</h2>
+
+        <table id="selectStu" lay-filter="selectStu"></table>
+        <script type="text/html" id="operation-bar">
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled}}" lay-event="allow">同意</a>
+        </script>
+
+        <script type="text/html" id="isSubmitTpl">
+            {{(d.issubmit==='1'?'是':'否')}}
+        </script>
+    </div>
+</div>
+{include file="Public/footer" /}
+
+<script src="__FHOME_JS__/showSelectStu.js"></script>

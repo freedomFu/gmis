@@ -25,7 +25,7 @@ return [
     'Table:%s'                                                               => '总计：%s个表',
     'Record:%s'                                                              => '记录：%s条',
     'Data:%s'                                                                => '占用：%s',
-    'Index:%s'                                                               => '索引：%s',
+    'Info:%s'                                                               => '索引：%s',
     'SQL Result:'                                                            => '查询结果：',
     'SQL can not be empty'                                                   => 'SQL语句不能为空',
     'Max output:%s'                                                          => '最大返回%s条',

@@ -533,7 +533,7 @@
                                    }
 
                                    if ( ssIndex > 0 ) {
-                                     style += ' ss:Index="' + (nCols+1) + '"';
+                                     style += ' ss:Info="' + (nCols+1) + '"';
                                      ssIndex = 0;
                                    }
 

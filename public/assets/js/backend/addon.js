@@ -52,7 +52,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                         {field: 'id', title: 'ID', operate: false, visible: false},
                         {
                             field: 'home',
-                            title: __('Index'),
+                            title: __('Info'),
                             width: '50px',
                             formatter: Controller.api.formatter.home
                         },

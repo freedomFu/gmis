@@ -14270,7 +14270,7 @@ var AST_Dot = DEFNODE("Dot", null, {
 }, AST_PropAccess);
 
 var AST_Sub = DEFNODE("Sub", null, {
-    $documentation: "Index-style property access, i.e. `a[\"foo\"]`",
+    $documentation: "Info-style property access, i.e. `a[\"foo\"]`",
     _walk: function(visitor) {
         return visitor._visit(this, function(){
             this.expression._walk(visitor);

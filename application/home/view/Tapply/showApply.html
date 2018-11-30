@@ -1,0 +1,149 @@
+{include file="Public/header" /}
+<div class="layui-body">
+    <div class="layui-container">
+        <!-- 内容主体区域 -->
+        <h2 id="userCon" style="text-align: center;">申请题目管理</h2>
+        <div class="btn-wrap layui-clear">
+            <div class="layui-show-md-inline-block" style="float:right;">
+                <a href="javascript:" id="add_tapply_check" class="layui-btn" data-type="new">申请题目</a>
+            </div>
+        </div>
+        <table id="tapply" lay-filter="tapply"></table>
+        <script type="text/html" id="operation-bar">
+            {{# var ifdisabled=(d.status=='已通过'?'layui-hide':'')}}
+            <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+            <a class="layui-btn layui-btn-warm layui-btn-xs {{ifdisabled}}" lay-event="edit">修改</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled}}" lay-event="del">删除</a>
+        </script>
+        <script type="text/html" id="isNewTpl">
+            {{(d.isnew==='1'?'是':'否')}}
+        </script>
+        <script type="text/html" id="isPracTpl">
+            {{(d.isprac==='1'?'是':'否')}}
+        </script>
+        <div id="showNote">
+        <p style="color: #999">您可以申请的数量为：<span id="totalNum" style="font-size:28px;color:#a00000;"></span>  剩余数量为：<span id="leftNum" style="font-size:28px;color:lightseagreen;"></span></p>
+        </div>
+    </div>
+</div>
+{include file="Public/footer" /}
+
+<script type="text/html" id="apply_title">
+    <div id="tapply-template">
+        <form class="layui-form " action="#" style="padding: 15px 20px 0 0;" method="post">
+            <div class="layui-form-item layui-hide">
+                <label class="layui-form-label">ID</label>
+                <div class="layui-input-block">
+                    <input type="text" name="id" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">题目</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required autocomplete="off" class="layui-input" placeholder="请输入标题">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">题目性质</label>
+                <div class="layui-input-block">
+                    <input type="text" name="nature" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">题目来源</label>
+                <div class="layui-input-block">
+                    <input type="text" name="source" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">专业</label>
+                <div class="layui-input-block">
+                    <select name="proid" lay-filter="zhuanye">
+                        <option value="0"></option>
+                        {volist name="profess" id="pro"}
+                        <option value="{$pro.id}">{$pro.proname}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">新题目</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="isnew" lay-skin="switch" lay-text="是|否">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">结合实际</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="isprac" lay-skin="switch" lay-text="是|否">
+                </div>
+            </div>
+            <div class="layui-form-item" style="margin-top: 15px;">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="apply_title">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+
+<script src="__FHOME_JS__/tapply.js"></script>
+
+<div id="editShow" style="display: none">
+    <form class="layui-form " lay-filter="editShow" id="change_apply" action="#" style="padding: 15px 20px 0 0;" method="post">
+        <div class="layui-form-item layui-hide">
+            <label class="layui-form-label">ID</label>
+            <div class="layui-input-block">
+                <input type="text" name="id" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">题目</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required autocomplete="off" class="layui-input" placeholder="请输入标题">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">题目性质</label>
+            <div class="layui-input-block">
+                <input type="text" name="nature" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">题目来源</label>
+            <div class="layui-input-block">
+                <input type="text" name="source" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">专业</label>
+            <div class="layui-input-block">
+                <select name="proid" lay-filter="zhuanye" id="proname">
+                    <option value="0"></option>
+                    {volist name="profess" id="pro"}
+                    <option value="{$pro.id}">{$pro.proname}</option>
+                    {/volist}
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">新题目</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="isnew" lay-skin="switch" lay-text="是|否">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">结合实际</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="isprac" lay-skin="switch" lay-text="是|否">
+            </div>
+        </div>
+        <div class="layui-form-item" style="margin-top: 15px;">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="change_apply">立即提交</button>
+            </div>
+        </div>
+    </form>
+</div>
