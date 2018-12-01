@@ -236,4 +236,34 @@ class Stuselect extends Base
     }
 
     /******************************************************************************************************************/
+
+    /**
+     * @Description: 提交数据,这里提交的时候需要修改weigh
+     * @DateTime:    2018/11/27 10:28
+     * @Author:      fyd
+     */
+    public function submitData(){
+        $sselect = new Sselect();
+        $id = $_POST['id'];
+        $stuid = session('uid');
+        $xq = getSenior();
+        $res = $sselect->submitData($stuid,$xq,$id);
+        switch ($res){
+            case 3:
+                falsePro(2,"数量超出，不能申请");
+                break;
+            case 1:
+                falsePro(0,"提交成功");
+                break;
+            case 0:
+                falsePro(1,"提交失败");
+                break;
+            case 2:
+                falsePro(2,"未找到数据");
+                break;
+            default:
+                falsePro(3,"操作错误");
+                break;
+        }
+    }
 }
