@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:78:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMySelected.html";i:1543654245;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543553675;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:68:"C:\wamp64\www\gmis\public/../application/home\view\Main\userSet.html";i:1543520444;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543553675;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,37 +55,50 @@
             </li>
         </ul>
     </div>
-<div class="layui-body">
-    <div class="layui-container">
-        <!-- 内容主体区域 -->
-        <h2 id="userCon" style="text-align: center;padding: 15px 0">我申请的题目</h2>
-        <!--<div class="btn-wrap layui-clear">
-            <div class="layui-show-md-inline-block" style="float:right;">
-                <a href="javascript:" id="submit_title" class="layui-btn" data-type="submitData">提交数据</a>
+<div style="width:930px;margin:50px auto;">
+    <h2 id="setTeacherInfo">设置教师信息</h2>
+    <form class="layui-form " id="set_info_form" action="#" style="padding: 15px 20px 0 0;" method="post">
+        <!--开题日期-->
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">开题日期</label>
+            <div class="layui-input-block">
+                <input type="text" name="starttimer" value="<?php echo $teainfo['starttimer']; ?>" id="starttimer" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
             </div>
-        </div>-->
-        <table id="mySelected" lay-filter="mySelected"></table>
-        <script type="text/html" id="isNewTpl">
-            {{(d.isnew==='1'?'是':'否')}}
-        </script>
-        <script type="text/html" id="isPracTpl">
-            {{(d.isprac==='1'?'是':'否')}}
-        </script>
-        <script type="text/html" id="operation-bar">
-            <?php if($isallsave == 0): ?>
-            {{# var ifdisabled1=(d.state!='未提交'?'layui-btn-disabled':'')}}
-            {{# var ifdisabled2=(d.state=='已通过'?'layui-btn-disabled':'')}}
-            <a class="layui-btn layui-btn-normal layui-btn-xs {{ifdisabled1}}" lay-event="{{ifdisabled1=='layui-btn-disabled'?'':'sure'}}">提交</a>
-            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled2}}" lay-event="{{ifdisabled2=='layui-btn-disabled'?'':'del'}}">删除</a>
-            <?php else: ?>
-            <a class="layui-btn layui-btn-normal layui-btn-xs layui-btn-disabled" lay-event="">提交</a>
-            <a class="layui-btn layui-btn-danger layui-btn-xs layui-btn-disabled" lay-event="">删除</a>
-            <?php endif; ?>
-        </script>
-        <div id="showNote">
-            <p style="color: #999">注：1.备注信息1</p>
         </div>
-    </div>
+        <!--中期时间-->
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">中期时间</label>
+            <div class="layui-input-block">
+                <input type="text" name="middletimer" value="<?php echo $teainfo['middletimer']; ?>" id="middletimer" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <!--答辩时间-->
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">答辩时间</label>
+            <div class="layui-input-block">
+                <input type="text" name="replytimer" value="<?php echo $teainfo['replytimer']; ?>" id="replytimer" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <!--答辩地点-->
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">答辩地点</label>
+            <div class="layui-input-block">
+                <input type="text" name="replyplace" value="<?php echo $teainfo['replyplace']; ?>" lay-verify="title" autocomplete="off" placeholder="请输入答辩地点" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item set_info">
+            <label class="layui-form-label layui-form-label1">手机号</label>
+            <div class="layui-input-block">
+                <input type="tel" name="teaphone" value="<?php echo $teainfo['teaphone']; ?>"  lay-verify="required|phone" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" style="margin-top: 15px;">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="change_info">立即提交</button>
+            </div>
+        </div>
+    </form>
 </div>
 <div class="layui-footer" style="text-align: center;">
     Copyright © 2018.Dreamtech Studio
@@ -132,5 +145,4 @@
         </form>
     </div>
 </script>
-
-<script src="http://127.0.0.1/gmis/public/fhome/js/sselect.js"></script>
+<script src="http://127.0.0.1/gmis/public/fhome/js/userSet.js"></script>

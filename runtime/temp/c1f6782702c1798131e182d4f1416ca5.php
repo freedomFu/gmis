@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:78:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMySelected.html";i:1543654245;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543553675;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:74:"C:\wamp64\www\gmis\public/../application/home\view\Tapply\showStudent.html";i:1543535339;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543553675;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,33 +58,13 @@
 <div class="layui-body">
     <div class="layui-container">
         <!-- 内容主体区域 -->
-        <h2 id="userCon" style="text-align: center;padding: 15px 0">我申请的题目</h2>
-        <!--<div class="btn-wrap layui-clear">
-            <div class="layui-show-md-inline-block" style="float:right;">
-                <a href="javascript:" id="submit_title" class="layui-btn" data-type="submitData">提交数据</a>
-            </div>
-        </div>-->
-        <table id="mySelected" lay-filter="mySelected"></table>
-        <script type="text/html" id="isNewTpl">
-            {{(d.isnew==='1'?'是':'否')}}
-        </script>
-        <script type="text/html" id="isPracTpl">
-            {{(d.isprac==='1'?'是':'否')}}
-        </script>
+        <h2 id="userCon" style="text-align: center;padding: 15px 0">管理学生</h2>
+
+        <table id="showStudent" lay-filter="showStudent"></table>
         <script type="text/html" id="operation-bar">
-            <?php if($isallsave == 0): ?>
-            {{# var ifdisabled1=(d.state!='未提交'?'layui-btn-disabled':'')}}
-            {{# var ifdisabled2=(d.state=='已通过'?'layui-btn-disabled':'')}}
-            <a class="layui-btn layui-btn-normal layui-btn-xs {{ifdisabled1}}" lay-event="{{ifdisabled1=='layui-btn-disabled'?'':'sure'}}">提交</a>
-            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled2}}" lay-event="{{ifdisabled2=='layui-btn-disabled'?'':'del'}}">删除</a>
-            <?php else: ?>
-            <a class="layui-btn layui-btn-normal layui-btn-xs layui-btn-disabled" lay-event="">提交</a>
-            <a class="layui-btn layui-btn-danger layui-btn-xs layui-btn-disabled" lay-event="">删除</a>
-            <?php endif; ?>
+            <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+            <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit">修改</a>
         </script>
-        <div id="showNote">
-            <p style="color: #999">注：1.备注信息1</p>
-        </div>
     </div>
 </div>
 <div class="layui-footer" style="text-align: center;">
@@ -133,4 +113,4 @@
     </div>
 </script>
 
-<script src="http://127.0.0.1/gmis/public/fhome/js/sselect.js"></script>
+<script src="http://127.0.0.1/gmis/public/fhome/js/showEditScore.js"></script>

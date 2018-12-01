@@ -11,6 +11,9 @@ body{
     border-bottom:  1px solid gray;
     background-color: rgb(244, 244, 244)
 }
+[v-cloak]{
+    display:none !important;
+}
 li{
     list-style: none;
     text-indent:15px

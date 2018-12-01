@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\wamp64\www\gmis\public/../application/index\view\tapply\teacher.html";i:1543630109;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>教师管理毕设题目</title>
-    <link rel="stylesheet" href="__HOME_CSS__/tapply.css">
+    <link rel="stylesheet" href="http://127.0.0.1/gmis/public/home/css/tapply.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -54,9 +55,9 @@
                     <td >{{item.status}}</td>
                     <td>
                         <select class="form-control" name="proname" id="proname" v-model="store[index].proid" disabled="disabled">
-                            {volist name='profess' id='pro'}
-                            <option value="{$pro.id}">{$pro.proname}</option>
-                            {/volist}
+                            <?php if(is_array($profess) || $profess instanceof \think\Collection || $profess instanceof \think\Paginator): $i = 0; $__LIST__ = $profess;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $pro['id']; ?>"><?php echo $pro['proname']; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </td>
                     <td >{{item.note}}</td>
@@ -92,9 +93,9 @@
                     <td> </td>
                     <td>
                         <select class="form-control" name="proname" id="add_proname" v-model="newItem.proid" >
-                            {volist name='profess' id='pro'}
-                            <option value="{$pro.id}">{$pro.proname}</option>
-                            {/volist}
+                            <?php if(is_array($profess) || $profess instanceof \think\Collection || $profess instanceof \think\Paginator): $i = 0; $__LIST__ = $profess;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $pro['id']; ?>"><?php echo $pro['proname']; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </td>
                     <td> </td>
@@ -220,10 +221,10 @@
 
 
 
-<script src="__HOME_JS__/base.js"></script>
+<script src="http://127.0.0.1/gmis/public/home/js/base.js"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
-<script src="__HOME_JS__/tapply/tapply.js"></script>
+<script src="http://127.0.0.1/gmis/public/home/js/tapply/tapply.js"></script>
 </body>
 </html>

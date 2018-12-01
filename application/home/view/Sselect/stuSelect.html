@@ -28,7 +28,12 @@
         </script>
         <script type="text/html" id="operation-bar">
             <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail">查看</a>
-            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="save">选题</a>
+            {if condition="$isallsave == 3"}
+            {{# var ifdisabled=(d.pick=='true'?'layui-btn-disabled':'')}}
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled}} " lay-event="{{ifdisabled=='layui-btn-disabled'?'':'save'}}">选题</a>
+            {else /}
+            <a class="layui-btn layui-btn-danger layui-btn-xs  layui-btn-disabled" lay-event="">选题</a>
+            {/if}
         </script>
     </div>
 </div>

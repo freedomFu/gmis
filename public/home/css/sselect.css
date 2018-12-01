@@ -7,7 +7,9 @@ li{
     list-style: none;
     text-indent:15px
 }
-
+[v-cloak] {
+    display: none !important;
+}
 #apply{
     width: 80%;
     margin: 40px auto;

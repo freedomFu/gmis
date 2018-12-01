@@ -26,29 +26,29 @@ function tableInput(){
 tableInput();
 
 var obj_all;
-$.ajax({
-    type: 'POST',
-    url: base_index+"/Stuselect/showApplyTitle",
-    data: {
-
-    },
-    async:false,
-    success : function(res){
-        obj_all=res.data;
-        console.log(obj_all);
-    },
-    error:function(){
-        alert("数据请求失败，请检查网络连接")
-    },
-    dataType: "json",
-});
+// $.ajax({
+//     type: 'POST',
+//     url: base_index+"/Stuselect/showApplyTitle",
+//     data: {
+//
+//     },
+//     async:false,
+//     success : function(res){
+//         obj_all=res.data;
+//         console.log(obj_all);
+//     },
+//     error:function(){
+//         alert("数据请求失败，请检查网络连接")
+//     },
+//     dataType: "json",
+// });
 
 console.log(obj_all);
 
 var app=new Vue({
     el:"#apply",
     data:{
-        store:obj_all,
+        store:"",
         max:5,
         newItem:{},
         picked:[],
@@ -197,12 +197,31 @@ var app=new Vue({
 
     },//end methods
 
-    created: function () {
-        for(var i=0;i<this.store.length;i++){
-            if(this.store[i].pick=="true"){
-                this.picked.push(this.store[i]);
+
+    watch:{
+        store(){
+            this.picked=[];
+            for(var i=0;i<this.store.length;i++){
+                if(this.store[i].pick=="true"){
+                    this.picked.push(this.store[i]);
+                }
             }
         }
-    },
+    }
 })
+$.ajax({
+    type: 'POST',
+    url: base_index+"/Stuselect/showApplyTitle",
+    data: {
 
+    },
+    // async:false,
+    success : function(res){
+        app.store=res.data;
+        console.log(obj_all);
+    },
+    error:function(){
+        alert("数据请求失败，请检查网络连接")
+    },
+    dataType: "json",
+});

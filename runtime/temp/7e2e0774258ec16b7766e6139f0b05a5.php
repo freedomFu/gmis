@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\wamp64\www\gmis\public/../application/index\view\sselect\index.html";i:1543629581;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>学生毕设选题系统</title>
-    <link rel="stylesheet" href="__HOME_CSS__/sselect.css">
+    <link rel="stylesheet" href="http://127.0.0.1/gmis/public/home/css/sselect.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,9 +15,9 @@
             <span>2019</span>
             <span>届 毕设题目查询</span>
             <select name="profess" id="profess"  class="form-control">
-                {volist name='profess' id='pro'}
-                <option value="{$pro.id}">{$pro.proname}</option>
-                {/volist}
+                <?php if(is_array($profess) || $profess instanceof \think\Collection || $profess instanceof \think\Paginator): $i = 0; $__LIST__ = $profess;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
+                <option value="<?php echo $pro['id']; ?>"><?php echo $pro['proname']; ?></option>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
             </select>
             <input class="form-control" type="text"   v-model="searchContent" name="tile_key" id="tile_key" placeholder="关键字">
             <button class="btn">查询</button>
@@ -115,20 +116,20 @@
                     <th>该题选择人数</th>
                     </thead>
                     <tbody>
-                    {volist name="submit" id="sd"}
+                    <?php if(is_array($submit) || $submit instanceof \think\Collection || $submit instanceof \think\Paginator): $i = 0; $__LIST__ = $submit;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sd): $mod = ($i % 2 );++$i;?>
                     <tr>
-                        <td>{$sd.title}</td>
-                        <td>{$sd.nature}</td>
-                        <td>{$sd.source}</td>
-                        <td>{$sd.isnew}</td>
-                        <td>{$sd.isprac}</td>
-                        <td>{$sd.isallow}</td>
-                        <td>{$sd.status}</td>
-                        <td>{$sd.teaname}</td>
-                        <td>{$sd.teaphone}</td>
-                        <td>{$sd.total}</td>
+                        <td><?php echo $sd['title']; ?></td>
+                        <td><?php echo $sd['nature']; ?></td>
+                        <td><?php echo $sd['source']; ?></td>
+                        <td><?php echo $sd['isnew']; ?></td>
+                        <td><?php echo $sd['isprac']; ?></td>
+                        <td><?php echo $sd['isallow']; ?></td>
+                        <td><?php echo $sd['status']; ?></td>
+                        <td><?php echo $sd['teaname']; ?></td>
+                        <td><?php echo $sd['teaphone']; ?></td>
+                        <td><?php echo $sd['total']; ?></td>
                     </tr>
-                    {/volist}
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>
                 </table>
             </div>
@@ -151,20 +152,20 @@
                     <th>答辩成绩</th>
                     </thead>
                     <tbody>
-                    {volist name="allow" id="al"}
+                    <?php if(is_array($allow) || $allow instanceof \think\Collection || $allow instanceof \think\Paginator): $i = 0; $__LIST__ = $allow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$al): $mod = ($i % 2 );++$i;?>
                     <tr>
-                        <td>{$al.title}</td>
-                        <td>{$al.stuidcard}</td>
-                        <td>{$al.stuname}</td>
-                        <td>{$al.stuclass}</td>
-                        <td>{$al.starttimer}</td>
-                        <td>{$al.middletimer}</td>
-                        <td>{$al.replytimer}</td>
-                        <td>{$al.replyplace}</td>
-                        <td>{$al.teaname}</td>
-                        <td>{$al.replyscore}</td>
+                        <td><?php echo $al['title']; ?></td>
+                        <td><?php echo $al['stuidcard']; ?></td>
+                        <td><?php echo $al['stuname']; ?></td>
+                        <td><?php echo $al['stuclass']; ?></td>
+                        <td><?php echo $al['starttimer']; ?></td>
+                        <td><?php echo $al['middletimer']; ?></td>
+                        <td><?php echo $al['replytimer']; ?></td>
+                        <td><?php echo $al['replyplace']; ?></td>
+                        <td><?php echo $al['teaname']; ?></td>
+                        <td><?php echo $al['replyscore']; ?></td>
                     </tr>
-                    {/volist}
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>
                 </table>
             </div>
@@ -172,10 +173,10 @@
         </div>
     </div>
     <!-- end #apply -->
-    <script src="__HOME_JS__/base.js"></script>
+    <script src="http://127.0.0.1/gmis/public/home/js/base.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
-    <script src="__HOME_JS__/sselect/sselect.js"></script>
+    <script src="http://127.0.0.1/gmis/public/home/js/sselect/sselect.js"></script>
 </body>
 </html>

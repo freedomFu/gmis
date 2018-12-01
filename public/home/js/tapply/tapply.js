@@ -1,37 +1,7 @@
 // function fresh(){
 var obj_apply;
 var obj_stu;
-$.ajax({   //请求      教师申请表格的数据
-    type: 'POST',
-    url: base_index+"/Teapply/index",
-    data: {},
-    async:false,
-    success : function(res){
-        console.log(res);
-        obj_apply=res;
-        console.log(obj_apply);
-    },
-    error:function(){
-        alert("数据请求失败，请检查网络连接!")
-    },
-    dataType: "json",
-  });
 
-$.ajax({    //请求      学生毕设管理表格的数据
-    type: 'POST',
-    url: base_index+"/Reprocess/show",
-    data: {},
-    async:false,
-    success : function(res){
-        console.log(res);
-        obj_stu=res;
-        console.log(obj_stu);
-    },
-    error:function(){
-        alert("数据请求失败，请检查网络连接!")
-    },
-    dataType: "json",
-});
 // }
 
 // fresh()
@@ -40,7 +10,7 @@ var app=new Vue({
     el:"#apply_teacher",
     data:{
         editing:[],
-        store:obj_apply.data,
+        store:[],
         newItem:{
             id:"",
             nature:"",
@@ -57,17 +27,25 @@ var app=new Vue({
             stuphone:"",//电话
 
         },
-        count:obj_apply.count,     //可申请总数
-        left:obj_apply.left,//剩余可申请数量
+        count:"",     //可申请总数
+        left:"",//剩余可申请数量
         old_item:"111",
         adding:false
 
     },
-    created: function () {
-        for(var i=0;i<this.store.length;i++){
-            this.editing.push(false)
+    // created: function () {
+    //     for(var i=0;i<this.store.length;i++){
+    //         this.editing.push(false)
+    //     }
+    //     console.log(obj_apply.count)
+    // },
+    watch:{
+        store(){
+            this.editing=[];
+            for(var i=0;i<this.store.length;i++){
+                    this.editing.push(false);
+             }
         }
-        console.log(obj_apply.count)
     },
     methods:{
         add:function(){
@@ -219,6 +197,24 @@ var app=new Vue({
         }
     }
 })
+$.ajax({   //请求      教师申请表格的数据
+    type: 'POST',
+    url: base_index+"/Teapply/index",
+    data: {},
+    // async:false,
+    success : function(res){
+        console.log(res);
+        app.store=res.data;
+        app.count=res.data.count;
+        app.left=res.data.left;
+        // console.log(obj_apply);
+    },
+    error:function(){
+        alert("数据请求失败，请检查网络连接!")
+    },
+    dataType: "json",
+});
+
 
 function readyNumber() { 
       $('textarea').each(function () {
@@ -235,8 +231,8 @@ function readyNumber() { 
 var stu=new Vue({
     el:"#apply_stu",
     data:{
-        store:obj_stu.data,
-        count:obj_stu.count,
+        store:"",
+        count:"",
         editing:[false,false]
     },
     created:function(){
@@ -282,28 +278,31 @@ var stu=new Vue({
         },
     }
 })
-
-
-var obj_manage;
-$.ajax({
+$.ajax({    //请求      学生毕设管理表格的数据
     type: 'POST',
-    url: base_index+"/Teapply/showSelectStu",
-    async:false,
+    url: base_index+"/Reprocess/show",
     data: {},
+    // async:false,
     success : function(res){
-        obj_manage=res.data;
-        // console.log(res.errmes)
+        console.log(res);
+        stu.store=res.data;
+        stu.count=res.count;
+        // console.log(obj_stu);
     },
     error:function(){
-        alert("数据请求失败，请检查网络连接")
+        alert("数据请求失败，请检查网络连接!")
     },
     dataType: "json",
 });
 
+
+
+var obj_manage;
+
 var manage = new Vue({
     el:"#manage",
     data:{
-        store:obj_manage,
+        store:"",
     },
     // async:false,
     methods:{
@@ -367,3 +366,19 @@ var manage = new Vue({
 
     }
 })
+
+$.ajax({
+    type: 'POST',
+    url: base_index+"/Teapply/showSelectStu",
+    // async:false,
+    data: {},
+    success : function(res){
+        manage.store=res.data;
+        // console.log(res.errmes)
+    },
+    error:function(){
+        alert("数据请求失败，请检查网络连接")
+    },
+    dataType: "json",
+});
+

@@ -12,10 +12,6 @@ class Sselect extends Model
     protected $createTime = 'createtime';
     protected $updateTime = 'updatetime';
 
-    /**
-     * 学生选择论文题目
-     * @author fyd
-     */
     //获取器修改时间格式
     public function getcreatetimeAttr($value, $data)
     {
@@ -27,6 +23,8 @@ class Sselect extends Model
         $value = $value ? $value : (isset($data['refreshtime']) ? $data['refreshtime'] : '');
         return is_numeric($value) ? date("Y-m-d H:i:s", $value) : $value;
     }
+
+    /******************************************************************************************************************/
 
     /**
      * @Description: 显示专业
@@ -42,61 +40,6 @@ class Sselect extends Model
             ->where($where)
             ->select();
         return $list;
-    }
-
-    /**
-     * @Description: 显示选择列表
-     * @DateTime:    2018/11/26 11:38
-     * @Author:      fyd
-     */
-    public function sselect($stuid){
-        $where['status'] = '正常';
-        $where['stuid'] = $stuid;
-        $list = Sselect::order('id desc')
-            ->where($where)
-            ->select();
-        return $list;
-    }
-
-    /**
-     * @Description: 获取筛选信息
-     * @DateTime:    2018/11/27 10:46
-     * @Author:      fyd
-     */
-    public function showApplyTitle($professid, $titlekey,$senior,$page,$limit){
-        $where['belongsenior']=$senior;
-        $where['status'] = "已通过";
-        $where['stuid'] = null;
-        $field = "id,title,nature,source,isnew,isprac,proid,status";
-        //都没有传入
-        if(!($professid==0)){
-            $where['proid'] = $professid;
-        }
-        if(!empty($titlekey)){
-            $where['title'] = ['like','%'.$titlekey.'%'];
-        }
-        $list = Tapply::where($where)
-            ->field($field)
-            ->order('id desc')
-            ->limit(($page-1)*$limit,$limit)
-            ->select();
-        return $list;
-    }
-
-    public function countApplyNum($professid, $titlekey,$senior){
-        $where['belongsenior']=$senior;
-        $where['status'] = "已通过";
-        $where['stuid'] = null;
-        if(!($professid==0)){
-            $where['proid'] = $professid;
-        }
-        if(!empty($titlekey)){
-            $where['title'] = ['like','%'.$titlekey.'%'];
-        }
-        $count = Tapply::where($where)
-            ->order('id desc')
-            ->count();
-        return $count;
     }
 
     /**
@@ -162,8 +105,7 @@ class Sselect extends Model
      * @DateTime:    2018/11/27 10:48
      * @Author:      fyd
      */
-    private function checkSave($stuid){
-
+    public function checkSave($stuid){
         $where['stuid'] = $stuid;
         $where['status'] = '正常';
         $total = Sselect::where($where)
@@ -179,8 +121,25 @@ class Sselect extends Model
         if($isallow){
             return 2;
         }
-
         return 3;
+    }
+
+    /**
+     * @Description: 是否有已经通过允许的
+     * @DateTime:    2018/12/1 16:45
+     * @Author:      fyd
+     */
+    public function checkIsAllow($stuid){
+        $where['stuid']=$stuid;
+        $where['isallow']=1;
+        $where['status']='正常';
+        $isallow = Sselect::where($where)
+            ->find();
+        if($isallow){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 
     /**
@@ -208,9 +167,8 @@ class Sselect extends Model
         $isAllowed = Sselect::where($whereAll)
             ->find();
         if($isAllowed){
-            return 4; //已经提交过了
+            return 4; //已经保存过了
         }
-
 
         $data = [
             'stuid'         =>      $stuid,
@@ -244,116 +202,118 @@ class Sselect extends Model
         $where['belongSenior']=$xq;
         $where['status']="正常";
         $where['isallow']=0;
+//        $where['issubmit']=0;
+
         $id = Sselect::where($where)
             ->value("id");
 
-        $ss = Sselect::get($id);
-        $res = $ss -> delete();
-        if($res){
-            return 1;
+        if($id){
+            $ss = Sselect::get($id);
+            $res = $ss -> delete();
+            if($res){
+                return 1;
+            }else{
+                return 0;
+            }
         }else{
-            return 0;
-        }
-
-    }
-
-    /**
-     * @Description: 保存数据，但是没有提交，获取的是titleid，已经通过的
-     * @DateTime:    2018/11/27 10:49
-     * @Author:      fyd
-     */
-    public function saveData($stuid,$dataid){
-        $count = count($dataid);
-        for($j=0;$j<$count;$j++){
-            $data[$j]=[];
-        }
-        for($i=0;$i<$count;$i++){
-            $titleid = $dataid[$i];
-            $data[$i] = [
-                'stuid'     =>  $stuid,
-                'titleid'   =>  $titleid,
-                'teaid'     =>  $this->getTeaid($titleid),
-                'issubmit'  =>  0
-            ];
-        }
-        $res = Sselect::saveall($data);
-        if($res){
-            return 1;
-        }else{
-            return 0;
-        }
-    }
-
-    /**
-     * @Description: 判断是否还可以申请
-     * @DateTime:    2018/11/27 10:51
-     * @Author:      fyd
-     */
-    public function checkStuTitleNum($stuid,$dataid){
-        //若已经有提交的就不能再添加了
-        $wherecheck['stuid'] = $stuid;
-        $wherecheck['issubmit']=1;
-        $wherecheck['status'] = '正常';
-        $checkIsAllow = Sselect::where($wherecheck)
-            ->find();
-        if($checkIsAllow){
-            return 4;
-        }
-
-        $count = count($dataid);
-        if($count>3){
             return 2;
         }
-        $where['stuid'] = $stuid;
-        $where['status'] = '正常';
-        $num = Sselect::where($where)
-            ->count();
-
-        $num+=$count;
-
-        if($num>3){
-            return 3;
-        }
-        return 1;
     }
+
+    /******************************************************************************************************************/
 
     /**
      * @Description: 提交数据
      * @DateTime:    2018/11/27 10:51
      * @Author:      fyd
      */
-    public function submitData($stuid,$xq){
+    public function submitData($stuid,$xq,$id){
         $where['status']="正常";
         $where['stuid']=$stuid;
         $where['isallow']=0;
+        $where['issubmit']=0;
         $where['belongSenior']=$xq;
+        $where['id']=$id;
 
         $stuselect = Sselect::where($where)
-            ->where('issubmit',0)
-            ->select();
-        $count = count($stuselect);
-        $list=[];
-        for($i=0;$i<$count;$i++){
-            $ssid = $stuselect[$i]['id'];
-            $titleid = $stuselect[$i]['stuid'];
+            ->find();
+
+        if($stuselect){
+            $titleid = $stuselect['stuid'];
             $titlenum = $this->getCount($titleid);
             if($titlenum>9){
                 return 3;
             }
-            $list[$i] = [
-                'id'        =>  $ssid,
-                'issubmit'  =>  1,
-                'weigh'     =>  $i
+            $updatedata = [
+                'issubmit'  =>  1
             ];
-        }
 
-        $res = Sselect::saveAll($list);
+            $res = $stuselect->save($updatedata);
 
-        if($res){
-            return 1; //更新成功
+            if($res){
+                return 1; //更新成功
+            }else{
+                return 0; //更新失败
+            }
         }else{
-            return 0; //更新失败
+            return 2; //未找到数据
         }
+    }
+
+
+
+    /******************************************************************************************************************/
+
+    /**
+     * @Description: 获取筛选信息
+     * @DateTime:    2018/11/27 10:46
+     * @Author:      fyd
+     */
+    public function showApplyTitle($professid, $titlekey,$senior,$page,$limit){
+        $where['gt.belongsenior']=$senior;
+        $where['gt.status'] = "已通过";
+        $where['gt.stuid'] = null;
+        $alias = 'gt';
+        $field = "gt.id,gt.title,gt.nature,gt.source,gt.isnew,gt.isprac,gt.proid,gt.status,gte.teaname,gte.teaphone";
+        $join = [
+            ['gmis_teacher gte','gte.id=gt.teaid','LEFT'],
+        ];
+        //都没有传入
+        if(!($professid==0)){
+            $where['proid'] = $professid;
+        }
+        if(!empty($titlekey)){
+            $where['title'] = ['like','%'.$titlekey.'%'];
+        }
+        $list = Tapply::where($where)
+            ->alias($alias)
+            ->field($field)
+            ->join($join)
+            ->order('id desc')
+            ->limit(($page-1)*$limit,$limit)
+            ->select();
+        return $list;
+    }
+
+    /**
+     * @Description: 获取筛选信息的总数
+     * @DateTime:    2018/12/1 15:39
+     * @Author:      fyd
+     */
+    public function countApplyNum($professid, $titlekey, $senior){
+        $where['belongsenior']=$senior;
+        $where['status'] = "已通过";
+        $where['stuid'] = null;
+        if(!($professid==0)){
+            $where['proid'] = $professid;
+        }
+        if(!empty($titlekey)){
+            $where['title'] = ['like','%'.$titlekey.'%'];
+        }
+        $count = Tapply::where($where)
+            ->order('id desc')
+            ->count();
+        return $count;
     }
 
     /**
@@ -365,7 +325,7 @@ class Sselect extends Model
         $where['ss.stuid']=$stuid;
 //        $where['ss.issubmit']=1;
         $where['ss.belongSenior']=$xq;
-        $field="ss.titleid,gt.title,gt.nature,gt.source,gt.isnew,ss.weigh,gt.isprac,ss.isallow,gt.status,gte.teaname,gte.teaphone";
+        $field="ss.id,ss.titleid,gt.title,gt.nature,gt.source,gt.isnew,ss.weigh,gt.isprac,ss.isallow,ss.issubmit,gt.status,gte.teaname,gte.teaphone";
         $alias="ss";
         $join = [
             ['gmis_tapply gt','gt.id=ss.titleid','LEFT'],
@@ -430,7 +390,6 @@ class Sselect extends Model
     public function countAllow($stuid, $xq){
         $table = "process";
         $alias = "gp";
-
         $where['gp.stuid']=$stuid;
         $where['gp.belongSenior']=$xq;
         $count = Db::name($table)
@@ -439,5 +398,32 @@ class Sselect extends Model
             ->count();
         return $count;
     }
+
+    /**
+     * @Description: 修改权重
+     * @DateTime:    2018/12/1 9:45
+     * @Author:      fyd
+     */
+    public function changeWeigh($id,$weigh){
+        $where['id'] = $id;
+        $where['isallow'] = 0;
+        $where['status'] = "正常";
+        $updateData=["weigh"=>$weigh];
+        $res = Sselect::get($id);
+
+        if($res){
+            $up = $res->where($where)
+                ->update($updateData);
+            if($up){
+                return 1;
+            }else{
+                return 0;
+            }
+        }else{
+            return 3;
+        }
+    }
+
+    /******************************************************************************************************************/
 
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"C:\wamp64\www\gmis\public/../application/home\view\Sselect\stuSelect.html";i:1543586163;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543553675;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"C:\wamp64\www\gmis\public/../application/home\view\Sselect\stuSelect.html";i:1543653685;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543553675;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,7 +84,12 @@
         </script>
         <script type="text/html" id="operation-bar">
             <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail">查看</a>
-            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="save">选题</a>
+            <?php if($isallsave == 3): ?>
+            {{# var ifdisabled=(d.pick=='true'?'layui-btn-disabled':'')}}
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled}} " lay-event="{{ifdisabled=='layui-btn-disabled'?'':'save'}}">选题</a>
+            <?php else: ?>
+            <a class="layui-btn layui-btn-danger layui-btn-xs  layui-btn-disabled" lay-event="">选题</a>
+            <?php endif; ?>
         </script>
     </div>
 </div>
