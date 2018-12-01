@@ -19,32 +19,22 @@
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="__FHOME__/Pchart/index">流程图</a></li>
 
+
             {if condition="$Request.session.auth eq 1"}
-            <li class="layui-nav-item">
-                <a href="javascript:;">学生管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="__FHOME__/Stuselect/showSelect">学生选题</a></dd>
-                    <dd><a href="__FHOME__/Stuselect/show">已选题目</a></dd>
-                    <dd><a href="__FHOME__/Stuselect/showMyTitle">我的题目</a></dd>
-                </dl>
-            </li>
+            <li class="layui-nav-item"><a href="__FHOME__/Stuselect/showSelect">学生选题</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/Stuselect/show">已选题目</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/Stuselect/showMyTitle">我的题目</a></li>
             {/if}
 
             {if condition="$Request.session.auth eq 2"}
-            <li class="layui-nav-item">
-                <a href="javascript:;">教师管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="__FHOME__/Teapply/show">查看题目</a></dd>
-                    <dd><a href="__FHOME__/Teapply/showSelectStu">查看学生申请</a></dd>
-                    <dd><a href="__FHOME__/Reprocess/showPage">管理学生</a></dd>
-                </dl>
-            </li>
+            <li class="layui-nav-item"><a href="__FHOME__/Teapply/show">查看题目</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/Teapply/showSelectStu">查看学生申请</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/Reprocess/showPage">管理学生</a></li>
             {/if}
-        </ul>
-        <ul class="layui-nav layui-layout-right">
+
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    个人信息{$Request.session.auth}
+                    个人信息
                 </a>
                 <dl class="layui-nav-child">
                     {if condition="$Request.session.auth eq 2"}
@@ -54,5 +44,20 @@
                     <dd><a href="__FHOME__/User/logout">退出</a></dd>
                 </dl>
             </li>
+
         </ul>
+        <!--<ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    个人信息
+                </a>
+                <dl class="layui-nav-child">
+                    {if condition="$Request.session.auth eq 2"}
+                    <dd><a href="__FHOME__/Index/showSet">个人信息</a></dd>
+                    {/if}
+                    <dd><a href="javascript:" id="password-btn">修改密码</a></dd>
+                    <dd><a href="__FHOME__/User/logout">退出</a></dd>
+                </dl>
+            </li>
+        </ul>-->
     </div>

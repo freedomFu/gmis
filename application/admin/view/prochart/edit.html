@@ -7,9 +7,15 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Protimer')}:</label>
+        <label class="control-label col-xs-12 col-sm-2">{:__('Starttime')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-protimer" data-rule="required" class="form-control" name="row[protimer]" type="text" value="{$row.protimer}">
+            <input id="c-starttime" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[starttime]" type="text" value="{$row.starttime}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Endtime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-endtime" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[endtime]" type="text" value="{$row.endtime}">
         </div>
     </div>
     <div class="form-group">

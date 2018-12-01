@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"C:\wamp64\www\gmis\public/../application/home\view\Sselect\stuSelect.html";i:1543653685;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543553675;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"C:\wamp64\www\gmis\public/../application/home\view\Sselect\stuSelect.html";i:1543653685;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543671589;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,15 +20,11 @@
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Pchart/index">流程图</a></li>
 
+
             <?php if(\think\Request::instance()->session('auth') == 1): ?>
-            <li class="layui-nav-item">
-                <a href="javascript:;">学生管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Stuselect/showSelect">学生选题</a></dd>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Stuselect/show">已选题目</a></dd>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Stuselect/showMyTitle">我的题目</a></dd>
-                </dl>
-            </li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Stuselect/showSelect">学生选题</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Stuselect/show">已选题目</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Stuselect/showMyTitle">我的题目</a></li>
             <?php endif; if(\think\Request::instance()->session('auth') == 2): ?>
             <li class="layui-nav-item">
                 <a href="javascript:;">教师管理</a>
@@ -43,7 +39,7 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    个人信息<?php echo \think\Request::instance()->session('auth'); ?>
+                    个人信息
                 </a>
                 <dl class="layui-nav-child">
                     <?php if(\think\Request::instance()->session('auth') == 2): ?>

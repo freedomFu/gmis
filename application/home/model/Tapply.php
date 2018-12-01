@@ -241,6 +241,7 @@ class Tapply extends Model{
             ->field($field)
             ->join($join)
             ->where($where)
+            ->order('ss.id desc ss.weigh asc')
             ->limit(($page-1)*$limit,$limit)
             ->select();
         return $list;
