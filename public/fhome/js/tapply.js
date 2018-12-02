@@ -18,6 +18,9 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
                 var total = data.total;
                 if(left==0){
                     $("#add_tapply_check").addClass("layui-hide");
+                }else{
+                    $("#add_tapply_check").removeClass("layui-hide");
+                    $("#add_tapply_check").addClass("layui-btn");
                 }
                 console.log(left);
                 $("#totalNum").html(total);
@@ -72,10 +75,11 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
                 json.id=data.id;
                 console.log(json.id+"--"+data.id);
                 return base_ajax(base_home+"/Teapply/del",json,function () {
-                    table.reload('tapply', {
+                    /*table.reload('tapply', {
                         url: base_home+"/Teapply/index"
-                    });
-                    getNum();
+                    });*/
+                    // getNum();
+                    location.reload();
                 });
             });
         } else if(obj.event === 'edit'){

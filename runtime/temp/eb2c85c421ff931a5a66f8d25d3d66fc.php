@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:75:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMyTitle.html";i:1543671494;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543671896;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:75:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMyTitle.html";i:1543671494;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543738560;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +31,7 @@
             <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Reprocess/showPage">管理学生</a></li>
             <?php endif; ?>
 
-            <li class="layui-nav-item">
+            <!--<li class="layui-nav-item">
                 <a href="javascript:;">
                     个人信息
                 </a>
@@ -42,10 +42,10 @@
                     <dd><a href="javascript:" id="password-btn">修改密码</a></dd>
                     <dd><a href="http://127.0.0.1/gmis/public/home/User/logout">退出</a></dd>
                 </dl>
-            </li>
+            </li>-->
 
         </ul>
-        <!--<ul class="layui-nav layui-layout-right">
+        <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
                     个人信息
@@ -58,7 +58,7 @@
                     <dd><a href="http://127.0.0.1/gmis/public/home/User/logout">退出</a></dd>
                 </dl>
             </li>
-        </ul>-->
+        </ul>
     </div>
 <div class="layui-body">
     <div class="layui-container">

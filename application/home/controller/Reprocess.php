@@ -2,6 +2,7 @@
 namespace app\home\controller;
 use app\home\controller\Base;
 use app\home\model\Process;
+use app\home\model\Prochart;
 use think\Controller;
 use think\Db;
 
@@ -19,6 +20,17 @@ class Reprocess extends Base
     }
 
     public function showPage(){
+        $this->isTeacher();
+
+        /********************************************************************/
+        /*$proname = "答辩成绩管理";
+        $prochart = new Prochart();
+        $res = $prochart->enterCheck($proname);
+        if(!$res){
+            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
+        }*/
+        /********************************************************************/
+
         return $this->fetch("Tapply/showStudent");
     }
 
@@ -43,7 +55,7 @@ class Reprocess extends Base
         if($count){
             echo echoJson(0,"获取成功",$count,$list);
         }else{
-            echo echoJson(1,"获取失败");
+            echo echoJson(1,"获取失败",$count,$list);
         }
     }
 

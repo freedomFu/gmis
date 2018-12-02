@@ -75,6 +75,10 @@ class Tapply extends Model{
      * @Author:      fyd
      */
     public function add($data){
+        if(empty($data['title']) || empty($data['nature']) || empty($data['source']) || ($data['proid']==0)){
+            return 3;
+        }
+
         $tapply = new Tapply($data);
         $title = $data['title'];
         $uniCheck = Tapply::checkTitle($title);
@@ -376,7 +380,7 @@ class Tapply extends Model{
             $this->dbProUpdate($id);
             // 提交事务
             Db::commit();
-        }catch(\Exception $e){
+        }catch(\think\Exception\DbException $e){
             Db::rollback();
             return 3;
         }

@@ -1,6 +1,7 @@
 <?php
 namespace app\home\controller;
 use app\home\controller\Base;
+use app\home\model\Prochart;
 use app\home\model\Sselect;
 use app\home\model\Tapply;
 
@@ -26,6 +27,16 @@ class Stuselect extends Base
      */
     public function show(){
         $this->isStudent();
+
+        /********************************************************************/
+        $proname = "学生选题";
+        $prochart = new Prochart();
+        $res = $prochart->enterCheck($proname);
+        if(!$res){
+            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
+        }
+        /********************************************************************/
+
         $stuid = session('uid');
         $ss = new Sselect();
         $isAllowSave = $ss->checkIsAllow($stuid);
@@ -103,6 +114,16 @@ class Stuselect extends Base
      */
     public function showSelect(){
         $this->isStudent();
+
+        /********************************************************************/
+        $proname = "学生选题";
+        $prochart = new Prochart();
+        $res = $prochart->enterCheck($proname);
+        if(!$res){
+            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
+        }
+        /********************************************************************/
+
         $teapply = new Tapply();
         $stuid = session('uid');
         $ss = new Sselect();
@@ -153,7 +174,7 @@ class Stuselect extends Base
         if($auth==1){
             echo echoJson(0,"提取成功",$count,$list);
         }else{
-            echo echoJson(1,"无数据");
+            echo echoJson(1,"无数据",$count,$list);
         }
     }
 
@@ -165,6 +186,7 @@ class Stuselect extends Base
      * @Author:      fyd
      */
     public function saveOne(){
+        $this->isStudent();
         $sselect = new Sselect();
         $stuid = session('uid');
         $dataid = $_POST['id'];
@@ -196,6 +218,7 @@ class Stuselect extends Base
      * @Author:      fyd
      */
     public function delOne(){
+        $this->isStudent();
         $sselect = new Sselect();
         $stuid = session('uid');
         $dataid = $_POST['id'];
@@ -220,6 +243,7 @@ class Stuselect extends Base
      * @Author:      fyd
      */
     public function changeWeigh(){
+        $this->isStudent();
         $id = $_POST['id'];
         $weigh = $_POST['weigh'];
 
@@ -238,11 +262,12 @@ class Stuselect extends Base
     /******************************************************************************************************************/
 
     /**
-     * @Description: 提交数据,这里提交的时候需要修改weigh
+     * @Description: 提交数据
      * @DateTime:    2018/11/27 10:28
      * @Author:      fyd
      */
     public function submitData(){
+        $this->isStudent();
         $sselect = new Sselect();
         $id = $_POST['id'];
         $stuid = session('uid');

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"C:\wamp64\www\gmis\public/../application/home\view\Tapply\showApply.html";i:1543586154;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543553675;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"C:\wamp64\www\gmis\public/../application/home\view\Tapply\showApply.html";i:1543743277;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543738560;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,30 +20,35 @@
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Pchart/index">流程图</a></li>
 
+
             <?php if(\think\Request::instance()->session('auth') == 1): ?>
-            <li class="layui-nav-item">
-                <a href="javascript:;">学生管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Stuselect/showSelect">学生选题</a></dd>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Stuselect/show">已选题目</a></dd>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Stuselect/showMyTitle">我的题目</a></dd>
-                </dl>
-            </li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Stuselect/showSelect">学生选题</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Stuselect/show">已选题目</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Stuselect/showMyTitle">我的题目</a></li>
             <?php endif; if(\think\Request::instance()->session('auth') == 2): ?>
-            <li class="layui-nav-item">
-                <a href="javascript:;">教师管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Teapply/show">查看题目</a></dd>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Teapply/showSelectStu">查看学生申请</a></dd>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Reprocess/showPage">管理学生</a></dd>
-                </dl>
-            </li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Teapply/show">查看题目</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Teapply/showSelectStu">查看学生申请</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Reprocess/showPage">管理学生</a></li>
             <?php endif; ?>
+
+            <!--<li class="layui-nav-item">
+                <a href="javascript:;">
+                    个人信息
+                </a>
+                <dl class="layui-nav-child">
+                    <?php if(\think\Request::instance()->session('auth') == 2): ?>
+                    <dd><a href="http://127.0.0.1/gmis/public/home/Index/showSet">个人信息</a></dd>
+                    <?php endif; ?>
+                    <dd><a href="javascript:" id="password-btn">修改密码</a></dd>
+                    <dd><a href="http://127.0.0.1/gmis/public/home/User/logout">退出</a></dd>
+                </dl>
+            </li>-->
+
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    个人信息<?php echo \think\Request::instance()->session('auth'); ?>
+                    个人信息
                 </a>
                 <dl class="layui-nav-child">
                     <?php if(\think\Request::instance()->session('auth') == 2): ?>
@@ -66,10 +71,10 @@
         </div>
         <table id="tapply" lay-filter="tapply"></table>
         <script type="text/html" id="operation-bar">
-            {{# var ifdisabled=(d.status=='已通过'?'layui-hide':'')}}
+            {{# var ifdisabled=(d.status=='已通过'?'layui-btn-disabled':'')}}
             <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-            <a class="layui-btn layui-btn-warm layui-btn-xs {{ifdisabled}}" lay-event="edit">修改</a>
-            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled}}" lay-event="del">删除</a>
+            <a class="layui-btn layui-btn-warm layui-btn-xs {{ifdisabled}}" lay-event="{{ifdisabled=='layui-btn-disabled'?'':'edit'}}">修改</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled}}" lay-event="{{ifdisabled=='layui-btn-disabled'?'':'del'}}">删除</a>
         </script>
         <script type="text/html" id="isNewTpl">
             {{(d.isnew==='1'?'是':'否')}}
@@ -201,25 +206,25 @@
         <div class="layui-form-item">
             <label class="layui-form-label">题目</label>
             <div class="layui-input-block">
-                <input type="text" name="title" required autocomplete="off" class="layui-input" placeholder="请输入标题">
+                <input type="text" name="title"  autocomplete="off" class="layui-input" lay-verify="required" required  lay-verType="tips" placeholder="请输入标题">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">题目性质</label>
             <div class="layui-input-block">
-                <input type="text" name="nature" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
+                <input type="text" name="nature" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">题目来源</label>
             <div class="layui-input-block">
-                <input type="text" name="source" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
+                <input type="text" name="source" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">专业</label>
             <div class="layui-input-block">
-                <select name="proid" lay-filter="zhuanye" id="proname">
+                <select name="proid" lay-verify="required" required lay-filter="zhuanye" id="proname">
                     <option value="0"></option>
                     <?php if(is_array($profess) || $profess instanceof \think\Collection || $profess instanceof \think\Paginator): $i = 0; $__LIST__ = $profess;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
                     <option value="<?php echo $pro['id']; ?>"><?php echo $pro['proname']; ?></option>
@@ -242,7 +247,7 @@
         </div>
         <div class="layui-form-item" style="margin-top: 15px;">
             <div class="layui-input-block">
-                <button class="layui-btn" lay-submit lay-filter="change_apply">立即提交</button>
+                <button class="layui-btn" type="button"  lay-submit="" lay-filter="change_apply">立即提交</button>
             </div>
         </div>
     </form>

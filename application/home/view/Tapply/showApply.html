@@ -10,10 +10,10 @@
         </div>
         <table id="tapply" lay-filter="tapply"></table>
         <script type="text/html" id="operation-bar">
-            {{# var ifdisabled=(d.status=='已通过'?'layui-hide':'')}}
+            {{# var ifdisabled=(d.status=='已通过'?'layui-btn-disabled':'')}}
             <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-            <a class="layui-btn layui-btn-warm layui-btn-xs {{ifdisabled}}" lay-event="edit">修改</a>
-            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled}}" lay-event="del">删除</a>
+            <a class="layui-btn layui-btn-warm layui-btn-xs {{ifdisabled}}" lay-event="{{ifdisabled=='layui-btn-disabled'?'':'edit'}}">修改</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled}}" lay-event="{{ifdisabled=='layui-btn-disabled'?'':'del'}}">删除</a>
         </script>
         <script type="text/html" id="isNewTpl">
             {{(d.isnew==='1'?'是':'否')}}
@@ -101,25 +101,25 @@
         <div class="layui-form-item">
             <label class="layui-form-label">题目</label>
             <div class="layui-input-block">
-                <input type="text" name="title" required autocomplete="off" class="layui-input" placeholder="请输入标题">
+                <input type="text" name="title"  autocomplete="off" class="layui-input" lay-verify="required" required  lay-verType="tips" placeholder="请输入标题">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">题目性质</label>
             <div class="layui-input-block">
-                <input type="text" name="nature" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
+                <input type="text" name="nature" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">题目来源</label>
             <div class="layui-input-block">
-                <input type="text" name="source" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
+                <input type="text" name="source" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">专业</label>
             <div class="layui-input-block">
-                <select name="proid" lay-filter="zhuanye" id="proname">
+                <select name="proid" lay-verify="required" required lay-filter="zhuanye" id="proname">
                     <option value="0"></option>
                     {volist name="profess" id="pro"}
                     <option value="{$pro.id}">{$pro.proname}</option>
@@ -142,7 +142,7 @@
         </div>
         <div class="layui-form-item" style="margin-top: 15px;">
             <div class="layui-input-block">
-                <button class="layui-btn" lay-submit lay-filter="change_apply">立即提交</button>
+                <button class="layui-btn" type="button"  lay-submit="" lay-filter="change_apply">立即提交</button>
             </div>
         </div>
     </form>

@@ -1,6 +1,7 @@
 <?php
 namespace app\home\controller;
 use app\home\controller\Base;
+use app\home\model\Prochart;
 use app\home\model\Tapply;
 
 class Teapply extends Base
@@ -16,6 +17,8 @@ class Teapply extends Base
         }
     }
 
+    /******************************************************************************************************************/
+
     /**
      * @Description: 显示界面
      * @DateTime:    2018/11/27 10:37
@@ -23,6 +26,16 @@ class Teapply extends Base
      */
     public function show(){
         $this->isTeacher();
+
+        /********************************************************************/
+        /*$proname = "题目申报";
+        $prochart = new Prochart();
+        $res = $prochart->enterCheck($proname);
+        if(!$res){
+            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
+        }*/
+        /********************************************************************/
+
         $teapply = new Tapply();
         $profess = $teapply->showProfess();
         $this->assign('profess',$profess);
@@ -49,15 +62,15 @@ class Teapply extends Base
         for($i=0;$i<$count;$i++){
             $list[$i]['kid']=$i+1;
         }
-        /*$res = json(['code'=>0,'count'=>$count,'errmsg'=>'','data'=>$list])->getcontent();
-        echo $res;*/
 
         if($count){
             echo echoJson(0,"获取成功",$appliedNum,$list,$titlenum,$leftNum);
         }else{
-            echo echoJson(1,"获取失败");
+            echo echoJson(1,"获取失败",$appliedNum,$list,$titlenum,$leftNum);
         }
     }
+
+
 
     /**
      * @Description: 添加数据
@@ -89,11 +102,14 @@ class Teapply extends Base
         $res = $teapply->add($data);
         if($res == 1){
             falsePro(0,"添加成功");
-        }elseif($res ==2){
+        }elseif($res==2){
             falsePro(2,"题目重复");
+        }elseif($res==3){
+            falsePro(2,"信息不得为空！");
         }else{
             falsePro(1,"添加失败");
         }
+
     }
 
     /**
@@ -147,6 +163,8 @@ class Teapply extends Base
         }
     }
 
+    /******************************************************************************************************************/
+
     /**
      * @Description: 显示教师确认学生界面
      * @DateTime:    2018/11/29 21:50
@@ -154,6 +172,16 @@ class Teapply extends Base
      */
     public function showSelectStu(){
         $this->isTeacher();
+
+        /********************************************************************/
+        /*$proname = "老师选学生";
+        $prochart = new Prochart();
+        $res = $prochart->enterCheck($proname);
+        if(!$res){
+            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
+        }*/
+        /********************************************************************/
+
         return $this->fetch("Tapply/showSelectStu");
     }
 
@@ -177,7 +205,7 @@ class Teapply extends Base
         if($count){
             echo echoJson(0,"获取成功",$count,$list);
         }else{
-            echo echoJson(1,"获取失败");
+            echo echoJson(1,"获取失败",$count,$list);
         }
     }
 
@@ -209,5 +237,7 @@ class Teapply extends Base
                 break;
         }
     }
+
+    /******************************************************************************************************************/
 
 }

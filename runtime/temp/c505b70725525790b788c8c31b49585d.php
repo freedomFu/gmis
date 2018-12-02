@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\wamp64\www\gmis\public/../application/home\view\Prochart\index.html";i:1543371821;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543671896;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\wamp64\www\gmis\public/../application/home\view\Prochart\index.html";i:1543735453;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543738560;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +31,7 @@
             <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Reprocess/showPage">管理学生</a></li>
             <?php endif; ?>
 
-            <li class="layui-nav-item">
+            <!--<li class="layui-nav-item">
                 <a href="javascript:;">
                     个人信息
                 </a>
@@ -42,10 +42,10 @@
                     <dd><a href="javascript:" id="password-btn">修改密码</a></dd>
                     <dd><a href="http://127.0.0.1/gmis/public/home/User/logout">退出</a></dd>
                 </dl>
-            </li>
+            </li>-->
 
         </ul>
-        <!--<ul class="layui-nav layui-layout-right">
+        <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
                     个人信息
@@ -58,7 +58,7 @@
                     <dd><a href="http://127.0.0.1/gmis/public/home/User/logout">退出</a></dd>
                 </dl>
             </li>
-        </ul>-->
+        </ul>
     </div>
 <div class="layui-body">
     <div class="layui-container">
@@ -69,17 +69,25 @@
                         <ul class="layui-timeline">
                             <?php if(is_array($prochart) || $prochart instanceof \think\Collection || $prochart instanceof \think\Paginator): $i = 0; $__LIST__ = $prochart;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
                             <li class="layui-timeline-item">
-                                <?php if($pro['statusnum'] == 2): ?>
+                                <?php if($pro['isnow'] == -1): ?>
                                 <i class="layui-icon layui-timeline-axis">&#xe605;</i>  <!-- 已截止 -->
-                                <?php endif; if($pro['statusnum'] == 1): ?>
+                                <div class="layui-timeline-content layui-text">
+                                    <h2 class="layui-timeline-title" style="color: #7E96B3;"><?php echo $pro['proname']; ?></h2>
+                                <?php endif; if($pro['isnow'] == 0): ?>
                                 <i class="layui-icon layui-timeline-axis">&#xe6af;</i>  <!-- 正在进行 -->
-                                <?php endif; if($pro['statusnum'] == 0): ?>
+                                <div class="layui-timeline-content layui-text">
+                                    <h2 class="layui-timeline-title" style="color: #a00000;"><?php echo $pro['proname']; ?>(进行中)</h2>
+                                <?php endif; if($pro['isnow'] == 1): ?>
                                 <i class="layui-icon layui-timeline-axis">&#xe609;</i>  <!-- 未开始 -->
-                                <?php endif; ?>
                                 <div class="layui-timeline-content layui-text">
                                     <h2 class="layui-timeline-title"><?php echo $pro['proname']; ?></h2>
+                                <?php endif; if($pro['isnow'] == 2): ?>
+                                <i class="layui-icon layui-timeline-axis">&#xe609;</i>  <!-- 未开始 -->
+                                <div class="layui-timeline-content layui-text">
+                                    <h2 class="layui-timeline-title" style="color: #0e6f5c;"><?php echo $pro['proname']; ?></h2>
+                                <?php endif; ?>
                                     <h4>
-                                        <?php echo $pro['protimer']; ?>
+                                        <?php echo $pro['starttime']; ?> → <?php echo $pro['endtime']; ?>
                                     </h4>
                                     <br/>
                                 </div>

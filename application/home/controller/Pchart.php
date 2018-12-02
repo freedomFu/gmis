@@ -16,4 +16,5 @@ class Pchart extends Base
         $this->assign('prochart',$prochart);
         return $this->fetch('Prochart/index');
     }
+
 }
