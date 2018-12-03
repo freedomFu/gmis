@@ -195,7 +195,7 @@ class Stuselect extends Base
 
         switch ($res){
             case 1:
-                falsePro(0,"成功");
+                falsePro(0,"选题成功，请及时提交");
                 break;
             case 0:
                 falsePro(1,"失败");

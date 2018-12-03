@@ -8,41 +8,27 @@
   <component name="ChangeListManager">
     <list default="true" id="22bcd330-2bf3-4591-b345-000f3989cf2a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Base.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Base.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/view/Public/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/view/Public/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/view/Tapply/showApply.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/view/Tapply/showApply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fhome/js/base/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/fhome/js/base/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fhome/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/fhome/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/cache/cb/78ef4a9130f39208ff10858ddd8377.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/1173ce9ac053253d7a243c28bdd53c91.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/1173ce9ac053253d7a243c28bdd53c91.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/12942d42f3c359f0dc8de474d3d29600.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/141cf60e21f77b562c97e694b910e78e.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/141cf60e21f77b562c97e694b910e78e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/227c732328c3c8592396eed2eff5ab08.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/227c732328c3c8592396eed2eff5ab08.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/47596743ff24600c5da4ffc0601e7b50.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/48614c48448f5053524b84fa6b8e16c2.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/48614c48448f5053524b84fa6b8e16c2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/491240ed954150b5ac7a4e574d336810.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/5bcf37dd47fa7b6338630f568731f744.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/67c4c81b5ca2e2e2ec038a1e6caa236d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/67d83a4a674093a0f059486ddf9766c7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/7e2e0774258ec16b7766e6139f0b05a5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/7ef09a07878106dccb14d617584fb7d0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/840f9f352559c70111cc2cb1bf66a257.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/840f9f352559c70111cc2cb1bf66a257.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/90021cde30bf021d043718363efd6700.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/9178026eae4fd84c29d5a31d4da7f77d.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/9178026eae4fd84c29d5a31d4da7f77d.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/949947c748d5a0fe06d0d0cbdf5bb47f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/bee01a707d3f4cbb60f0bf6fc0453708.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/c1f6782702c1798131e182d4f1416ca5.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/c1f6782702c1798131e182d4f1416ca5.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/c505b70725525790b788c8c31b49585d.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/c505b70725525790b788c8c31b49585d.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/da5c8e5fb5508eff382887e3e7985a89.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/da5c8e5fb5508eff382887e3e7985a89.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/e959f0e0807d10135ac9e90fde11aacc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/eb2c85c421ff931a5a66f8d25d3d66fc.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/eb2c85c421ff931a5a66f8d25d3d66fc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/f8dc854941cb532b7cfc012de9cd9959.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/fcaffbd00aaf4495e094b45bf6a8320b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/fe0977dba92f0631548e66c82392f708.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/home/controller/Stuselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Stuselect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201811/1543325536-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201811/1543502764-29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201811/25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201811/26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201811/27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201811/28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201811/29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201811/30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201812/01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201812/02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201812/03.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201812/03.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201812/1543671904-01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/1173ce9ac053253d7a243c28bdd53c91.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/38cd300e5daaf51eb4546fec0d04a98f.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/9178026eae4fd84c29d5a31d4da7f77d.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/c1f6782702c1798131e182d4f1416ca5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/cddb8afdd07e2b868e8ac88d1d2b02c5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/eb2c85c421ff931a5a66f8d25d3d66fc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/ec55cbc3f573c0ed7f2427631ed37a72.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/f98a05576040532867633132b0cae07c.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,11 +51,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Base.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Base.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="420">
+              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1664">
+              <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stuselect.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/home/controller/Stuselect.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-540">
+              <caret line="197" column="38" selection-start-line="197" selection-start-column="38" selection-end-line="197" selection-end-column="38" />
+              <folding>
+                <element signature="e#37#66#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -194,7 +201,6 @@
         <option value="$PROJECT_DIR$/application/home/view/Tapply/showApply.html" />
         <option value="$PROJECT_DIR$/application/home/model/Userlogin.php" />
         <option value="$PROJECT_DIR$/application/home/controller/Teapply.php" />
-        <option value="$PROJECT_DIR$/application/home/controller/Stuselect.php" />
         <option value="$PROJECT_DIR$/application/home/controller/Reprocess.php" />
         <option value="$PROJECT_DIR$/application/home/controller/Index.php" />
         <option value="$PROJECT_DIR$/application/config.php" />
@@ -208,6 +214,7 @@
         <option value="$PROJECT_DIR$/public/fhome/js/base/base.js" />
         <option value="$PROJECT_DIR$/application/home/controller/User.php" />
         <option value="$PROJECT_DIR$/application/home/controller/Base.php" />
+        <option value="$PROJECT_DIR$/application/home/controller/Stuselect.php" />
       </list>
     </option>
   </component>
@@ -419,12 +426,12 @@
       <workItem from="1543447361551" duration="68583000" />
       <workItem from="1543623461753" duration="23602000" />
       <workItem from="1543707518238" duration="15113000" />
-      <workItem from="1543793842985" duration="7751000" />
+      <workItem from="1543793842985" duration="8758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412280000" />
+    <option name="totallyTimeSpent" value="413287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="1" />
@@ -713,16 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Stuselect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="e#37#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Pchart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -767,23 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Teapply.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <element signature="e#37#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="88" column="37" lean-forward="true" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -848,8 +828,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        <state relative-caret-position="420">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1664">
+          <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Teapply.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="103" column="28" lean-forward="true" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
+          <folding>
+            <element signature="e#37#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Stuselect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="197" column="38" selection-start-line="197" selection-start-column="38" selection-end-line="197" selection-end-column="38" />
+          <folding>
+            <element signature="e#37#66#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
