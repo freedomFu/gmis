@@ -14,22 +14,22 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo"><a href="__FHOME__/Index/index"><img src="__FHOME_IMG__/footLogo.png" width="180" /></a></div>
+        <div class="layui-logo"><a href="__FHOME__/index"><img src="__FHOME_IMG__/footLogo.png" width="180" /></a></div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="__FHOME__/Pchart/index">流程图</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/flow">流程图</a></li>
 
 
             {if condition="$Request.session.auth eq 1"}
-            <li class="layui-nav-item"><a href="__FHOME__/Stuselect/showSelect">学生选题</a></li>
-            <li class="layui-nav-item"><a href="__FHOME__/Stuselect/show">已选题目</a></li>
-            <li class="layui-nav-item"><a href="__FHOME__/Stuselect/showMyTitle">我的题目</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/sTitle">学生选题</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/msTitle">已选题目</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/mTitle">我的题目</a></li>
             {/if}
 
             {if condition="$Request.session.auth eq 2"}
-            <li class="layui-nav-item"><a href="__FHOME__/Teapply/show">查看题目</a></li>
-            <li class="layui-nav-item"><a href="__FHOME__/Teapply/showSelectStu">查看学生申请</a></li>
-            <li class="layui-nav-item"><a href="__FHOME__/Reprocess/showPage">管理学生</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/tApply">查看题目</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/tSstu">查看学生申请</a></li>
+            <li class="layui-nav-item"><a href="__FHOME__/mastu">管理学生</a></li>
             {/if}
 
             <!--<li class="layui-nav-item">
@@ -53,10 +53,10 @@
                 </a>
                 <dl class="layui-nav-child">
                     {if condition="$Request.session.auth eq 2"}
-                    <dd><a href="__FHOME__/Index/showSet">个人信息</a></dd>
+                    <dd><a href="__FHOME__/myset">个人信息</a></dd>
                     {/if}
                     <dd><a href="javascript:" id="password-btn">修改密码</a></dd>
-                    <dd><a href="__FHOME__/User/logout">退出</a></dd>
+                    <dd><a href="__FHOME__/logout">退出</a></dd>
                 </dl>
             </li>
         </ul>

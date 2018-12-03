@@ -21,7 +21,7 @@ layui.use(['form', 'jquery', 'layer'], function () {
         }else{
             return base_ajax(base_home+"/User/expass", data.field, function(){
                 layer.close(pass_layer);
-                window.location.href=base_home+"/Login/index";
+                window.location.href=site_url+"/public/login";
             });
         }
     });

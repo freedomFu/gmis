@@ -5,7 +5,7 @@ layui.use(['form','jquery','layer'],function(){
     //登录
     form.on('submit(userLog)',function(data){
         return base_ajax(base_home+"/Login/login",data.field,function(){
-            window.location.href=base_home+"/Index/index";
+            window.location.href=site_url+"/public/index";
         });
     });
 });

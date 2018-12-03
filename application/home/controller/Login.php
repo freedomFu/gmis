@@ -45,6 +45,7 @@ class Login extends Controller
         if(($res-3)%10 == 0){
             session('auth',$auth);
             session('isLogin',1);
+            session('session_start_time',time());
             falsePro(0,'登录成功');
             exit;
         }elseif(($res-2)%10 == 0){

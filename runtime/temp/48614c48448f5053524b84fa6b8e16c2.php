@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\teacher\add.html";i:1543738129;s:61:"C:\wamp64\www\gmis\application\admin\view\layout\default.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\teacher\add.html";i:1543738404;s:61:"C:\wamp64\www\gmis\application\admin\view\layout\default.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -103,19 +103,19 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Starttimer'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-starttimer" data-rule="required" class="form-control" name="row[starttimer]" type="text" value="尚未填写">
+            <input id="c-starttimer" data-rule="required" class="form-control" name="row[starttimer]" type="text" value="0000-00-00">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Middletimer'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-middletimer" data-rule="required" class="form-control" name="row[middletimer]" type="text" value="尚未填写">
+            <input id="c-middletimer" data-rule="required" class="form-control" name="row[middletimer]" type="text" value="0000-00-00">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Replytimer'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-replytimer" data-rule="required" class="form-control" name="row[replytimer]" type="text" value="尚未填写">
+            <input id="c-replytimer" data-rule="required" class="form-control" name="row[replytimer]" type="text" value="0000-00-00">
         </div>
     </div>
     <div class="form-group">

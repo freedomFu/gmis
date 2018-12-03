@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:68:"C:\wamp64\www\gmis\public/../application/home\view\Main\userSet.html";i:1543520444;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543671896;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:68:"C:\wamp64\www\gmis\public/../application/home\view\Main\userSet.html";i:1543520444;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1543802751;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,50 +15,50 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo"><a href="http://127.0.0.1/gmis/public/home/Index/index"><img src="http://127.0.0.1/gmis/public/fhome/img/footLogo.png" width="180" /></a></div>
+        <div class="layui-logo"><a href="http://127.0.0.1/gmis/public/index"><img src="http://127.0.0.1/gmis/public/fhome/img/footLogo.png" width="180" /></a></div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Pchart/index">流程图</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/flow">流程图</a></li>
 
 
             <?php if(\think\Request::instance()->session('auth') == 1): ?>
-            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Stuselect/showSelect">学生选题</a></li>
-            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Stuselect/show">已选题目</a></li>
-            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Stuselect/showMyTitle">我的题目</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/sTitle">学生选题</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/msTitle">已选题目</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/mTitle">我的题目</a></li>
             <?php endif; if(\think\Request::instance()->session('auth') == 2): ?>
-            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Teapply/show">查看题目</a></li>
-            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Teapply/showSelectStu">查看学生申请</a></li>
-            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/home/Reprocess/showPage">管理学生</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/tApply">查看题目</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/tSstu">查看学生申请</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/gmis/public/mastu">管理学生</a></li>
             <?php endif; ?>
 
-            <li class="layui-nav-item">
+            <!--<li class="layui-nav-item">
                 <a href="javascript:;">
                     个人信息
                 </a>
                 <dl class="layui-nav-child">
                     <?php if(\think\Request::instance()->session('auth') == 2): ?>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Index/showSet">个人信息</a></dd>
+                    <dd><a href="http://127.0.0.1/gmis/public/Index/showSet">个人信息</a></dd>
                     <?php endif; ?>
                     <dd><a href="javascript:" id="password-btn">修改密码</a></dd>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/User/logout">退出</a></dd>
+                    <dd><a href="http://127.0.0.1/gmis/public/User/logout">退出</a></dd>
                 </dl>
-            </li>
+            </li>-->
 
         </ul>
-        <!--<ul class="layui-nav layui-layout-right">
+        <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
                     个人信息
                 </a>
                 <dl class="layui-nav-child">
                     <?php if(\think\Request::instance()->session('auth') == 2): ?>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/Index/showSet">个人信息</a></dd>
+                    <dd><a href="http://127.0.0.1/gmis/public/myset">个人信息</a></dd>
                     <?php endif; ?>
                     <dd><a href="javascript:" id="password-btn">修改密码</a></dd>
-                    <dd><a href="http://127.0.0.1/gmis/public/home/User/logout">退出</a></dd>
+                    <dd><a href="http://127.0.0.1/gmis/public/logout">退出</a></dd>
                 </dl>
             </li>
-        </ul>-->
+        </ul>
     </div>
 <div style="width:930px;margin:50px auto;">
     <h2 id="setTeacherInfo">设置教师信息</h2>

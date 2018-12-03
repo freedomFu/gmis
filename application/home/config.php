@@ -11,7 +11,7 @@ return [
         '__MODULE__'        =>  SITE_URL.'/public',
 
         // 生成Index模块的样式模板
-        '__FHOME__'         =>  SITE_URL.'/public/home',
+        '__FHOME__'         =>  SITE_URL.'/public',
         '__FHOME_IMG__'         =>  SITE_URL.'/public/fhome/img',
         '__FHOME_CSS__'     =>  SITE_URL.'/public/fhome/css',
         '__FHOME_JS__'      =>  SITE_URL.'/public/fhome/js',
@@ -30,5 +30,8 @@ return [
             'first_page'=>true, //首页
             'last_page'=>true  //尾页
         ]
-    ]
+    ],
+    // 是否开启路由
+    'url_route_on'  =>  true,
+    'url_route_must'=>  false,
 ];

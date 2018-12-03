@@ -26,7 +26,7 @@ class User extends Base
      */
     public function logout(){
         $this->delSession();
-        $this->success('退出成功','Login/index');
+        $this->success('退出成功','../login');
     }
 
     /**
