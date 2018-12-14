@@ -14,3 +14,40 @@
 {include file="Public/footer" /}
 
 <script src="__FHOME_JS__/showEditScore.js"></script>
+<div id="changeScore" style="display: none">
+    <form class="layui-form " lay-filter="changeScore" id="change_score" action="#" style="padding: 15px 20px 0 0;" method="post">
+        <div class="layui-form-item layui-hide">
+            <label class="layui-form-label">ID</label>
+            <div class="layui-input-block">
+                <input type="text" name="id" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">中期成绩</label>
+            <div class="layui-input-block">
+                <select name="mscore" lay-verify="required" required lay-filter="mscore" id="mscore">
+                    <option value="">---请选择---</option>
+                    {volist name="midscore" id="midscore"}
+                    <option value="{$midscore}">{$midscore}</option>
+                    {/volist}
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">答辩成绩</label>
+            <div class="layui-input-block">
+                <select name="rscore" lay-verify="required" required lay-filter="rscore" id="rscore">
+                    <option value="">---请选择---</option>
+                    {volist name="repscore" id="repscore"}
+                    <option value="{$repscore}">{$repscore}</option>
+                    {/volist}
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item" style="margin-top: 15px;">
+            <div class="layui-input-block">
+                <button class="layui-btn" type="button"  lay-submit="" lay-filter="change_score">立即提交</button>
+            </div>
+        </div>
+    </form>
+</div>

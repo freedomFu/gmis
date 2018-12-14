@@ -69,6 +69,38 @@ class Tapply extends Model{
         return $list;
     }
 
+    public function getOldNum($teaid,$year){
+        $where['teaid'] = $teaid;
+        $where['belongsenior'] = $year;
+        $where['status'] = "已通过";
+        $maintable = 'tapply';
+        $count = Db::name($maintable)
+            ->where($where)
+            ->count();
+        return $count;
+    }
+
+    public function showOld($teaid,$page,$limit,$year){
+        $where['teaid'] = $teaid;
+        $where['belongsenior'] = $year;
+        $where['ta.status'] = "已通过";
+        $maintable = 'tapply';
+        $field = 'ta.id,title,nature,source,isnew,isprac,ta.proid,proname,note,ta.status,stuidcard,stuname,stuclass,stuphone';
+        $mt = 'ta';
+        $join = [
+            ['gmis_student gs','gs.id=ta.stuid','LEFT'],
+            ['gmis_profess gp','gp.id=ta.proid','LEFT'],
+        ];
+        $list = Db::name($maintable)
+            ->alias($mt)
+            ->join($join)
+            ->field($field)
+            ->where($where)
+            ->limit(($page-1)*$limit,$limit)
+            ->select();
+        return $list;
+    }
+
     /**
      * @Description: 新增数据
      * @DateTime:    2018/11/27 10:53

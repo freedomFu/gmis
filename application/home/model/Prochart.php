@@ -115,4 +115,21 @@ class Prochart extends Model
         $flag = $this->isNow($start,$end);
         return $flag;
     }
+
+    /**
+     * @Description: 审核时间
+     * @DateTime:    2018/12/14 20:49
+     * @Author:      fyd
+     */
+    public function getTimeCheck(){
+        $where['setname'] = "时间审核";
+        $res = Db::name("userset")
+            ->where($where)
+            ->value("status");
+        if($res=="on"){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

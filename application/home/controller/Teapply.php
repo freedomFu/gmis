@@ -2,6 +2,7 @@
 namespace app\home\controller;
 use app\home\controller\Base;
 use app\home\model\Prochart;
+use app\home\model\Info;
 use app\home\model\Tapply;
 
 class Teapply extends Base
@@ -28,17 +29,25 @@ class Teapply extends Base
         $this->isTeacher();
 
         /********************************************************************/
-        /*$proname = "题目申报";
-        $prochart = new Prochart();
-        $res = $prochart->enterCheck($proname);
-        if(!$res){
-            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
-        }*/
+        $proc = new Prochart();
+        if($proc->getTimeCheck()) {
+            $proname = "题目申报";
+            $prochart = new Prochart();
+            $res = $prochart->enterCheck($proname);
+            if (!$res) {
+                $this->error("当前时间不可以进行" . $proname . "操作", "../flow");
+            }
+        }
         /********************************************************************/
 
         $teapply = new Tapply();
         $profess = $teapply->showProfess();
+        $year = getSenior();
+        $years = [
+            $year,$year-1,$year-2,$year-3,$year-4,$year-5
+        ];
         $this->assign('profess',$profess);
+        $this->assign('years',$years);
         return $this->fetch('Tapply/showApply');
     }
 
@@ -67,6 +76,35 @@ class Teapply extends Base
             echo echoJson(0,"获取成功",$appliedNum,$list,$titlenum,$leftNum);
         }else{
             echo echoJson(1,"获取失败",$appliedNum,$list,$titlenum,$leftNum);
+        }
+    }
+
+    /**
+     * @Description: 获取往年题目信息
+     * @DateTime:    2018/12/14 20:18
+     * @Author:      fyd
+     */
+    public function told(){
+        $this->isTeacher();
+        $teapply = new Tapply();
+        $id = session('uid');
+        if(isset($_POST['year'])){
+            $year = $_POST['year'];
+        }else{
+            $year = getSenior();
+        }
+        $page=input('page');
+        $limit=input('limit');
+        $count = $teapply->getOldNum($id,$year);
+        $list = $teapply->showOld($id,$page,$limit,$year);
+        for($i=0;$i<$count;$i++){
+            $list[$i]['kid']=$i+1;
+        }
+
+        if($count){
+            echo echoJson(0,"获取成功",$count,$list);
+        }else{
+            echo echoJson(1,"获取失败",$count,$list);
         }
     }
 
@@ -174,14 +212,16 @@ class Teapply extends Base
         $this->isTeacher();
 
         /********************************************************************/
-        /*$proname = "老师选学生";
-        $prochart = new Prochart();
-        $res = $prochart->enterCheck($proname);
-        if(!$res){
-            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
-        }*/
+        $proc = new Prochart();
+        if($proc->getTimeCheck()) {
+            $proname = "老师选学生";
+            $prochart = new Prochart();
+            $res = $prochart->enterCheck($proname);
+            if (!$res) {
+                $this->error("当前时间不可以进行" . $proname . "操作", "../flow");
+            }
+        }
         /********************************************************************/
-
         return $this->fetch("Tapply/showSelectStu");
     }
 

@@ -51,6 +51,38 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
             , { align: 'center', toolbar: '#operation-bar', fixed: 'right' , width: 174 }
         ]]
     });
+
+    table.render({
+        elem: '#told'
+        , id: 'told'
+        , height: 488
+        , url: base_home+'/Teapply/told' //数据接口
+        , method: 'post'
+        , cellMinWidth: 80
+        , page: true //开启分页
+        , cols: [[ //表头
+            { field: 'kid', title: 'ID', sort: true, fixed: 'left', width: 120}
+            , { field: 'title', title: '题目', width: 200}
+            , { field: 'nature', title: '题目性质', width: 100 }
+            , { field: 'source', title: '题目来源', width: 100 }
+            , { field: 'isnew', title: '是否新题', width: 100, templet: '#isNewTpl' }
+            , { field: 'isprac', title: '是否结合实践', width: 120, templet: '#isPracTpl' }
+            , { field: 'proname', title: '专业', width: 200 }
+            , { field: 'status', title: '状态', width: 190 }
+        ]]
+    });
+
+    //搜索
+    $("#searchBtn").click(function(){
+        var year = $("#oldyear").val();
+        var json = {};
+        json.year = year;
+        table.reload('told', {
+            where: json
+        });
+    })
+
+
     var $ = layui.$, active = {
         new: function () {
             layer_tapply=layer.open({

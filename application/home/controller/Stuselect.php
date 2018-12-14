@@ -14,7 +14,7 @@ class Stuselect extends Base
      */
     private function isStudent(){
         if(session('auth')!=1){
-            $this->error("您没有权限操作！","Login/index");
+            $this->error("您没有权限操作！","../login");
         }
     }
 
@@ -29,11 +29,14 @@ class Stuselect extends Base
         $this->isStudent();
 
         /********************************************************************/
-        $proname = "学生选题";
-        $prochart = new Prochart();
-        $res = $prochart->enterCheck($proname);
-        if(!$res){
-            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
+        $proc = new Prochart();
+        if($proc->getTimeCheck()) {
+            $proname = "学生选题";
+            $prochart = new Prochart();
+            $res = $prochart->enterCheck($proname);
+            if (!$res) {
+                $this->error("当前时间不可以进行" . $proname . "操作", "../flow");
+            }
         }
         /********************************************************************/
 
@@ -116,11 +119,14 @@ class Stuselect extends Base
         $this->isStudent();
 
         /********************************************************************/
-        $proname = "学生选题";
-        $prochart = new Prochart();
-        $res = $prochart->enterCheck($proname);
-        if(!$res){
-            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
+        $proc = new Prochart();
+        if($proc->getTimeCheck()) {
+            $proname = "学生选题";
+            $prochart = new Prochart();
+            $res = $prochart->enterCheck($proname);
+            if (!$res) {
+                $this->error("当前时间不可以进行" . $proname . "操作", "../flow");
+            }
         }
         /********************************************************************/
 

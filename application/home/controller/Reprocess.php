@@ -3,6 +3,7 @@ namespace app\home\controller;
 use app\home\controller\Base;
 use app\home\model\Process;
 use app\home\model\Prochart;
+use app\home\controller\Index;
 use think\Controller;
 use think\Db;
 
@@ -15,7 +16,24 @@ class Reprocess extends Base
      */
     private function isTeacher(){
         if(session('auth')!=2){
-            $this->error("您没有权限操作！","Login/index");
+            $this->error("您没有权限操作！","../login");
+        }
+    }
+
+    /**
+     * @Description: 审核时间
+     * @DateTime:    2018/12/14 20:49
+     * @Author:      fyd
+     */
+    private function getTimeCheck(){
+        $where['setname'] = "时间审核";
+        $res = Db::name("userset")
+            ->where($where)
+            ->value("status");
+        if($res=="on"){
+            return true;
+        }else{
+            return false;
         }
     }
 
@@ -23,14 +41,22 @@ class Reprocess extends Base
         $this->isTeacher();
 
         /********************************************************************/
-        /*$proname = "答辩成绩管理";
-        $prochart = new Prochart();
-        $res = $prochart->enterCheck($proname);
-        if(!$res){
-            $this->error("当前时间不可以进行".$proname."操作","Pchart/index");
-        }*/
-        /********************************************************************/
+        $proc = new Prochart();
+        if($proc->getTimeCheck()){
+            $proname = "答辩成绩管理";
+            $prochart = new Prochart();
+            $res = $prochart->enterCheck($proname);
+            if(!$res){
+                $this->error("当前时间不可以进行".$proname."操作","../flow");
+            }
+        }
 
+        /********************************************************************/
+        $index = new Index();
+        $midscore = $index->getArray("getMidScore");
+        $this->assign("midscore",$midscore);
+        $repscore = $index->getArray("getRepScore");
+        $this->assign("repscore",$repscore);
         return $this->fetch("Tapply/showStudent");
     }
 
@@ -68,8 +94,11 @@ class Reprocess extends Base
         $this->isTeacher();
         $process = new Process();
         $id = $_POST['id'];
-        $score = $_POST['replyscore'];
-        $res = $process->editScore($id,$score);
+        $data = [
+            'middlescore'               =>$_POST['mscore'],
+            'replyscore'                =>$_POST['rscore']
+        ];
+        $res = $process->editScore($id,$data);
 
         switch ($res){
             case 0:

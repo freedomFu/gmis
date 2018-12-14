@@ -2,13 +2,32 @@
 <div class="layui-body">
     <div class="layui-container">
         <!-- 内容主体区域 -->
-        <h2 id="userCon" style="text-align: center;">申请题目管理</h2>
+        <h2 id="userCon" style="text-align: center;">毕设题目管理</h2>
         <div class="btn-wrap layui-clear">
             <div class="layui-show-md-inline-block" style="float:right;">
                 <a href="javascript:" id="add_tapply_check" class="layui-btn" data-type="new">申请题目</a>
             </div>
         </div>
         <table id="tapply" lay-filter="tapply"></table>
+
+        <div id="showNote">
+        <p style="color: #999">您可以申请的数量为：<span id="totalNum" style="font-size:28px;color:#a00000;"></span>  剩余数量为：<span id="leftNum" style="font-size:28px;color:lightseagreen;"></span></p>
+        </div>
+
+
+        <h2 style="text-align: center;margin-top: 30px;">往年题目查询</h2>
+        <div class="demo">
+            年份
+            <div class="layui-inline">
+                <select id="oldyear" class="layui-select" name="oldyear" lay-filter="oldyear" id="oldyear" lay-search="">
+                    {volist name="years" id="year"}
+                    <option value="{$year}">{$year}</option>
+                    {/volist}
+                </select>
+            </div>
+            <a class="layui-btn layui-btn-normal" id="searchBtn" lay-event="search" style="margin-left: 20px;">搜索</a>
+        </div>
+        <table id="told" lay-filter="told"></table>
         <script type="text/html" id="operation-bar">
             {{# var ifdisabled=(d.status=='已通过'?'layui-btn-disabled':'')}}
             <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
@@ -21,9 +40,6 @@
         <script type="text/html" id="isPracTpl">
             {{(d.isprac==='1'?'是':'否')}}
         </script>
-        <div id="showNote">
-        <p style="color: #999">您可以申请的数量为：<span id="totalNum" style="font-size:28px;color:#a00000;"></span>  剩余数量为：<span id="leftNum" style="font-size:28px;color:lightseagreen;"></span></p>
-        </div>
     </div>
 </div>
 {include file="Public/footer" /}
@@ -140,7 +156,7 @@
                 <input type="checkbox" name="isprac" lay-skin="switch" lay-text="是|否">
             </div>
         </div>
-        <div class="layui-form-item" style="margin-top: 15px;">
+        <div class="layui-form-item" style="margin-top: 40px;">
             <div class="layui-input-block">
                 <button class="layui-btn" type="button"  lay-submit="" lay-filter="change_apply">立即提交</button>
             </div>

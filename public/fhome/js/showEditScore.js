@@ -20,10 +20,11 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
             , { field: 'stuidcard', title: '学号', width: 150}
             , { field: 'stuname', title: '姓名', width: 100 }
             , { field: 'stuclass', title: '班级', width: 100,  }
-            , { field: 'replytimer', title: '答辩时间', width: 120 }
-            , { field: 'replyplace', title: '答辩地点', width: 120 }
-            , { field: 'replyscore', title: '成绩', width: 100 }
-            , { align: 'center', toolbar: '#operation-bar', fixed: 'right' , width: 180 }
+            , { field: 'replytimer', title: '答辩时间', width: 104 }
+            , { field: 'replyplace', title: '答辩地点', width: 100 }
+            , { field: 'middlescore', title: '中期成绩', width: 100 }
+            , { field: 'replyscore', title: '答辩成绩', width: 100 }
+            , { align: 'center', toolbar: '#operation-bar', fixed: 'right' , width: 115 }
         ]]
     });
 
@@ -45,6 +46,7 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
             str += '<div class="detailStr"><span class="detailStrSpan1">答辩时间</span><span class="detailStrSpan2">'+data.replytimer+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">答辩地点</span><span class="detailStrSpan2">'+data.replyplace+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">备注</span><span class="detailStrSpan2">'+data.note+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">中期成绩</span><span class="detailStrSpan2">'+data.middlescore+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">答辩成绩</span><span class="detailStrSpan2">'+data.replyscore+'</span></div>';
             layer.open({
                 type: 1,
@@ -79,24 +81,32 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
                 layui.layer.close(index);
                 var json={}
                 json.id=data.id;
-                console.log(json.id+"--"+data.id);
-                layer_change=layer.prompt({
-                    formType: 0,
-                    value: data.replyscore,
-                    title: '输入成绩',
-                    area: ['800px', '350px'] //自定义文本域宽高
-                }, function(value, index, elem){
-                    console.log(data.replyscore);
-                    console.log(elem);
-                    json.replyscore = value;
-                    return base_ajax(base_home+"/Reprocess/editScore",json,function () {
-                        table.reload('showStudent', {
-                            url: base_home+"/Reprocess/show"
-                        });
-                        layer.close(index);
-                    });
+                console.log(json.id+"--"+data.id+"--"+data['middlescore']+"--"+data['replyscore']);
+                layer_change=layer.open({
+                    type: 1,
+                    title: '修改成绩',
+                    area: ['420px', '300px'],
+                    content: $('#changeScore'),
                 });
+
+                form.val("changeScore", {
+                    "id": data['id']
+                    ,"mscore": data['middlescore']
+                    ,"rscore": data['replyscore']
+                })
             });
         }
     });
+
+    form.on('submit(change_score)', function(data){//修改成绩
+
+        return base_ajax(base_home+"/Reprocess/editScore",data.field,function () {
+            table.reload('showStudent', {
+                url: base_home+"/Reprocess/show"
+            });
+            layer.close(layer_change);
+        });
+    });
+
+
 })

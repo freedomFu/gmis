@@ -73,4 +73,9 @@ class Student extends Backend
         }
         return $this->view->fetch();
     }
+
+    public function import()
+    {
+        return parent::import();
+    }
 }

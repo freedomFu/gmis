@@ -18,14 +18,23 @@ class Userset extends Model
     
     // 追加属性
     protected $append = [
-
+        'status_text'
     ];
     
 
     
+    public function getStatusList()
+    {
+        return ['on' => __('On'),'off' => __('Off')];
+    }     
 
 
-
+    public function getStatusTextAttr($value, $data)
+    {        
+        $value = $value ? $value : (isset($data['status']) ? $data['status'] : '');
+        $list = $this->getStatusList();
+        return isset($list[$value]) ? $list[$value] : '';
+    }
 
 
 

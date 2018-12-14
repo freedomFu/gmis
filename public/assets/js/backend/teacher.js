@@ -9,6 +9,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     add_url: 'teacher/add',
                     edit_url: 'teacher/edit',
                     del_url: 'teacher/del',
+                    import_url: 'teacher/import',
                     multi_url: 'teacher/multi',
                     table: 'teacher',
                 }

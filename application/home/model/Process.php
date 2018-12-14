@@ -39,7 +39,7 @@ class Process extends Model
         $where['p.belongsenior'] = $xq;
         $maintable = 'process';
         $mt = 'p';
-        $field = 'p.id,gta.title,gs.stuidcard,gs.stuname,gs.stuclass,gt.starttimer,gt.middletimer,gt.replytimer,gt.replyplace,gt.note,p.replyscore';
+        $field = 'p.id,gta.title,gs.stuidcard,gs.stuname,gs.stuclass,gt.starttimer,gt.middletimer,gt.replytimer,gt.replyplace,gt.note,p.middlescore,p.replyscore';
         $join = [
             ['gmis_student gs','gs.id=p.stuid'],
             ['gmis_teacher gt','gt.id=p.teaid'],
@@ -77,15 +77,17 @@ class Process extends Model
      * @DateTime:    2018/11/27 10:42
      * @Author:      fyd
      */
-    public function editScore($processid,$score){
+    public function editScore($processid,$data){
         $process = Process::get($processid);
-        $oldScore = $process['replyscore'];
+        $midscore = $data['middlescore'];
+        $repscore = $data['replyscore'];
 
         /*if($oldScore>0){ //成绩可以修改多次嘛？
             return 2; //已经打过成绩不可以再打
         }*/
 
-        $process->replyscore = $score;
+        $process->middlescore = $midscore;
+        $process->replyscore = $repscore;
         $res = $process->save();
         if($res){
             return 1; //更新成功

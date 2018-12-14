@@ -1,0 +1,3974 @@
+---------------------------------------------------------------
+[ 2018-12-08T13:34:20+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/
+[运行时间：3.672713s] [吞吐率：0.27req/s] [内存消耗：4,072.72kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000823s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.212435s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.109614s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T13:34:23+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/login.html
+[运行时间：0.364110s] [吞吐率：2.75req/s] [内存消耗：3,951.08kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000218s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.016951s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013265s ]
+[ info ] [ RUN ] app\home\controller\Login->index[ C:\wamp64\www\gmis\application\home\controller\Login.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/home\view\Login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T21:49:32+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/home/Login/login
+[运行时间：0.956813s] [吞吐率：1.05req/s] [内存消耗：5,854.70kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000539s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.047522s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '43',
+  'accept' => '*/*',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'auth' => '2',
+  'username' => 'ncepu201501',
+  'password' => '123456',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.026719s ]
+[ info ] [ RUN ] app\home\controller\Login->login[ C:\wamp64\www\gmis\application\home\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009095s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.023693s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` WHERE  `teaidcard` = 'ncepu201501' LIMIT 1 [ RunTime:0.002605s ]
+---------------------------------------------------------------
+[ 2018-12-08T21:54:43+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin
+[运行时间：1.014802s] [吞吐率：0.99req/s] [内存消耗：4,673.38kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000226s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.031094s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.039836s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.049033s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T21:54:49+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/index/login?url=%2Fgmis%2Fpublic%2Fadmin
+[运行时间：1.417968s] [吞吐率：0.71req/s] [内存消耗：5,619.41kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000475s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.030259s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/gmis/public/admin',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.025574s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ C:\wamp64\www\gmis\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.008630s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T21:54:49+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/index/login?url=%2Fgmis%2Fpublic%2Fadmin
+[运行时间：0.683618s] [吞吐率：1.46req/s] [内存消耗：5,361.70kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000231s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022826s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/gmis/public/admin',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017998s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ C:\wamp64\www\gmis\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.008546s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T21:54:51+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=index&v=1544277289
+[运行时间：0.567440s] [吞吐率：1.76req/s] [内存消耗：5,372.98kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000249s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019693s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/login?url=%2Fgmis%2Fpublic%2Fadmin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1544277289',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016208s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009961s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T21:55:02+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/index/login?url=%2Fgmis%2Fpublic%2Fadmin
+[运行时间：0.804637s] [吞吐率：1.24req/s] [内存消耗：6,917.73kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000387s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.041244s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '77',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/login?url=%2Fgmis%2Fpublic%2Fadmin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/gmis/public/admin',
+  '__token__' => 'add927f9240ad9949af3135bc0478172',
+  'username' => 'dreamtech',
+  'password' => '123456',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.024941s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ C:\wamp64\www\gmis\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.024100s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004779s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_admin` [ RunTime:0.004269s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_admin` WHERE  `username` = 'dreamtech' LIMIT 1 [ RunTime:0.002442s ]
+[ sql ] [ SQL ] UPDATE `gmis_admin`  SET `logintime`=1544277302,`token`='d549d76a-0c99-44a5-b91b-b29885bd2541',`updatetime`=1544277302  WHERE  `id` = 1 [ RunTime:0.008971s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_admin_log` [ RunTime:0.003455s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/gmis\\/public\\/admin\",\"__token__\":\"add927f9240ad9949af3135bc0478172\",\"username\":\"dreamtech\"}' , '/gmis/public/admin/index/login?url=%2Fgmis%2Fpublic%2Fadmin' , 1 , 'dreamtech' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36' , '127.0.0.1' , 1544277302) [ RunTime:0.005028s ]
+---------------------------------------------------------------
+[ 2018-12-08T21:55:08+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin
+[运行时间：5.660688s] [吞吐率：0.18req/s] [内存消耗：7,729.76kb] [文件加载：90]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000364s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.025057s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/login?url=%2Fgmis%2Fpublic%2Fadmin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.024906s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ C:\wamp64\www\gmis\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009556s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004877s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.019671s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.019572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.017846s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003616s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.003396s ]
+---------------------------------------------------------------
+[ 2018-12-08T21:55:10+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/dashboard?addtabs=1
+[运行时间：2.140475s] [吞吐率：0.47req/s] [内存消耗：7,435.09kb] [文件加载：80]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000482s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.064676s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.053446s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ C:\wamp64\www\gmis\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.010140s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005775s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.025328s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.024245s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.023628s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.005807s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.002667s ]
+---------------------------------------------------------------
+[ 2018-12-08T21:55:11+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=index&v=1544277303
+[运行时间：0.808958s] [吞吐率：1.24req/s] [内存消耗：5,374.87kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000406s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.043801s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1544277303',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.029052s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.015997s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T21:55:12+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher?ref=addtabs
+[运行时间：1.204144s] [吞吐率：0.83req/s] [内存消耗：6,360.88kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000384s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.044204s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.048292s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.013500s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005649s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.028023s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.031815s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.005858s ]
+---------------------------------------------------------------
+[ 2018-12-08T21:55:12+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=dashboard&v=1544277309
+[运行时间：0.859798s] [吞吐率：1.16req/s] [内存消耗：5,373.08kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000470s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.041277s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1544277309',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.036005s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.014024s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T21:55:17+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/index/index
+[运行时间：4.250066s] [吞吐率：0.24req/s] [内存消耗：7,494.34kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000319s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.082857s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.045801s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ C:\wamp64\www\gmis\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.006268s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004143s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.021133s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.032581s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.020236s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003054s ]
+---------------------------------------------------------------
+[ 2018-12-08T21:55:17+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/dashboard?addtabs=1
+[运行时间：0.468081s] [吞吐率：2.14req/s] [内存消耗：7,140.44kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000177s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.016110s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.010580s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ C:\wamp64\www\gmis\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.005883s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003749s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.002061s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001612s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.002677s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003726s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001452s ]
+---------------------------------------------------------------
+[ 2018-12-08T21:55:21+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=index&v=1544277313
+[运行时间：0.266578s] [吞吐率：3.75req/s] [内存消耗：5,375.42kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000120s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.013686s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1544277313',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014541s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.004024s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T21:55:21+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=dashboard&v=1544277317
+[运行时间：0.235091s] [吞吐率：4.25req/s] [内存消耗：5,372.88kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000158s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.011692s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1544277317',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.009515s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.004402s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:08:53+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/wipecache?type=all&_=1544277318768
+[运行时间：1.235541s] [吞吐率：0.81req/s] [内存消耗：5,684.44kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000243s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.032463s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'wipecache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/dashboard?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'all',
+  '_' => '1544277318768',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.023195s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->wipecache[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.006091s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:08:54+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/dashboard?ref=addtabs
+[运行时间：0.675609s] [吞吐率：1.48req/s] [内存消耗：6,370.30kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000375s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.043712s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.028403s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.002798s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005881s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.022984s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.017785s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.024044s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003750s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:08:58+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/index/index
+[运行时间：4.116231s] [吞吐率：0.24req/s] [内存消耗：7,731.28kb] [文件加载：90]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000321s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.036591s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.023379s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ C:\wamp64\www\gmis\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.002084s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005872s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.021451s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.017668s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.022271s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004480s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.003589s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:09:00+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/dashboard?addtabs=1
+[运行时间：1.211281s] [吞吐率：0.83req/s] [内存消耗：7,435.85kb] [文件加载：80]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000256s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.037500s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.028363s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ C:\wamp64\www\gmis\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.012243s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005585s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.004021s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.003221s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.005388s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.005439s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.002484s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:09:01+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=index&v=1544278134
+[运行时间：0.581884s] [吞吐率：1.72req/s] [内存消耗：5,376.99kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000241s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.047786s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1544278134',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.028619s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.002798s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:09:01+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=dashboard&v=1544278139
+[运行时间：0.630882s] [吞吐率：1.59req/s] [内存消耗：5,372.88kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000366s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.040472s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1544278139',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.028627s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009961s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:09:19+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/tapply?addtabs=1
+[运行时间：1.085887s] [吞吐率：0.92req/s] [内存消耗：7,366.04kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000242s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.027439s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tapply',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/tapply?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.023609s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/tapply.php
+[ info ] [ RUN ] app\admin\controller\Tapply->index[ C:\wamp64\www\gmis\application\admin\controller\Tapply.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\tapply\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007801s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012136s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.016777s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.016712s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.017638s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003739s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'tapply' LIMIT 1 [ RunTime:0.002181s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:09:20+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=tapply&v=1544278158
+[运行时间：0.499438s] [吞吐率：2.00req/s] [内存消耗：5,368.78kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000400s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.034501s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/tapply?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'tapply',
+  'v' => '1544278158',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.024105s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/tapply.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007998s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:09:22+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/tapply/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1544278160154
+[运行时间：0.998969s] [吞吐率：1.00req/s] [内存消耗：7,656.05kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000236s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.025098s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tapply',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/tapply?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1544278160154',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015260s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/tapply.php
+[ info ] [ RUN ] app\admin\controller\Tapply->index[ C:\wamp64\www\gmis\application\admin\controller\Tapply.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.005989s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004150s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.017080s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.019586s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.017030s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003537s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_tapply` [ RunTime:0.017502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_profess` [ RunTime:0.017556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_student` [ RunTime:0.019372s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.016750s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_tapply` `tapply` LEFT JOIN `gmis_profess` `profess` ON `tapply`.`proid`=`profess`.`id` LEFT JOIN `gmis_student` `student` ON `tapply`.`stuid`=`student`.`id` LEFT JOIN `gmis_teacher` `teacher` ON `tapply`.`teaid`=`teacher`.`id` ORDER BY `tapply`.`weigh` DESC LIMIT 1 [ RunTime:0.002065s ]
+[ sql ] [ SQL ] SELECT `tapply`.`id`,`tapply`.`title`,`tapply`.`nature`,`tapply`.`source`,`tapply`.`isnew`,`tapply`.`isprac`,`tapply`.`proid`,`tapply`.`note`,`tapply`.`stuid`,`tapply`.`belongsenior`,`tapply`.`teaid`,`tapply`.`weigh`,`tapply`.`createtime`,`tapply`.`updatetime`,`tapply`.`status`,profess.id AS profess__id,profess.proname AS profess__proname,profess.createtime AS profess__createtime,profess.updatetime AS profess__updatetime,profess.status AS profess__status,student.id AS student__id,student.stuidcard AS student__stuidcard,student.stupwd AS student__stupwd,student.stuname AS student__stuname,student.stuclass AS student__stuclass,student.stuphone AS student__stuphone,student.stuproid AS student__stuproid,student.weigh AS student__weigh,student.createtime AS student__createtime,student.updatetime AS student__updatetime,student.status AS student__status,teacher.id AS teacher__id,teacher.teaidcard AS teacher__teaidcard,teacher.teaname AS teacher__teaname,teacher.teapwd AS teacher__teapwd,teacher.teaduty AS teacher__teaduty,teacher.teahonor AS teacher__teahonor,teacher.teatitlenum AS teacher__teatitlenum,teacher.teaphone AS teacher__teaphone,teacher.starttimer AS teacher__starttimer,teacher.middletimer AS teacher__middletimer,teacher.replytimer AS teacher__replytimer,teacher.replyplace AS teacher__replyplace,teacher.note AS teacher__note,teacher.weigh AS teacher__weigh,teacher.createtime AS teacher__createtime,teacher.updatetime AS teacher__updatetime,teacher.status AS teacher__status FROM `gmis_tapply` `tapply` LEFT JOIN `gmis_profess` `profess` ON `tapply`.`proid`=`profess`.`id` LEFT JOIN `gmis_student` `student` ON `tapply`.`stuid`=`student`.`id` LEFT JOIN `gmis_teacher` `teacher` ON `tapply`.`teaid`=`teacher`.`id` ORDER BY `tapply`.`weigh` DESC LIMIT 0,10 [ RunTime:0.003760s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:09:28+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher?addtabs=1
+[运行时间：1.178693s] [吞吐率：0.85req/s] [内存消耗：7,352.52kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000305s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.033474s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.021461s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\teacher\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'teahonorList',
+  6 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.006814s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004935s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.026034s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.019589s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.020939s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004459s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'teacher' LIMIT 1 [ RunTime:0.002115s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:09:29+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=teacher&v=1544278167
+[运行时间：0.416536s] [吞吐率：2.40req/s] [内存消耗：5,368.54kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000204s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.027698s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'teacher',
+  'v' => '1544278167',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017873s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.008284s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:09:30+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1544278169007
+[运行时间：0.565480s] [吞吐率：1.77req/s] [内存消耗：7,202.08kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000227s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024203s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1544278169007',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.021353s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007051s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003950s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003037s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002178s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.004053s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003171s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.016608s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.002024s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.002195s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:15:00+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/ajax/upload
+[运行时间：0.766852s] [吞吐率：1.30req/s] [内存消耗：7,068.68kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000335s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.033637s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '9755',
+  'origin' => 'http://127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLuM3R6mMirw8L3z1',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'teacher.xlsx',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.024444s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->upload[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.038614s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005224s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_attachment` [ RunTime:0.006040s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_attachment` (`admin_id` , `filesize` , `imagetype` , `mimetype` , `url` , `uploadtime` , `storage` , `sha1` , `createtime` , `updatetime`) VALUES (1 , 9411 , 'xlsx' , 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' , '/uploads/20181208/84424688db166059bc057552c639fbf9.xlsx' , 1544278500 , 'local' , '6cd9a29b864873946adbf8ab12e8d397bcb3f85f' , 1544278500 , 1544278500) [ RunTime:0.008822s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_admin_log` [ RunTime:0.003996s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"name\":\"teacher.xlsx\"}' , '/gmis/public/admin/ajax/upload' , 1 , 'dreamtech' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36' , '127.0.0.1' , 1544278500) [ RunTime:0.007566s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:15:01+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/example/import
+[运行时间：0.852986s] [吞吐率：1.17req/s] [内存消耗：3,553.78kb] [文件加载：55]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000182s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.026402s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'example',
+    2 => 'import',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '66',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'file' => '/uploads/20181208/84424688db166059bc057552c639fbf9.xlsx',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022365s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:15:10+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/ajax/upload
+[运行时间：0.655176s] [吞吐率：1.53req/s] [内存消耗：7,068.68kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000183s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.025561s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '9755',
+  'origin' => 'http://127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarybOQq4wmEk0QlWlXA',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'teacher.xlsx',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017862s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->upload[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.051822s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013237s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_attachment` [ RunTime:0.022422s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_attachment` (`admin_id` , `filesize` , `imagetype` , `mimetype` , `url` , `uploadtime` , `storage` , `sha1` , `createtime` , `updatetime`) VALUES (1 , 9411 , 'xlsx' , 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' , '/uploads/20181208/84424688db166059bc057552c639fbf9.xlsx' , 1544278510 , 'local' , '6cd9a29b864873946adbf8ab12e8d397bcb3f85f' , 1544278510 , 1544278510) [ RunTime:0.009823s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_admin_log` [ RunTime:0.019994s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"name\":\"teacher.xlsx\"}' , '/gmis/public/admin/ajax/upload' , 1 , 'dreamtech' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36' , '127.0.0.1' , 1544278510) [ RunTime:0.006957s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:15:11+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/example/import
+[运行时间：0.399019s] [吞吐率：2.51req/s] [内存消耗：3,553.66kb] [文件加载：55]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000214s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.032736s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'example',
+    2 => 'import',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '66',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'file' => '/uploads/20181208/84424688db166059bc057552c639fbf9.xlsx',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.027250s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:15:36+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher?ref=addtabs
+[运行时间：0.702286s] [吞吐率：1.42req/s] [内存消耗：6,362.51kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000244s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.034583s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.021570s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007291s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003535s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.002847s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002206s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.003309s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003659s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:15:38+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/index/index
+[运行时间：2.444110s] [吞吐率：0.41req/s] [内存消耗：7,498.32kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000197s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024225s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015948s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ C:\wamp64\www\gmis\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007646s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002883s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.002023s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.002216s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002827s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:15:40+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/dashboard?addtabs=1
+[运行时间：0.835273s] [吞吐率：1.20req/s] [内存消耗：7,141.09kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000363s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.042821s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.021296s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ C:\wamp64\www\gmis\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.012291s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004591s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003389s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002549s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.004084s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004256s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.002294s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:15:40+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher?addtabs=1
+[运行时间：1.537727s] [吞吐率：0.65req/s] [内存消耗：7,353.99kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000345s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.056521s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.041569s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\teacher\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'teahonorList',
+  6 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009034s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012687s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003759s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002137s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.003556s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.005226s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'teacher' LIMIT 1 [ RunTime:0.002151s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:15:42+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=index&v=1544278536
+[运行时间：0.638930s] [吞吐率：1.57req/s] [内存消耗：5,376.99kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000423s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.050602s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1544278536',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.038473s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009065s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:15:43+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=teacher&v=1544278539
+[运行时间：0.639241s] [吞吐率：1.56req/s] [内存消耗：5,368.54kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000222s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.027990s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'teacher',
+  'v' => '1544278539',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.030491s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.019754s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:15:43+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=dashboard&v=1544278539
+[运行时间：0.809537s] [吞吐率：1.24req/s] [内存消耗：5,372.88kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000348s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.037734s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1544278539',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.031972s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.010205s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:15:45+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1544278542232
+[运行时间：0.673789s] [吞吐率：1.48req/s] [内存消耗：7,202.08kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000214s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.027188s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1544278542232',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.023080s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.010624s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012096s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003630s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002057s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.003521s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003278s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.016576s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.002103s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.002502s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:16:45+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher?ref=addtabs
+[运行时间：0.414296s] [吞吐率：2.41req/s] [内存消耗：6,362.51kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000237s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022250s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017346s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.005918s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003541s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.002225s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001688s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.002824s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003069s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:16:48+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/index/index
+[运行时间：2.189237s] [吞吐率：0.46req/s] [内存消耗：7,498.32kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000150s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.019671s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.018025s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ C:\wamp64\www\gmis\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.005383s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003400s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.002238s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.002798s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002757s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:16:48+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/dashboard?addtabs=1
+[运行时间：0.384278s] [吞吐率：2.60req/s] [内存消耗：7,141.09kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000182s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022256s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.019398s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ C:\wamp64\www\gmis\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.002010s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002170s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.001782s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.002291s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002264s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001135s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:16:49+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher?addtabs=1
+[运行时间：0.713061s] [吞吐率：1.40req/s] [内存消耗：7,353.15kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000219s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022094s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013204s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\teacher\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'teahonorList',
+  6 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.004567s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002731s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.001853s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.002329s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002077s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'teacher' LIMIT 1 [ RunTime:0.001064s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:16:49+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=index&v=1544278606
+[运行时间：0.251361s] [吞吐率：3.98req/s] [内存消耗：5,376.99kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000174s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018515s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1544278606',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.008325s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.005117s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:16:50+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=dashboard&v=1544278608
+[运行时间：0.268571s] [吞吐率：3.72req/s] [内存消耗：5,372.88kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000153s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021221s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1544278608',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014067s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001976s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:16:50+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=teacher&v=1544278608
+[运行时间：0.333388s] [吞吐率：3.00req/s] [内存消耗：5,368.54kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000150s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.017609s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'teacher',
+  'v' => '1544278608',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015270s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.005320s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:16:50+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1544278609729
+[运行时间：0.255976s] [吞吐率：3.91req/s] [内存消耗：7,202.08kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000109s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.011121s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1544278609729',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004616s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.003801s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002176s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.001517s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.001643s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001772s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.009562s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.000869s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.000988s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:17:03+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/ajax/upload
+[运行时间：0.806715s] [吞吐率：1.24req/s] [内存消耗：7,068.68kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000581s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.028584s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '9755',
+  'origin' => 'http://127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBLMJgqG18XXI4gCH',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'teacher.xlsx',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.020509s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->upload[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.054414s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013007s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_attachment` [ RunTime:0.023244s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_attachment` (`admin_id` , `filesize` , `imagetype` , `mimetype` , `url` , `uploadtime` , `storage` , `sha1` , `createtime` , `updatetime`) VALUES (1 , 9411 , 'xlsx' , 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' , '/uploads/20181208/84424688db166059bc057552c639fbf9.xlsx' , 1544278623 , 'local' , '6cd9a29b864873946adbf8ab12e8d397bcb3f85f' , 1544278623 , 1544278623) [ RunTime:0.007783s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_admin_log` [ RunTime:0.021015s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"name\":\"teacher.xlsx\"}' , '/gmis/public/admin/ajax/upload' , 1 , 'dreamtech' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36' , '127.0.0.1' , 1544278623) [ RunTime:0.006343s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:17:09+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/teacher/import
+[运行时间：5.564464s] [吞吐率：0.18req/s] [内存消耗：11,924.74kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000307s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023610s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'import',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '66',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'file' => '/uploads/20181208/84424688db166059bc057552c639fbf9.xlsx',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.014664s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\admin\controller\Teacher->import[ C:\wamp64\www\gmis\application\admin\controller\Teacher.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.100391s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006878s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.004046s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002709s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.004925s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004783s ]
+[ sql ] [ SQL ] SELECT COLUMN_NAME,COLUMN_COMMENT FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'gmis_teacher' AND TABLE_SCHEMA = 'gmisManage' [ RunTime:0.003516s ]
+[ sql ] [ SQL ] 'gmisManage'gmis_teacher'HOW COLUMNS FROM `gmis_teacher` [ RunTime:0.025654s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_teacher` (`teaname` , `teapwd` , `teaduty` , `teahonor` , `teatitlenum` , `teaphone` , `starttimer` , `middletimer` , `replytimer` , `replyplace` , `note` , `weigh` , `createtime` , `updatetime` , `status`) VALUES ('付彦铎' , 'c9adc24f05976055d8f7eeb679d721d9' , '未知' , '讲师' , '10' , '17778885031' , '0000-00-00' , '0000-00-00' , '0000-00-00' , '教十A110' , '无' , 0 , 0 , 0 , '任教中') [ RunTime:0.004542s ]
+[ sql ] [ SQL ] UPDATE `gmis_teacher`  SET `weigh`=11  WHERE  `id` = 11 [ RunTime:0.003634s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_admin_log` [ RunTime:0.027372s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"file\":\"\\/uploads\\/20181208\\/84424688db166059bc057552c639fbf9.xlsx\"}' , '/gmis/public/admin/teacher/import' , 1 , 'dreamtech' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36' , '127.0.0.1' , 1544278629) [ RunTime:0.008510s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:17:11+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1544278609730
+[运行时间：1.907192s] [吞吐率：0.52req/s] [内存消耗：7,232.63kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000400s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.108712s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1544278609730',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.058079s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.022954s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006457s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.005144s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002752s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.005353s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.005414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.004818s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001977s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.002727s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:17:50+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher/edit/ids/11?dialog=1
+[运行时间：1.612296s] [吞吐率：0.62req/s] [内存消耗：7,392.16kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000447s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.065033s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '11',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.041889s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\teacher\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'teahonorList',
+  6 => 'statusList',
+  7 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009192s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006266s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.028245s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.028038s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.028232s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.005586s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.005855s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.002619s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:17:52+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=teacher&v=1544278669
+[运行时间：0.621788s] [吞吐率：1.61req/s] [内存消耗：5,368.44kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000588s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.037913s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'teacher',
+  'v' => '1544278669',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.026338s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007226s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:17:57+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/teacher/edit/ids/11?dialog=1
+[运行时间：0.582849s] [吞吐率：1.72req/s] [内存消耗：7,228.59kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000157s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.027849s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '471',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher/edit/ids/11?dialog=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'teaidcard' => '19971026',
+    'teaname' => '付彦铎',
+    'teapwd' => 'c9adc24f05976055d8f7eeb679d721d9',
+    'teaduty' => '未知',
+    'teahonor' => '讲师',
+    'teatitlenum' => '10',
+    'teaphone' => '17778885031',
+    'starttimer' => '0000-00-00',
+    'middletimer' => '0000-00-00',
+    'replytimer' => '0000-00-00',
+    'replyplace' => '教十A110',
+    'note' => '无',
+    'weigh' => '11',
+    'status' => '任教中',
+  ),
+  'ids' => '11',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016334s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->edit[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.036830s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003231s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003504s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001612s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.003029s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.002877s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001374s ]
+[ sql ] [ SQL ] UPDATE `gmis_teacher`  SET `teaidcard`='19971026',`updatetime`=1544278677  WHERE  `id` = 11 [ RunTime:0.007606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_admin_log` [ RunTime:0.003445s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('普通教师 编辑' , '{\"dialog\":\"1\",\"row\":{\"teaidcard\":\"19971026\",\"teaname\":\"\\u4ed8\\u5f66\\u94ce\",\"teapwd\":\"c9adc24f05976055d8f7eeb679d721d9\",\"teaduty\":\"\\u672a\\u77e5\",\"teahonor\":\"\\u8bb2\\u5e08\",\"teatitlenum\":\"10\",\"teaphone\":\"17778885031\",\"starttimer\":\"0000-00-00\",\"middletimer\":\"0000-00-00\",\"replytimer\":\"0000-00-00\",\"replyplace\":\"\\u6559\\u5341A110\",\"note\":\"\\u65e0\",\"weigh\":\"11\",\"status\":\"\\u4efb\\u6559\\u4e2d\"},\"ids\":\"11\"}' , '/gmis/public/admin/teacher/edit/ids/11?dialog=1' , 1 , 'dreamtech' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36' , '127.0.0.1' , 1544278677) [ RunTime:0.005919s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:17:58+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1544278609731
+[运行时间：0.636795s] [吞吐率：1.57req/s] [内存消耗：7,232.59kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000304s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.048931s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1544278609731',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016456s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.004317s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003390s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.011736s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.014642s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.014573s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002519s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.002787s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001066s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.001787s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:18:56+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/
+[运行时间：0.684681s] [吞吐率：1.46req/s] [内存消耗：4,327.27kb] [文件加载：63]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000449s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.046615s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.024971s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:18:59+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/login.html
+[运行时间：0.604507s] [吞吐率：1.65req/s] [内存消耗：4,200.86kb] [文件加载：60]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000356s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.044390s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.024841s ]
+[ info ] [ RUN ] app\home\controller\Login->index[ C:\wamp64\www\gmis\application\home\controller\Login.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/home\view\Login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:18:59+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/login.html
+[运行时间：0.508020s] [吞吐率：1.97req/s] [内存消耗：3,951.08kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000239s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.041270s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.027514s ]
+[ info ] [ RUN ] app\home\controller\Login->index[ C:\wamp64\www\gmis\application\home\controller\Login.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/home\view\Login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:19:08+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/home/Login/login
+[运行时间：0.504134s] [吞吐率：1.98req/s] [内存消耗：5,954.18kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000241s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.031691s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '40',
+  'accept' => '*/*',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'auth' => '2',
+  'username' => '19971026',
+  'password' => '123456',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022893s ]
+[ info ] [ RUN ] app\home\controller\Login->login[ C:\wamp64\www\gmis\application\home\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004931s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.004069s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` WHERE  `teaidcard` = '19971026' LIMIT 1 [ RunTime:0.003081s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:19:09+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index
+[运行时间：0.709949s] [吞吐率：1.41req/s] [内存消耗：4,209.95kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000288s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.027951s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.025830s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ C:\wamp64\www\gmis\application\home\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/home\view\Main\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:19:14+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/logout
+[运行时间：0.510871s] [吞吐率：1.96req/s] [内存消耗：4,088.22kb] [文件加载：61]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000393s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.032316s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'User',
+    2 => 'logout',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.026172s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\User->logout[ C:\wamp64\www\gmis\application\home\controller\User.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:19:15+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/login.html
+[运行时间：0.297224s] [吞吐率：3.36req/s] [内存消耗：3,951.16kb] [文件加载：58]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000208s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021267s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Login',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/logout',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.016311s ]
+[ info ] [ RUN ] app\home\controller\Login->index[ C:\wamp64\www\gmis\application\home\controller\Login.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/home\view\Login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:21:07+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher?ref=addtabs
+[运行时间：0.701309s] [吞吐率：1.43req/s] [内存消耗：6,363.19kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000225s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.029761s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.028234s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.011881s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005938s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.004116s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.004561s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.005191s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:21:10+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/index/index
+[运行时间：3.457550s] [吞吐率：0.29req/s] [内存消耗：7,498.47kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000388s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.027455s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022615s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ C:\wamp64\www\gmis\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009556s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012476s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003150s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.003715s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003685s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:21:12+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher?addtabs=1
+[运行时间：0.753376s] [吞吐率：1.33req/s] [内存消耗：7,094.26kb] [文件加载：77]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000290s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.041704s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.030078s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\teacher\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'teahonorList',
+  6 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.008537s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012548s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003175s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.004166s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004804s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'teacher' LIMIT 1 [ RunTime:0.002196s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:21:12+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/dashboard?addtabs=1
+[运行时间：1.130880s] [吞吐率：0.88req/s] [内存消耗：7,141.96kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000351s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.047242s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.027096s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ C:\wamp64\www\gmis\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007983s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012703s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003734s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002689s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.003587s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003693s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `gmis_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.002679s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:21:14+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=index&v=1544278867
+[运行时间：0.645623s] [吞吐率：1.55req/s] [内存消耗：5,377.59kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000237s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.042874s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1544278867',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.023380s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.013602s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:21:14+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=dashboard&v=1544278871
+[运行时间：0.697527s] [吞吐率：1.43req/s] [内存消耗：5,373.42kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000213s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.041223s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1544278871',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.026504s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.012611s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:21:14+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/ajax/lang?callback=define&controllername=teacher&v=1544278871
+[运行时间：0.863982s] [吞吐率：1.16req/s] [内存消耗：5,369.09kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000392s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.063058s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'teacher',
+  'v' => '1544278871',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.036420s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.017165s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-08T22:21:17+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1544278873863
+[运行时间：0.683126s] [吞吐率：1.46req/s] [内存消耗：7,233.18kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000293s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.029019s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1544278873863',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022833s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.008216s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013776s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.004105s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002656s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.003398s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003673s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.005422s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001939s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.002508s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:21:24+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/ajax/upload
+[运行时间：0.708608s] [吞吐率：1.41req/s] [内存消耗：7,069.20kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000431s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.031728s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '9741',
+  'origin' => 'http://127.0.0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary2EuCfRG0q4RdZrRe',
+  'accept' => '*/*',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'teacher.xlsx',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.025207s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->upload[ C:\wamp64\www\gmis\application\admin\controller\Ajax.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.050251s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013061s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_attachment` [ RunTime:0.020400s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_attachment` (`admin_id` , `filesize` , `imagetype` , `mimetype` , `url` , `uploadtime` , `storage` , `sha1` , `createtime` , `updatetime`) VALUES (1 , 9397 , 'xlsx' , 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' , '/uploads/20181208/033ff4953c5fa41718ca4ca1968cd6f0.xlsx' , 1544278883 , 'local' , '48e283ca79f47e92891da3b32f5fb3341f8abece' , 1544278883 , 1544278883) [ RunTime:0.009089s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_admin_log` [ RunTime:0.017694s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"name\":\"teacher.xlsx\"}' , '/gmis/public/admin/ajax/upload' , 1 , 'dreamtech' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36' , '127.0.0.1' , 1544278884) [ RunTime:0.006906s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:21:25+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/admin/teacher/import
+[运行时间：1.447295s] [吞吐率：0.69req/s] [内存消耗：11,924.99kb] [文件加载：125]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000212s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.027900s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'import',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '66',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'file' => '/uploads/20181208/033ff4953c5fa41718ca4ca1968cd6f0.xlsx',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.019082s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\admin\controller\Teacher->import[ C:\wamp64\www\gmis\application\admin\controller\Teacher.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.053668s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012068s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003802s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.003696s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003711s ]
+[ sql ] [ SQL ] SELECT COLUMN_NAME,COLUMN_COMMENT FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'gmis_teacher' AND TABLE_SCHEMA = 'gmisManage' [ RunTime:0.004222s ]
+[ sql ] [ SQL ] 'gmisManage'gmis_teacher'HOW COLUMNS FROM `gmis_teacher` [ RunTime:0.018757s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_teacher` (`teaidcard` , `teaname` , `teapwd` , `teaduty` , `teahonor` , `teatitlenum` , `teaphone` , `starttimer` , `middletimer` , `replytimer` , `replyplace` , `note` , `weigh` , `createtime` , `updatetime` , `status`) VALUES ('222222' , '毛帅男' , 'c9adc24f05976055d8f7eeb679d721d9' , '未知' , '讲师' , '10' , '17778885031' , '0000-00-00' , '0000-00-00' , '0000-00-00' , '教十A110' , '无' , 0 , 0 , 0 , '任教中') [ RunTime:0.006297s ]
+[ sql ] [ SQL ] UPDATE `gmis_teacher`  SET `weigh`=12  WHERE  `id` = 12 [ RunTime:0.002418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_admin_log` [ RunTime:0.020029s ]
+[ sql ] [ SQL ] INSERT INTO `gmis_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"file\":\"\\/uploads\\/20181208\\/033ff4953c5fa41718ca4ca1968cd6f0.xlsx\"}' , '/gmis/public/admin/teacher/import' , 1 , 'dreamtech' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36' , '127.0.0.1' , 1544278885) [ RunTime:0.006889s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:21:26+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/admin/teacher/index?sort=weigh&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1544278873864
+[运行时间：0.754356s] [吞吐率：1.33req/s] [内存消耗：7,234.57kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000217s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.035000s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'teacher',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://127.0.0.1/gmis/public/admin/teacher?addtabs=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1544278873864',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022194s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/admin/lang/zh-cn/teacher.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ C:\wamp64\www\gmis\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.009810s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004688s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_group_access` [ RunTime:0.003699s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `gmis_auth_group_access` `aga` LEFT JOIN `gmis_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002460s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_auth_rule` [ RunTime:0.004222s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `gmis_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.021467s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 1 [ RunTime:0.001878s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` ORDER BY `weigh` DESC LIMIT 0,10 [ RunTime:0.002768s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:21:38+08:00 ] 127.0.0.1 POST 127.0.0.1/gmis/public/home/Login/login
+[运行时间：0.402946s] [吞吐率：2.48req/s] [内存消耗：5,953.93kb] [文件加载：64]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000193s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.024015s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'content-length' => '38',
+  'accept' => '*/*',
+  'origin' => 'http://127.0.0.1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1/gmis/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+  'auth' => '2',
+  'username' => '222222',
+  'password' => '123456',
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.017363s ]
+[ info ] [ RUN ] app\home\controller\Login->login[ C:\wamp64\www\gmis\application\home\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012602s ] mysql:host=127.0.0.1;dbname=gmisManage;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `gmis_teacher` [ RunTime:0.004130s ]
+[ sql ] [ SQL ] SELECT * FROM `gmis_teacher` WHERE  `teaidcard` = '222222' LIMIT 1 [ RunTime:0.002403s ]
+---------------------------------------------------------------
+[ 2018-12-08T22:21:38+08:00 ] 127.0.0.1 GET 127.0.0.1/gmis/public/index
+[运行时间：0.337878s] [吞吐率：2.96req/s] [内存消耗：3,956.55kb] [文件加载：59]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000191s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.025641s ]
+[ info ] [ LANG ] C:\wamp64\www\gmis\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://127.0.0.1/gmis/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=qn67tiiqrliqbp318fki1c0t66',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] C:\wamp64\www\gmis\public/../application/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.015110s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ C:\wamp64\www\gmis\application\home\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\gmis\public/../application/home\view\Main\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

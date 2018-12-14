@@ -52,9 +52,9 @@ function getSenior(){
     $thismonth = date("m");
 
     if($thismonth<9){
-        $senior = $lastyear.'-'.$thisyear;
+        $senior = $thisyear;
     }else{
-        $senior = $thisyear.'-'.$nextyear;
+        $senior = $nextyear;
     }
     return $senior;
 }
