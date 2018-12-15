@@ -2,6 +2,7 @@
 namespace app\home\controller;
 use app\home\controller\Base;
 use app\home\model\Prochart;
+use app\home\model\Comclass;
 use app\home\model\Info;
 
 class Index extends Base
@@ -27,9 +28,10 @@ class Index extends Base
         $list = $imodel->getTeaInfo($teaid);
         $this->assign("teainfo",$list);
 
-        $teahonor = $this->getArray("getTeaHonor");
+        $com = new Comclass();
+        $teahonor = $com->getTeaHonor();
         $this->assign("teahonor",$teahonor);
-        $teaduty = $this->getArray("getTeaDuty");
+        $teaduty = $com->getTeaDuty();
         $this->assign("teaduty",$teaduty);
         return $this->fetch("Main/userSet");
     }
@@ -55,32 +57,5 @@ class Index extends Base
             falsePro(1,"提交失败");
         }
     }
-
-    private function getNeedBetween($str,$s1,$s2){
-        $kw=$str;
-        $kw='123'.$kw.'123';
-        $st =stripos($kw,$s1);
-        $ed =stripos($kw,$s2);
-        if(($st==false||$ed==false)||$st>=$ed){
-            return 0;
-        }
-        $kw=substr($kw,($st+1),($ed-$st-1));
-        return $kw;
-    }
-
-    public function getArray($funame){
-        $i = new Info();
-        $res = $i->$funame();
-        $str = $res[0]['Type'];
-        $typestr = $this->getNeedBetween($str,'(',')');
-        $typestr = str_replace("'","",$typestr);
-        $typearr = explode(",",$typestr);
-        return $typearr;
-    }
-
-    /*public function test(){
-        $res = $this->getArray("getTeaDuty");
-        dump($res);
-    }*/
 
 }

@@ -62,20 +62,30 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">题目性质</label>
                 <div class="layui-input-block">
-                    <input type="text" name="nature" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
+                    <select name="nature" lay-verify="required" required lay-filter="xingzhi">
+                        <option value="">请选择题目性质</option>
+                        {volist name="nature" id="na"}
+                        <option value="{$na.id}">{$na.name}</option>
+                        {/volist}
+                    </select>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">题目来源</label>
                 <div class="layui-input-block">
-                    <input type="text" name="source" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
+                    <select name="source" lay-verify="required" required lay-filter="laiyuan">
+                        <option value="">请选择题目来源</option>
+                        {volist name="source" id="so"}
+                        <option value="{$so.id}">{$so.name}</option>
+                        {/volist}
+                    </select>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">专业</label>
                 <div class="layui-input-block">
                     <select name="proid" lay-verify="required" required lay-filter="zhuanye">
-                        <option value="0"></option>
+                        <option value=""></option>
                         {volist name="profess" id="pro"}
                         <option value="{$pro.id}">{$pro.proname}</option>
                         {/volist}
@@ -123,20 +133,30 @@
         <div class="layui-form-item">
             <label class="layui-form-label">题目性质</label>
             <div class="layui-input-block">
-                <input type="text" name="nature" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
+                <select name="nature" lay-verify="required" required lay-filter="xingzhi">
+                    <option value="">请选择题目性质</option>
+                    {volist name="nature" id="cna"}
+                    <option value="{$cna.id}">{$cna.name}</option>
+                    {/volist}
+                </select>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">题目来源</label>
             <div class="layui-input-block">
-                <input type="text" name="source" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
+                <select name="source" lay-verify="required" required lay-filter="laiyuan">
+                    <option value="">请选择题目来源</option>
+                    {volist name="source" id="cso"}
+                    <option value="{$cso.id}">{$cso.name}</option>
+                    {/volist}
+                </select>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">专业</label>
             <div class="layui-input-block">
                 <select name="proid" lay-verify="required" required lay-filter="zhuanye" id="proname">
-                    <option value="0"></option>
+                    <option value=""></option>
                     {volist name="profess" id="pro"}
                     <option value="{$pro.id}">{$pro.proname}</option>
                     {/volist}

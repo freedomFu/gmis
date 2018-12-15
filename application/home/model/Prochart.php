@@ -132,4 +132,91 @@ class Prochart extends Model
             return false;
         }
     }
+
+    /**
+     * @Description: 进行审核  已经开启则判断是不是在 未开启则可以进入
+     * @DateTime:    2018/12/15 8:55
+     * @Author:      fyd
+     */
+    public function doCheck($proname){
+        if($this->getTimeCheck()){
+            $res = $this->enterCheck($proname);
+            if($res){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return true;
+        }
+    }
+
+    /**
+     * @Description: 学生用户信息 根据auth判断
+     * @DateTime:    2018/12/15 11:09
+     * @Author:      fyd
+     */
+    public function getStuInfo($stuid){
+        $table = "process";
+        $alias = "gp";
+        $join = [
+            ['gmis_student gs','gs.id=gp.stuid','LEFT'],
+            ['gmis_teacher gte','gte.id=gp.teaid','LEFT']
+        ];
+        $where['gp.stuid'] = $stuid;
+        $where['gp.status'] = "正常";
+        $field = "gp.id,gs.stuidcard,gs.stuname,gte.starttimer,gte.middletimer,gte.replytimer,gte.replyplace";
+        $list = Db::name($table)
+            ->alias($alias)
+            ->field($field)
+            ->join($join)
+            ->where($where)
+            ->find();
+        $list["auth"] = "学生";
+
+        $rearr = [
+            "id"            =>  $list["id"],
+            "idcard"        =>  $list["stuidcard"],
+            "name"          =>  $list["stuname"],
+            "auth"          =>  "学生",
+            "starttime"     =>  $list["starttimer"],
+            "middletime"    =>  $list["middletimer"],
+            "replytime"     =>  $list["replytimer"],
+            "replyplace"    =>  $list["replyplace"],
+        ];
+
+        return $rearr;
+    }
+
+    /**
+     * @Description: 教师用户信息
+     * @DateTime:    2018/12/15 11:10
+     * @Author:      fyd
+     */
+    public function getTeaInfo($teaid){
+        $table = "teacher";
+        $where['id'] = $teaid;
+//        $where['status'] = "任教中";
+        $field = "id,teaidcard,teaname,starttimer,middletimer,replytimer,replyplace";
+        $list = Db::name($table)
+            ->field($field)
+            ->where($where)
+            ->find();
+
+        $rearr = [
+            "id"            =>  $list["id"],
+            "idcard"        =>  $list["teaidcard"],
+            "name"          =>  $list["teaname"],
+            "auth"          =>  "教师",
+            "starttime"     =>  $list["starttimer"],
+            "middletime"    =>  $list["middletimer"],
+            "replytime"     =>  $list["replytimer"],
+            "replyplace"    =>  $list["replyplace"],
+        ];
+
+        return $rearr;
+    }
+
+
+
 }

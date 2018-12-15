@@ -30,13 +30,10 @@ class Stuselect extends Base
 
         /********************************************************************/
         $proc = new Prochart();
-        if($proc->getTimeCheck()) {
-            $proname = "学生选题";
-            $prochart = new Prochart();
-            $res = $prochart->enterCheck($proname);
-            if (!$res) {
-                $this->error("当前时间不可以进行" . $proname . "操作", "../flow");
-            }
+        $proname = "学生选题";
+        $res = $proc->doCheck($proname);
+        if(!$res){
+            $this->error("当前时间不可以进行".$proname."操作","../flow");
         }
         /********************************************************************/
 
@@ -120,13 +117,10 @@ class Stuselect extends Base
 
         /********************************************************************/
         $proc = new Prochart();
-        if($proc->getTimeCheck()) {
-            $proname = "学生选题";
-            $prochart = new Prochart();
-            $res = $prochart->enterCheck($proname);
-            if (!$res) {
-                $this->error("当前时间不可以进行" . $proname . "操作", "../flow");
-            }
+        $proname = "学生选题";
+        $res = $proc->doCheck($proname);
+        if(!$res){
+            $this->error("当前时间不可以进行".$proname."操作","../flow");
         }
         /********************************************************************/
 

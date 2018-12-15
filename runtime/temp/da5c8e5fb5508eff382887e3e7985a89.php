@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"C:\wamp64\www\gmis\public/../application/home\view\Tapply\showApply.html";i:1544796492;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"C:\wamp64\www\gmis\public/../application/home\view\Tapply\showApply.html";i:1544864564;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -167,20 +167,30 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">题目性质</label>
                 <div class="layui-input-block">
-                    <input type="text" name="nature" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
+                    <select name="nature" lay-verify="required" required lay-filter="xingzhi">
+                        <option value="">请选择题目性质</option>
+                        <?php if(is_array($nature) || $nature instanceof \think\Collection || $nature instanceof \think\Paginator): $i = 0; $__LIST__ = $nature;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$na): $mod = ($i % 2 );++$i;?>
+                        <option value="<?php echo $na['id']; ?>"><?php echo $na['name']; ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </select>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">题目来源</label>
                 <div class="layui-input-block">
-                    <input type="text" name="source" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
+                    <select name="source" lay-verify="required" required lay-filter="laiyuan">
+                        <option value="">请选择题目来源</option>
+                        <?php if(is_array($source) || $source instanceof \think\Collection || $source instanceof \think\Paginator): $i = 0; $__LIST__ = $source;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$so): $mod = ($i % 2 );++$i;?>
+                        <option value="<?php echo $so['id']; ?>"><?php echo $so['name']; ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </select>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">专业</label>
                 <div class="layui-input-block">
                     <select name="proid" lay-verify="required" required lay-filter="zhuanye">
-                        <option value="0"></option>
+                        <option value=""></option>
                         <?php if(is_array($profess) || $profess instanceof \think\Collection || $profess instanceof \think\Paginator): $i = 0; $__LIST__ = $profess;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
                         <option value="<?php echo $pro['id']; ?>"><?php echo $pro['proname']; ?></option>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
@@ -228,20 +238,30 @@
         <div class="layui-form-item">
             <label class="layui-form-label">题目性质</label>
             <div class="layui-input-block">
-                <input type="text" name="nature" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题性质">
+                <select name="nature" lay-verify="required" required lay-filter="xingzhi">
+                    <option value="">请选择题目性质</option>
+                    <?php if(is_array($nature) || $nature instanceof \think\Collection || $nature instanceof \think\Paginator): $i = 0; $__LIST__ = $nature;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cna): $mod = ($i % 2 );++$i;?>
+                    <option value="<?php echo $cna['id']; ?>"><?php echo $cna['name']; ?></option>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">题目来源</label>
             <div class="layui-input-block">
-                <input type="text" name="source" lay-verify="required" required autocomplete="off" class="layui-input" placeholder="请输入课题来源">
+                <select name="source" lay-verify="required" required lay-filter="laiyuan">
+                    <option value="">请选择题目来源</option>
+                    <?php if(is_array($source) || $source instanceof \think\Collection || $source instanceof \think\Paginator): $i = 0; $__LIST__ = $source;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cso): $mod = ($i % 2 );++$i;?>
+                    <option value="<?php echo $cso['id']; ?>"><?php echo $cso['name']; ?></option>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">专业</label>
             <div class="layui-input-block">
                 <select name="proid" lay-verify="required" required lay-filter="zhuanye" id="proname">
-                    <option value="0"></option>
+                    <option value=""></option>
                     <?php if(is_array($profess) || $profess instanceof \think\Collection || $profess instanceof \think\Paginator): $i = 0; $__LIST__ = $profess;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
                     <option value="<?php echo $pro['id']; ?>"><?php echo $pro['proname']; ?></option>
                     <?php endforeach; endif; else: echo "" ;endif; ?>

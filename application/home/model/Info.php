@@ -53,31 +53,4 @@ class Info extends Model
             return 0;
         }
     }
-    private function getEnum($tablename,$name){
-        $sql = "show columns from ".$tablename." like '".$name."';";
-        $res = Db::query($sql);
-        return $res;
-    }
-
-
-    public function getTeaHonor(){
-        $res = $this->getEnum("gmis_teacher","teahonor");
-        return $res;
-    }
-
-    public function getTeaDuty(){
-        $res = $this->getEnum("gmis_teacher","teaduty");
-        return $res;
-    }
-
-    public function getMidScore(){
-        $res = $this->getEnum("gmis_process","middlescore");
-        return $res;
-    }
-
-    public function getRepScore(){
-        $res = $this->getEnum("gmis_process","replyscore");
-        return $res;
-    }
-
 }

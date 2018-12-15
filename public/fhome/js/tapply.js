@@ -42,8 +42,8 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
         , cols: [[ //表头
             { field: 'kid', title: 'ID', sort: true, fixed: 'left', width: 80}
             , { field: 'title', title: '题目', width: 200}
-            , { field: 'nature', title: '题目性质', width: 90 }
-            , { field: 'source', title: '题目来源', width: 90 }
+            , { field: 'naturename', title: '题目性质', width: 90 }
+            , { field: 'sourcename', title: '题目来源', width: 90 }
             , { field: 'isnew', title: '是否新题', width: 100, templet: '#isNewTpl' }
             , { field: 'isprac', title: '是否结合实践', width: 120, templet: '#isPracTpl' }
             , { field: 'proname', title: '专业', width: 190 }
@@ -63,8 +63,8 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
         , cols: [[ //表头
             { field: 'kid', title: 'ID', sort: true, fixed: 'left', width: 120}
             , { field: 'title', title: '题目', width: 200}
-            , { field: 'nature', title: '题目性质', width: 100 }
-            , { field: 'source', title: '题目来源', width: 100 }
+            , { field: 'naturename', title: '题目性质', width: 100 }
+            , { field: 'sourcename', title: '题目来源', width: 100 }
             , { field: 'isnew', title: '是否新题', width: 100, templet: '#isNewTpl' }
             , { field: 'isprac', title: '是否结合实践', width: 120, templet: '#isPracTpl' }
             , { field: 'proname', title: '专业', width: 200 }
@@ -125,6 +125,7 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
                 var isnew = (data['isnew']==1)?true:false;
                 var isprac = (data['isprac']==1)?true:false;
                 console.log(isnew+'--'+isprac);
+                console.log(data['nature']+'--'+data['source']);
                 form.val("editShow", {
                     "id": data['id']
                     ,"title": data['title']
@@ -138,8 +139,8 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
         } else if(obj.event === 'detail'){
             console.log('ID：'+ data.id + ' 的查看操作');
             var str = '<div class="detailStr"><span class="detailStrSpan1">题目</span><span class="detailStrSpan2">'+data.title+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">题目性质</span><span class="detailStrSpan2">'+data.nature+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">题目来源</span><span class="detailStrSpan2">'+data.source+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">题目性质</span><span class="detailStrSpan2">'+data.naturename+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">题目来源</span><span class="detailStrSpan2">'+data.sourcename+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">是否新题</span><span class="detailStrSpan2">'+data.isnew+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">是否实际</span><span class="detailStrSpan2">'+data.isprac+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">专业</span><span class="detailStrSpan2">'+data.proname+'</span></div>';

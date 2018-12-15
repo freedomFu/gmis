@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:68:"C:\wamp64\www\gmis\public/../application/home\view\Main\userSet.html";i:1544787468;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:68:"C:\wamp64\www\gmis\public/../application/home\view\Main\userSet.html";i:1544834228;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +62,7 @@
     </div>
 <div class="layui-container">
     <div class="layui-row">
-        <div class="layui-col-md4" style="margin:50px auto;margin-top: 100px;">
+        <div class="layui-col-md4" style="margin:50px auto;margin-top: 150px;">
             <ul class="layui-timeline">
                 <?php if(is_array($prochart) || $prochart instanceof \think\Collection || $prochart instanceof \think\Paginator): $i = 0; $__LIST__ = $prochart;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?>
                 <li class="layui-timeline-item">

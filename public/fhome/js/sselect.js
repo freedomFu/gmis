@@ -4,6 +4,7 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
         layer = layui.layer,
         table = layui.table,
         $ = layui.$;
+
     // 我选择的题目
     table.render({
         elem: '#mySelected'
@@ -16,8 +17,8 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
         , cols: [[ //表头
             { field: 'kid', title: 'ID', sort: true, fixed: 'left', width: 35}
             , { field: 'title', title: '题目', width: 225}
-            , { field: 'nature', title: '题目性质', width: 90 }
-            , { field: 'source', title: '题目来源', width: 90 }
+            , { field: 'naturename', title: '题目性质', width: 90 }
+            , { field: 'sourcename', title: '题目来源', width: 90 }
             , { field: 'isnew', title: '是否新题', width: 90, templet: '#isNewTpl' }
             , { field: 'isprac', title: '是否结合实践', width: 114, templet: '#isPracTpl' }
             , { field: 'weigh', title: '优先级', width: 80, edit: 'text', sort: true}
@@ -89,13 +90,13 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
         , cols: [[ //表头
             { field: 'kid', title: 'ID', sort: true, fixed: 'left', width: 40}
             , { field: 'title', title: '题目', width: 220}
-            , { field: 'nature', title: '题目性质', width: 90 }
-            , { field: 'source', title: '题目来源', width: 90 }
+            , { field: 'naturename', title: '题目性质', width: 90 }
+            , { field: 'sourcename', title: '题目来源', width: 90 }
             , { field: 'isnew', title: '是否新题', width: 90, templet: '#isNewTpl' }
             , { field: 'isprac', title: '是否结合实践', width: 115, templet: '#isPracTpl' }
             , { field: 'status', title: '状态', width: 80 }
             , { field: 'proname', title: '专业名称', width: 140 }
-            , { field: 'total', title: '已选数目', width: 90 }
+            , { field: 'total', title: '选题人数', width: 90 }
             , { align: 'center', toolbar: '#operation-bar', fixed: 'right' , width: 174 }
         ]]
     });
@@ -115,11 +116,13 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
             });
         } else if(obj.event === 'detail'){
             console.log('ID：'+ data.id + ' 的查看操作');
+            var isnew = (data.isnew==1)?("是"):("否");
+            var isprac = (data.isprac==1)?("是"):("否");
             var str = '<div class="detailStr"><span class="detailStrSpan1">题目</span><span class="detailStrSpan2">'+data.title+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">题目性质</span><span class="detailStrSpan2">'+data.nature+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">题目来源</span><span class="detailStrSpan2">'+data.source+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">是否新题</span><span class="detailStrSpan2">'+data.isnew+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">是否实际</span><span class="detailStrSpan2">'+data.isprac+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">题目性质</span><span class="detailStrSpan2">'+data.naturename+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">题目来源</span><span class="detailStrSpan2">'+data.sourcename+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">是否新题</span><span class="detailStrSpan2">'+isnew+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">是否实际</span><span class="detailStrSpan2">'+isprac+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">状态</span><span class="detailStrSpan2">'+data.status+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">专业</span><span class="detailStrSpan2">'+data.proname+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">已选数目</span><span class="detailStrSpan2">'+data.total+'</span></div>';
@@ -174,9 +177,10 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
             , { field: 'stuname', title: '学生姓名', width: 90 }
             , { field: 'teaname', title: '教师姓名', width: 90}
             , { field: 'replytimer', title: '答辩时间', width: 110 }
-            , { field: 'replyplace', title: '答辩地点', width: 140 }
+            , { field: 'replyplace', title: '答辩地点', width: 120 }
+            , { field: 'middlescore', title: '中期成绩', width: 86 }
             , { field: 'replyscore', title: '答辩成绩', width: 86 }
-            , { align: 'center', toolbar: '#operation-bar', fixed: 'right' , width: 174 }
+            , { align: 'center', toolbar: '#operation-bar', fixed: 'right' , width: 107 }
         ]]
     });
 
@@ -184,16 +188,17 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
     table.on('tool(myTitle)', function(obj) {
         var data = obj.data;
         if (obj.event === 'detail') {
-            console.log('ID：'+ data.id + ' 的查看操作');
+            console.log('ID：'+ data.id + ' 的查看操作ddd');
             var str = '<div class="detailStr"><span class="detailStrSpan1">题目</span><span class="detailStrSpan2">'+data.title+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">学生学号</span><span class="detailStrSpan2">'+data.stuidcard+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">学生姓名</span><span class="detailStrSpan2">'+data.stuname+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">学生班级</span><span class="detailStrSpan2">'+data.stuclass+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">开题时间</span><span class="detailStrSpan2">'+data.teaname+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">中期检查时间</span><span class="detailStrSpan2">'+data.starttimer+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">答辩时间</span><span class="detailStrSpan2">'+data.middletimer+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">答辩地点</span><span class="detailStrSpan2">'+data.replytimer+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">教师姓名</span><span class="detailStrSpan2">'+data.replyplace+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">开题时间</span><span class="detailStrSpan2">'+data.starttimer+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">中期检查时间</span><span class="detailStrSpan2">'+data.middletimer+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">答辩时间</span><span class="detailStrSpan2">'+data.replytimer+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">答辩地点</span><span class="detailStrSpan2">'+data.replyplace+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">教师姓名</span><span class="detailStrSpan2">'+data.teaname+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">中期成绩</span><span class="detailStrSpan2">'+data.middlescore+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">答辩成绩</span><span class="detailStrSpan2">'+data.replyscore+'</span></div>';
             layer.open({
                 type: 1,

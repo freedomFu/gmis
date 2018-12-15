@@ -14,6 +14,15 @@ class Pchart extends Base
         $pc = new Prochart();
         $prochart = $pc->prochart();
         $this->assign('prochart',$prochart);
+
+        $auth = session("auth");
+        $uid = session("uid");
+        if($auth==1){ // 学生
+            $info = $pc->getStuInfo($uid);
+        }elseif($auth==2){
+            $info = $pc->getTeaInfo($uid);
+        }
+        $this->assign("userinfo",$info);
         return $this->fetch('Prochart/index');
     }
 

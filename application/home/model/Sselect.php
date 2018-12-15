@@ -1,6 +1,7 @@
 <?php
 namespace app\home\model;
 use app\home\model\Tapply;
+use app\home\model\Comclass;
 use think\Model;
 use think\Db;
 
@@ -292,6 +293,13 @@ class Sselect extends Model
             ->order('id desc')
             ->limit(($page-1)*$limit,$limit)
             ->select();
+        $com = new Comclass();
+        for($i=0;$i<count($list);$i++){
+            $nature = $list[$i]["nature"];
+            $source = $list[$i]["source"];
+            $list[$i]["naturename"] = $com->getTeaName("nature",$nature);
+            $list[$i]["sourcename"] = $com->getTeaName("source",$source);
+        }
         return $list;
     }
 
@@ -337,6 +345,13 @@ class Sselect extends Model
             ->where($where)
             ->limit(($page-1)*$limit,$limit)
             ->select();
+        $com = new Comclass();
+        for($i=0;$i<count($list);$i++){
+            $nature = $list[$i]["nature"];
+            $source = $list[$i]["source"];
+            $list[$i]["naturename"] = $com->getTeaName("nature",$nature);
+            $list[$i]["sourcename"] = $com->getTeaName("source",$source);
+        }
         return $list;
     }
 
@@ -369,7 +384,7 @@ class Sselect extends Model
             ['gmis_student gs','gs.id=gp.stuid','LEFT'],
             ['gmis_teacher gte','gte.id=gp.teaid','LEFT']
         ];
-        $field = "gta.title,gs.stuidcard,gs.stuname,gs.stuclass,gte.teaname,gte.starttimer,gte.middletimer,gte.replytimer,gte.replyplace,gp.replyscore";
+        $field = "gp.id,gta.title,gs.stuidcard,gs.stuname,gs.stuclass,gte.teaname,gte.starttimer,gte.middletimer,gte.replytimer,gte.replyplace,gp.middlescore,gp.replyscore";
         $where['gp.stuid']=$stuid;
         $where['gp.belongSenior']=$xq;
         $list = Db::name($table)

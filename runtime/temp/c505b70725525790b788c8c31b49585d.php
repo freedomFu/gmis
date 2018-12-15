@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\wamp64\www\gmis\public/../application/home\view\Prochart\index.html";i:1543735453;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\wamp64\www\gmis\public/../application/home\view\Prochart\index.html";i:1544861369;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,6 +60,32 @@
             </li>
         </ul>
     </div>
+<style type="text/css">
+    #pchartfooter{
+        vertical-align: center;
+        margin-top: 180px;
+        color: #1e282c;
+        font-size: 15px;
+        border:1px solid #cee3e9;
+        background:#f1f7f9;
+        padding: 20px 0;
+        border-radius:25px;
+    }
+    .pchartp{
+        margin: 8px 5px;
+    }
+
+    .pcharttitle{
+        color: #8e8e8e;
+        margin: 0 10px 0 30px;
+    }
+
+    .pchartcon{
+        color: #0f253c;
+        -webkit-text-stroke: 0.05px lightskyblue;
+    }
+
+</style>
 <div class="layui-body">
     <div class="layui-container">
         <div class="layui-row layui-col-space10 prochartDemo">
@@ -95,8 +121,17 @@
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </div>
-                <div class="layui-col-md4"></div>
-
+                <div class="layui-col-md4">
+                    <div id="pchartfooter">
+                        <p class="pchartp"><span class="pcharttitle">用户姓名：</span> <span class="pchartcon"><?php echo $userinfo['name']; ?></span> </p>
+                        <p class="pchartp"><span class="pcharttitle">用户工号：</span> <span class="pchartcon"><?php echo $userinfo['idcard']; ?></span> </p>
+                        <p class="pchartp"><span class="pcharttitle">用户身份：</span> <span class="pchartcon"><?php echo $userinfo['auth']; ?></span> </p>
+                        <p class="pchartp"><span class="pcharttitle">开题时间：</span> <span class="pchartcon"><?php echo $userinfo['starttime']; ?></span> </p>
+                        <p class="pchartp"><span class="pcharttitle">中期时间：</span> <span class="pchartcon"><?php echo $userinfo['middletime']; ?></span> </p>
+                        <p class="pchartp"><span class="pcharttitle">答辩时间：</span> <span class="pchartcon"><?php echo $userinfo['replytime']; ?></span> </p>
+                        <p class="pchartp"><span class="pcharttitle">答辩地点：</span> <span class="pchartcon"><?php echo $userinfo['replyplace']; ?></span> </p>
+                    </div>
+                </div>
             </div>
         </div>
             <!--<div class="layui-col-md3"></div>-->

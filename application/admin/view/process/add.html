@@ -19,9 +19,27 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Middlescore')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-middlescore" data-rule="required" class="form-control selectpicker" name="row[middlescore]">
+                {foreach name="middlescoreList" item="vo"}
+                    <option value="{$key}" {in name="key" value="未填写"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Replyscore')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-replyscore" data-rule="required" class="form-control" name="row[replyscore]" type="text" value="0">
+                        
+            <select  id="c-replyscore" data-rule="required" class="form-control selectpicker" name="row[replyscore]">
+                {foreach name="replyscoreList" item="vo"}
+                    <option value="{$key}" {in name="key" value="未填写"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
         </div>
     </div>
     <div class="form-group">

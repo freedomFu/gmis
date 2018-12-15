@@ -30,13 +30,10 @@ class Teapply extends Base
 
         /********************************************************************/
         $proc = new Prochart();
-        if($proc->getTimeCheck()) {
-            $proname = "题目申报";
-            $prochart = new Prochart();
-            $res = $prochart->enterCheck($proname);
-            if (!$res) {
-                $this->error("当前时间不可以进行" . $proname . "操作", "../flow");
-            }
+        $proname = "题目申报";
+        $res = $proc->doCheck($proname);
+        if(!$res){
+            $this->error("当前时间不可以进行".$proname."操作","../flow");
         }
         /********************************************************************/
 
@@ -46,7 +43,11 @@ class Teapply extends Base
         $years = [
             $year,$year-1,$year-2,$year-3,$year-4,$year-5
         ];
+        $nature = $teapply->getNature();
+        $source = $teapply->getSource();
         $this->assign('profess',$profess);
+        $this->assign('nature',$nature);
+        $this->assign('source',$source);
         $this->assign('years',$years);
         return $this->fetch('Tapply/showApply');
     }
@@ -213,13 +214,10 @@ class Teapply extends Base
 
         /********************************************************************/
         $proc = new Prochart();
-        if($proc->getTimeCheck()) {
-            $proname = "老师选学生";
-            $prochart = new Prochart();
-            $res = $prochart->enterCheck($proname);
-            if (!$res) {
-                $this->error("当前时间不可以进行" . $proname . "操作", "../flow");
-            }
+        $proname = "老师选学生";
+        $res = $proc->doCheck($proname);
+        if(!$res){
+            $this->error("当前时间不可以进行".$proname."操作","../flow");
         }
         /********************************************************************/
         return $this->fetch("Tapply/showSelectStu");

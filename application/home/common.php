@@ -78,3 +78,20 @@ function echoJson($code=0,$errmsg="",$count=0,$data=null,$total=0,$left=0){
     $res = json(['code'=>$code,'count'=>$count,'errmsg'=>$errmsg,'data'=>$data,'total'=>$total,'left'=>$left])->getcontent();
     return $res;
 }
+
+/**
+ * @Description: 获取
+ * @DateTime:    2018/12/15 8:26
+ * @Author:      fyd
+ */
+function getNeedBetween($str, $s1, $s2){
+    $kw=$str;
+    $kw='123'.$kw.'123';
+    $st =stripos($kw,$s1);
+    $ed =stripos($kw,$s2);
+    if(($st==false||$ed==false)||$st>=$ed){
+        return 0;
+    }
+    $kw=substr($kw,($st+1),($ed-$st-1));
+    return $kw;
+}

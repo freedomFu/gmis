@@ -1,6 +1,7 @@
 <?php
 namespace app\home\model;
 use app\home\model\Process;
+use app\home\model\Comclass;
 use think\Model;
 use think\Db;
 
@@ -66,6 +67,13 @@ class Tapply extends Model{
             ->where($where)
             ->limit(($page-1)*$limit,$limit)
             ->select();
+        $com = new Comclass();
+        for($i=0;$i<count($list);$i++){
+            $nature = $list[$i]["nature"];
+            $source = $list[$i]["source"];
+            $list[$i]["naturename"] = $com->getTeaName("nature",$nature);
+            $list[$i]["sourcename"] = $com->getTeaName("source",$source);
+        }
         return $list;
     }
 
@@ -98,6 +106,13 @@ class Tapply extends Model{
             ->where($where)
             ->limit(($page-1)*$limit,$limit)
             ->select();
+        $com = new Comclass();
+        for($i=0;$i<count($list);$i++){
+            $nature = $list[$i]["nature"];
+            $source = $list[$i]["source"];
+            $list[$i]["naturename"] = $com->getTeaName("nature",$nature);
+            $list[$i]["sourcename"] = $com->getTeaName("source",$source);
+        }
         return $list;
     }
 
@@ -422,6 +437,27 @@ class Tapply extends Model{
         }else{
             return 0;
         }
+    }
 
+    /**
+     * @Description: 获取课题性质
+     * @DateTime:    2018/12/15 16:37
+     * @Author:      fyd
+     */
+    public function getNature(){
+        $res = Db::name("nature")
+            ->select();
+        return $res;
+    }
+
+    /**
+     * @Description: 获取课题来源
+     * @DateTime:    2018/12/15 16:38
+     * @Author:      fyd
+     */
+    public function getSource(){
+        $res = Db::name("source")
+            ->select();
+        return $res;
     }
 }

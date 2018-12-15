@@ -22,6 +22,8 @@ class Process extends Backend
     {
         parent::_initialize();
         $this->model = new \app\admin\model\Process;
+        $this->view->assign("middlescoreList", $this->model->getMiddlescoreList());
+        $this->view->assign("replyscoreList", $this->model->getReplyscoreList());
         $this->view->assign("statusList", $this->model->getStatusList());
     }
     
@@ -65,8 +67,8 @@ class Process extends Backend
             foreach ($list as $row) {
                 
                 $row->getRelation('tapply')->visible(['title']);
-				$row->getRelation('student')->visible(['stuidcard','stuname','stuclass']);
-				$row->getRelation('teacher')->visible(['starttimer','middletimer','replytimer','replyplace']);
+				$row->getRelation('student')->visible(['stuname','stuclass','stuphone']);
+				$row->getRelation('teacher')->visible(['teaname','teaphone','starttimer','middletimer','replytimer','replyplace']);
             }
             $list = collection($list)->toArray();
             $result = array("total" => $total, "rows" => $list);

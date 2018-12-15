@@ -1,0 +1,31 @@
+<ul class="layui-timeline">
+    {volist name="prochart" id="pro"}
+    <li class="layui-timeline-item">
+        {if condition="$pro.isnow eq -1"}
+        <i class="layui-icon layui-timeline-axis">&#xe605;</i>  <!-- 已截止 -->
+        <div class="layui-timeline-content layui-text">
+            <h2 class="layui-timeline-title" style="color: #7E96B3;">{$pro.proname}</h2>
+        {/if}
+        {if condition="$pro.isnow eq 0"}
+        <i class="layui-icon layui-timeline-axis">&#xe6af;</i>  <!-- 正在进行 -->
+        <div class="layui-timeline-content layui-text">
+            <h2 class="layui-timeline-title" style="color: #a00000;">{$pro.proname}(进行中)</h2>
+        {/if}
+        {if condition="$pro.isnow eq 1"}
+        <i class="layui-icon layui-timeline-axis">&#xe609;</i>  <!-- 未开始 -->
+        <div class="layui-timeline-content layui-text">
+            <h2 class="layui-timeline-title">{$pro.proname}</h2>
+        {/if}
+        {if condition="$pro.isnow eq 2"}
+        <i class="layui-icon layui-timeline-axis">&#xe609;</i>  <!-- 未开始 -->
+        <div class="layui-timeline-content layui-text">
+            <h2 class="layui-timeline-title" style="color: #0e6f5c;">{$pro.proname}</h2>
+        {/if}
+            <h4>
+                {$pro.starttime} → {$pro.endtime}
+            </h4>
+            <br/>
+        </div>
+    </li>
+    {/volist}
+</ul>

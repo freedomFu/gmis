@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:78:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMySelected.html";i:1543671410;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:78:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMySelected.html";i:1544861487;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,8 +87,9 @@
             <a class="layui-btn layui-btn-danger layui-btn-xs layui-btn-disabled" lay-event="">删除</a>
             <?php endif; ?>
         </script>
-        <div id="showNote">
-            <p style="color: #a00000">注：1.一旦提交被教师确认后就不能再修改，请谨慎操作！</p>
+        <div id="showNote" style="font-size: 24px;">
+            <p>注：1.一旦提交被教师确认后就不能再修改，<span style="color: #a00000;">请谨慎操作！</span></p>
+            <p><span style="opacity: 0;">注：</span>2.请填写优先级(点击单元格即可，<span style="color: lightskyblue;">通过后不可修改</span>)！<span style="color: #a00000;font-weight: bolder;">(高3、中2、低1)</span></p>
         </div>
     </div>
 </div>
@@ -139,3 +140,13 @@
 </script>
 
 <script src="http://127.0.0.1/gmis/public/fhome/js/sselect.js"></script>
+<script>
+    layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
+        var layer = layui.layer;
+
+        layer.msg("<span style='color:lightcoral;font-weight: bolder;font-size: 20px;'>请填写优先级！高3、中2、低1</span>", {
+            icon: 0,
+            time: 3000
+        });
+    });
+</script>
