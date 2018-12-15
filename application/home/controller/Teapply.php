@@ -41,7 +41,7 @@ class Teapply extends Base
         $profess = $teapply->showProfess();
         $year = getSenior();
         $years = [
-            $year,$year-1,$year-2,$year-3,$year-4,$year-5
+            $year-1,$year-2,$year-3,$year-4,$year-5
         ];
         $nature = $teapply->getNature();
         $source = $teapply->getSource();
@@ -92,7 +92,7 @@ class Teapply extends Base
         if(isset($_POST['year'])){
             $year = $_POST['year'];
         }else{
-            $year = getSenior();
+            $year = getSenior()-1;
         }
         $page=input('page');
         $limit=input('limit');

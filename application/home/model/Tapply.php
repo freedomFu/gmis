@@ -78,19 +78,25 @@ class Tapply extends Model{
     }
 
     public function getOldNum($teaid,$year){
-        $where['teaid'] = $teaid;
-        $where['belongsenior'] = $year;
-        $where['status'] = "已通过";
+        $where['ta.teaid'] = $teaid;
+        $where['ta.belongsenior'] = $year;
+        $where['ta.status'] = "已通过";
         $maintable = 'tapply';
+        $mt = 'ta';
+        $join = [
+            ['gmis_process gpc','gpc.titleid=ta.id','INNER']
+        ];
         $count = Db::name($maintable)
+            ->alias($mt)
+            ->join($join)
             ->where($where)
             ->count();
         return $count;
     }
 
     public function showOld($teaid,$page,$limit,$year){
-        $where['teaid'] = $teaid;
-        $where['belongsenior'] = $year;
+        $where['ta.teaid'] = $teaid;
+        $where['ta.belongsenior'] = $year;
         $where['ta.status'] = "已通过";
         $maintable = 'tapply';
         $field = 'ta.id,title,nature,source,isnew,isprac,ta.proid,proname,note,ta.status,stuidcard,stuname,stuclass,stuphone';
@@ -98,6 +104,7 @@ class Tapply extends Model{
         $join = [
             ['gmis_student gs','gs.id=ta.stuid','LEFT'],
             ['gmis_profess gp','gp.id=ta.proid','LEFT'],
+            ['gmis_process gpc','gpc.titleid=ta.id','INNER']
         ];
         $list = Db::name($maintable)
             ->alias($mt)

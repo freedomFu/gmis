@@ -8,40 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="22bcd330-2bf3-4591-b345-000f3989cf2a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Process.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Process.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Sselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Sselect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Tapply.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Tapply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/lang/zh-cn/process.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/lang/zh-cn/process.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/lang/zh-cn/sselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/lang/zh-cn/sselect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/model/Process.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/model/Process.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/model/Sselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/model/Sselect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/view/process/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/process/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/view/process/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/process/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/view/sselect/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/sselect/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/view/sselect/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/sselect/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/common.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Pchart.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Pchart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Reprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Reprocess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Stuselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Stuselect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/home/controller/Teapply.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Teapply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/model/Info.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/model/Info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/model/Prochart.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/model/Prochart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/model/Sselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/model/Sselect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/home/model/Tapply.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/model/Tapply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/view/Main/userSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/view/Main/userSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/view/Prochart/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/view/Prochart/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/view/Sselect/showMySelected.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/view/Sselect/showMySelected.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/view/Tapply/showApply.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/view/Tapply/showApply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/backend/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/backend/process.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/backend/sselect.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/backend/sselect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fhome/js/sselect.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/fhome/js/sselect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fhome/js/tapply.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/fhome/js/tapply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/cache/cb/78ef4a9130f39208ff10858ddd8377.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/cache/cb/78ef4a9130f39208ff10858ddd8377.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/141cf60e21f77b562c97e694b910e78e.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/141cf60e21f77b562c97e694b910e78e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/9178026eae4fd84c29d5a31d4da7f77d.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/9178026eae4fd84c29d5a31d4da7f77d.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/c505b70725525790b788c8c31b49585d.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/c505b70725525790b788c8c31b49585d.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/da5c8e5fb5508eff382887e3e7985a89.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/da5c8e5fb5508eff382887e3e7985a89.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201812/15.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201812/15.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,53 +36,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tapply.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/admin/controller/Tapply.php">
+      <file leaf-file-name="Teapply.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/home/controller/Teapply.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="123" column="33" lean-forward="true" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+            <state relative-caret-position="480">
+              <caret line="99" column="58" lean-forward="true" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
               <folding>
-                <element signature="e#40#74#0#PHP" expanded="true" />
+                <element signature="e#37#66#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Backend.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/library/traits/Backend.php">
+      <file leaf-file-name="Tapply.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/home/model/Tapply.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="308" column="26" selection-start-line="308" selection-start-column="26" selection-end-line="308" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Backend.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/controller/Backend.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="361" column="64" selection-start-line="361" selection-start-column="64" selection-end-line="361" selection-end-column="64" />
+            <state relative-caret-position="367">
+              <caret line="96" column="55" lean-forward="true" selection-start-line="96" selection-start-column="55" selection-end-line="96" selection-end-column="55" />
               <folding>
-                <element signature="e#41#68#0#PHP" expanded="true" />
+                <element signature="e#32#59#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test/demo.php">
+      <file leaf-file-name="tapply.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/fhome/js/tapply.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="-2173">
+              <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Controller.php">
+      <file leaf-file-name="showApply.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/home/view/Tapply/showApply.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="161" column="5" selection-start-line="161" selection-start-column="5" selection-end-line="161" selection-end-column="5" />
+            <state relative-caret-position="440">
+              <caret line="22" column="49" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -200,17 +160,17 @@
         <option value="$PROJECT_DIR$/application/home/model/Prochart.php" />
         <option value="$PROJECT_DIR$/application/home/view/Prochart/index.html" />
         <option value="$PROJECT_DIR$/application/home/view/Sselect/showMySelected.html" />
-        <option value="$PROJECT_DIR$/application/home/controller/Teapply.php" />
         <option value="$PROJECT_DIR$/application/home/model/Comclass.php" />
         <option value="$PROJECT_DIR$/application/home/view/Tapply/showApply.html" />
         <option value="$PROJECT_DIR$/application/home/model/Sselect.php" />
-        <option value="$PROJECT_DIR$/application/home/model/Tapply.php" />
         <option value="$PROJECT_DIR$/public/fhome/js/tapply.js" />
         <option value="$PROJECT_DIR$/public/fhome/js/sselect.js" />
         <option value="$PROJECT_DIR$/application/admin/controller/Nature.php" />
         <option value="$PROJECT_DIR$/application/admin/library/traits/Backend.php" />
         <option value="$PROJECT_DIR$/../test/demo.php" />
         <option value="$PROJECT_DIR$/application/admin/controller/Tapply.php" />
+        <option value="$PROJECT_DIR$/application/home/model/Tapply.php" />
+        <option value="$PROJECT_DIR$/application/home/controller/Teapply.php" />
       </list>
     </option>
   </component>
@@ -270,7 +230,7 @@
       <path value="$PROJECT_DIR$/vendor/mtdowling/cron-expression" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -299,14 +259,54 @@
               <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmis" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmis" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmis" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmis" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmis" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="Tapply" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmis" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmis" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="fhome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmis" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="fhome" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -380,15 +380,15 @@
       <workItem from="1544579650491" duration="232000" />
       <workItem from="1544748334139" duration="26162000" />
       <workItem from="1544831175511" duration="712000" />
-      <workItem from="1544833153985" duration="32003000" />
+      <workItem from="1544833153985" duration="33009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="477170000" />
+    <option name="totallyTimeSpent" value="478176000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -397,7 +397,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.5092502" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
@@ -704,16 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Teapply.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-          <folding>
-            <element signature="e#37#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/home/model/Comclass.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="607">
@@ -724,24 +714,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/Tapply/showApply.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="149" column="66" selection-start-line="149" selection-start-column="66" selection-end-line="149" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/home/model/Prochart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4031">
           <caret line="207" column="51" selection-start-line="207" selection-start-column="51" selection-end-line="207" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/fhome/js/tapply.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="847">
-          <caret line="159" column="34" selection-start-line="159" selection-start-column="34" selection-end-line="159" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -762,16 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/model/Tapply.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#32#59#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/library/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7667">
@@ -783,16 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Nature.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="68" column="32" selection-start-line="66" selection-start-column="8" selection-end-line="68" selection-end-column="32" />
-          <folding>
-            <element signature="e#40#74#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -836,10 +792,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Tapply.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="123" column="33" lean-forward="true" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+        <state relative-caret-position="427">
+          <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
           <folding>
             <element signature="e#40#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/controller/Nature.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="68" column="32" selection-start-line="66" selection-start-column="8" selection-end-line="68" selection-end-column="32" />
+          <folding>
+            <element signature="e#40#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/fhome/js/tapply.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2173">
+          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/Tapply/showApply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/model/Tapply.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="96" column="55" lean-forward="true" selection-start-line="96" selection-start-column="55" selection-end-line="96" selection-end-column="55" />
+          <folding>
+            <element signature="e#32#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Teapply.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="99" column="58" lean-forward="true" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
+          <folding>
+            <element signature="e#37#66#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
