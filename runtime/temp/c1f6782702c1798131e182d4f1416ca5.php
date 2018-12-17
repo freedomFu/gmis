@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:74:"C:\wamp64\www\gmis\public/../application/home\view\Tapply\showStudent.html";i:1544795854;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:74:"C:\wamp64\www\gmis\public/../application/home\view\Tapply\showStudent.html";i:1545037357;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,6 +69,11 @@
         <script type="text/html" id="operation-bar">
             <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
             <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit">修改</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="upfile"><i class="layui-icon"></i>任务书</a>
+        </script>
+
+        <script type="text/html" id="titleTpl">
+            <a href="<?php echo url('../downas'); ?>?id={{ d.id }}" class="layui-table-link" target="_blank">{{ d.title }}<span style="font-size: 0.6em;color: red;">({{ d.isUpload }})</span></a>
         </script>
     </div>
 </div>
@@ -155,4 +160,9 @@
             </div>
         </div>
     </form>
+</div>
+
+<div id="up_assign" style="display: none">
+    <!--上右下左-->
+    <button type="button" class="layui-btn" id="upassign" style="margin: 30px 50px;"><i class="layui-icon"></i>上传文件</button>
 </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:75:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMyTitle.html";i:1543671494;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:75:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMyTitle.html";i:1545054787;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,6 +60,16 @@
             </li>
         </ul>
     </div>
+<style type="text/css">
+    .mybtn{
+        margin: 10px 10px;
+    }
+    .mybtn-right{
+        display: inline;
+        float: right;
+    }
+
+</style>
 <div class="layui-body">
     <div class="layui-container">
         <!-- 内容主体区域 -->
@@ -68,6 +78,19 @@
         <script type="text/html" id="operation-bar">
             <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail">查看</a>
         </script>
+        <?php if($isUp == 1): ?>
+        <div class="mybtn">
+            <button type="button" class="layui-btn layui-btn-primary" id="openreport"><i class="layui-icon"></i>上传开题报告</button>
+            <button type="button" class="layui-btn layui-btn-normal" id="mypaper"><i class="layui-icon"></i>上传毕设论文</button>
+            <button type="button" class="layui-btn layui-btn-danger" id="mycode"><i class="layui-icon"></i>上传毕设材料</button>
+            <div class="mybtn-right">
+                <a href="<?php echo url('../downre'); ?>" type="button" class="layui-btn layui-btn-primary" id="dopenreport" target="_blank"><i class="layui-icon"></i>下载开题报告</a>
+                <a href="<?php echo url('../downpa'); ?>" type="button" class="layui-btn layui-btn-normal" id="dmypaper" target="_blank"><i class="layui-icon"></i>下载毕设论文</a>
+                <a href="<?php echo url('../downco'); ?>" type="button" class="layui-btn layui-btn-danger" id="dmycode" target="_blank"><i class="layui-icon"></i>下载毕设材料</a>
+            </div>
+
+        </div>
+        <?php endif; ?>
     </div>
 </div>
 <div class="layui-footer" style="text-align: center;">
@@ -117,3 +140,4 @@
 </script>
 
 <script src="http://127.0.0.1/gmis/public/fhome/js/sselect.js"></script>
+<script src="http://127.0.0.1/gmis/public/fhome/js/stupload.js"></script>

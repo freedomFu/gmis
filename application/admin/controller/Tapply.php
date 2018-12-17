@@ -51,18 +51,16 @@ class Tapply extends Backend
                 return $this->selectpage();
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
-            //$where这里说是 Cannot use object of type Closure as array   闭包不能作为数组  所以可以重新声明一个where条件  也要注意ambigious问题  或者强制转型成array
-            /*$where = (array)$where;
-            $where["tapply.id"]=1;*/
             $mywhere = [];
 
-            $getAuthId = $this->getWhereProId();
-            if($getAuthId==0){
+            $getAuthId = $this->getWhereGroupId();
+            $getTeaId = $this->getTeaList();
+            if($getAuthId==1){
                 $mywhere = [];
             }elseif($getAuthId==-1){
                 $mywhere["tapply.id"] = -1;
             }else{
-                $mywhere["tapply.proid"] = $getAuthId;
+                $mywhere["tapply.teaid"] = ["in",$getTeaId];
             }
 
             $total = $this->model
@@ -95,35 +93,36 @@ class Tapply extends Backend
     }
 
     /**
-     * @Description: 获取当前
+     * @Description: 获取当前groupid
      * @DateTime:    2018/12/15 20:33
      * @Author:      fyd
      */
-    private function getWhereProId(){
+    private function getWhereGroupId(){
         $id = $this->auth->id;
         $authid = Db::name("auth_group_access")
             ->where("uid",$id)
             ->value("group_id");
-        $groupname = Db::name("auth_group")
-            ->where("id",$authid)
-            ->value("name");
-        $res = Db::name("profess")
-            ->where("proname",$groupname)
-            ->find();
 
-        if($groupname=="Admin group"){
-            return 0;
-        }elseif($res){
-            return $this->getProId($groupname);
+        if($authid){
+            return $authid;
         }else{
             return -1;
         }
     }
 
-    private function getProId($proname){
-        $id = Db::name("profess")
-            ->where("proname",$proname)
-            ->value("id");
-        return $id;
+    private function getTeaList(){
+        $groupId = $this->getWhereGroupId();
+        $table = "teacher";
+        $where["teabelongid"] = $groupId;
+        $field = "id";
+        $tealist = Db::name($table)
+            ->field($field)
+            ->where($where)
+            ->select();
+        $teaid = [];
+        for($i=0;$i<count($tealist);$i++){
+            $teaid[$i] = $tealist[$i]["id"];
+        }
+        return $teaid;
     }
 }

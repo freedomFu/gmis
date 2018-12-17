@@ -9,6 +9,7 @@ return [
     'Teahonor'  =>  '职称',
     'Teatitlenum'  =>  '题目数量',
     'Teaphone'  =>  '教师电话',
+    'Teabelongid'  =>  '所属教研室',
     'Starttimer'  =>  '开题时间',
     'Middletimer'  =>  '中期检查时间',
     'Replytimer'  =>  '答辩时间',

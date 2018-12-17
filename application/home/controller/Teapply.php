@@ -2,7 +2,8 @@
 namespace app\home\controller;
 use app\home\controller\Base;
 use app\home\model\Prochart;
-use app\home\model\Info;
+use app\home\model\Process;
+use app\home\model\Upfile;
 use app\home\model\Tapply;
 
 class Teapply extends Base
@@ -277,5 +278,107 @@ class Teapply extends Base
     }
 
     /******************************************************************************************************************/
+    /**
+     * @Description: 对于上传任务书的处理
+     * @DateTime:    2018/12/16 11:29
+     * @Author:      fyd
+     */
+    public function upassign(){
+        $file = request()->file('file');
+        $typeid = 1;
+        $typename = "rws";
+        $year = getSenior(); //获取学年
+        $filename = $_FILES["file"]["name"]; //获取文件名
+        $ext = getExt($filename); //获取文件后缀
+        $processid = $_POST['id'];// 获取对应的过程id
+        //根据过程id获取学号、姓名和课题名称
+        $process = new Process();
+        $processInfo = $process->getProcessInfo($processid);
+        $stuidcard = $processInfo["stuidcard"];
+        $stuname = $processInfo["stuname"];
+        $title = $processInfo["title"];
+        //上传到移动到指定目录下
+        if($file){
+            $path = "." . DS . "upload". DS . $typename . DS . $year;
+            $insertpath = "public" . DS . "upload". DS . $typename . DS . $year;
+            //必须转为gbk格式才可以
+            $cupname = $stuidcard."+".$stuname."+".$title."-任务书";
+            $upname = iconv("UTF-8","gbk",$cupname);
+            $validate["ext"] = "doc,docx,pdf";
+            $info = $file
+                ->validate($validate)
+                ->move($path,$upname);
+            if($info){
+                // 进行数据库插入操作
+                $data = [
+                    "filename"      =>      $cupname,
+                    "filepath"      =>      $insertpath,
+                    "fileext"       =>      $ext,
+                    "belongsenior"  =>      getSenior(),
+                    "processid"     =>      $processid,
+                    "type"          =>      $typeid
+                ];
+                $up = new Upfile();
+                $res = $up->addassign($data);
+                if($res==1){
+                    falsePro(0,"上传成功");
+                }elseif ($res==2){
+                    falsePro(0,"成功覆盖！");
+                }elseif ($res==0){
+                    falsePro(1,"请重新提交");
+                }
 
+            }else{
+                falsePro(1,$file->getError());
+            }
+        }else{
+            falsePro(1,"文件不存在");
+        }
+    }
+
+    /**
+     * @Description: 下载文件
+     * @DateTime:    2018/12/17 7:02
+     * @Author:      fyd
+     */
+    public function downAssign(){
+        $processid = $_GET['id']; //获取过程id
+        $type = 1;
+        $senior = getSenior();
+        $up = new Upfile();
+        $info = $up->downassign($processid,$type,$senior);
+
+        if(!$info){
+            echo "<script>alert('数据不存在！')</script>";
+            echo "<script>window.close();</script>";
+            exit;
+        }
+
+        $file_name1 = $info["filename"];
+        $file_name = iconv('UTF-8','GB2312',$file_name1);
+//        $file_dir = ROOT_PATH.$info["filepath"].DS.$file_name1.".".$info["fileext"];
+        $file_dir = "..".DS.$info["filepath"].DS.$file_name1.".".$info["fileext"];
+        $file_lj1 = str_replace("\\","/",$file_dir);
+        $file_lj=iconv('UTF-8','GB2312',$file_lj1); //必须转化成中文
+        if(!file_exists($file_lj)){
+            echo "<script>alert('文件不存在！')</script>";
+            echo "<script>window.close();</script>";
+            exit;
+        }else{
+            //打开文件
+            $file1 = fopen($file_lj, "r");
+            //输入文件标签
+            header("Content-type: application/octet-stream");
+            header("Accept-Ranges: bytes");
+            header("Accept-Length: ".filesize($file_lj));
+            header("Content-Disposition: attachment; filename=".$file_name.".".$info["fileext"]);
+            echo fread($file1, (filesize($file_lj)==0)?1:filesize($file_lj));
+            fclose($file1);
+            echo "<script>alert('下载成功！')</script>";
+            exit;
+        }
+    }
+
+
+    /******************************************************************************************************************/
 }

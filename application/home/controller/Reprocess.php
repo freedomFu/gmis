@@ -54,10 +54,11 @@ class Reprocess extends Base
         $page=input('page');
         $limit=input('limit');
         $list = $pro->showProcess($id,$xq,$page,$limit);
+        $prc = new Prochart();
         for($i=0;$i<count($list);$i++){
             $list[$i]['kid']=$i+1;
+            $list[$i]['isUpload'] = $prc->isUpload("stuid",$list[$i]["sid"],1);
         }
-
         $count = $pro->getProcessCount($id,$xq);
         if($count){
             echo echoJson(0,"获取成功",$count,$list);

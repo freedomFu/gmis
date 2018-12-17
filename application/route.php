@@ -21,6 +21,10 @@ Route::rule('myset','home/Index/showSet');
 Route::rule('logout','home/User/logout');
 Route::rule('login','home/Login/index');
 Route::rule('index','home/Index/index');
+Route::rule('downre','home/stuselect/downopreport');
+Route::rule('downpa','home/stuselect/downmypaper');
+Route::rule('downco','home/stuselect/downmycode');
+Route::rule('downas','home/teapply/downAssign');
 return [
     //别名配置,别名只能是映射到控制器且访问时必须加上请求的方法
     '__alias__'   => [

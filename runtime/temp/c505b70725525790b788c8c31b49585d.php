@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\wamp64\www\gmis\public/../application/home\view\Prochart\index.html";i:1544861369;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\wamp64\www\gmis\public/../application/home\view\Prochart\index.html";i:1545017842;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -130,6 +130,11 @@
                         <p class="pchartp"><span class="pcharttitle">中期时间：</span> <span class="pchartcon"><?php echo $userinfo['middletime']; ?></span> </p>
                         <p class="pchartp"><span class="pcharttitle">答辩时间：</span> <span class="pchartcon"><?php echo $userinfo['replytime']; ?></span> </p>
                         <p class="pchartp"><span class="pcharttitle">答辩地点：</span> <span class="pchartcon"><?php echo $userinfo['replyplace']; ?></span> </p>
+                        <?php if(\think\Request::instance()->session('auth') == 1): ?>
+                        <p class="pchartp"><span class="pcharttitle">开题报告：</span> <span class="pchartcon"><?php echo $userinfo['openreport']; ?></span> </p>
+                        <p class="pchartp"><span class="pcharttitle">毕设论文：</span> <span class="pchartcon"><?php echo $userinfo['paper']; ?></span> </p>
+                        <p class="pchartp"><span class="pcharttitle">毕设材料：</span> <span class="pchartcon"><?php echo $userinfo['code']; ?></span> </p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

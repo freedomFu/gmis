@@ -172,18 +172,44 @@ class Prochart extends Model
             ->join($join)
             ->where($where)
             ->find();
-        $list["auth"] = "学生";
+        $liststu = Db::name("student")
+            ->where("id",$stuid)
+            ->find();
 
-        $rearr = [
-            "id"            =>  $list["id"],
-            "idcard"        =>  $list["stuidcard"],
-            "name"          =>  $list["stuname"],
-            "auth"          =>  "学生",
-            "starttime"     =>  $list["starttimer"],
-            "middletime"    =>  $list["middletimer"],
-            "replytime"     =>  $list["replytimer"],
-            "replyplace"    =>  $list["replyplace"],
-        ];
+        if($list){
+            $name = "stuid";
+            $or = $this->isUpload($name,$stuid,2);
+            $paper = $this->isUpload($name,$stuid,3);
+            $code = $this->isUpload($name,$stuid,4);
+            $rearr = [
+                "id"            =>  $list["id"],
+                "idcard"        =>  $list["stuidcard"],
+                "name"          =>  $list["stuname"],
+                "auth"          =>  "学生",
+                "starttime"     =>  $list["starttimer"],
+                "middletime"    =>  $list["middletimer"],
+                "replytime"     =>  $list["replytimer"],
+                "replyplace"    =>  $list["replyplace"],
+                "openreport"    =>  $or,
+                "paper"         =>  $paper,
+                "code"          =>  $code
+
+            ];
+        }else{
+            $rearr = [
+                "id"            =>  $liststu["id"],
+                "idcard"        =>  $liststu["stuidcard"],
+                "name"          =>  $liststu["stuname"],
+                "auth"          =>  "学生",
+                "starttime"     =>  "未选择",
+                "middletime"    =>  "未选择",
+                "replytime"     =>  "未选择",
+                "replyplace"    =>  "未选择",
+                "openreport"    =>  "未选择",
+                "paper"         =>  "未选择",
+                "code"          =>  "未选择"
+            ];
+        }
 
         return $rearr;
     }
@@ -212,9 +238,32 @@ class Prochart extends Model
             "middletime"    =>  $list["middletimer"],
             "replytime"     =>  $list["replytimer"],
             "replyplace"    =>  $list["replyplace"],
+            "openreport"    =>  "",
+            "paper"         =>  "",
+            "code"          =>  ""
         ];
 
         return $rearr;
+    }
+
+    public function isUpload($name,$id,$type){
+        $where1[$name]=$id;
+        $where1["belongsenior"]=getSenior();
+        $where1["status"]="正常";
+        $processid = Db::name("process")
+            ->where($where1)
+            ->value("id");
+        $where2["processid"]=$processid;
+        $where2["type"]=$type;
+        $where2["belongsenior"]=getSenior();
+        $res = Db::name("upfile")
+            ->where($where2)
+            ->find();
+        if($res){
+            return "已提交";
+        }else{
+            return "未提交";
+        }
     }
 
 

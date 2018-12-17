@@ -31,7 +31,7 @@ class Info extends Model
 
     public function getTeaInfo($teaid){
         $where['id'] = $teaid;
-        $field = "teaduty,teahonor,teaphone,starttimer,middletimer,replytimer,replyplace";
+        $field = "id,teaduty,teahonor,teaphone,starttimer,middletimer,replytimer,replyplace";
         $table = "teacher";
         $list = Db::name($table)
             ->field($field)

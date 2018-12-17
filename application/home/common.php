@@ -64,8 +64,8 @@ function getSenior(){
  * @DateTime:    2018/11/22 14:42
  * @Description: 返回json数据
  */
-function falsePro($errno, $errmsg,$data=null,$count=null,$left=null){
-    $json = ['errno'=>$errno,'errmsg'=>$errmsg,'data'=>$data,'count'=>$count,'left'=>$left];
+function falsePro($errno, $errmsg,$data=null,$count=null,$left=null,$ext=null){
+    $json = ['errno'=>$errno,'errmsg'=>$errmsg,'data'=>$data,'count'=>$count,'left'=>$left,'ext'=>$ext];
     echo json_encode($json,JSON_UNESCAPED_UNICODE);
 }
 
@@ -74,8 +74,8 @@ function falsePro($errno, $errmsg,$data=null,$count=null,$left=null){
  * @DateTime:    2018/11/28 15:49
  * @Author:      fyd
  */
-function echoJson($code=0,$errmsg="",$count=0,$data=null,$total=0,$left=0){
-    $res = json(['code'=>$code,'count'=>$count,'errmsg'=>$errmsg,'data'=>$data,'total'=>$total,'left'=>$left])->getcontent();
+function echoJson($code=0,$errmsg="",$count=0,$data=null,$total=0,$left=0,$ext=0){
+    $res = json(['code'=>$code,'count'=>$count,'errmsg'=>$errmsg,'data'=>$data,'total'=>$total,'left'=>$left,'ext'=>$ext])->getcontent();
     return $res;
 }
 
@@ -94,4 +94,15 @@ function getNeedBetween($str, $s1, $s2){
     }
     $kw=substr($kw,($st+1),($ed-$st-1));
     return $kw;
+}
+
+/**
+ * @Description: 获取后缀名
+ * @DateTime:    2018/12/16 19:41
+ * @Author:      fyd
+ */
+function getExt($filename){
+    $arr = pathinfo($filename);
+    $ext = $arr["extension"];
+    return $ext;
 }

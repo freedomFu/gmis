@@ -13,7 +13,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     table: 'tapply',
                 }
             });
-
             var table = $("#table");
             //,formatter:Table.api.formatter.toggle
             // 初始化表格
@@ -26,8 +25,45 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {checkbox: true},
                         {field: 'id', title: __('Id'),operate:false},
                         {field: 'title', title: __('Title')},
-                        {field: 'nature', title: __('Nature')},
-                        {field: 'source', title: __('Source')},
+                        {field: 'nature', title: __('Nature'), formatter:function(value){
+                                switch (value){
+                                    case "1":
+                                        return "A：工程设计、产品开发";
+                                        break;
+                                    case "2":
+                                        return "B：工程技术研究";
+                                        break;
+                                    case "3":
+                                        return "C：软件开发设计";
+                                        break;
+                                    case "4":
+                                        return "D：理论性研究、调查报告、案例分析";
+                                        break;
+                                    case "5":
+                                        return "E：其它";
+                                        break;
+                                    default:
+                                        return "未知";
+                                }
+                            }},
+                        {field: 'source', title: __('Source'), formatter:function(value){
+                                switch (value){
+                                    case "1":
+                                        return "A：自然科学基金与省、部、市级以上科研课题";
+                                        break;
+                                    case "2":
+                                        return "B：企、事业单位委托课题";
+                                        break;
+                                    case "3":
+                                        return "C：校级基金课题";
+                                        break;
+                                    case "4":
+                                        return "D：自拟课题";
+                                        break;
+                                    default:
+                                        return "未知";
+                                }
+                            }},
                         {field: 'isnew', title: __('Isnew'),formatter:function(value){
                                 if(value == 1){
                                     return '是';

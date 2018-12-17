@@ -1,10 +1,12 @@
-layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
+layui.use(['element', 'table', 'layer', 'jquery','form','upload'], function () {
     var element = layui.element,
         form = layui.form,
         layer = layui.layer,
         table = layui.table,
         $ = layui.$,
-        layer_change;
+        upload = layui.upload,
+        layer_change,
+        layer_assign;
 
     table.render({
         elem: '#showStudent'
@@ -15,16 +17,16 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
         , cellMinWidth: 80
         , page: true //开启分页
         , cols: [[ //表头
-            { field: 'kid', title: 'ID', sort: true, fixed: 'left', width: 80}
-            , { field: 'title', title: '题目', width: 180}
-            , { field: 'stuidcard', title: '学号', width: 150}
-            , { field: 'stuname', title: '姓名', width: 100 }
+            { field: 'kid', title: 'ID', sort: true, fixed: 'left', width: 60}
+            , { field: 'title', title: '题目', width: 180, templet: '#titleTpl'}
+            , { field: 'stuidcard', title: '学号', width: 130}
+            , { field: 'stuname', title: '姓名', width: 75 }
             , { field: 'stuclass', title: '班级', width: 100,  }
             , { field: 'replytimer', title: '答辩时间', width: 104 }
             , { field: 'replyplace', title: '答辩地点', width: 100 }
             , { field: 'middlescore', title: '中期成绩', width: 100 }
             , { field: 'replyscore', title: '答辩成绩', width: 100 }
-            , { align: 'center', toolbar: '#operation-bar', fixed: 'right' , width: 115 }
+            , { align: 'center', toolbar: '#operation-bar', fixed: 'right' , width: 180 }
         ]]
     });
 
@@ -95,6 +97,48 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
                     ,"rscore": data['replyscore']
                 })
             });
+        }else if(obj.event === 'upfile'){ //上传任务书
+            layer.confirm('您可以反复提交，以最新的为准！请谨慎操作！', function(index) {
+                layui.layer.close(index);
+                var json = {}
+                json.id = data.id;
+                layer_assign = layer.open({
+                    type: 1,
+                    title: '上传任务书',
+                    area: ['240px', '150px'],
+                    content: $('#up_assign'),
+                });
+
+                //上传任务书，只允许word文档类型的
+                /************************************************************************/
+
+                upload.render({
+                    elem: '#upassign'
+                    , url: base_home + '/Teapply/upassign'
+                    , accept: 'file' //普通文件
+                    , size: 8000
+                    , exts: 'doc|docx|pdf' //只允许上传word和pdf
+                    , data: json
+                    , before: function (obj) { //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
+                        layer.load(); //上传loading
+                    }
+                    , done: function (res) {
+                        layer.closeAll('loading'); //关闭loading
+                        if (res.errno == 0) {
+                            layer.msg(res.errmsg, {icon: 1, time: 2000});
+                        } else {
+                            layer.msg(res.errmsg, {icon: 5, time: 2000});
+                        }
+                        layer.close(layer_assign);
+                        location.reload();
+                    }
+                    , error: function (index, upload) {
+                        layer.closeAll('loading'); //关闭loading
+                    }
+                });
+            });
+
+            /************************************************************************/
         }
     });
 

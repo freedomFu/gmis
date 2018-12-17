@@ -72,6 +72,11 @@
                         <p class="pchartp"><span class="pcharttitle">中期时间：</span> <span class="pchartcon">{$userinfo.middletime}</span> </p>
                         <p class="pchartp"><span class="pcharttitle">答辩时间：</span> <span class="pchartcon">{$userinfo.replytime}</span> </p>
                         <p class="pchartp"><span class="pcharttitle">答辩地点：</span> <span class="pchartcon">{$userinfo.replyplace}</span> </p>
+                        {if condition="$Request.session.auth eq 1"}
+                        <p class="pchartp"><span class="pcharttitle">开题报告：</span> <span class="pchartcon">{$userinfo.openreport}</span> </p>
+                        <p class="pchartp"><span class="pcharttitle">毕设论文：</span> <span class="pchartcon">{$userinfo.paper}</span> </p>
+                        <p class="pchartp"><span class="pcharttitle">毕设材料：</span> <span class="pchartcon">{$userinfo.code}</span> </p>
+                        {/if}
                     </div>
                 </div>
             </div>

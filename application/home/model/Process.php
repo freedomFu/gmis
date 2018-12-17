@@ -39,7 +39,7 @@ class Process extends Model
         $where['p.belongsenior'] = $xq;
         $maintable = 'process';
         $mt = 'p';
-        $field = 'p.id,gta.title,gs.stuidcard,gs.stuname,gs.stuclass,gt.starttimer,gt.middletimer,gt.replytimer,gt.replyplace,gt.note,p.middlescore,p.replyscore';
+        $field = 'p.id,gta.title,gs.id as sid,gs.stuidcard,gs.stuname,gs.stuclass,gt.starttimer,gt.middletimer,gt.replytimer,gt.replyplace,gt.note,p.middlescore,p.replyscore';
         $join = [
             ['gmis_student gs','gs.id=p.stuid'],
             ['gmis_teacher gt','gt.id=p.teaid'],
@@ -93,6 +93,66 @@ class Process extends Model
             return 1; //更新成功
         }else{
             return 0; //更新失败
+        }
+    }
+
+    /**
+     * @Description: 获取过程信息
+     * @DateTime:    2018/12/16 18:06
+     * @Author:      fyd
+     */
+    public function getProcessInfo($id){
+        $table = "process";
+        $alias = "gp";
+        $where["gp.status"] = "正常";
+        $where["gp.id"] = $id;
+        $field = "gp.id,gta.title,gs.stuidcard,gs.stuname";
+        $join = [
+            ["gmis_tapply gta", "gta.id=gp.titleid"],
+            ["gmis_student gs", "gs.id=gp.stuid"]
+        ];
+
+        $processInfo = Db::name($table)
+            ->alias($alias)
+            ->join($join)
+            ->field($field)
+            ->where($where)
+            ->find();
+        return $processInfo;
+    }
+
+    /**
+     * @Description: 获取processid
+     * @DateTime:    2018/12/17 14:19
+     * @Author:      fyd
+     */
+    public function getProcessId($stuid, $xq){
+        $where["stuid"] = $stuid;
+        $where["belongsenior"] = $xq;
+        $processid = Process::where($where)
+            ->value("id");
+        if($processid){
+            return $processid;
+        }else{
+            return -1;
+        }
+    }
+
+    /**
+     * @Description: 是否可以上传
+     * @DateTime:    2018/12/17 14:13
+     * @Author:      fyd
+     */
+    public function checkUp($stuid, $xq){
+        $where["stuid"] = $stuid;
+        $where["belongsenior"] = $xq;
+        $where["status"] = "正常";
+        $res = Process::where($where)
+            ->find();
+        if($res){
+            return 1;
+        }else{
+            return 0;
         }
     }
 

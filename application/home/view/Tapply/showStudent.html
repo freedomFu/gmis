@@ -8,6 +8,11 @@
         <script type="text/html" id="operation-bar">
             <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
             <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit">修改</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="upfile"><i class="layui-icon"></i>任务书</a>
+        </script>
+
+        <script type="text/html" id="titleTpl">
+            <a href="{:url('../downas')}?id={{ d.id }}" class="layui-table-link" target="_blank">{{ d.title }}<span style="font-size: 0.6em;color: red;">({{ d.isUpload }})</span></a>
         </script>
     </div>
 </div>
@@ -50,4 +55,9 @@
             </div>
         </div>
     </form>
+</div>
+
+<div id="up_assign" style="display: none">
+    <!--上右下左-->
+    <button type="button" class="layui-btn" id="upassign" style="margin: 30px 50px;"><i class="layui-icon"></i>上传文件</button>
 </div>

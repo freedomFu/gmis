@@ -1,0 +1,52 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Filename')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-filename" data-rule="required" class="form-control" name="row[filename]" type="text" value="{$row.filename}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Filepath')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-filepath" data-rule="required" class="form-control" name="row[filepath]" type="text" value="{$row.filepath}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Fileext')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-fileext" data-rule="required" class="form-control" name="row[fileext]" type="text" value="{$row.fileext}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Belongsenior')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-belongsenior" data-rule="required" class="form-control" name="row[belongsenior]" type="text" value="{$row.belongsenior}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Processid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-processid" data-rule="required" class="form-control" name="row[processid]" type="number" value="{$row.processid}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-type" data-rule="required" class="form-control selectpicker" name="row[type]">
+                {foreach name="typeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

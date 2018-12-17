@@ -5,26 +5,24 @@ namespace app\admin\controller;
 use app\common\controller\Backend;
 
 /**
- * 普通教师
+ * 上传文件管理
  *
  * @icon fa fa-circle-o
  */
-class Teacher extends Backend
+class Upfile extends Backend
 {
     
     /**
-     * Teacher模型对象
-     * @var \app\admin\model\Teacher
+     * Upfile模型对象
+     * @var \app\admin\model\Upfile
      */
     protected $model = null;
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\Teacher;
-        $this->view->assign("teadutyList", $this->model->getTeadutyList());
-        $this->view->assign("teahonorList", $this->model->getTeahonorList());
-        $this->view->assign("statusList", $this->model->getStatusList());
+        $this->model = new \app\admin\model\Upfile;
+        $this->view->assign("typeList", $this->model->getTypeList());
     }
     
     /**
@@ -32,42 +30,48 @@ class Teacher extends Backend
      * 因此在当前控制器中可不用编写增删改查的代码,除非需要自己控制这部分逻辑
      * 需要将application/admin/library/traits/Backend.php中对应的方法复制到当前控制器,然后进行修改
      */
+    
 
     /**
      * 查看
      */
     public function index()
     {
+        //当前是否为关联查询
+        $this->relationSearch = true;
         //设置过滤方法
         $this->request->filter(['strip_tags']);
-        if ($this->request->isAjax()) {
+        if ($this->request->isAjax())
+        {
             //如果发送的来源是Selectpage，则转发到Selectpage
-            if ($this->request->request('keyField')) {
+            if ($this->request->request('keyField'))
+            {
                 return $this->selectpage();
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
             $total = $this->model
-                ->where($where)
-                ->order($sort, $order)
-                ->count();
+                    ->with(['process'])
+                    ->where($where)
+                    ->order($sort, $order)
+                    ->count();
 
             $list = $this->model
-                ->where($where)
-                ->order($sort, $order)
-                ->limit($offset, $limit)
-                ->select();
+                    ->with(['process'])
+                    ->where($where)
+                    ->order($sort, $order)
+                    ->limit($offset, $limit)
+                    ->select();
 
-            $totalnum = $this->model
-                ->where($where)
-                ->sum("teatitlenum");
-
+            foreach ($list as $row) {
+                $row->visible(['id','filename','filepath','fileext','belongsenior','type','updatetime']);
+                $row->visible(['process']);
+				$row->getRelation('process')->visible(['stuid','teaid']);
+            }
             $list = collection($list)->toArray();
-            $result = array("total" => $total, "rows" => $list,"extend"=>['totalnum'=>$totalnum]);
+            $result = array("total" => $total, "rows" => $list);
 
             return json($result);
         }
         return $this->view->fetch();
     }
-    
-
 }

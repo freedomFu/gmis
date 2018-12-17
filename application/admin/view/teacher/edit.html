@@ -21,7 +21,13 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Teaduty')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-teaduty" data-rule="required" class="form-control" name="row[teaduty]" type="text" value="{$row.teaduty}">
+                        
+            <select  id="c-teaduty" data-rule="required" class="form-control selectpicker" name="row[teaduty]">
+                {foreach name="teadutyList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.teaduty"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
         </div>
     </div>
     <div class="form-group">
@@ -46,6 +52,12 @@
         <label class="control-label col-xs-12 col-sm-2">{:__('Teaphone')}:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-teaphone" data-rule="required" class="form-control" name="row[teaphone]" type="text" value="{$row.teaphone}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Teabelongid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-teabelongid" data-rule="required" class="form-control" name="row[teabelongid]" type="number" value="{$row.teabelongid}">
         </div>
     </div>
     <div class="form-group">
