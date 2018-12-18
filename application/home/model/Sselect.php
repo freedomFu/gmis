@@ -165,6 +165,11 @@ class Sselect extends Model
         $whereAll['belongSenior']=$xq;
         $whereAll['isallow']=0;
 
+        $titlenum = $this->getCount($titleid);
+        if($titlenum>9){
+            return 5;
+        }
+
         $isAllowed = Sselect::where($whereAll)
             ->find();
         if($isAllowed){
@@ -240,11 +245,7 @@ class Sselect extends Model
             ->find();
 
         if($stuselect){
-            $titleid = $stuselect['stuid'];
-            $titlenum = $this->getCount($titleid);
-            if($titlenum>9){
-                return 3;
-            }
+            $titleid = $stuselect['titleid'];
             $updatedata = [
                 'issubmit'  =>  1
             ];

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\index\index.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\header.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\menu.html";i:1540985180;s:61:"C:\wamp64\www\gmis\application\admin\view\common\control.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\index\index.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\header.html";i:1545140568;s:58:"C:\wamp64\www\gmis\application\admin\view\common\menu.html";i:1540985180;s:61:"C:\wamp64\www\gmis\application\admin\view\common\control.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -160,9 +160,9 @@
                     </ul>
                 </li>
                 <!-- 控制栏切换按钮 -->
-                <li class="hidden-xs">
+                <!--<li class="hidden-xs">
                     <a href="javascript:;" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li>
+                </li>-->
             </ul>
         </div>
     </div>

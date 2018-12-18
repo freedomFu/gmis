@@ -216,6 +216,9 @@ class Stuselect extends Base
             case 4:
                 falsePro(3,"数据重复");
                 break;
+            case 5:
+                falsePro(4,"申请数量过多");
+                break;
         }
     }
 
@@ -281,9 +284,6 @@ class Stuselect extends Base
         $xq = getSenior();
         $res = $sselect->submitData($stuid,$xq,$id);
         switch ($res){
-            case 3:
-                falsePro(2,"数量超出，不能申请");
-                break;
             case 1:
                 falsePro(0,"提交成功");
                 break;
@@ -292,6 +292,9 @@ class Stuselect extends Base
                 break;
             case 2:
                 falsePro(2,"未找到数据");
+                break;
+            case 3:
+                falsePro(2,"数量超出，不能申请");
                 break;
             default:
                 falsePro(3,"操作错误");
