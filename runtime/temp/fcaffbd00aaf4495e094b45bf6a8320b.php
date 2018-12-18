@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\index\index.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\header.html";i:1545140568;s:58:"C:\wamp64\www\gmis\application\admin\view\common\menu.html";i:1540985180;s:61:"C:\wamp64\www\gmis\application\admin\view\common\control.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\index\index.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\header.html";i:1545140568;s:58:"C:\wamp64\www\gmis\application\admin\view\common\menu.html";i:1545141472;s:61:"C:\wamp64\www\gmis\application\admin\view\common\control.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -220,12 +220,6 @@
 
         <!-- 菜单可以在 后台管理->权限管理->菜单规则 中进行增删改排序 -->
         <?php echo $menulist; ?>
-
-        <!--以下4行可以删除或改成自己的链接,但建议你在你的网站上添加一个FastAdmin的链接-->
-        <li class="header" data-rel="external"><?php echo __('Links'); ?></li>
-        <li data-rel="external"><a href="https://doc.fastadmin.net" target="_blank"><i class="fa fa-list text-red"></i> <span><?php echo __('Docs'); ?></span></a></li>
-        <li data-rel="external"><a href="https://forum.fastadmin.net" target="_blank"><i class="fa fa-comment text-yellow"></i> <span><?php echo __('Forum'); ?></span></a></li>
-        <li data-rel="external"><a href="https://jq.qq.com/?_wv=1027&k=487PNBb" target="_blank"><i class="fa fa-qq text-aqua"></i> <span><?php echo __('QQ qun'); ?></span></a></li>
     </ul>
 </section>
             </aside>

@@ -8,18 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="22bcd330-2bf3-4591-b345-000f3989cf2a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Upfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Upfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/view/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/common/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/view/upfile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/upfile/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Stuselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Stuselect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/model/Sselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/model/Sselect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/model/Tapply.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/model/Tapply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/view/Sselect/stuSelect.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/view/Sselect/stuSelect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/backend/upfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/backend/upfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/cache/cb/78ef4a9130f39208ff10858ddd8377.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/cache/cb/78ef4a9130f39208ff10858ddd8377.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/log/201812/17.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201812/17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/1a896d2ba179a058ac8d061c08d8f13a.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/1a896d2ba179a058ac8d061c08d8f13a.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/common/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/common/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201812/18.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201812/18.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/fcaffbd00aaf4495e094b45bf6a8320b.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/fcaffbd00aaf4495e094b45bf6a8320b.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,20 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/view/addon/index.html">
+      <file leaf-file-name="menu.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/admin/view/common/menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="108" column="25" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/admin/view/common/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="134" column="24" lean-forward="true" selection-start-line="131" selection-start-column="16" selection-end-line="134" selection-end-column="24" />
+            <state relative-caret-position="180">
+              <caret line="9" column="69" lean-forward="true" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -98,7 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/assets/js/backend/userset.js" />
         <option value="$PROJECT_DIR$/application/home/controller/Base.php" />
         <option value="$PROJECT_DIR$/public/assets/js/backend/process.js" />
         <option value="$PROJECT_DIR$/public/assets/js/backend/sselect.js" />
@@ -149,6 +129,7 @@
         <option value="$PROJECT_DIR$/application/home/view/Sselect/stuSelect.html" />
         <option value="$PROJECT_DIR$/application/admin/view/addon/index.html" />
         <option value="$PROJECT_DIR$/application/admin/view/common/header.html" />
+        <option value="$PROJECT_DIR$/application/admin/view/common/menu.html" />
       </list>
     </option>
   </component>
@@ -208,7 +189,7 @@
       <path value="$PROJECT_DIR$/vendor/mtdowling/cron-expression" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -228,32 +209,6 @@
             <path>
               <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmis" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmis" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmis" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmis" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,16 +286,15 @@
       <workItem from="1545001061837" duration="23770000" />
       <workItem from="1545051482028" duration="156000" />
       <workItem from="1545052538090" duration="3736000" />
-      <workItem from="1545090865510" duration="22049000" />
+      <workItem from="1545090865510" duration="22946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="560596000" />
+    <option name="totallyTimeSpent" value="561493000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -348,7 +302,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22428884" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13166311" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
@@ -403,13 +357,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="47" column="71" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/library/traits/Backend.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -754,6 +701,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/common/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="141" column="24" lean-forward="true" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/addon/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2160">
@@ -761,10 +715,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/common/header.html">
+    <entry file="file://$PROJECT_DIR$/application/admin/view/common/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="134" column="24" lean-forward="true" selection-start-line="131" selection-start-column="16" selection-end-line="134" selection-end-column="24" />
+        <state relative-caret-position="180">
+          <caret line="9" column="69" lean-forward="true" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
         </state>
       </provider>
     </entry>
