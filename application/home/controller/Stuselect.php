@@ -294,7 +294,7 @@ class Stuselect extends Base
                 falsePro(2,"未找到数据");
                 break;
             case 3:
-                falsePro(2,"数量超出，不能申请");
+                falsePro(2,"权重不合法，请修改权重");
                 break;
             default:
                 falsePro(3,"操作错误");

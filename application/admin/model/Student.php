@@ -43,10 +43,6 @@ class Student extends Model
         $list = $this->getStatusList();
         return isset($list[$value]) ? $list[$value] : '';
     }
-
-
-
-
     public function profess()
     {
         return $this->belongsTo('Profess', 'stuproid', 'id', [], 'LEFT')->setEagerlyType(0);

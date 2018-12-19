@@ -245,7 +245,10 @@ class Sselect extends Model
             ->find();
 
         if($stuselect){
-            $titleid = $stuselect['titleid'];
+            $weigh = $stuselect['weigh'];
+            if($weigh==0 || ($weigh!=1 && $weigh!=2 && $weigh!=3)){
+                return 3; //权重为0不可以提交
+            }
             $updatedata = [
                 'issubmit'  =>  1
             ];

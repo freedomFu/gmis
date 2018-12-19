@@ -4,7 +4,6 @@ layui.use(['element', 'table', 'layer', 'jquery','form','layedit','laydate'], fu
         layer = layui.layer,
         table = layui.table,
         $ = layui.$,
-        layedit = layui.layedit,
         laydate = layui.laydate;
 
     // 获取当前学年      2018.9 - 2019.8 为 2019
@@ -41,6 +40,18 @@ layui.use(['element', 'table', 'layer', 'jquery','form','layedit','laydate'], fu
         }
     }
 
+    function checkRank(){
+        var stime = $("#starttimer").val();
+        var mtime = $("#middletimer").val();
+        var rtime = $("#replytimer").val();
+
+        if(stime>mtime || mtime>rtime || stime>rtime){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
     function changeColor(idname){
         var time = $(idname).val();
         if(!checkTime(time)){
@@ -52,6 +63,7 @@ layui.use(['element', 'table', 'layer', 'jquery','form','layedit','laydate'], fu
         }else{
             $(idname).css("color","black");
         }
+
     }
 
     /*********************************************************/
@@ -85,6 +97,11 @@ layui.use(['element', 'table', 'layer', 'jquery','form','layedit','laydate'], fu
             //判断月份
             if(!checkTime(value)){
                 return '请填写符合当前学年的时间！';
+            }
+        },
+        checkrank: function(value, item){
+            if(!checkRank()){
+                return '请填写符合顺序的时间！';
             }
         }
     });

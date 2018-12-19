@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:78:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMySelected.html";i:1544861487;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:78:"C:\wamp64\www\gmis\public/../application/home\view\sselect\showMySelected.html";i:1545227195;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,7 +78,7 @@
         </script>
         <script type="text/html" id="operation-bar">
             <?php if($isallsave == 0): ?>
-            {{# var ifdisabled1=(d.state!='未提交'?'layui-btn-disabled':'')}}
+            {{# var ifdisabled1=((d.state!='未提交' || d.weigh==0)?'layui-btn-disabled':'')}}
             {{# var ifdisabled2=(d.state=='已通过'?'layui-btn-disabled':'')}}
             <a class="layui-btn layui-btn-normal layui-btn-xs {{ifdisabled1}}" lay-event="{{ifdisabled1=='layui-btn-disabled'?'':'sure'}}">提交</a>
             <a class="layui-btn layui-btn-danger layui-btn-xs {{ifdisabled2}}" lay-event="{{ifdisabled2=='layui-btn-disabled'?'':'del'}}">删除</a>
