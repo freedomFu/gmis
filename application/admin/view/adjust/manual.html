@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="__ADJUST_LAYUI__/css/layui.css">
+<style type="text/css">
+    #adjust_panel{
+        height: 800px;
+        margin: 0 auto;
+    }
+
+    #box{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .box_title{
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+        letter-spacing: 10px;
+    }
+    table{
+        border-collapse:collapse;
+        text-align: center;
+
+    }
+    td,th{
+        border: 1px solid burlywood;
+    }
+</style>
+<div class="panel panel-default panel-intro" id="adjust_panel">
+    <div class="panel-body">
+        <div id="myTabContent" class="tab-content">
+            <div id="box">
+                <div class="box_title">
+                    <p>手动调剂</p>
+                    <hr style="width: 80%;margin: 15px auto;" />
+                </div>
+                <div class="tab">
+                    <table class="layui-hide" id="title" lay-filter="title"></table>
+                </div>
+                <script type="text/html" id="toolbarDemo">
+                    <div class="layui-btn-container">
+                        <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
+                    </div>
+                </script>
+                <div class="tab">
+                    <table class="layui-hide" id="stu" lay-filter="stu"></table>
+                </div>
+
+                <div class="box_title">
+                    <button class="layui-btn layui-btn-normal" id="manual_adjust">手动调剂</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__ADJUST_LAYUI__/layui.js"></script>
+<script src="__ADJUST_JS__/base/base.js"></script>
+<script src="__ADJUST_JS__/adjust.js"></script>

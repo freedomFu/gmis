@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\index\index.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\header.html";i:1545140568;s:58:"C:\wamp64\www\gmis\application\admin\view\common\menu.html";i:1545141472;s:61:"C:\wamp64\www\gmis\application\admin\view\common\control.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"C:\wamp64\www\gmis\public/../application/admin\view\index\index.html";i:1540985180;s:58:"C:\wamp64\www\gmis\application\admin\view\common\meta.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\header.html";i:1545140568;s:58:"C:\wamp64\www\gmis\application\admin\view\common\menu.html";i:1545293908;s:61:"C:\wamp64\www\gmis\application\admin\view\common\control.html";i:1540985180;s:60:"C:\wamp64\www\gmis\application\admin\view\common\script.html";i:1540985180;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -219,7 +219,10 @@
     <ul class="sidebar-menu <?php if($config['fastadmin']['multiplenav']): ?>show-submenu<?php endif; ?>">
 
         <!-- 菜单可以在 后台管理->权限管理->菜单规则 中进行增删改排序 -->
-        <?php echo $menulist; ?>
+        <?php echo $menulist; if($auth->id==1): ?>
+        <li class="header" data-rel="external">新增功能</li>
+        <li data-rel="external"><a href="http://127.0.0.1/gmis/public/admin/Adjust//index?ref=addtabs"><i class="fa fa-list text-red"></i> <span>调剂平台</span></a></li>
+        <?php endif; ?>
     </ul>
 </section>
             </aside>

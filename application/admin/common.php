@@ -180,4 +180,14 @@ if (!function_exists('build_heading')) {
         }
         return $senior;
     }
+
+    function falsePro($errno, $errmsg,$data=null,$count=null,$left=null,$ext=null){
+        $json = ['errno'=>$errno,'errmsg'=>$errmsg,'data'=>$data,'count'=>$count,'left'=>$left,'ext'=>$ext];
+        echo json_encode($json,JSON_UNESCAPED_UNICODE);
+    }
+
+    function echoJson($code=0,$errmsg="",$count=0,$data=null,$total=0,$left=0,$ext=0){
+        $res = json(['code'=>$code,'count'=>$count,'errmsg'=>$errmsg,'data'=>$data,'total'=>$total,'left'=>$left,'ext'=>$ext])->getcontent();
+        return $res;
+    }
 }

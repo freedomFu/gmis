@@ -370,6 +370,35 @@ class Tapply extends Model{
     }
 
     /**
+     * @Description: 删除其他学生的这个题目申请
+     * @DateTime:    2018/12/20 8:11
+     * @Author:      fyd
+     */
+    private function cutdownOtherApply($stuid){
+        $table = "sselect";
+        $field1 = "titleid";
+        $where1["stuid"] = $stuid;
+        $where1["belongsenior"] = getSenior();
+        $where1["issubmit"] = 1;
+        $where1["isallow"] = 1;
+        $titleid = Db::name($table)
+            ->field($field1)
+            ->where($where1)
+            ->value($field1);
+
+        $update = ["status"=>"隐藏"];
+        $where2["titleid"] = $titleid;
+        $where2["isallow"] = 0;
+        $where2["belongsenior"] = getSenior();
+        $where2["status"] = "正常";
+        $where2["stuid"] = ["<>",$stuid];
+        Db::name($table)
+            ->where($where2)
+            ->update($update);
+
+    }
+
+    /**
      * @Description: 修改tapply表中的数据
      * @DateTime:    2018/11/27 10:55
      * @Author:      fyd
@@ -404,8 +433,16 @@ class Tapply extends Model{
             'teaid'         =>  $teaid,
             'belongsenior'  =>  getSenior()
         ];
+
         $pro = new Process();
-        $pro -> save($data);
+        $isExstu = $pro->where("stuid",$stuid)->find();
+        $isExtitle = $pro->where("titleid",$titleid)->find();
+        if(!($isExstu || $isExtitle)){
+            $pro -> save($data);
+        }else{
+            return "fail";
+        }
+
     }
 
     /**
@@ -430,19 +467,23 @@ class Tapply extends Model{
                 ->where($where)
                 ->update($updatedata);
             $this->cutdownStu($stuid,$id);
+            $this->cutdownOtherApply($stuid);
             $this->dbTaUpdate($id);
-            $this->dbProUpdate($id);
-            // 提交事务
-            Db::commit();
-        }catch(\think\Exception\DbException $e){
+            $res0 = $this->dbProUpdate($id);
+            if($res0 == "fail"){
+                return 4;
+            }
+            if($res){
+                // 提交事务
+                Db::commit();
+                return 1;
+            }else{
+                Db::rollback();
+                return 0;
+            }
+        }catch(\think\Exception\DbException $e) {
             Db::rollback();
             return 3;
-        }
-
-        if($res){
-            return 1;
-        }else{
-            return 0;
         }
     }
 

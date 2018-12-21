@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="__ADJUST_LAYUI__/css/layui.css">
+<style type="text/css">
+    #adjust_panel{
+        height: 800px;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #adjust_title{
+        font-size: 45px;
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .adjust_btn{
+        margin: 100px 0px;
+        text-align: center;
+    }
+
+    .adjust_btn button{
+        width: 160px;
+        height: 80px;
+        font-size: 22px;
+    }
+
+</style>
+<div class="panel panel-default panel-intro" id="adjust_panel">
+    <div class="panel-body">
+        <div id="myTabContent" class="tab-content">
+            <p id="adjust_title"><span>调剂平台</span></p>
+            <div class="adjust_btn">
+                <a href="__ADJUST_PUBLIC__/manual"><button class="layui-btn layui-btn-lg layui-btn-normal layui-btn-radius">手动调剂</button></a>
+            </div>
+
+            <div class="adjust_btn">
+                <a href="__ADJUST_PUBLIC__/auto"><button class="layui-btn layui-btn-lg layui-btn-danger layui-btn-radius">自动调剂</button></a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<script src="__ADJUST_JS__/base/base.js"></script>

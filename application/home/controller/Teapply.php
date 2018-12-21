@@ -244,7 +244,7 @@ class Teapply extends Base
         if($count){
             echo echoJson(0,"获取成功",$count,$list);
         }else{
-            echo echoJson(1,"获取失败",$count,$list);
+            echo echoJson(0,"获取失败",$count,$list);
         }
     }
 
@@ -270,6 +270,9 @@ class Teapply extends Base
                 break;
             case 0:
                 falsePro(1,"确认失败");
+                break;
+            case 4:
+                falsePro(2,"数据重复");
                 break;
             default:
                 falsePro(3,"未知错误");

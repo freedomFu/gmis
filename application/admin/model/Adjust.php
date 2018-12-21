@@ -65,7 +65,14 @@ class Adjust extends Model
         $res = Db::name($table)
             ->where($where)
             ->find();
-        if($res){
+
+        $where["status"] = "正常";
+        $where["titleid"] = $titleid;
+        $where["belongsenior"] = getSenior();
+        $notTe = Db::name("process")
+            ->where($where)
+            ->find();
+        if($res && (!$notTe)){
             return true;
         }else{
             return false;
@@ -81,7 +88,7 @@ class Adjust extends Model
         $isExist = Db::name("student")
             ->where("id",$stuid)
             ->find();
-        $where["stauts"] = "正常";
+        $where["status"] = "正常";
         $where["stuid"] = $stuid;
         $where["belongsenior"] = getSenior();
         $notSe = Db::name("process")
@@ -119,9 +126,22 @@ class Adjust extends Model
      * @DateTime:    2018/12/19 9:27
      * @Author:      fyd
      */
-    public function getStuList(){
+    public function getStuList($page,$limit){
         $table = "student";
-        $field = "id,stuname";
+        $field = "id,stuidcard,stuname,stuclass,stuphone";
+        $stuseid = $this->getStuSeId();
+        $where["id"] = ["NOT IN",$stuseid];
+        $stulist = Db::name($table)
+            ->field($field)
+            ->where($where)
+            ->limit(($page-1)*$limit,$limit)
+            ->select();
+        return $stulist;
+    }
+
+    public function getSList(){
+        $table = "student";
+        $field = "id,stuidcard,stuname,stuclass,stuphone";
         $stuseid = $this->getStuSeId();
         $where["id"] = ["NOT IN",$stuseid];
         $stulist = Db::name($table)
@@ -129,6 +149,18 @@ class Adjust extends Model
             ->where($where)
             ->select();
         return $stulist;
+    }
+
+    public function getStuCount(){
+        $table = "student";
+        $field = "id,stuidcard,stuname,stuclass,stuphone";
+        $stuseid = $this->getStuSeId();
+        $where["id"] = ["NOT IN",$stuseid];
+        $count = Db::name($table)
+            ->field($field)
+            ->where($where)
+            ->count();
+        return $count;
     }
 
     /**
@@ -152,26 +184,66 @@ class Adjust extends Model
         }
         return $stuseid;
     }
-
     /**
      * @Description: 获取未被选择的题目列表
      * @DateTime:    2018/12/19 9:28
      * @Author:      fyd
      */
-    public function getTitleList(){
+    public function getTitleList($page,$limit){
         $table = "tapply";
-        $field = "";
+        $alias = "gta";
+        $join = [
+            ["gmis_teacher gt", "gta.teaid = gt.id" , "INNER"]
+        ];
+        $field = "gta.id,title,teaid,gt.teaname,gt.teaphone";
         $where["belongsenior"] = getSenior();
         $where["stuid"] = null;
-        $where["status"] = "已通过";
+        $where["gta.status"] = "已通过";
         $titleList = Db::name($table)
+            ->alias($alias)
+            ->field($field)
+            ->join($join)
+            ->where($where)
+            ->limit(($page-1)*$limit,$limit)
+            ->select();
+        return $titleList;
+    }
+
+    public function getTList(){
+        $table = "tapply";
+        $alias = "gta";
+        $join = [
+            ["gmis_teacher gt", "gta.teaid = gt.id" , "INNER"]
+        ];
+        $field = "gta.id,title,teaid,gt.teaname,gt.teaphone";
+        $where["belongsenior"] = getSenior();
+        $where["stuid"] = null;
+        $where["gta.status"] = "已通过";
+        $titleList = Db::name($table)
+            ->alias($alias)
+            ->field($field)
+            ->join($join)
             ->where($where)
             ->select();
         return $titleList;
     }
 
+    public function getTitleCount(){
+        $table = "tapply";
+        $field = "id,title,teaid";
+        $where["belongsenior"] = getSenior();
+        $where["stuid"] = null;
+        $where["status"] = "已通过";
+        $count = Db::name($table)
+            ->field($field)
+            ->where($where)
+            ->count();
+        return $count;
+    }
+    /**************************************************************************/
+    //手动调剂
     /**
-     * @Description: 数据更新,自动调剂
+     * @Description: 数据更新,手动调剂，两边各选一个
      * @DateTime:    2018/12/19 10:59
      * @Author:      fyd
      */
@@ -180,137 +252,171 @@ class Adjust extends Model
         $checktea = $this->checkTeaId($teaid);
         $checkstu = $this->checkStuId($stuid);
         $checktitle = $this->checkTitleId($titleid);
-
-        if($checkstu && $checktea && $checktitle){
-
-        }else{
-            return 3; //数据审核失败
-        }
-
         $saveProData = [
             "titleid"       =>      $titleid,
             "stuid"         =>      $stuid,
             "teaid"         =>      $teaid,
             "belongsenior"  =>      getSenior(),
             "weigh"         =>      0,
-            "status"       =>      "正常"
+            "status"        =>      "正常",
+            "createtime"    =>      time(),
+            "updatetime"    =>      time()
         ];
+        if($checkstu && $checktea && $checktitle){
+            /**
+             * 存储到process中，存储到tapply，这个函数中对于sselect的数据无需处理
+             */
+            Db::startTrans();
+            try{
+                $res1 = Db::name("process")->insert($saveProData);//插入process数据
+                $where["status"] = "已通过";
+                $where["id"] = $titleid;
+                $where["stuid"] = null;
+                $update = ["stuid"=>$stuid];
+                $res2 = Db::name("tapply")
+                    ->where($where)
+                    ->update($update);
+                $res3 = $this->changeSselect($stuid,$titleid);
+                if($res1 && $res2 && $res3){
+                    // 提交事务
+                    Db::commit();
+                    return 1; //成功
+                }else{
+                    Db::rollback();
+                    return 2; //失败
+                }
+            }catch(\think\Exception\DbException $e){
+                Db::rollback();
+                return 4;
+            }
+        }else{
+            return 3; //数据审核失败
+        }
+    }
 
-        /**
-         * 存储到process中，存储到tapply，这个函数中对于sselect的数据无需处理
-         */
-        Db::startTrans();
-        try{
+    /**
+     * @Description: 隐藏对应学生和题目的其余数据
+     * @DateTime:    2018/12/20 8:30
+     * @Author:      fyd
+     */
+    private function changeSselect($stuid,$titleid){
+        $table = "sselect";
+        $where["issubmit"] = 1;
+        $where["isallow"] = 0;
+        $where["titleid"] = $titleid;
+        $where["stuid"] = $stuid;
+        $where["belongsenior"] = getSenior();
+        $where["status"] = "正常";
+        $update = ["status"=>"隐藏"];
+        $isExist = Db::name($table)
+            ->where($where)
+            ->find();
+        // 如果存在就进行隐藏操作，否则就不操作，直接返回true
+        if($isExist){
+            $commonwhere["isallow"] = 0;
+            $commonwhere["issubmit"] = 1;
+            $commonwhere["belongsenior"] = getSenior();
+            $commonwhere["status"] = "正常";
+            try{
+                //先把isallow置为1
+                $res1 = Db::name($table)
+                    ->where($where)
+                    ->update(["isallow"=>1]);
+                //把对应学生其余选择的内容置为隐藏
+                $where2["stuid"] = $stuid;
+                $where2["titleid"] = ["<>",$titleid];
+                $flag2 = Db::name($table)
+                    ->where($commonwhere)
+                    ->where($where2)
+                    ->find();
+                if($flag2){
+                    $res2 = Db::name($table)
+                        ->where($commonwhere)
+                        ->where($where2)
+                        ->update($update);
+                }else{
+                    return true;
+                }
 
-            // 提交事务
-            Db::commit();
-        }catch(\think\Exception\DbException $e){
-            Db::rollback();
+                //把对应题目的其余申请置为隐藏
+                $where3["stuid"] = ["<>",$stuid];
+                $where3["titleid"] = $titleid;
+                $flag3 = Db::name($table)
+                    ->where($commonwhere)
+                    ->where($where3)
+                    ->find();
+                if($flag3){
+                    $res3 = Db::name($table)
+                        ->where($commonwhere)
+                        ->where($where3)
+                        ->update($update);
+                }else{
+                    $res3 = true;
+                }
+
+                if($res1 && $res2 && $res3){
+                    return true;
+                }else{
+                    Db::rollback();
+                    return false;
+                }
+            }catch(\think\Exception\DbException $e){
+                Db::rollback();
+                return false;
+            }
+        }else{
+            return true;
         }
     }
     /**************************************************************************/
+    //自动调剂
     /**
-     * @Description: 把对应学生的其他选择隐藏
-     * @DateTime:    2018/11/27 10:54
+     * @Description: 优先调剂存在的
+     * @DateTime:    2018/12/20 9:48
      * @Author:      fyd
      */
-    private function cutdownStu($stuid, $id){
-        $table = 'sselect';
-        $field = 'id';
-        $where['status'] = '正常';
-        $where['stuid'] = $stuid;
-        $stuidArr = Db::name($table)
-            ->field($field)
+    public function priorAdjust($titleid){
+        $table = "sselect";
+        $where["titleid"] = $titleid;
+        $where["isallow"] = 0;
+        $where["issubmit"] = 1;
+        $where["status"] = "正常";
+        $where["belongsenior"] = getSenior();
+        $order = "createtime asc, updatetime asc, weigh desc";
+        $limit = 1;
+        $valname = "stuid";
+        $stuid = Db::name($table)
             ->where($where)
-            ->select();
-        $count = count($stuidArr);
-        for ($i=0;$i<$count;$i++){
-            $checkid = $stuidArr[$i]['id'];
-            if($checkid==$id){
-                continue;
-            }
-            $update = ['status'=>'隐藏'];
-            $wherecheck['id'] = $checkid;
-            Db::name($table)
-                ->where($wherecheck)
-                ->update($update);
+            ->order($order)
+            ->limit($limit)
+            ->value($valname);
+        $res = $this->upMyData($stuid,$titleid);
+        if($res==1){
+            return true;
+        }else{
+            return false;
         }
     }
 
     /**
-     * @Description: 修改tapply表中的数据
-     * @DateTime:    2018/11/27 10:55
+     * @Description: 是否存在于sselect中
+     * @DateTime:    2018/12/20 13:54
      * @Author:      fyd
      */
-    private function dbTaUpdate($id){
-        $stuid = $this->ccselect($id,'stuid');
-        $title = $this->ccselect($id,'titleid');
-        $table = 'tapply';
-        $where['id'] = $title;
-        $where['status'] = '已通过';
-        $where['stuid'] = null;
-        $update = ['stuid'=>$stuid];
+    public function isExTitle($titleid){
+        $table = "sselect";
+        $where["titleid"] = $titleid;
+        $where["isallow"] = 0;
+        $where["issubmit"] = 1;
+        $where["belongsenior"] = getSenior();
+        $where["status"] = "正常";
         $res = Db::name($table)
             ->where($where)
-            ->update($update);
-        return $res;
-    }
-
-    /**
-     * @Description: 添加到process表中
-     * @DateTime:    2018/11/27 10:55
-     * @Author:      fyd
-     */
-    private function dbProUpdate($id){
-        $titleid = $this->ccselect($id,'titleid');
-        $stuid = $this->ccselect($id,'stuid');
-        $teaid = $this->ccselect($id,'teaid');
-
-        $data = [
-            'titleid'       =>  $titleid,
-            'stuid'         =>  $stuid,
-            'teaid'         =>  $teaid,
-            'belongsenior'  =>  getSenior()
-        ];
-        $pro = new Process();
-        $pro -> save($data);
-    }
-
-    /**
-     * @Description: 确认选择这个学生
-     * @DateTime:    2018/11/27 10:55
-     * @Author:      fyd
-     */
-    public function chooseTitle($id){
-        $table = 'sselect';
-        $stuid = $this->ccselect($id,'stuid');
-        $isallow = $this->ccselect($id,'isallow');
-
-        if($isallow==1){
-            return 2; //这一项已经通过了申请，不能再更新
-        }
-        $where['id'] = $id;
-        $where['issubmit'] = 1;
-        $updatedata = ['isallow'=>1];
-        Db::startTrans();
-        try{
-            $res = Db::name($table)
-                ->where($where)
-                ->update($updatedata);
-            $this->cutdownStu($stuid,$id);
-            $this->dbTaUpdate($id);
-            $this->dbProUpdate($id);
-            // 提交事务
-            Db::commit();
-        }catch(\think\Exception\DbException $e){
-            Db::rollback();
-            return 3;
-        }
-
+            ->find();
         if($res){
-            return 1;
+            return true;
         }else{
-            return 0;
+            return false;
         }
     }
     /**************************************************************************/
