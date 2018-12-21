@@ -3,6 +3,7 @@
 namespace app\admin\controller;
 
 use app\common\controller\Backend;
+use think\Db;
 
 /**
  * 普通教师
@@ -45,20 +46,35 @@ class Teacher extends Backend
             if ($this->request->request('keyField')) {
                 return $this->selectpage();
             }
+
+            $mywhere = [];
+
+            $getAuthId = $this->getWhereGroupId();
+            if($getAuthId==1){
+                $mywhere = [];
+            }elseif($getAuthId==-1){
+                $mywhere["id"] = -1;
+            }else{
+                $mywhere["teabelongid"] = $getAuthId;
+            }
+
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
             $total = $this->model
                 ->where($where)
+                ->where($mywhere)
                 ->order($sort, $order)
                 ->count();
 
             $list = $this->model
                 ->where($where)
+                ->where($mywhere)
                 ->order($sort, $order)
                 ->limit($offset, $limit)
                 ->select();
 
             $totalnum = $this->model
                 ->where($where)
+                ->where($mywhere)
                 ->sum("teatitlenum");
 
             $list = collection($list)->toArray();
@@ -68,6 +84,23 @@ class Teacher extends Backend
         }
         return $this->view->fetch();
     }
-    
+
+    /**
+     * @Description: 获取当前groupid
+     * @DateTime:    2018/12/15 20:33
+     * @Author:      fyd
+     */
+    private function getWhereGroupId(){
+        $id = $this->auth->id;
+        $authid = Db::name("auth_group_access")
+            ->where("uid",$id)
+            ->value("group_id");
+
+        if($authid){
+            return $authid;
+        }else{
+            return -1;
+        }
+    }
 
 }
