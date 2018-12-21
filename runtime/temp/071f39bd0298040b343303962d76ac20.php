@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\wamp64\www\gmis\public/../application/home\view\Login\index.html";i:1545397339;}*/ ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -5,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登录</title>
-    <link rel="stylesheet" type="text/css" href="__FHOME_LAYUI__/css/layui.css" />
-    <link rel="stylesheet" type="text/css" href="__FHOME_CSS__/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="__FHOME_CSS__/demo.css" />
-    <link rel="stylesheet" type="text/css" href="__FHOME_CSS__/component.css" />
-    <script src="__FHOME_LAYUI__/layui.js"></script>
-    <script src="__FHOME_JS__/login.js"></script>
-    <script src="__FHOME_JS__/html5.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/gmis/public/fhome/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/gmis/public/fhome/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/gmis/public/fhome/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/gmis/public/fhome/css/component.css" />
+    <script src="http://127.0.0.1/gmis/public/fhome/layui/layui.js"></script>
+    <script src="http://127.0.0.1/gmis/public/fhome/js/login.js"></script>
+    <script src="http://127.0.0.1/gmis/public/fhome/js/html5.js"></script>
 
 </head>
 <body>
@@ -51,10 +52,10 @@
     </div>
 </div><!-- /container -->
 
-<script src="__FHOME_JS__/TweenLite.min.js"></script>
-<script src="__FHOME_JS__/EasePack.min.js"></script>
-<script src="__FHOME_JS__/rAF.js"></script>
-<script src="__FHOME_JS__/demo-1.js"></script>
-<script src="__FHOME_JS__/base/base.js"></script>
+<script src="http://127.0.0.1/gmis/public/fhome/js/TweenLite.min.js"></script>
+<script src="http://127.0.0.1/gmis/public/fhome/js/EasePack.min.js"></script>
+<script src="http://127.0.0.1/gmis/public/fhome/js/rAF.js"></script>
+<script src="http://127.0.0.1/gmis/public/fhome/js/demo-1.js"></script>
+<script src="http://127.0.0.1/gmis/public/fhome/js/base/base.js"></script>
 </body>
 </html>

@@ -129,7 +129,7 @@ class Adjust extends Backend
     public function pa(){
         $titleList = $this->model->getTList();
         $stulist = $this->model->getSList();
-        if(count($titleList) != count($stulist)){
+        if(count($titleList) != count($stulist) || count($titleList)==0){
             falsePro(1,"数目不符合调剂条件");
             exit;
         }
@@ -153,7 +153,7 @@ class Adjust extends Backend
 
         $newTitle = $this->model->getTList();
         $newStu = $this->model->getSList();
-        if(count($newTitle) == count($newStu)){ //数目相同
+        if(count($newTitle) == count($newStu) && count($newTitle)!=0){ //数目相同
             $total = count($newTitle);
             for($j=0;$j<$total;$j++){
                 $titleid = $newTitle[$j]["id"];
@@ -183,7 +183,7 @@ class Adjust extends Backend
     public function da(){
         $titleList = $this->model->getTList();
         $stuList = $this->model->getSList();
-        if(count($titleList) == count($stuList)){ //数目相同
+        if(count($titleList) == count($stuList) && count($stuList)!=0){ //数目相同
             $total = count($titleList);
             for($j=0;$j<$total;$j++){
                 $titleid = $titleList[$j]["id"];

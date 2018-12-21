@@ -424,6 +424,14 @@ class Sselect extends Model
      * @Author:      fyd
      */
     public function changeWeigh($id,$weigh){
+        if($weigh!=1 && $weigh!=2 && $weigh!=3){
+            return 4; //必须为123
+        }
+
+        if($this->isUniWeigh($id,$weigh)){
+            return 2; //权重重复
+        }
+
         $where['id'] = $id;
         $where['isallow'] = 0;
         $where['status'] = "正常";
@@ -440,6 +448,34 @@ class Sselect extends Model
             }
         }else{
             return 3;
+        }
+    }
+
+    /**
+     * @Description: 判断是不是重复的weigh
+     * @DateTime:    2018/12/21 21:51
+     * @Author:      fyd
+     */
+    private function isUniWeigh($id, $weigh){
+        $where["id"] = $id;
+        $cwhere['isallow'] = 0;
+        $cwhere['status'] = "正常";
+        $stuid = Sselect::where($where)
+            ->where($cwhere)
+            ->value("stuid");
+        $nwhere["stuid"] = $stuid;
+        $nwhere["status"] = "正常";
+        $nwhere["id"] = ["<>",$id];
+        $weighL = Sselect::where($nwhere)
+            ->select();
+        $wlist = [];
+        for($i=0;$i<count($weighL);$i++){
+            $wlist[$i] = $weighL[$i]["weigh"];
+        }
+        if(in_array($weigh,$wlist)){
+            return true;
+        }else{
+            return false;
         }
     }
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"C:\wamp64\www\gmis\public/../application/home\view\Tapply\showApply.html";i:1544864564;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1543467483;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"C:\wamp64\www\gmis\public/../application/home\view\Tapply\showApply.html";i:1544864564;s:59:"C:\wamp64\www\gmis\application\home\view\Public\header.html";i:1544787648;s:59:"C:\wamp64\www\gmis\application\home\view\Public\footer.html";i:1545397361;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -125,19 +125,19 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">旧密码</label>
                 <div class="layui-input-block">
-                    <input type="password" name="old_pass" placeholder="请输入旧密码" autocomplete="off" class="layui-input">
+                    <input type="password" lay-verify="required" required name="old_pass" placeholder="请输入旧密码" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">新密码</label>
                 <div class="layui-input-block">
-                    <input type="password" name="new_pass" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+                    <input type="password" lay-verify="required" required name="new_pass" placeholder="请输入新密码" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">确认密码</label>
                 <div class="layui-input-block">
-                    <input type="password" name="confirm_pass" placeholder="请确认新密码" autocomplete="off" class="layui-input">
+                    <input type="password" lay-verify="required" required name="confirm_pass" placeholder="请确认新密码" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item" style="margin-top: 15px;">

@@ -146,10 +146,10 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
             str += '<div class="detailStr"><span class="detailStrSpan1">专业</span><span class="detailStrSpan2">'+data.proname+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">备注</span><span class="detailStrSpan2">'+data.note+'</span></div>';
             str += '<div class="detailStr"><span class="detailStrSpan1">状态</span><span class="detailStrSpan2">'+data.status+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">学生号</span><span class="detailStrSpan2">'+data.stuidcard+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">学生名</span><span class="detailStrSpan2">'+data.stuname+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">班级</span><span class="detailStrSpan2">'+data.stuclass+'</span></div>';
-            str += '<div class="detailStr"><span class="detailStrSpan1">电话</span><span class="detailStrSpan2">'+data.stuphone+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">学生号</span><span class="detailStrSpan2">'+(data.stuidcard==null?"-":data.stuidcard)+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">学生名</span><span class="detailStrSpan2">'+(data.stuname==null?"-":data.stuname)+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">班级</span><span class="detailStrSpan2">'+(data.stuclass==null?"-":data.stuclass)+'</span></div>';
+            str += '<div class="detailStr"><span class="detailStrSpan1">电话</span><span class="detailStrSpan2">'+(data.stuphone==null?"-":data.stuphone)+'</span></div>';
             layer.open({
                 type: 1,
                 area: ['500px', '600px'],

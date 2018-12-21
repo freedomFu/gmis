@@ -260,14 +260,29 @@ class Stuselect extends Base
         $ss = new Sselect();
         $res = $ss->changeWeigh($id,$weigh);
 
-        if($res==1){
-            falsePro(0,"修改成功");
-        }elseif($res==2){
-            falsePro(2,"未知错误");
-        }elseif($res==0){
-            falsePro(1,"修改失败");
+        switch ($res){
+            case 1:
+                falsePro(0,"修改成功");
+                break;
+            case 2:
+                falsePro(2,"权重不能重复");
+                break;
+            case 0:
+                falsePro(2,"修改失败");
+                break;
+            case 3:
+                falsePro(2,"数据不存在");
+                break;
+            case 4:
+                falsePro(2,"您只能填写1、2、3！");
+                break;
+            default:
+                falsePro(1,"未知错误");
+                break;
         }
     }
+
+
 
     /******************************************************************************************************************/
 
