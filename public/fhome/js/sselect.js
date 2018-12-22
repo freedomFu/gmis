@@ -72,7 +72,13 @@ layui.use(['element', 'table', 'layer', 'jquery','form'], function () {
             table.reload('mySelected', {
                 url: base_home + "/Stuselect/mySelectedJson"
             });
-            // location.reload();
+            /*setInterval(function(){
+                location.reload();
+            },1000);*/
+        },function () {
+            table.reload('mySelected', {
+                url: base_home + "/Stuselect/mySelectedJson"
+            });
         });
     });
 

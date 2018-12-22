@@ -1,7 +1,9 @@
 <div class="panel panel-default panel-intro">
-    
     <div class="panel-heading">
         {:build_heading(null,FALSE)}
+        <div style="border-top: 1px dotted #7E96B3;border-bottom: 1px dotted #7E96B3;">
+            {$note}
+        </div>
         <ul class="nav nav-tabs" data-field="status">
             <li class="active"><a href="#t-all" data-value="" data-toggle="tab">{:__('All')}</a></li>
             {foreach name="statusList" item="vo"}

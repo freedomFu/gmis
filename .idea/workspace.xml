@@ -8,14 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="22bcd330-2bf3-4591-b345-000f3989cf2a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Adjust.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Adjust.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Stuselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Stuselect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/model/Sselect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/model/Sselect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/view/Login/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/view/Login/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/view/Public/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/view/Public/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fhome/js/tapply.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/fhome/js/tapply.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Teacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Teacher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/teacher/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/teacher/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/backend/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/backend/teacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fhome/js/base/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/fhome/js/base/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fhome/js/sselect.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/fhome/js/sselect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/cache/cb/78ef4a9130f39208ff10858ddd8377.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/cache/cb/78ef4a9130f39208ff10858ddd8377.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/log/201812/21.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201812/21.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/da5c8e5fb5508eff382887e3e7985a89.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/da5c8e5fb5508eff382887e3e7985a89.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/0c56f4af0d56a10d7f9d8fe98bd226e7.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/0c56f4af0d56a10d7f9d8fe98bd226e7.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,26 +32,8 @@
       <file leaf-file-name="Adjust.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Adjust.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
+            <state relative-caret-position="2960">
               <caret line="148" column="18" selection-start-line="148" selection-start-column="18" selection-end-line="148" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tapply.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/fhome/js/tapply.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="147" column="41" selection-start-line="147" selection-start-column="41" selection-end-line="147" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/fhome/js/base/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -59,7 +41,7 @@
       <file leaf-file-name="Teapply.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Teapply.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
+            <state relative-caret-position="5840">
               <caret line="296" column="28" selection-start-line="296" selection-start-column="28" selection-end-line="296" selection-end-column="28" />
             </state>
           </provider>
@@ -77,29 +59,38 @@
       <file leaf-file-name="sselect.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/fhome/js/sselect.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+            <state relative-caret-position="580">
+              <caret line="108" column="18" lean-forward="true" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stuselect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/home/controller/Stuselect.php">
+      <file leaf-file-name="teacher.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/backend/teacher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="281" column="9" lean-forward="true" selection-start-line="262" selection-start-column="8" selection-end-line="281" selection-end-column="9" />
+            <state relative-caret-position="540">
+              <caret line="45" column="71" lean-forward="true" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/admin/view/teacher/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="86" />
               <folding>
-                <element signature="e#37#66#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sselect.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sselect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/model/Sselect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="472" column="46" lean-forward="true" selection-start-line="472" selection-start-column="46" selection-end-line="472" selection-end-column="46" />
+            <state relative-caret-position="9020">
+              <caret line="454" column="34" selection-start-line="454" selection-start-column="34" selection-end-line="454" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -107,7 +98,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/view/Login/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="680">
               <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
             </state>
           </provider>
@@ -116,7 +107,7 @@
       <file leaf-file-name="Upfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Upfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
+            <state relative-caret-position="1540">
               <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
             </state>
           </provider>
@@ -168,10 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/assets/js/backend/tapply.js" />
-        <option value="$PROJECT_DIR$/application/admin/view/teacher/index.html" />
-        <option value="$PROJECT_DIR$/application/common/controller/Backend.php" />
-        <option value="$PROJECT_DIR$/public/assets/js/backend/teacher.js" />
         <option value="$PROJECT_DIR$/public/assets/js/backend/student.js" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/application/home/common.php" />
@@ -212,13 +199,17 @@
         <option value="$PROJECT_DIR$/application/admin/view/adjust/auto.html" />
         <option value="$PROJECT_DIR$/application/admin/model/Adjust.php" />
         <option value="$PROJECT_DIR$/public/assets/adjust/js/adjust.js" />
-        <option value="$PROJECT_DIR$/application/admin/controller/Teacher.php" />
         <option value="$PROJECT_DIR$/application/admin/controller/Adjust.php" />
         <option value="$PROJECT_DIR$/public/fhome/js/tapply.js" />
         <option value="$PROJECT_DIR$/application/home/view/Login/index.html" />
         <option value="$PROJECT_DIR$/application/home/view/Public/footer.html" />
         <option value="$PROJECT_DIR$/application/home/controller/Stuselect.php" />
         <option value="$PROJECT_DIR$/application/home/model/Sselect.php" />
+        <option value="$PROJECT_DIR$/public/fhome/js/base/base.js" />
+        <option value="$PROJECT_DIR$/public/fhome/js/sselect.js" />
+        <option value="$PROJECT_DIR$/application/admin/view/teacher/index.html" />
+        <option value="$PROJECT_DIR$/application/admin/controller/Teacher.php" />
+        <option value="$PROJECT_DIR$/public/assets/js/backend/teacher.js" />
       </list>
     </option>
   </component>
@@ -278,7 +269,7 @@
       <path value="$PROJECT_DIR$/vendor/mtdowling/cron-expression" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -308,20 +299,20 @@
               <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmis" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmis" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmis" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -339,22 +330,16 @@
               <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmis" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="fhome" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmis" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="fhome" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gmis" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmis" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="fhome" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -435,18 +420,18 @@
       <workItem from="1545090865510" duration="24327000" />
       <workItem from="1545179818319" duration="17194000" />
       <workItem from="1545261882731" duration="24572000" />
-      <workItem from="1545351011103" duration="17582000" />
+      <workItem from="1545351011103" duration="18984000" />
+      <workItem from="1545436305970" duration="4390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="622222000" />
+    <option name="totallyTimeSpent" value="628014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.32275712" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.32889125" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -470,19 +455,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1444563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -507,13 +492,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/admin/model/Process.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="79" column="87" selection-start-line="79" selection-start-column="87" selection-end-line="79" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/backend/upfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -654,13 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/teacher/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="35" column="28" lean-forward="true" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -714,9 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="587">
           <caret line="302" column="44" lean-forward="true" selection-start-line="302" selection-start-column="12" selection-end-line="302" selection-end-column="44" />
-          <folding>
-            <element signature="e#32#59#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,9 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,9 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
           <caret line="141" column="28" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="28" />
-          <folding>
-            <element signature="e#35#51#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -782,16 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="95" column="30" lean-forward="true" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
-          <folding>
-            <element signature="e#40#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/model/Upfile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
@@ -801,22 +753,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Upfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
+        <state relative-caret-position="1540">
           <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Adjust.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
+        <state relative-caret-position="2960">
           <caret line="148" column="18" selection-start-line="148" selection-start-column="18" selection-end-line="148" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/fhome/js/base/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -829,14 +774,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Teapply.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
+        <state relative-caret-position="5840">
           <caret line="296" column="28" selection-start-line="296" selection-start-column="28" selection-end-line="296" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/view/Login/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="680">
           <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
         </state>
       </provider>
@@ -855,27 +800,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/fhome/js/sselect.js">
+    <entry file="file://$PROJECT_DIR$/application/home/model/Sselect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+        <state relative-caret-position="9020">
+          <caret line="454" column="34" selection-start-line="454" selection-start-column="34" selection-end-line="454" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/fhome/js/base/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="77" column="21" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="77" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Stuselect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="281" column="9" lean-forward="true" selection-start-line="262" selection-start-column="8" selection-end-line="281" selection-end-column="9" />
+        <state relative-caret-position="20">
+          <caret line="281" column="9" selection-start-line="262" selection-start-column="8" selection-end-line="281" selection-end-column="9" />
           <folding>
             <element signature="e#37#66#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/model/Sselect.php">
+    <entry file="file://$PROJECT_DIR$/application/admin/view/teacher/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="472" column="46" lean-forward="true" selection-start-line="472" selection-start-column="46" selection-end-line="472" selection-end-column="46" />
+        <state relative-caret-position="60">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/controller/Teacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="124" column="9" lean-forward="true" selection-start-line="121" selection-start-column="8" selection-end-line="124" selection-end-column="9" />
+          <folding>
+            <element signature="e#40#74#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#96#102#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#168#174#0" expanded="true" />
+            <element signature="e#191#197#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/fhome/js/sselect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="108" column="18" lean-forward="true" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/backend/teacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="45" column="71" lean-forward="true" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
         </state>
       </provider>
     </entry>

@@ -40,7 +40,7 @@ layui.use(['form', 'jquery', 'layer'], function () {
     });
 });
 
-function base_ajax(url,data,success_func){
+function base_ajax(url,data,success_func,fail_func){
     var $ = layui.$
         , layer = layui.layer;
     var loading = layer.msg('请稍后...',{
@@ -73,12 +73,18 @@ function base_ajax(url,data,success_func){
                         , shade: 0.1
                         , time: 2000
                     });
+                    if(fail_func !== undefined){
+                        fail_func();
+                    }
                 }else{
                     layer.msg("未知错误",{
                         icon: 2
                         , shade: 0.1
                         , time: 2000
                     });
+                    if(fail_func !== undefined){
+                        fail_func();
+                    }
                 }
             }
         },

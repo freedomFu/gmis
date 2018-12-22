@@ -42,7 +42,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'teahonor', title: __('Teahonor'), searchList: {"教授":__('教授'),"副教授":__('副教授'),"讲师":__('讲师'),"助教":__('助教'),"正高级实验师":__('正高级实验师'),"高级实验师":__('高级实验师'),"实验师":__('实验师'),"助理实验师":__('助理实验师'),"实验员":__('实验员')}, formatter: Table.api.formatter.normal},
                         {field: 'teatitlenum', title: __('Teatitlenum')},
                         {field: 'teaphone', title: __('Teaphone')},
-                        {field: 'teabelongid', title: __('Teabelongid')},
+                        {field: 'teabelongid', title: __('Teabelongid'), formatter: Table.api.formatter.search},
                         {field: 'starttimer', title: __('Starttimer')},
                         {field: 'middletimer', title: __('Middletimer')},
                         {field: 'replytimer', title: __('Replytimer')},
